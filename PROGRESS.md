@@ -148,3 +148,11 @@ Decisions:
 - Fixes: "Free only" is now a 48px toggle button (aria-pressed) instead of a
   28px checkbox; short chain-name links get min-width 48px; back link 48px.
 - Evidence: evidence/F10.png (+ F10-keyboard.png, F10-dark-zoom200.png).
+
+## Browser test suite (infra)
+- Dockerfile.e2e + compose service `e2e` (profile test): Playwright
+  Chromium/WebKit + axe-core 4.14.0. Shares the web container's network so
+  the site is http://localhost:8095 (a secure origin, needed for location
+  tests). `docker compose --profile test run --rm e2e`: 52 passed.
+- Found by it: "Home" crumb link was 46px wide with Linux fonts; now
+  min-width 48px.

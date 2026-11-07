@@ -27,3 +27,23 @@ services:
       build:
         condition: service_completed_successfully
     restart: unless-stopped
+
+  # Browser tests (Playwright + axe). Not started by start.ps1.
+  # Run: docker compose --profile test run --rm e2e
+  e2e:
+    profiles: ["test"]
+    build:
+      context: .
+      dockerfile: Dockerfile.e2e
+    image: vetseatfree-e2e:latest
+    # Share the web container's network so the site is http://localhost:8095,
+    # a secure origin (needed for the "Use my location" tests).
+    network_mode: "service:web"
+    environment:
+      BASE_URL: http://localhost:8095
+    volumes:
+      - ./:/app
+    working_dir: /app
+    depends_on:
+      - web
+    command: ["python", "-m", "pytest", "-q", "-p", "no:cacheprovider", "tests/e2e"]

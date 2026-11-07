@@ -1,0 +1,18 @@
+# Browser tests: Playwright (Chromium + WebKit) with axe-core.
+# Run: docker compose --profile test run --rm e2e
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+
+RUN pip install "pytest==8.4.2" "playwright>=1.48,<2" \
+ && playwright install --with-deps chromium webkit \
+ && rm -rf /var/lib/apt/lists/*
+
+ADD https://unpkg.com/axe-core@4.14.0/axe.min.js /opt/axe/axe.min.js
+
+WORKDIR /app
+CMD ["python", "-m", "pytest", "-q", "tests/e2e"]
