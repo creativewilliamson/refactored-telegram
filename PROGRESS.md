@@ -77,3 +77,16 @@ Decisions:
   135 mi away, so verified with 50309 (Des Moines): both offers on one card.
   Evidence: evidence/F02.png, evidence/F02-stacked.png.
 - Next: F03 (data provenance checks + Docker build via start.ps1).
+
+## F03: real places only (passes)
+- tools/spot_check.py traces random stores in dist/ back to the cached ATP
+  feature (spider, run, ref) or Census Geocoder match and checks brand Q-id
+  + state + coordinates: 10/10 and 40/40 OK.
+- All 33 distinct source links load in a real browser except Smashburger's
+  (true 404). Override in data/overrides.json points it at the VA News 2026
+  list, which names the offer; offer wording unchanged.
+- 10001: three Offer details links open exactly their source_url; 38 chains
+  without store data show "Find nearest" (Google Maps search, brand + town).
+- tests/test_pipeline.py: 39 pytest checks (seed, overrides, tags, brands,
+  US-only records, collision-prone brands, lookups, Pages limits, headers).
+- Evidence: evidence/F03.png, evidence/F03-source.png. Next: F04.

@@ -144,6 +144,14 @@
       },
       "reason": "Time window parsed from the seed's own wording (\"9 a.m.–4:30 p.m. Central\"); not guessed.",
       "source_url": "https://www.archives.gov/calendar/event/veterans-day-free-museum-admission-0"
+    },
+    {
+      "slug": "smashburger",
+      "set": {
+        "source_url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/"
+      },
+      "reason": "The seed's source_url (https://smashburger.com/veterans-day-locations) returns HTTP 404 'Page Not Found' in a real browser, checked 2026-11-07. The VA News 2026 list confirms the offer: 'Smashburger: Offers Veterans a free All-American Smashburger on Nov. 11, 2026 at participating locations; ID required.' Offer wording is unchanged.",
+      "source_url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/"
     }
   ]
 }

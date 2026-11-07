@@ -40,7 +40,7 @@
         "Verify brands with no location data show a 'Find nearest' maps link instead of invented stores"
       ],
       "evidence": "evidence/F03.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F04",

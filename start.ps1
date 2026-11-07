@@ -13,7 +13,7 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "Building VetsEatFree (data + pages) and starting the web server..."
 $env:BUILDKIT_PROGRESS = 'quiet'
-docker compose up --build -d
+docker compose --progress quiet up --build -d
 if ($LASTEXITCODE -ne 0) {
     Write-Host "The build failed. See: docker compose logs build" -ForegroundColor Red
     exit 1
