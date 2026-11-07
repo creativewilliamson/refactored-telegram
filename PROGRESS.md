@@ -218,3 +218,17 @@ Decisions:
   online). One tile blocked: other stores still show + "Some nearby places
   didn't load... Try again", which recovers all 353.
 - Evidence: evidence/F17.png. Tests: tests/e2e/test_errors.py (6).
+
+## F18: speed (passes)
+- Home: 8.4 KB transferred on a first visit (limit 60 KB).
+- 46052 on Chrome DevTools "Slow 4G" (562.5 ms, 1.6 Mbps) + 4x CPU, empty
+  cache: direct link 2.46 s, search from home 2.50 s (was 3.6 s). Fixes: a
+  hashed inline script at the top of /near/ starts the offer list, map index,
+  ZIP file and 25-mile map squares at once (it was stuck behind the CSS until
+  moved above the stylesheet link); a "searching" layout keeps the page from
+  jumping (CLS 0.33 -> 0).
+- Lighthouse 12 mobile: home, results, state = 100 performance / 100 a11y.
+- WebKit 27.2 search works. For Safari 14 / Chrome 90: JS is ES5; flex `gap`
+  replaced with margins (Safari 14.0 lacks it); :focus fallback for
+  :focus-visible.
+- Evidence: evidence/F18.png (+ F18-webkit.png, F18-measurements.json).

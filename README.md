@@ -24,6 +24,7 @@ and Census data into `data\cache\` (a minute or two); later starts reuse it.
 | Build offline from the cache | `docker compose run --rm build python -m pipeline.build --offline` |
 | Pipeline tests (pytest) | `docker compose run --rm build python -m pytest -q tests` |
 | Browser tests (Playwright + axe) | `docker compose --profile test run --rm e2e` |
+| Lighthouse mobile audits | `docker compose --profile test run --rm e2e sh tools/lighthouse.sh` |
 | Serve `dist/` only | `docker compose up -d web` |
 | Stop | `docker compose down` |
 | Trace random stores to their source | `docker compose run --rm build python tools/spot_check.py 20` |

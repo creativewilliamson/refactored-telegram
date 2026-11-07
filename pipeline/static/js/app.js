@@ -49,6 +49,15 @@
 
   VEF.getJSON = function (url) {
     if (cache[url]) { return cache[url]; }
+    var pre = window.VEF_PRE && window.VEF_PRE[url];
+    if (pre) {
+      // Started early by the small script at the top of the results page.
+      delete window.VEF_PRE[url];
+      var early = pre.catch(function (status) { throw Err(status === 404 ? "missing" : "network"); });
+      cache[url] = early;
+      early.catch(function () { delete cache[url]; });
+      return early;
+    }
     var p = fetch(url, { credentials: "omit" }).then(function (r) {
       if (r.status === 404) { throw Err("missing"); }
       if (!r.ok) { throw Err("network"); }

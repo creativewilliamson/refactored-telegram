@@ -1,0 +1,11 @@
+{
+ "home_transfer_bytes": 8412,
+ "home_files": {
+  "/": 2980,
+  "/js/search.b066c4407b.js": 1536,
+  "/css/site.67067ba1c5.css": 3896
+ },
+ "slow4g_direct_link_ms": 2467,
+ "slow4g_search_from_home_ms": 2520,
+ "webkit_version": "27.2"
+}

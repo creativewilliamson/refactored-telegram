@@ -117,6 +117,7 @@ def build(offline: bool = False, quick: bool = False) -> None:
     log(f"pages: {npages}")
 
     csp = ("default-src 'self'; script-src 'self' " + site.csp_hash(site.JS_FLAG_SCRIPT)
+           + " " + site.csp_hash(site.NEAR_PRELOAD_SCRIPT)
            + "; style-src 'self'; img-src 'self' data:; connect-src 'self'; "
            "form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'")
     (dist / "_headers").write_text(headers_file(csp), encoding="utf-8", newline="\n")

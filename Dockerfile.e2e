@@ -14,5 +14,9 @@ RUN pip install "pytest==8.4.2" "playwright>=1.48,<2" \
 
 ADD https://unpkg.com/axe-core@4.14.0/axe.min.js /opt/axe/axe.min.js
 
+# Lighthouse (mobile audits) runs on Playwright's Chromium.
+RUN apt-get update  && apt-get install -y --no-install-recommends nodejs npm  && npm install -g lighthouse@12  && rm -rf /var/lib/apt/lists/* /root/.npm  && ln -s "$(ls -d /ms-playwright/chromium-*/chrome-linux*/chrome | head -1)" /usr/local/bin/chromium-for-lighthouse
+ENV CHROME_PATH=/usr/local/bin/chromium-for-lighthouse
+
 WORKDIR /app
 CMD ["python", "-m", "pytest", "-q", "tests/e2e"]

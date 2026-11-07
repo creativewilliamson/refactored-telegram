@@ -236,7 +236,7 @@
         "Smoke-test a search in Playwright WebKit"
       ],
       "evidence": "evidence/F18.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F19",

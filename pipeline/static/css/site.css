@@ -54,7 +54,8 @@ body {
 img { max-width: 100%; }
 a { color: var(--link); text-underline-offset: 0.15em; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+:focus { outline: 3px solid var(--focus); outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }  /* browsers without :focus-visible keep the ring */
 h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5rem; }
 h1 { font-size: 1.75rem; }
 h2 { font-size: 1.4rem; margin-top: 0.5rem; }
@@ -77,10 +78,10 @@ p { margin: 0 0 0.75rem; }
 
 /* Header and footer */
 .site-header { background: var(--navy); color: var(--navy-fg); border-bottom: 4px solid var(--red); }
-.header-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1rem; min-height: 3.5rem; }
+.header-row { display: flex; flex-wrap: wrap; align-items: center; min-height: 3.5rem; }
 .brand {
   color: var(--navy-fg); font-weight: 800; font-size: 1.35rem; text-decoration: none;
-  display: inline-flex; align-items: center; min-height: 48px;
+  display: inline-flex; align-items: center; min-height: 48px; margin-right: 1rem;
 }
 .brand-tag { font-size: 1.125rem; }
 main { display: block; padding-bottom: 2rem; }
@@ -95,7 +96,7 @@ main:focus { outline: none; }
 
 /* Buttons and inputs */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  display: inline-flex; align-items: center; justify-content: center;
   min-height: 48px; min-width: 48px; padding: 0.5rem 1.1rem;
   font: inherit; font-weight: 700; border-radius: 8px; cursor: pointer;
   border: 2px solid var(--navy); text-decoration: none; text-align: center;
@@ -113,7 +114,8 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 /* Home */
 .hero { background: var(--card); padding: 1.25rem 0 1rem; border-bottom: 1px solid var(--line); }
 .lead { font-size: 1.2rem; }
-.search-row { display: flex; gap: 0.5rem; }
+.search-row { display: flex; }
+.search-row .btn { margin-left: 0.5rem; }
 .search-row input { flex: 1 1 auto; min-width: 0; }
 .search-row .btn { flex: 0 0 auto; }
 .no-js .js-only { display: none; }
@@ -137,7 +139,8 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
   list-style: none; padding: 0; margin: 0;
   display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 0.25rem 1rem;
 }
-.link-grid li { display: flex; align-items: center; flex-wrap: wrap; gap: 0 0.4rem; min-height: 48px; }
+.link-grid li { display: flex; align-items: center; flex-wrap: wrap; min-height: 48px; }
+.link-grid .count { margin-left: 0.4rem; }
 .link-grid a { display: inline-flex; align-items: center; min-height: 48px; }
 .offer-list { list-style: none; padding: 0; margin: 0; }
 .offer-row { border-top: 1px solid var(--line); padding: 0.9rem 0; }
@@ -150,7 +153,8 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .terms { color: var(--muted); }
 .links a { display: inline-flex; align-items: center; min-height: 48px; }
 .links .btn { margin-right: 0.75rem; }
-.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.25rem 0 0.5rem; }
+.chips { display: flex; flex-wrap: wrap; margin: 0.25rem 0 0.1rem; }
+.chips > * { margin: 0 0.4rem 0.4rem 0; }
 .chip {
   display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 1.125rem;
   background: var(--chip); color: var(--chip-fg); border: 1px solid var(--line); line-height: 1.4;
@@ -165,7 +169,8 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .facts dd { margin: 0.15rem 0 0; }
 .place-list { list-style: none; padding: 0; }
 .place-list li { border-top: 1px solid var(--line); padding: 0.75rem 0; }
-.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.5rem 0 0; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; margin: 0.5rem 0 0; }
+.actions > * { margin: 0 0.5rem 0.5rem 0; }
 .prose { padding-top: 1rem; }
 .prose ul { padding-left: 1.4rem; }
 .prose li { margin-bottom: 0.5rem; }
@@ -175,13 +180,24 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .page-near h1 { margin-top: 1rem; }
 .page-near h1:focus { outline: none; }
 .search-box > summary { display: none; }
+/* While a search loads: search box folded, space kept for the results, so
+   nothing on screen moves when they arrive. */
+.loading-space { display: none; }
+.searching .loading-space { display: block; min-height: 120vh; }
+.searching #search-box > summary {
+  display: flex; align-items: center; min-height: 48px; font-weight: 700; color: var(--link);
+}
+.searching #search-box > form { display: none; }
+@media (max-width: 40rem) { .page-near h1 { min-height: 2.4em; } }
 .search-box.collapsible > summary {
   display: flex; align-items: center; min-height: 48px; cursor: pointer; font-weight: 700; color: var(--link);
 }
 .search-box.collapsible[open] { border: 2px solid var(--line); border-radius: 8px; padding: 0 0.75rem 0.75rem; }
 .status { min-height: 1.5em; margin: 0.75rem 0; font-weight: 600; }
 .summary { font-size: 1.2rem; font-weight: 700; margin-top: 0.5rem; }
-.controls { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; align-items: flex-start; margin: 0.75rem 0; }
+.controls { display: flex; flex-wrap: wrap; align-items: flex-start; margin: 0.75rem 0 0; }
+.controls > * { margin: 0 1.5rem 0.75rem 0; }
+.controls > .filters { margin-right: 0; }
 .control { min-width: 12rem; }
 .control select { width: auto; min-width: 12rem; }
 .filters { flex: 1 1 100%; border: 2px solid var(--line); border-radius: 8px; padding: 0 0.75rem; }
@@ -189,16 +205,15 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .filters summary { cursor: pointer; font-weight: 700; min-height: 48px; display: flex; align-items: center; color: var(--link); }
 .filters fieldset { border: 0; padding: 0; margin: 0.5rem 0; }
 .filters legend { font-weight: 700; margin-bottom: 0.35rem; }
-.seg { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.seg { display: flex; flex-wrap: wrap; }
+.seg > * { margin: 0 0.4rem 0.4rem 0; }
 .seg-btn {
   font: inherit; min-height: 48px; padding: 0.4rem 0.9rem; border-radius: 999px; cursor: pointer;
   border: 2px solid var(--link); background: var(--bg); color: var(--link); font-weight: 600;
 }
 .seg-btn[aria-pressed="true"] { background: var(--navy); color: var(--navy-fg); border-color: var(--navy); }
-.check { display: flex; align-items: center; gap: 0.6rem; min-height: 48px; margin: 0.5rem 0; }
-.check input { width: 28px; height: 28px; margin: 0; flex: 0 0 auto; accent-color: var(--navy); }
-.check label { margin: 0; font-weight: 600; display: flex; align-items: center; min-height: 48px; }
-.tools { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 1rem; }
+.tools { display: flex; flex-wrap: wrap; margin: 0.5rem 0 0.5rem; }
+.tools > * { margin: 0 0.5rem 0.5rem 0; }
 .linkish {
   font: inherit; background: none; border: 0; padding: 0 0.15rem; color: var(--link);
   text-decoration: underline; cursor: pointer; min-height: 48px; font-weight: 700;
@@ -206,7 +221,8 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .cards { list-style: none; padding: 0; margin: 0; }
 .card { border: 2px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem; margin: 0 0 1rem; background: var(--bg); }
 .card.is-ended { opacity: 0.85; border-style: dashed; }
-.card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+.card-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.card-head h3 { margin-right: 0.75rem; }
 .card-head h3 { margin: 0; font-size: 1.3rem; }
 .miles { font-weight: 800; white-space: nowrap; }
 .branch { color: var(--muted); margin: 0.15rem 0 0.25rem; }
@@ -233,7 +249,7 @@ section[id="far"], section[id="everywhere"], section[id="find"] { margin-top: 1.
 @media (max-width: 30rem) {
   h1 { font-size: 1.5rem; }
   .search-row { flex-direction: column; }
-  .search-row .btn { width: 100%; }
+  .search-row .btn { width: 100%; margin: 0.5rem 0 0; }
 }
 @media print {
   .site-header, .skip, .no-print, .site-footer .footer-links { display: none !important; }

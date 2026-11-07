@@ -27,6 +27,7 @@
     statusEl.textContent = text;
     statusEl.className = quiet ? "status sr-only" : "status";
   }
+  function doneLoading() { document.documentElement.classList.remove("searching"); }
   function foldSearch(fold) {
     if (fold) { box.classList.add("collapsible"); box.open = false; }
     else { box.open = true; }
@@ -332,7 +333,9 @@
     results.hidden = false;
     var tail = S.failed ? " Some places may be missing." : "";
     say("Found " + n + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles." + tail, true);
-    if (fresh) { foldSearch(true); $("results-h").focus(); }
+    if (fresh) { foldSearch(true); }
+    doneLoading();
+    if (fresh) { $("results-h").focus(); }
   }
 
   function nextRadius() { return S.radius < 25 ? 25 : S.radius < 50 ? 50 : 100; }
@@ -393,6 +396,7 @@
     }
     say("");
     foldSearch(false);
+    doneLoading();
     showMsg(text);
     if (!S.origin) { results.hidden = true; }
     input.focus();

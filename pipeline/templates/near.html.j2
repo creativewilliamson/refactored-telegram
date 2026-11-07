@@ -2,6 +2,7 @@
 {% block title %}Veterans Day offers near you | {{ site_name }}{% endblock %}
 {% block canonical %}/near/{% endblock %}
 {% block body_class %}page-near{% endblock %}
+{% block head %}<script>{{ near_preload_script | safe }}</script>{% endblock %}
 {% block main %}
 <div class="wrap">
   <h1 id="results-h" tabindex="-1">Veterans Day offers near you</h1>
@@ -24,6 +25,7 @@
   </noscript>
 
   <p id="status" class="status" role="status" aria-live="polite"></p>
+  <div id="loading-space" class="loading-space" aria-hidden="true"></div>
 
   <section id="results" hidden>
     <p id="summary" class="summary"></p>
