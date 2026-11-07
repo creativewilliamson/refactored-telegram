@@ -222,7 +222,7 @@
         "Go offline and block one tile file; verify the message and that the rest still works"
       ],
       "evidence": "evidence/F17.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F18",

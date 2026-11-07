@@ -209,3 +209,12 @@ Decisions:
   files this phone already used. A reload with no connection shows the same
   results. About page privacy text now says so. Tested offline in Playwright.
 - Evidence: evidence/F16.png. Tests: tests/e2e/test_share.py (5).
+
+## F17: errors with a way forward (passes)
+- 00000: "We couldn't find ZIP code 00000. Check the numbers, or type your city
+  and state"; focus back in the box. Misspelled city: "Did you mean" buttons.
+  APO/FPO ZIP: explains military mail. Location denied: "type your ZIP code
+  instead". Offline: "You seem to be offline... Try again" (works once back
+  online). One tile blocked: other stores still show + "Some nearby places
+  didn't load... Try again", which recovers all 353.
+- Evidence: evidence/F17.png. Tests: tests/e2e/test_errors.py (6).
