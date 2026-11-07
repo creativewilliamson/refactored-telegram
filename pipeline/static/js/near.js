@@ -260,8 +260,12 @@
     $("results-h").textContent = "Offers near " + placeLabel;
     var n = cards.length;
     var unlisted = noStoreList();
+    var only = onlyName();          // "Find the nearest X": every count is about X only
     $("summary").textContent = unlisted
       ? "We don’t have a store list for " + unlisted.name + ", so we can’t say how far the nearest one is."
+      : only
+      ? (n ? n + " " + only + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles of " + placeLabel + ", closest first."
+           : "No " + only + " within " + S.radius + " miles of " + placeLabel + ".")
       : n
       ? n + (n === 1 ? " store" : " stores") + " with offers within " + S.radius + " miles of " + placeLabel + ", closest first."
       : "No stores with offers within " + S.radius + " miles of " + placeLabel + ".";
@@ -273,6 +277,10 @@
     }
     if (unlisted) {
       widen.hidden = true;
+    } else if (S.widened && S.offer && S.data._byId[S.offer]) {
+      widen.textContent = "Showing up to " + S.widened + " miles to look for the nearest " +
+        ((S.data.brands[S.data._byId[S.offer].brand] || {}).name || S.data._byId[S.offer].name) + "." + islandNote;
+      widen.hidden = false;
     } else if (S.widened) {
       widen.textContent = "Showing up to " + S.widened + " miles because few places are close by." + islandNote;
       widen.hidden = false;
@@ -370,10 +378,18 @@
     results.hidden = false;
     var tail = S.failed ? " Some places may be missing." : "";
     say(unlisted ? "We don’t have a store list for " + unlisted.name + ". Use Find nearest to search a map."
+      : only ? (n ? "Found " + n + " " + only + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles." + tail
+                  : "No " + only + " within " + S.radius + " miles.")
       : "Found " + n + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles." + tail, true);
     if (fresh) { foldSearch(true); }
     doneLoading();
     if (fresh) { $("results-h").focus(); }
+  }
+
+  /* "Find the nearest X": X's name, or null when showing every offer. */
+  function onlyName() {
+    var o = S.offer && S.data && S.data._byId[S.offer];
+    return o ? ((S.data.brands[o.brand] || {}).name || o.name) : null;
   }
 
   /* "Find the nearest X" for a chain we have no store list for: the offer. */

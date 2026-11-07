@@ -604,3 +604,19 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
   instead of "No offers here match your filters."
 - New e2e tests: the 4 named cases + every one of the 42 "find" offers from 46052. e2e 193 passed. Evidence: evidence/R2-W1.png.
 - Next: evaluator round 2.
+
+## Evaluator round 2 (run 2): NEEDS_WORK (1 blocking) -> work item
+- W2: the Large-print list from "Find the nearest X" (print.js) still widens and prints "No places within 100 miles ... few places
+  are close by" without naming X: false for Mission BBQ (no store list) and Hy-Vee/Lebanon (349 places nearby). One-chain prints
+  must say they show only X; "find" offers make no distance claim.
+- Polish (not fixed): two identical Find nearest buttons and an idle radius picker in no-list one-chain mode; filtered prints don't
+  name the filter; console 404 for an unknown ZIP shard; RUN-REPORT.md still run 1's (rewritten at the end).
+
+## Evaluator round 2 fix (W2) done
+- print.js one-chain mode (offer=X): heading "X near <place>"; a chain with no store list never widens and prints "We don't have a
+  store list for X ... Search a map for "X near <place>"" plus the offer itself; a listed chain with none in range prints "The nearest
+  X is more than 100 miles from <place>." (+ its states); found ones say "Only X: N places within R miles". The "few places are close
+  by" note is only used for all-offer lists.
+- Same class on the results page: one-chain summary/status name X ("No Texas Roadhouse within 100 miles of Miles City, MT 59301.",
+  "4 Texas Roadhouse stores within 25 miles ..."), widen note "Showing up to 100 miles to look for the nearest X."
+- e2e 197 passed. Evidence: evidence/R2-W2.png. Next: evaluator round 3 (last allowed).

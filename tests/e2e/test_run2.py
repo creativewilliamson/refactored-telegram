@@ -344,3 +344,46 @@ def test_w1_every_unlisted_chain(page):
         page.wait_for_selector("#cards-empty:not([hidden])")
         assert "is more than" not in page.locator("#results").inner_text(), o["id"]
         assert page.locator("#summary").inner_text().startswith("We don’t have a store list"), o["id"]
+
+
+# ------------------------- evaluator round 2 (run 2), W2: one-chain print is honest
+def _from_offer_to_print(page, slug, zip_):
+    page.goto(url(f"/offer/{slug}/"))
+    page.fill("form[data-search] input[type=text]", zip_)
+    page.locator("form[data-search] button[type=submit]").click()
+    page.wait_for_selector("#summary:not(:empty)")
+    page.click("#print-link")
+    page.wait_for_selector("#print-sub:not(:empty)")
+    return (page.locator("#print-h").inner_text(), page.locator("#print-sub").inner_text(),
+            page.locator("#print-widen").inner_text() if page.locator("#print-widen").is_visible() else "")
+
+
+def test_w2_print_no_store_list(page):
+    h1, sub, note = _from_offer_to_print(page, "mission-bbq", "21061")
+    assert h1 == "Mission BBQ near Glen Burnie, MD 21061"
+    assert sub.startswith("We don’t have a store list for Mission BBQ")
+    assert "No places" not in sub and note == ""
+    assert page.locator("#print-list > li").count() == 1
+    assert "search a map for" in page.locator("#print-list").inner_text()
+
+
+def test_w2_print_chain_none_in_range(page):
+    h1, sub, note = _from_offer_to_print(page, "hy-vee", "46052")
+    assert h1 == "Hy-Vee near Lebanon, IN 46052"
+    assert sub.startswith("The nearest Hy-Vee is more than 100 miles from Lebanon, IN 46052.")
+    assert "few places are close by" not in note
+
+
+def test_w2_print_chain_found_says_only(page):
+    h1, sub, _ = _from_offer_to_print(page, "texas-roadhouse", "46052")
+    assert h1 == "Texas Roadhouse near Lebanon, IN 46052"
+    assert re.match(r"Only Texas Roadhouse: \d+ places? within 25 miles", sub)
+
+
+def test_w2_results_one_chain_summary(page):
+    page.goto(url("/offer/texas-roadhouse/"))
+    page.fill("form[data-search] input[type=text]", "59301")
+    page.locator("form[data-search] button[type=submit]").click()
+    page.wait_for_selector("#cards-empty:not([hidden])")
+    assert page.locator("#summary").inner_text() == "No Texas Roadhouse within 100 miles of Miles City, MT 59301."
+    assert page.locator("#widen-note").inner_text() == "Showing up to 100 miles to look for the nearest Texas Roadhouse."

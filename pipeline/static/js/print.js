@@ -45,7 +45,9 @@
   /* Same rule as the results page: count every store and place in range
      (or, for "find the nearest X", only X and stop at one). */
   function gather(o, data, first) {
-    var steps = autoWiden ? [25, 50, 100] : [radius];
+    var only = f.offer && data._byId[f.offer];
+    // No store list for X: nothing to count, so never widen.
+    var steps = autoWiden && !(only && only.kind === "find") ? [25, 50, 100] : [radius];
     function check(i, near) {
       var r = steps[i];
       var count = near.records.length + placesWithin(data, o, r).length, enough = MIN_PLACES;
@@ -88,14 +90,30 @@
       });
       rows.sort(function (a, b) { return a.d - b.d; });
 
-      document.title = "Large-print list: offers near " + o.label + " | Vet Day Deals";
-      $("print-h").textContent = "Veterans Day offers near " + o.label;
-      $("print-sub").textContent = (rows.length
-        ? rows.length + (rows.length === 1 ? " place" : " places") + " within " + radius + " miles, closest first."
-        : "No places within " + radius + " miles.") + " Printed " + V.fmtLong(today) + ".";
+      // "Find the nearest X" prints only X, and says so.
+      var only = f.offer && data._byId[f.offer];
+      var b = only && data.brands[only.brand] || {};
+      var xname = only ? (b.name || only.name) : "";
+      var count = rows.length + (rows.length === 1 ? " place" : " places") + " within " + radius + " miles, closest first.";
+      var sub;
+      if (only && only.kind === "find") {
+        sub = "We don’t have a store list for " + xname + ", so we can’t say how far the nearest one is. " +
+          "Search a map for “" + (only.map || xname) + " near " + o.label + "”.";
+      } else if (only) {
+        sub = rows.length ? "Only " + xname + ": " + count
+          : "The nearest " + xname + " is more than " + radius + " miles from " + o.label + "." +
+            (b.st && b.st.length ? " " + xname + " has stores in " + V.stateList(b.st) + "." : "");
+      } else {
+        sub = rows.length ? count : "No places within " + radius + " miles.";
+      }
+      document.title = "Large-print list: " + (only ? xname : "offers") + " near " + o.label + " | Vet Day Deals";
+      $("print-h").textContent = (only ? xname : "Veterans Day offers") + " near " + o.label;
+      $("print-sub").textContent = sub + " Printed " + V.fmtLong(today) + ".";
       var island = ISLANDS[o.st] && rows.some(function (row) { return row.r.s && row.r.s !== o.st; })
         ? " Some of these places are on another island, across the water." : "";
-      $("print-widen").textContent = widened
+      $("print-widen").textContent = widened && only && rows.length
+        ? "Showing up to " + radius + " miles to look for the nearest " + xname + "." + island
+        : widened && !only
         ? "Showing up to " + radius + " miles because few places are close by." + island
         : island.trim();
       $("print-widen").hidden = !$("print-widen").textContent;
@@ -114,6 +132,15 @@
           '<p class="print-addr">' + esc(addr) + "</p>" +
           '<p class="print-phone">' + (r.p ? "Phone: " + esc(V.fmtPhone(r.p)) : "No phone listed") + "</p></li>";
       }).join("");
+      if (only && only.kind === "find") {
+        // No store list: still print the offer, with what to search for.
+        var st0 = V.status(only, today);
+        $("print-list").innerHTML = '<li class="print-item"><h2>' + esc(xname) + "</h2>" +
+          '<p class="print-offer">' + esc(only.offer) + "</p>" +
+          '<p class="print-when">' + esc(st0.label) + (only.tw ? " · " + esc(only.tw) : "") + " · For: " + esc(only.elig) + "</p>" +
+          '<p class="print-addr">No store list: search a map for “' + esc((only.map || xname) + " near " + o.label) +
+          "”, and call ahead.</p></li>";
+      }
       var every = data.offers.filter(function (x) { return x.kind === "everywhere" && V.offerPasses(x, f); });
       $("print-everywhere").hidden = !every.length;
       $("print-everywhere-list").innerHTML = every.map(function (x) {
