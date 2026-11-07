@@ -16,7 +16,7 @@ docker compose run --rm build
 It ends with a line like:
 
 ```
-Cloudflare Pages check: 3121 files (limit 20,000), largest 253 KB (limit 25 MiB). OK
+Cloudflare Pages check: 3114 files (limit 20,000), largest 251 KB (limit 25 MiB). OK
 Built dist/
 ```
 
@@ -117,10 +117,9 @@ PowerShell in this folder:
 docker compose run --rm build; if ($LASTEXITCODE -eq 0) { npx wrangler pages deploy dist --project-name vetseatfree --branch main }
 ```
 
-Optional, every few days (about 20 minutes, read-only visits to the chains'
-own store pages): `docker compose run --rm build python tools/status_sweep.py`
-refreshes data/store-status.json, the list of stores whose own page says
-closed or coming soon. Commit it, then run the line above.
+If someone reports a store that is closed or not open yet, add it to
+`data/location-exclusions.json` with the page that shows it (see the
+entries already there), then run the line above.
 
 The daily line re-reads the offers and overrides, checks All The Places for a newer
 weekly store run (it falls back to the cached files if offline), rebuilds

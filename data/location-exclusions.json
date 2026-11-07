@@ -1,5 +1,5 @@
 {
-  "_readme": "Store listings from All The Places that the chain's own page shows as closed or not open, where nothing in the source data says so. Each entry names the source record (spider + ref), the reason, the page that proves it, and the date it was checked. The pipeline leaves these out. Like data/overrides.json: no entry without a source.",
+  "_readme": "Store listings from All The Places that the chain's own page or location data shows as closed or not open, where nothing in the source data says so. Entries are added one by one when someone finds such a store (no automatic sweep). Each entry names the source record (spider + ref), the reason, the page that proves it, and the date it was checked. The pipeline leaves these out. Like data/overrides.json: no entry without a source.",
   "exclusions": [
     {
       "spider": "charleys_philly_steaks",
@@ -7,6 +7,167 @@
       "name": "Charleys Philly Steaks, Fort Buchanan, PR",
       "reason": "The chain's own store page says this location is temporarily closed.",
       "source_url": "https://www.charleys.com/locations/fort-buchanan/",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "5th-alton-south-miami-beach-fl",
+      "name": "Playa Bowls, 1105 5th St Unit #10, Miami Beach, FL",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/5th-alton-south-miami-beach-fl",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "doral-fl",
+      "name": "Playa Bowls, 10690 NW 19th Street, Doral, FL",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/doral-fl",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "san-antonio-tx--",
+      "name": "Playa Bowls, 11943 Alamo Ranch Pkwy, San Antonio, TX",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/san-antonio-tx--",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "indian-land-sc",
+      "name": "Playa Bowls, 7756 Charlotte Hwy, Ste 106, Indian Land, SC",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/indian-land-sc",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "rogers-ar",
+      "name": "Playa Bowls, 1803 S 46 St, Ste 134, Rogers, AR",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/rogers-ar",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "boca-park--las-vegas-nv",
+      "name": "Playa Bowls, 750 S Rampart Blvd, Las Vegas, NV",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/boca-park--las-vegas-nv",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "westview-promenade---frederick-md",
+      "name": "Playa Bowls, 5251 Buckeystown Pike, Frederick, MD",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/westview-promenade---frederick-md",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "clarkston-mi",
+      "name": "Playa Bowls, 6413 Sashabaw Rd, Clarkston, MI",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/clarkston-mi",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "playa_bowls_us",
+      "ref": "brighton-twelve-corners-plaza---rochester-ny",
+      "name": "Playa Bowls, 1892 Monroe Ave, Rochester, NY",
+      "reason": "Not open yet: the chain's own location data marks this store \"coming soon\" (evaluator round 9).",
+      "source_url": "https://playabowls.com/api/locations",
+      "store_page": "https://playabowls.com/locations/brighton-twelve-corners-plaza---rochester-ny",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "ihop",
+      "ref": "360254",
+      "name": "IHOP, 1830 State Rd 44, New Smyrna Beach, FL",
+      "reason": "Not open yet: the chain's own store page shows \"Coming Soon\" in place of hours (evaluator round 9).",
+      "source_url": "https://restaurants.ihop.com/fl/newsmyrnabeach/breakfast-1830-state-rd-44-360254",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "ihop",
+      "ref": "3881",
+      "name": "IHOP, 9607 Old Granbury Road, Crowley, TX",
+      "reason": "The chain's own page for this listing now shows a different, \"Coming Soon\" store (evaluator round 9).",
+      "source_url": "https://restaurants.ihop.com/tx/crowley/breakfast-9607-old-granbury-road-3881",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "ruby_tuesday_us",
+      "ref": "4240",
+      "name": "Ruby Tuesday, 1640 S. Roane St, Harriman, TN",
+      "reason": "The chain's own store page says \"Temp Closed\": closed due to a fire and being rebuilt (evaluator round 9).",
+      "source_url": "https://www.rubytuesday.com/locations/harriman/",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "ruby_tuesday_us",
+      "ref": "3682",
+      "name": "Ruby Tuesday West Ashley, 1953 Savannah Highway, Charleston, SC",
+      "reason": "Not on the chain's own locations list, and its store page returns 404 (evaluator round 9).",
+      "source_url": "https://www.rubytuesday.com/locations/",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "wendys",
+      "ref": "https://locations.wendys.com/#2082895852",
+      "name": "Wendy's, 801 E Main St, Radford, VA",
+      "reason": "The chain's own store page says \"Temporarily Closed\" (evaluator round 9; one store has several source records).",
+      "source_url": "https://locations.wendys.com/united-states/va/radford/801-e-main-st",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "wendys",
+      "ref": "https://locations.wendys.com/#9255133",
+      "name": "Wendy's, 801 E Main St, Radford, VA",
+      "reason": "The chain's own store page says \"Temporarily Closed\" (evaluator round 9; one store has several source records).",
+      "source_url": "https://locations.wendys.com/united-states/va/radford/801-e-main-st",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "wendys",
+      "ref": "https://locations.wendys.com/#2070758366",
+      "name": "Wendy's, 3900 Georgia Avenue NW, Washington, DC",
+      "reason": "The chain's own store page says \"Temporarily Closed\" (evaluator round 9; one store has several source records).",
+      "source_url": "https://locations.wendys.com/united-states/dc/washington/3900-georgia-avenue-nw/breakfast-menu.html",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "wendys",
+      "ref": "https://locations.wendys.com/#2086806414",
+      "name": "Wendy's, 2083 Lawrenceville Road (BLC Student Center), Lawrenceville, NJ",
+      "reason": "The chain's own store page says \"Temporarily Closed\" (evaluator round 9; one store has several source records).",
+      "source_url": "https://locations.wendys.com/united-states/nj/lawrenceville/2083-lawrenceville-road,-blc-student-center",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "wendys",
+      "ref": "https://locations.wendys.com/#2086811770",
+      "name": "Wendy's, 2083 Lawrenceville Road (BLC Student Center), Lawrenceville, NJ",
+      "reason": "The chain's own store page says \"Temporarily Closed\" (evaluator round 9; one store has several source records).",
+      "source_url": "https://locations.wendys.com/united-states/nj/lawrenceville/2083-lawrenceville-road,-blc-student-center",
+      "checked": "2026-11-07"
+    },
+    {
+      "spider": "wendys",
+      "ref": "https://locations.wendys.com/#15004971",
+      "name": "Wendy's, 2083 Lawrenceville Road (BLC Student Center), Lawrenceville, NJ",
+      "reason": "The chain's own store page says \"Temporarily Closed\" (evaluator round 9; one store has several source records).",
+      "source_url": "https://locations.wendys.com/united-states/nj/lawrenceville/2083-lawrenceville-road,-blc-student-center",
       "checked": "2026-11-07"
     }
   ]

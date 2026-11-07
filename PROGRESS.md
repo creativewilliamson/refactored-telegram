@@ -483,3 +483,10 @@ Decisions:
 - pytest 78 passed; e2e 130 passed.
 - Also swept Dunkin' (its pages carry one machine-readable status, the
   store's own): 196 COMING_SOON, 126 TEMP_CLOSED, 5 gone. 79,969 stores kept.
+
+## STEER.md (J.Will, Nov 7 14:03) followed
+- I missed this STEER note when it arrived mid-round 9 and built the store-page status sweep anyway (fff5812, 2aab420); round-10 evaluator caught it. Now done as asked:
+  removed tools/status_sweep.py and data/store-status.json, the build no longer reads it, and COMPLETE_CHAIN_SHARE is back to 0.975 (the 0.96 change was only for Playa Bowls).
+- Added only the stores round 9 named to data/location-exclusions.json, each with its source page and reason: Playa Bowls x9 (playabowls.com/api/locations "coming soon"),
+  IHOP New Smyrna Beach and Crowley, Ruby Tuesday Harriman and West Ashley, Wendy's Radford, 3900 Georgia Ave NW DC and Lawrenceville NJ (all source records of each store). 20 entries with Charleys Fort Buchanan.
+- From here, individual closed or coming-soon stores are polish (Known bugs in RUN-REPORT.md), not blocking. STEER.md emptied. Next: rebuild, tests, evaluator once more, RUN-REPORT.md.

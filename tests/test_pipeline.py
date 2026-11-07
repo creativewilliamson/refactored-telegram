@@ -401,16 +401,6 @@ def test_location_exclusions_have_sources_and_apply(records):
 
 
 # ---- evaluator round 9 -------------------------------------------------------
-def test_store_status_entries_have_sources():
-    doc = load("data/store-status.json")
-    n = 0
-    for chain in doc["chains"].values():
-        for e in chain["flagged"]:
-            assert e["url"].startswith("https://") and e["status"] and e["checked"]
-            n += 1
-    assert n > 0
-
-
 def test_round9_closed_or_unopened_examples_gone(records):
     def has(b, start):
         return any(r["b"] == b and (r.get("a") or "").lower().startswith(start.lower()) for r in records)
@@ -419,3 +409,17 @@ def test_round9_closed_or_unopened_examples_gone(records):
     assert not has("wendys", "801 E Main St")
     assert not has("wendys", "3900 Georgia")
     assert not has("playa-bowls", "1105 5th St")
+    assert not has("ihop", "9607 Old Granbury")
+    assert not has("ruby-tuesday", "1953 Savannah")
+    assert not has("wendys", "2083 Lawrenceville")
+    for street in ("10690 NW 19th", "11943 Alamo Ranch", "7756 Charlotte Hwy", "1803 S 46 St",
+                   "750 S Rampart", "5251 Buckeystown", "6413 Sashabaw", "1892 Monroe Ave"):
+        assert not has("playa-bowls", street), street
+
+
+def test_no_store_page_sweep():
+    """STEER (J.Will, Nov 7): no automatic store-page status sweep; closed
+    stores are added one by one to data/location-exclusions.json."""
+    from pipeline import config
+    assert not (config.DATA / "store-status.json").exists()
+    assert len(load("data/location-exclusions.json")["exclusions"]) == 20

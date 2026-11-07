@@ -55,10 +55,9 @@ NOT_PUBLIC = re.compile(
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
 # Listings the chain hasn't filled in yet are placeholders for stores not open
 # yet (checked against chains' own pages in evaluator round 8: Dunkin' with
-# neither phone nor hours 19/21 COMING_SOON; Playa Bowls with neither 9/14
-# "coming soon"; Chipotle with no hours 29/44
+# neither phone nor hours 19/21 COMING_SOON; Chipotle with no hours 29/44
 # "COMING SOON!"; Wendy's with no hours 5/6 pages gone). See end of build().
-COMPLETE_CHAIN_SHARE = 0.96    # >= this share has a phone or hours -> drop listings with neither
+COMPLETE_CHAIN_SHARE = 0.975   # >= this share has a phone or hours -> drop listings with neither
 HOURS_CHAIN_SHARE = 0.97       # >= this share has hours -> drop listings without hours
 
 
@@ -233,15 +232,6 @@ def load_exclusions() -> set[tuple[str, str]]:
         if not (e.get("reason") and str(e.get("source_url", "")).startswith("https://")):
             raise ValueError(f"location exclusion without reason/source: {e}")
         out.add((e["spider"], str(e["ref"])))
-    # Stores whose own chain page shows them closed, coming soon or gone
-    # (tools/status_sweep.py; each entry has the page and the date checked).
-    status = config.DATA / "store-status.json"
-    if status.exists():
-        for chain in json.loads(status.read_text(encoding="utf-8")).get("chains", {}).values():
-            for e in chain.get("flagged", []):
-                if not (e.get("status") and str(e.get("url", "")).startswith("https://")):
-                    raise ValueError(f"store-status entry without status/page: {e}")
-                out.add((e["spider"], str(e["ref"])))
     return out
 
 
