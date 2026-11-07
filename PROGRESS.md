@@ -114,3 +114,10 @@ Decisions:
 - Added: island searches note when results are on another island (St.
   Thomas -> Puerto Rico); zero-store summary reads "No stores with offers...".
 - Evidence: evidence/F06.png (Guam), F06-american-samoa.png, F06-st-thomas.png.
+
+## F07: privacy (passes)
+- Playwright network log over a ZIP search, a "Lebanon, IN" search and a
+  mocked location: 48 requests, all same-origin GETs of static files; none
+  contains 46052, Lebanon or the coordinates; no cookies, no third parties.
+  ZIP lookup fetches /data/zip/460.json; city lookup /data/city/in.json.
+- Evidence: evidence/F07.png (log), evidence/F07-location-results.png.

@@ -90,7 +90,7 @@
         "Verify no cookies are set and no request URL or body contains the ZIP, city or coordinates"
       ],
       "evidence": "evidence/F07.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F08",
