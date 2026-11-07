@@ -23,6 +23,8 @@ RESULTS = Path(__file__).resolve().parents[2] / "evidence" / "F18-measurements.j
 
 
 def record(key, value):
+    if os.environ.get("EVIDENCE") != "1":   # normal test runs change no files
+        return
     data = json.loads(RESULTS.read_text()) if RESULTS.exists() else {}
     data[key] = value
     RESULTS.write_text(json.dumps(data, indent=1))
