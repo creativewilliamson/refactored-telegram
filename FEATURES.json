@@ -249,7 +249,7 @@
         "Open sitemap.xml and robots.txt; check OG tags on the home page"
       ],
       "evidence": "evidence/F19.png",
-      "passes": false
+      "passes": true
     }
   ]
 }

@@ -105,7 +105,15 @@
       var r = steps[i];
       return V.loadNearby(S.origin, r).then(function (res) {
         var count = res.records.length + placesWithin(r).length;
-        if (!S.userRadius && count < MIN_PLACES && i < steps.length - 1) { return attempt(i + 1); }
+        var enough = MIN_PLACES;
+        if (S.offer && S.data._byId[S.offer]) {
+          // "Find the nearest X": widen until at least one X is in range.
+          var want = S.data._byId[S.offer].brand;
+          count = res.records.filter(function (x) { return x.r.b === want; }).length +
+            placesWithin(r).filter(function (x) { return x.p.offer === S.offer; }).length;
+          enough = 1;
+        }
+        if (!S.userRadius && count < enough && i < steps.length - 1) { return attempt(i + 1); }
         S.radius = r;
         S.nearby = res.records;
         S.failed = res.failed;
@@ -315,7 +323,7 @@
     $("everywhere-note").textContent = n
       ? "These offers don’t need a store near you."
       : "Nothing with a store list is close to " + placeLabel + ", so start here: these offers work anywhere.";
-    $("everywhere-list").innerHTML = every.map(function (x) { return offerListItem(x, false); }).join("") ||
+    $("everywhere-list").innerHTML = every.map(function (x) { return offerListItem(x, true); }).join("") ||
       "<li>No offers here match your filters.</li>";
 
     // Chains without a store list (regional ones only in their states).

@@ -48,7 +48,23 @@
     {% endfor %}
     </ul>
   </section>
-  {% elif o.kind != "everywhere" %}
+  <section class="block" aria-labelledby="more-h">
+    <h2 id="more-h">See other offers near you</h2>
+    {{ search_box("of", "Your ZIP code, or City, ST") }}
+    <noscript><p class="notice">Search needs JavaScript. <a href="/">Pick your state</a> to see offers there.</p></noscript>
+  </section>
+  {% elif o.kind == "everywhere" %}
+  <section class="block" aria-labelledby="find-h">
+    <h2 id="find-h">Find the nearest {{ o.name | replace("National Parks", "national park") }}</h2>
+    <p>This offer has no store list. This button searches a map for one near you. It opens Google Maps.</p>
+    <p><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query={{ (o.map ~ ' near me') | urlencode }}" rel="noopener noreferrer" target="_blank">Find nearest<span class="sr-only"> {{ o.name }} on Google Maps</span></a></p>
+  </section>
+  <section class="block" aria-labelledby="more-h">
+    <h2 id="more-h">See other offers near you</h2>
+    {{ search_box("of", "Your ZIP code, or City, ST") }}
+    <noscript><p class="notice">Search needs JavaScript. <a href="/">Pick your state</a> to see offers there.</p></noscript>
+  </section>
+  {% else %}
   <section class="block" aria-labelledby="find-h">
     <h2 id="find-h">Find the nearest {{ o.name }}</h2>
     {{ search_box("of", "Your ZIP code, or City, ST", brand=o.id) }}

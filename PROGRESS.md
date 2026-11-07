@@ -232,3 +232,16 @@ Decisions:
   replaced with margins (Safari 14.0 lacks it); :focus fallback for
   :focus-visible.
 - Evidence: evidence/F18.png (+ F18-webkit.png, F18-measurements.json).
+
+## F19: offer pages, sitemap, robots, OG (passes)
+- 130 /offer/{slug}/ pages: offer, chips, who qualifies, rules, voucher,
+  where (store count / place / "no store"), source + checked date, and a
+  find-the-nearest: chain search (results filtered to that chain, "Show all
+  offers" to undo); National Parks / Grace for Vets: "Find nearest" map link
+  from the seed's map_query plus a search for other offers; places: address,
+  phone, directions.
+- A "find the nearest X" search now widens until at least one X is found.
+- sitemap.xml (188 URLs), robots.txt with Sitemap line, Open Graph tags,
+  text-only og.png 1200x630.
+- Evidence: evidence/F19.png. Tests: tests/e2e/test_offer_pages.py (7).
+- All 19 features pass. Next: full re-check, then the evaluator.
