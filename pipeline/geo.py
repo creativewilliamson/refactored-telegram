@@ -80,6 +80,7 @@ class Geo:
     zips: dict[str, list]          # zip -> [lat, lng, city, state] or "M"
     cities: dict[str, dict]        # state -> {key: [lat, lng, display]}
     counts: dict[str, int]
+    areas: dict[str, float]        # ZCTA land area, square miles
 
 
 def load(offline: bool = False) -> Geo:
@@ -89,8 +90,10 @@ def load(offline: bool = False) -> Geo:
     cached(ZIPCODES_LICENSE_URL, "zipcodes/LICENSE.txt", offline=offline)
 
     zcta = {}
+    areas: dict[str, float] = {}
     for r in _read_gazetteer(zcta_path):
         zcta[r["GEOID"]] = (float(r["INTPTLAT"]), float(r["INTPTLONG"]))
+        areas[r["GEOID"]] = float(r.get("ALAND_SQMI") or 0)
 
     zc = json.loads(bz2.decompress(zc_path.read_bytes()))
     postal: dict[str, dict] = {z["zip_code"]: z for z in zc}
@@ -179,7 +182,7 @@ def load(offline: bool = False) -> Geo:
         "postal_cities_added": added,
         "zcta_point_replaced_by_postal_town": moved,
     }
-    return Geo(zips=zips, cities=dict(cities), counts=counts)
+    return Geo(zips=zips, cities=dict(cities), counts=counts, areas=areas)
 
 
 def write_shards(geo: Geo, dist) -> int:

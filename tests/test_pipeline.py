@@ -197,3 +197,44 @@ def test_build_fails_when_pages_limits_exceeded(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "MAX_FILE_BYTES", 5)
     with pytest.raises(SystemExit, match="25 MiB"):
         build.check_limits(tmp_path)
+
+
+# ---- evaluator round 1: real, public stores in the right place ---------------
+def test_no_test_closed_or_staff_only_stores(records):
+    from pipeline.locations import NOT_PUBLIC, STREET_NOT_PUBLIC
+    for r in records:
+        assert not (r.get("n") and NOT_PUBLIC.search(r["n"])), r
+        assert not STREET_NOT_PUBLIC.search(r.get("a") or ""), r
+    # Texas Roadhouse's QA/test entries on Guam are gone (it has no Guam store).
+    assert not any(r["b"] == "texas-roadhouse" and r["s"] == "GU" for r in records)
+
+
+def test_no_placeholder_phones(records):
+    from pipeline.locations import is_placeholder_phone
+    for r in records:
+        if "p" in r:
+            assert not is_placeholder_phone(r["p"]), r
+    assert is_placeholder_phone("5555555555") and is_placeholder_phone("7667676767")
+    assert not is_placeholder_phone("7654827644")
+
+
+def test_stores_sit_near_their_zip_and_show_its_state(records):
+    import math
+    from pipeline.locations import MIN_ZIP_ALLOWANCE_MI, ZIP_SLACK_MI, miles
+    zips, areas = {}, {}
+    for f in glob.glob(str(DIST / "data/zip/*.json")):
+        zips.update({k: v for k, v in json.loads(Path(f).read_text(encoding="utf-8")).items() if isinstance(v, list)})
+    import zipfile
+    with zipfile.ZipFile(config.CACHE / "census" / "2025_Gaz_zcta_national.zip") as z:
+        lines = z.read(z.namelist()[0]).decode("utf-8").splitlines()
+    head = lines[0].split("|")
+    for ln in lines[1:]:
+        row = dict(zip(head, ln.split("|")))
+        areas[row["GEOID"]] = float(row["ALAND_SQMI"])
+    for r in records:
+        z = r.get("z")
+        if z in zips:
+            zl = zips[z]
+            allowed = max(MIN_ZIP_ALLOWANCE_MI, math.sqrt(areas.get(z, 0) / math.pi) + ZIP_SLACK_MI)
+            assert miles(r["la"], r["lo"], zl[0], zl[1]) <= allowed + 0.01, r
+            assert r["s"] == zl[3], r

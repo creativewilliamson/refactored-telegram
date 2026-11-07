@@ -50,11 +50,17 @@ def coverage(brands_doc: dict, stats: dict, choices: dict, records: list[dict], 
         "",
         "Dropped along the way (all brands): "
         f"wrong brand Q-id {sum(s.wrong_brand for s in stats.values())}, "
+        f"marked by the source as test/lab, closed, coming soon or staff-only "
+        f"{sum(s.not_public for s in stats.values())}, "
         f"outside the U.S. {sum(s.not_us for s in stats.values())}, "
         f"no coordinates and no usable address {sum(s.no_place for s in stats.values())}, "
         f"coordinates far from their ZIP or outside the U.S. {sum(s.bad_coords for s in stats.values())}, "
         f"duplicates {sum(s.duplicates for s in stats.values())}. "
-        f"Placed with the U.S. Census Geocoder: {sum(s.geocoded for s in stats.values())}.",
+        f"Placed with the U.S. Census Geocoder: {sum(s.geocoded for s in stats.values())}. "
+        f"Placeholder phone numbers removed (store kept, no phone shown): "
+        f"{sum(s.placeholder_phone for s in stats.values())}. "
+        f"State corrected to the ZIP's state: {sum(s.state_fixed for s in stats.values())}. "
+        f"ZIP hidden because it contradicts the store's own town: {sum(s.zip_hidden for s in stats.values())}.",
         "",
         f"Total store locations: **{len(records)}**. Single places: **{len(places)}**.",
         "",

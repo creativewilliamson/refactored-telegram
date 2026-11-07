@@ -89,7 +89,8 @@ def build(offline: bool = False, quick: bool = False) -> None:
     else:
         g = geo.load(offline)
         log(f"geo: {g.counts}")
-        records, stats, choices = locations.build(brands_doc["brands"], g.zips, offline)
+        records, stats, choices = locations.build(brands_doc["brands"], g.zips, offline,
+                                                  areas=g.areas, cities=g.cities)
         state_path.parent.mkdir(parents=True, exist_ok=True)
         state_path.write_bytes(pickle.dumps((g, records, stats, choices)))
     kept = {b: s.kept for b, s in stats.items()}

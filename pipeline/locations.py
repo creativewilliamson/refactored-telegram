@@ -15,6 +15,7 @@ Record: {b: brandSlug, n: branch?, a: street, c: city, s: state, z: zip,
 from __future__ import annotations
 
 import collections
+import datetime as dt
 import json
 import math
 import re
@@ -28,8 +29,20 @@ STATE_BY_NAME = {v.lower(): k for k, v in config.STATES.items()}
 STATE_BY_NAME.update({"virgin islands": "VI", "us virgin islands": "VI", "washington dc": "DC",
                       "washington, d.c.": "DC", "puerto rico": "PR"})
 ZIP_RE = re.compile(r"\b(\d{5})(?:-\d{4})?\b")
-MAX_FROM_ZIP_MI = 75       # store must be this close to its own ZIP centroid
-MAX_FROM_ANY_ZIP_MI = 60   # and this close to some U.S. ZIP centroid
+MAX_FROM_ANY_ZIP_MI = 60   # store must be this close to some U.S. ZIP centroid
+ZIP_SLACK_MI = 10          # ...and within (ZIP radius + this) of its own ZIP
+MIN_ZIP_ALLOWANCE_MI = 15
+CITY_ALLOWANCE_MI = 25     # or within this of its own town's Census point
+STATE_BORDER_MI = 15
+
+# The source itself marks these as not real public stores: test and lab
+# entries, closed or not-yet-open stores, and staff-only sites.
+NOT_PUBLIC = re.compile(
+    r"\b(test|testing|qa|lab|dev|demo|uat|sandbox)\b|do not use|do not order|support cent(er|re)|training (center|store)|"
+    r"corporate office|secure access|closed to (the )?public|\bclosed\b|coming soon|opening soon|"
+    r"not (yet )?open|future (site|location)|\bplaceholder\b",
+    re.I,
+)
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
 
 
@@ -88,9 +101,78 @@ def norm_phone(v: str | None) -> str | None:
     digits = re.sub(r"\D", "", first)
     if len(digits) == 11 and digits.startswith("1"):
         digits = digits[1:]
-    if len(digits) == 10 and digits[0] not in "01" and digits[3] not in "01":
-        return digits
-    return None
+    if len(digits) != 10 or digits[0] in "01" or digits[3] in "01":
+        return None
+    if is_placeholder_phone(digits):
+        return None
+    return digits
+
+
+def is_placeholder_phone(d: str) -> bool:
+    """Numbers the source uses as fillers (555-555-5555, 999-999-9999,
+    766-767-6767, 123-456-7890). The store stays; the phone is dropped."""
+    if d[3:6] == "555":                       # 555 exchange: fictional/directory
+        return True
+    if len(set(d)) == 1:                       # 999-999-9999
+        return True
+    local = d[3:]
+    if all(local[i] == local[i % 2] for i in range(7)):   # 767-6767 style filler
+        return True
+    if d in ("1234567890", "2345678901", "9876543210"):
+        return True
+    if d[1:3] == "11" or d[4:6] == "11":       # N11 codes (411, 911...) aren't store lines
+        return True
+    return False
+
+
+# Street fields hold real names like "Test Drive", so only unmistakable
+# markers count there.
+STREET_NOT_PUBLIC = re.compile(r"do not use|do not order|closed|coming soon|secure access|not (yet )?open", re.I)
+
+
+TEST_SITE = re.compile(r"\b(test|testing|qa|lab|dev|demo|uat|sandbox)\b|do not (use|order)|support cent(er|re)", re.I)
+TEST_CLUSTER_MI = 0.25
+
+
+def test_points(feats: list[dict], qids: set) -> list[tuple[float, float]]:
+    """Where the brand keeps test/lab entries. Other entries of the same brand
+    within a quarter mile are staging copies too (e.g. "TXRH Win10", "Tier 2"
+    beside a "QA Lab"), so they are dropped with them."""
+    pts = []
+    for f in feats:
+        p = f.get("properties") or {}
+        if p.get("brand:wikidata") not in qids:
+            continue
+        names = " ".join(str(p.get(k) or "") for k in ("branch", "name", "addr:unit"))
+        streets = " ".join(str(p.get(k) or "") for k in ("addr:street_address", "addr:full"))
+        g = f.get("geometry") or {}
+        if (TEST_SITE.search(names) or re.search(r"do not (use|order)", streets, re.I)) and g.get("coordinates"):
+            lng, lat = g["coordinates"][:2]
+            pts.append((float(lat), float(lng)))
+    return pts
+
+
+def near_test_point(f: dict, pts: list[tuple[float, float]]) -> bool:
+    g = f.get("geometry") or {}
+    if not pts or not g.get("coordinates"):
+        return False
+    lng, lat = g["coordinates"][:2]
+    return any(miles(lat, lng, a, b) <= TEST_CLUSTER_MI for a, b in pts)
+
+
+def not_public(p: dict) -> bool:
+    for key in ("branch", "name", "addr:unit"):
+        v = p.get(key)
+        if v and NOT_PUBLIC.search(str(v)):
+            return True
+    for key in ("addr:street_address", "addr:street", "addr:full"):
+        v = p.get(key)
+        if v and STREET_NOT_PUBLIC.search(str(v)):
+            return True
+    end = str(p.get("end_date") or "").strip()
+    if end and (end == "yes" or end <= dt.date.today().isoformat()):
+        return True
+    return False
 
 
 def street_of(p: dict) -> str:
@@ -120,14 +202,22 @@ class BrandStats:
     not_us: int = 0
     no_place: int = 0
     geocoded: int = 0
+    not_public: int = 0
+    placeholder_phone: int = 0
     bad_coords: int = 0
+    state_fixed: int = 0
+    zip_hidden: int = 0
     duplicates: int = 0
     kept: int = 0
     run: str = ""
     spiders: list[str] = field(default_factory=list)
 
 
-def build(brands: dict, zips: dict[str, list], offline: bool) -> tuple[list[dict], dict[str, BrandStats], dict]:
+def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, float] | None = None,
+          cities: dict[str, dict] | None = None) -> tuple[list[dict], dict[str, BrandStats], dict]:
+    from .geo import norm_name
+    areas = areas or {}
+    cities = cities or {}
     zindex = ZipIndex({k: v for k, v in zips.items() if isinstance(v, list)})
     spiders = sorted({s for b in brands.values() for s in b.get("atp_spiders", [])})
     choices = atp.choose_runs(spiders, offline)
@@ -146,12 +236,19 @@ def build(brands: dict, zips: dict[str, list], offline: bool) -> tuple[list[dict
                 continue
             st.run = pick[0]
             feats = atp.load_features(atp.spider_file(sp, pick[0], offline))
+            labs = test_points(feats, qids)
             for f in feats:
                 st.features += 1
                 p = f.get("properties") or {}
                 if p.get("brand:wikidata") not in qids:
                     st.wrong_brand += 1
                     continue
+                if not_public(p) or near_test_point(f, labs):
+                    st.not_public += 1
+                    continue
+                raw = re.sub(r"\D", "", str(p.get("phone") or "").split(";")[0])[-10:]
+                if len(raw) == 10 and is_placeholder_phone(raw):
+                    st.placeholder_phone += 1
                 country = (p.get("addr:country") or "").upper() or None
                 fc, fs, fz = parse_full(p.get("addr:full") or "")
                 state = norm_state(p.get("addr:state")) or fs
@@ -224,17 +321,34 @@ def build(brands: dict, zips: dict[str, list], offline: bool) -> tuple[list[dict
         if near_d > MAX_FROM_ANY_ZIP_MI:
             st.bad_coords += 1
             continue
+        # The point must agree with the store's own ZIP (allowing for big
+        # rural ZIPs) or, if the ZIP itself is off, with its own town.
         z = rec.get("z")
+        town = None
+        if rec.get("s") and rec.get("c"):
+            town = cities.get(rec["s"], {}).get(norm_name(rec["c"]))
+        near_town = bool(town) and miles(lat, lng, town[0], town[1]) <= CITY_ALLOWANCE_MI
         if z and z in zindex.zips:
             zlat, zlng, zcity, zst = zindex.zips[z]
-            if miles(lat, lng, zlat, zlng) > MAX_FROM_ZIP_MI:
+            radius = math.sqrt(areas.get(z, 0.0) / math.pi)
+            allowed = max(MIN_ZIP_ALLOWANCE_MI, radius + ZIP_SLACK_MI)
+            if miles(lat, lng, zlat, zlng) <= allowed:
+                if rec["s"] and rec["s"] != zst:
+                    st.state_fixed += 1          # e.g. "New York, NJ 10001" -> NY
+                rec["s"] = zst
+                rec["c"] = rec["c"] or zcity.title()
+            elif near_town:
+                del rec["z"]                     # ZIP contradicts the place: don't show it
+                st.zip_hidden += 1
+            else:
                 st.bad_coords += 1
                 continue
-            rec["s"] = rec["s"] or zst
-            rec["c"] = rec["c"] or zcity.title()
+        elif town and not near_town:
+            st.bad_coords += 1
+            continue
         if not rec["s"]:
             rec["s"] = near_state
-        if rec["s"] != near_state and not zindex.state_near(lat, lng, rec["s"], 30):
+        if rec["s"] != near_state and not zindex.state_near(lat, lng, rec["s"], STATE_BORDER_MI):
             st.bad_coords += 1
             continue
         rec["la"], rec["lo"] = round(lat, 5), round(lng, 5)

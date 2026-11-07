@@ -245,3 +245,32 @@ Decisions:
   text-only og.png 1200x630.
 - Evidence: evidence/F19.png. Tests: tests/e2e/test_offer_pages.py (7).
 - All 19 features pass. Next: full re-check, then the evaluator.
+
+## Evaluator round 1: NEEDS_WORK (2 blocking) -> work items
+- W1 (blocking): drop test/QA/lab/"DO NOT USE"/closed/coming-soon/secure-access
+  /corporate-office stores from ATP; strip placeholder phones (555-xxxx,
+  999-999-9999, 766-767-6767...) but keep the store ("No phone listed").
+- W2 (blocking): stores far from their own ZIP (40-73 mi) and cards whose
+  state contradicts the ZIP (e.g. "New York, NJ 10001"): tighten the ZIP
+  distance check, use the ZIP's Census/postal state when they disagree.
+- Polish items (not fixed, per CLAUDE.md) go to RUN-REPORT.md Known bugs.
+
+## Evaluator round 1 fixes (W1, W2)
+- W1: pipeline/locations.py drops stores the source itself marks as not
+  public: names with test/QA/lab/dev/demo/UAT/sandbox, "do not use/order",
+  support center, corporate office, secure access, closed (to public),
+  coming/opening soon; ATP end_date in the past. Street fields only count the
+  unmistakable markers (a real Starbucks is on "W. Test Drive"). Stores within
+  0.25 mi of a brand's own test/lab entry are dropped too (Texas Roadhouse's
+  "Win10", "Tier 2", "Global Menu Store" staging copies on Guam, in Wahiawa
+  and at its Louisville HQ). 107 dropped. Placeholder phones (555 exchange,
+  all-same digits, 767-6767 style, N11) are removed and the store shows "No
+  phone listed": 41.
+- W2: a store must sit within max(15 mi, ZIP radius from Census land area +
+  10 mi) of its own ZIP; then the card takes the ZIP's state (163 fixed, e.g.
+  "New York, NJ 10001" -> NY). If the ZIP is the odd one out but the point is
+  within 25 mi of the store's own town, the ZIP is hidden (141); otherwise the
+  store is dropped (35). Border tolerance for no-ZIP stores 30 -> 15 mi.
+- pytest: no not-public names, no placeholder phones, every store near its
+  ZIP with the ZIP's state (43 passed); e2e 112 passed. 81,0xx stores.
+- Re-took evidence/F06.png (Guam now 3 real stores).
