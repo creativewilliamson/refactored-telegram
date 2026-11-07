@@ -128,3 +128,14 @@ Decisions:
   notice, About link. About: last-checked date (from the seed's verified_on),
   plain-words privacy, sources (ATP, Wikidata, Census, zipcodes MIT).
 - Evidence: evidence/F08.png, evidence/F08-footer-state.png.
+
+## F09: deploy-ready build (passes)
+- `docker compose run --rm build` -> dist/ (3,121 files, largest 253 KB);
+  build stops with BUILD FAILED past 20,000 files or 25 MiB (pytest proves
+  it). _redirects: /near/* /near/index.html 200. _headers: HTML 300 s,
+  /data/* 3600 s, hashed CSS/JS immutable, strict CSP, no-referrer.
+- DEPLOY.md: dashboard upload / Wrangler / GitHub, live check, custom
+  domain, Web Analytics (incl. the CSP edit it needs), one-line daily
+  rebuild + deploy. README.md: commands (data, build, test, serve).
+- Dropped the deprecated interest-cohort Permissions-Policy (console noise).
+- Evidence: evidence/F09.png, evidence/F09-near.png. Next: F10 (axe/a11y).

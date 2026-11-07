@@ -183,3 +183,16 @@ def test_no_third_party_scripts_or_images():
         html = page.read_text(encoding="utf-8")
         for src in re.findall(r'<(?:script|img|link)[^>]+(?:src|href)="([^"]+)"', html):
             assert not src.startswith("http") or src.startswith(config.SITE_URL), (page, src)
+
+
+def test_build_fails_when_pages_limits_exceeded(tmp_path, monkeypatch):
+    from pipeline import build
+    for i in range(3):
+        (tmp_path / f"f{i}.txt").write_text("x" * 10)
+    monkeypatch.setattr(config, "MAX_FILES", 3)
+    with pytest.raises(SystemExit, match="20,000"):
+        build.check_limits(tmp_path)
+    monkeypatch.setattr(config, "MAX_FILES", 20_000)
+    monkeypatch.setattr(config, "MAX_FILE_BYTES", 5)
+    with pytest.raises(SystemExit, match="25 MiB"):
+        build.check_limits(tmp_path)

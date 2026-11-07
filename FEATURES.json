@@ -117,7 +117,7 @@
         "Open DEPLOY.md and verify the steps and the one-line daily rebuild command"
       ],
       "evidence": "evidence/F09.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F10",

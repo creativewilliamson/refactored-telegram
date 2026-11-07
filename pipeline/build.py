@@ -35,7 +35,7 @@ def headers_file(csp: str) -> str:
     parts = [f"""/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
-  Permissions-Policy: geolocation=(self), camera=(), microphone=(), interest-cohort=()
+  Permissions-Policy: geolocation=(self), camera=(), microphone=()
   Content-Security-Policy: {csp}
 """]
     for route in HTML_ROUTES:
