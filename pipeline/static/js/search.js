@@ -19,6 +19,16 @@
     });
   }
 
+  // "New search" on every other page links to /#search: put the cursor in
+  // the search box. The page stays at the top so the heading shows.
+  if (window.location.hash === "#search") {
+    var box = document.querySelector("#search-form input[type=text]");
+    if (box) {
+      box.focus();
+      try { history.replaceState(null, "", "/"); } catch (e) { /* ignore */ }
+    }
+  }
+
   var forms = document.querySelectorAll("form[data-search]");
   Array.prototype.forEach.call(forms, function (form) {
     // The box has no name attribute on purpose: if this script ever fails to

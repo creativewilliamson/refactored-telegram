@@ -516,3 +516,12 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - DEPLOY.md: project vetdaydeals, Wrangler is the main way; dashboard drag-and-drop is limited to 1,000 files (site has ~3,100), so not used.
 - Kept: folder, compose project/image names (vetseatfree), data file names. dist/ has 0 matches for VetsEatFree/Vets Eat Free/vetseatfree.
 - tests/e2e/test_run2.py (8 new). Evidence: evidence/F26.png. Next: F27 "New search" button.
+
+## F27: "New search" button on every page but home (passes)
+- base.html.j2 block at the top of <main> (home empties it); results page has a second one right after "Show more places" (read
+  "at the bottom after Show more" as directly below the store list, closest to where the reader is). Hidden in print (no-print).
+- Link is /#search (no element has that id, so the browser doesn't jump); search.js focuses the search box and drops the hash.
+  Always goes to /, never history.back(), so it works from a link opened fresh from Facebook or a text.
+- Results page: focus still moves to the results heading (F10); the button is one Shift+Tab above it. Elsewhere it's the 3rd Tab stop.
+- Also: the service worker now deletes every cache but its own build's (old "vef-" caches from local testing were left behind).
+- e2e test_run2.py: 17 passed. Evidence: evidence/F27.png. Next: F20 re-check of the round-9 flagged stores.

@@ -20,7 +20,8 @@ self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(keys.filter(function (k) {
-        return k.indexOf("vdd-") === 0 && k !== CACHE;
+        // Every cache on this site belongs to this helper: keep only this build's.
+        return k !== CACHE;
       }).map(function (k) { return caches.delete(k); }));
     }).then(function () { return self.clients.claim(); })
   );

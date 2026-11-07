@@ -133,6 +133,10 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 
 /* Shared lists and chips */
 .crumbs { margin: 1rem 0 0.5rem; }
+/* "New search": back to the home page search box (not browser history). */
+.new-search-top { padding-top: 0.75rem; }
+.new-search-top + .wrap .crumbs { margin-top: 0.25rem; }
+.new-search-bottom { margin: 1rem 0; }
 .crumbs a { display: inline-flex; align-items: center; min-height: 48px; min-width: 48px; }
 .count { color: var(--muted); font-weight: 400; }
 .link-grid {

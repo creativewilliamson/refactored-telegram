@@ -278,7 +278,7 @@
         "Tab to it with the keyboard and check its height is at least 48px at 375px wide"
       ],
       "evidence": "evidence/F27.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F20",
