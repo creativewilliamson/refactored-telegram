@@ -1,0 +1,28 @@
+{% macro offer_line(o, count=None, place_name=None, show_name=True) %}
+<li class="offer-row">
+  {% if show_name %}<h3 class="offer-name"><a href="/offer/{{ o.id }}/">{{ o.name }}</a>{% if count %} <span class="count">· {{ count }} {{ 'store' if count == 1 else 'stores' }} here</span>{% endif %}</h3>{% endif %}
+  <p class="offer-text">{{ o.offer }}</p>
+  <p class="chips">
+    <span class="chip chip-type">{{ types[o.type] }}</span>
+    <span class="chip">{{ o | range }}</span>
+    {% if o.tw %}<span class="chip chip-time">{{ o.tw }}</span>{% endif %}
+    {% if o.redeem_by %}<span class="chip chip-voucher">Voucher good until {{ o.redeem_by | long }}</span>{% endif %}
+  </p>
+  <p class="who"><strong>Who:</strong> {{ o.elig }}</p>
+  {% if o.terms %}<p class="terms">{{ o.terms }}</p>{% endif %}
+  <p class="links"><a href="{{ o.src }}" rel="noopener noreferrer" target="_blank">Offer details<span class="sr-only"> for {{ o.name }} (opens the business's page)</span></a></p>
+</li>
+{% endmacro %}
+
+{% macro search_box(id_prefix, label, brand=None, state=None) %}
+<form class="search js-only" data-search {% if brand %}data-brand="{{ brand }}"{% endif %} action="/near/" method="get" role="search" novalidate>
+  <label for="{{ id_prefix }}-q">{{ label }}</label>
+  <div class="search-row">
+    <input id="{{ id_prefix }}-q" name="q" type="text" autocomplete="postal-code"
+           placeholder="46052 or Lebanon, IN" aria-describedby="{{ id_prefix }}-msg" required>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </div>
+  <p id="{{ id_prefix }}-msg" class="msg" role="alert" hidden></p>
+  <button type="button" class="btn btn-secondary btn-block" data-locate>Use my location</button>
+</form>
+{% endmacro %}

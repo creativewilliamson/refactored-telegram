@@ -1,0 +1,63 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import search_box %}
+{% block title %}{{ o.name }} Veterans Day 2026 offer | {{ site_name }}{% endblock %}
+{% block description %}{{ o.name }}: {{ o.offer }}. {{ o | range }}. For {{ o.elig | lower }}.{% endblock %}
+{% block canonical %}/offer/{{ o.id }}/{% endblock %}
+{% block main %}
+<div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> › {{ cats[o.cat] }}</p>
+  <h1>{{ o.name }}</h1>
+  <p class="offer-big">{{ o.offer }}</p>
+  <p class="chips">
+    <span class="chip chip-type">{{ types[o.type] }}</span>
+    <span class="chip">{{ o | range }}</span>
+    {% if o.tw %}<span class="chip chip-time">{{ o.tw }}</span>{% endif %}
+    {% if o.redeem_by %}<span class="chip chip-voucher">Voucher good until {{ o.redeem_by | long }}</span>{% endif %}
+  </p>
+  <dl class="facts">
+    <dt>Who qualifies</dt>
+    <dd>{{ o.elig }}</dd>
+    {% if o.terms %}<dt>Rules</dt><dd>{{ o.terms }}</dd>{% endif %}
+    {% if o.redeem_note %}<dt>Voucher</dt><dd>{{ o.redeem_note }}</dd>{% endif %}
+    <dt>Where</dt>
+    <dd>
+      {% if o.kind == "everywhere" %}Good anywhere in the U.S.; no store needed.
+      {% elif o.kind == "place" %}{% for p in places %}{{ p.n }}, {{ p.c }}, {{ p.s }}{% if not loop.last %}; {% endif %}{% endfor %}
+      {% elif o.kind == "stores" %}{{ store_total }} stores in {{ states_with | length }} {{ 'state or territory' if states_with | length == 1 else 'states and territories' }} on our map.{% if o.scope == "regional" %} Regional offer: {{ o.states | join(", ") }}.{% endif %}
+      {% else %}{% if o.states %}{{ o.states | join(", ") }}. {% endif %}We don't have this chain's store list. Search a map for the nearest one.{% endif %}
+    </dd>
+    <dt>Source</dt>
+    <dd><a href="{{ o.src }}" rel="noopener noreferrer" target="_blank">Offer details on the business's page</a> (checked {{ o.checked | long }})</dd>
+  </dl>
+
+  {% if o.kind == "place" %}
+  <section class="block" aria-labelledby="place-h">
+    <h2 id="place-h">How to get there</h2>
+    <ul class="place-list">
+    {% for p in places %}
+      <li>
+        <h3>{{ p.n }}</h3>
+        <p>{% if p.a %}{{ p.a }}<br>{% endif %}{{ p.c }}, {{ p.s }} {{ p.z }}</p>
+        {% if p.approx %}<p class="terms">We don't have the exact street address. The map link goes to the middle of {{ p.c }}; check the offer details for the exact spot.</p>{% endif %}
+        <p class="actions">
+          {% if p.p %}<a class="btn btn-secondary" href="tel:+1{{ p.p }}">Call {{ p.p | phone }}</a>{% endif %}
+          <a class="btn btn-secondary" href="https://www.google.com/maps/dir/?api=1&amp;destination={{ p.la }},{{ p.lo }}" rel="noopener noreferrer" target="_blank">Google Maps</a>
+          <a class="btn btn-secondary" href="https://maps.apple.com/?daddr={{ p.la }},{{ p.lo }}" rel="noopener noreferrer" target="_blank">Apple Maps</a>
+        </p>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% elif o.kind != "everywhere" %}
+  <section class="block" aria-labelledby="find-h">
+    <h2 id="find-h">Find the nearest {{ o.name }}</h2>
+    {{ search_box("of", "Your ZIP code, or City, ST", brand=o.id) }}
+    <noscript><p class="notice">Search needs JavaScript. <a href="/">Pick your state</a> to see offers there.</p></noscript>
+  </section>
+  {% endif %}
+  <p class="block"><a href="/">← All Veterans Day offers</a></p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ asset('js/search.js') }}" defer></script>
+{% endblock %}

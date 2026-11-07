@@ -1,0 +1,534 @@
+{
+ "_readme": "Each brand Q-id from data/brands.json as found on wikidata.org (label and description), checked by pipeline/wikidata.py.",
+ "qids": {
+  "Q1025921": {
+   "ok": true,
+   "label": "Hooters",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1025921"
+  },
+  "Q1058722": {
+   "ok": true,
+   "label": "Shake Shack",
+   "description": "fast casual burger restaurant",
+   "url": "https://www.wikidata.org/wiki/Q1058722"
+  },
+  "Q1064893": {
+   "ok": true,
+   "label": "Outback Steakhouse",
+   "description": "American chain steakhouse",
+   "url": "https://www.wikidata.org/wiki/Q1064893"
+  },
+  "Q1066777": {
+   "ok": true,
+   "label": "Charleys Cheesesteaks",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1066777"
+  },
+  "Q106769573": {
+   "ok": true,
+   "label": "Torchy’s Tacos",
+   "description": "American fast-casual restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q106769573"
+  },
+  "Q1072948": {
+   "ok": true,
+   "label": "Chili's",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1072948"
+  },
+  "Q111304278": {
+   "ok": true,
+   "label": "Lazy Dog Restaurant & Bar",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q111304278"
+  },
+  "Q113163467": {
+   "ok": true,
+   "label": "WaBa Grill",
+   "description": "fast food chain in the United States",
+   "url": "https://www.wikidata.org/wiki/Q113163467"
+  },
+  "Q114618507": {
+   "ok": true,
+   "label": "Playa Bowls",
+   "description": "fast food chain specializing in açaí fruit bowls",
+   "url": "https://www.wikidata.org/wiki/Q114618507"
+  },
+  "Q115930150": {
+   "ok": true,
+   "label": "Keke's Breakfast Cafe",
+   "description": "American cafe chain",
+   "url": "https://www.wikidata.org/wiki/Q115930150"
+  },
+  "Q1185675": {
+   "ok": true,
+   "label": null,
+   "description": "American multinational pancake house restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1185675"
+  },
+  "Q1189695": {
+   "ok": true,
+   "label": "Denny's",
+   "description": "restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1189695"
+  },
+  "Q1205312": {
+   "ok": true,
+   "label": "In-N-Out Burger",
+   "description": "American chain of fast food restaurants",
+   "url": "https://www.wikidata.org/wiki/Q1205312"
+  },
+  "Q121292194": {
+   "ok": true,
+   "label": "110 Grill",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q121292194"
+  },
+  "Q123689179": {
+   "ok": true,
+   "label": "Hopdoddy Burger Bar",
+   "description": "American burger chain restaurant",
+   "url": "https://www.wikidata.org/wiki/Q123689179"
+  },
+  "Q1244034": {
+   "ok": true,
+   "label": "White Castle",
+   "description": "fast food restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1244034"
+  },
+  "Q127688691": {
+   "ok": true,
+   "label": "7 Brew",
+   "description": "coffee shop chain in the United States",
+   "url": "https://www.wikidata.org/wiki/Q127688691",
+   "redirects_to": "Q131838275"
+  },
+  "Q131290500": {
+   "ok": true,
+   "label": "54th Street Grill and Bar",
+   "description": "chain of family restaurants serving American cuisine",
+   "url": "https://www.wikidata.org/wiki/Q131290500"
+  },
+  "Q131838275": {
+   "ok": true,
+   "label": "7 Brew",
+   "description": "coffee shop chain in the United States",
+   "url": "https://www.wikidata.org/wiki/Q131838275"
+  },
+  "Q1393809": {
+   "ok": true,
+   "label": "Little Caesars",
+   "description": "American multinational pizza chain based in Detroit",
+   "url": "https://www.wikidata.org/wiki/Q1393809"
+  },
+  "Q1435950": {
+   "ok": true,
+   "label": "Food Lion",
+   "description": "American grocery store",
+   "url": "https://www.wikidata.org/wiki/Q1435950"
+  },
+  "Q15109854": {
+   "ok": true,
+   "label": "California Pizza Kitchen",
+   "description": "casual dining restaurant franchise founded in California with an established brand mostly in the United States",
+   "url": "https://www.wikidata.org/wiki/Q15109854"
+  },
+  "Q15109925": {
+   "ok": true,
+   "label": "Tractor Supply Company",
+   "description": "American retail chain",
+   "url": "https://www.wikidata.org/wiki/Q15109925"
+  },
+  "Q1524184": {
+   "ok": true,
+   "label": "TGI Fridays",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1524184"
+  },
+  "Q1591889": {
+   "ok": true,
+   "label": "Walgreens",
+   "description": "American pharmacy and convenience store chain",
+   "url": "https://www.wikidata.org/wiki/Q1591889"
+  },
+  "Q1639719": {
+   "ok": true,
+   "label": "Hy-Vee",
+   "description": "U.S. employee owned supermarket chain",
+   "url": "https://www.wikidata.org/wiki/Q1639719"
+  },
+  "Q16935493": {
+   "ok": true,
+   "label": "Bar Louie Restaurants",
+   "description": "American bar and restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q16935493"
+  },
+  "Q17019306": {
+   "ok": true,
+   "label": "Lucille's Smokehouse Bar-B-Que",
+   "description": "Restaurant chain in the western United States",
+   "url": "https://www.wikidata.org/wiki/Q17019306"
+  },
+  "Q17061332": {
+   "ok": true,
+   "label": "Smashburger",
+   "description": "American fast-food chain",
+   "url": "https://www.wikidata.org/wiki/Q17061332"
+  },
+  "Q17109937": {
+   "ok": true,
+   "label": "Rack Room Shoes",
+   "description": "American footwear retailer",
+   "url": "https://www.wikidata.org/wiki/Q17109937"
+  },
+  "Q1848822": {
+   "ok": true,
+   "label": "Sizzler",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q1848822"
+  },
+  "Q19720749": {
+   "ok": true,
+   "label": "Chicken Salad Chick",
+   "description": "Fast casual food chain",
+   "url": "https://www.wikidata.org/wiki/Q19720749"
+  },
+  "Q21189156": {
+   "ok": true,
+   "label": "Yard House",
+   "description": "American sports bar chain",
+   "url": "https://www.wikidata.org/wiki/Q21189156"
+  },
+  "Q23016666": {
+   "ok": true,
+   "label": "Blaze Pizza",
+   "description": "pizza restaurant chain in the United States",
+   "url": "https://www.wikidata.org/wiki/Q23016666"
+  },
+  "Q2940968": {
+   "ok": true,
+   "label": "Casey's General Stores",
+   "description": "chain of convenience stores in the Midwestern United States",
+   "url": "https://www.wikidata.org/wiki/Q2940968"
+  },
+  "Q3045312": {
+   "ok": true,
+   "label": "Olive Garden",
+   "description": "American casual dining restaurant chain specializing in Italian-American cuisine",
+   "url": "https://www.wikidata.org/wiki/Q3045312"
+  },
+  "Q3259007": {
+   "ok": true,
+   "label": "LongHorn Steakhouse",
+   "description": "restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q3259007"
+  },
+  "Q37158": {
+   "ok": true,
+   "label": "Starbucks",
+   "description": "American multinational coffee company",
+   "url": "https://www.wikidata.org/wiki/Q37158"
+  },
+  "Q4039560": {
+   "ok": true,
+   "label": "Golden Corral",
+   "description": "American chain of restaurants",
+   "url": "https://www.wikidata.org/wiki/Q4039560"
+  },
+  "Q465751": {
+   "ok": true,
+   "label": "Chipotle Mexican Grill",
+   "description": "American fast casual Mexican restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q465751"
+  },
+  "Q4835755": {
+   "ok": true,
+   "label": "BJ's Restaurant & Brewery",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q4835755"
+  },
+  "Q4887996": {
+   "ok": true,
+   "label": "Benihana",
+   "description": "Japanese steakhouse based in the United States",
+   "url": "https://www.wikidata.org/wiki/Q4887996"
+  },
+  "Q4906876": {
+   "ok": true,
+   "label": "Biggby Coffee",
+   "description": "American coffee shop chain",
+   "url": "https://www.wikidata.org/wiki/Q4906876"
+  },
+  "Q4932386": {
+   "ok": true,
+   "label": "Bob Evans Restaurants",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q4932386"
+  },
+  "Q4941599": {
+   "ok": true,
+   "label": "Bonefish Grill",
+   "description": "American casual dining seafood restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q4941599"
+  },
+  "Q4978656": {
+   "ok": true,
+   "label": "Bruegger's",
+   "description": "restaurant operator in the United States",
+   "url": "https://www.wikidata.org/wiki/Q4978656"
+  },
+  "Q5036283": {
+   "ok": true,
+   "label": "Capriotti's",
+   "description": "American fast casual restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5036283"
+  },
+  "Q5045999": {
+   "ok": true,
+   "label": "Carrabba's Italian Grill",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5045999"
+  },
+  "Q509255": {
+   "ok": true,
+   "label": "Buffalo Wild Wings",
+   "description": "American sports bar and restaurant",
+   "url": "https://www.wikidata.org/wiki/Q509255"
+  },
+  "Q5125081": {
+   "ok": true,
+   "label": "Claim Jumper",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5125081"
+  },
+  "Q5175713": {
+   "ok": true,
+   "label": "Cotton Patch Café",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5175713"
+  },
+  "Q5228205": {
+   "ok": true,
+   "label": "Dave & Buster's",
+   "description": "restaurant and entertainment business",
+   "url": "https://www.wikidata.org/wiki/Q5228205"
+  },
+  "Q5331211": {
+   "ok": true,
+   "label": "Eat'n Park",
+   "description": "restaurant chain in the United States",
+   "url": "https://www.wikidata.org/wiki/Q5331211"
+  },
+  "Q5349788": {
+   "ok": true,
+   "label": "Einstein Bros. Bagels",
+   "description": "American bagel and coffee chain",
+   "url": "https://www.wikidata.org/wiki/Q5349788"
+  },
+  "Q5435711": {
+   "ok": true,
+   "label": "Farmer Boys",
+   "description": "restaurant chain in California",
+   "url": "https://www.wikidata.org/wiki/Q5435711"
+  },
+  "Q5451873": {
+   "ok": true,
+   "label": "Firehouse Subs",
+   "description": "US-based restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5451873"
+  },
+  "Q5464133": {
+   "ok": true,
+   "label": "Fogo de Chão",
+   "description": "American Brazilian-style restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5464133"
+  },
+  "Q5496837": {
+   "ok": true,
+   "label": "Freddy's Frozen Custard & Steakburgers",
+   "description": "fast food restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5496837"
+  },
+  "Q550258": {
+   "ok": true,
+   "label": "Wendy's",
+   "description": "American international fast food chain restaurant",
+   "url": "https://www.wikidata.org/wiki/Q550258"
+  },
+  "Q5598967": {
+   "ok": true,
+   "label": "Great Clips",
+   "description": "American hair salon chain",
+   "url": "https://www.wikidata.org/wiki/Q5598967"
+  },
+  "Q56062981": {
+   "ok": true,
+   "label": "Main Event Entertainment",
+   "description": "American family entertainment center chain",
+   "url": "https://www.wikidata.org/wiki/Q56062981"
+  },
+  "Q5908897": {
+   "ok": true,
+   "label": "Hoss's Steak and Sea House",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q5908897"
+  },
+  "Q6208210": {
+   "ok": true,
+   "label": "Joe's Crab Shack",
+   "description": "US restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q6208210"
+  },
+  "Q621532": {
+   "ok": true,
+   "label": "Applebee's",
+   "description": "restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q621532"
+  },
+  "Q64055574": {
+   "ok": true,
+   "label": "Bravo! Italian Kitchen",
+   "description": "Italian restaurant chain based in the United States",
+   "url": "https://www.wikidata.org/wiki/Q64055574"
+  },
+  "Q64055835": {
+   "ok": true,
+   "label": "Brio Italian Grille",
+   "description": "Italian restaurant chain based in the United States",
+   "url": "https://www.wikidata.org/wiki/Q64055835"
+  },
+  "Q64128179": {
+   "ok": true,
+   "label": "Pilot Travel Centers",
+   "description": "American truck stop chain",
+   "url": "https://www.wikidata.org/wiki/Q64128179"
+  },
+  "Q64130592": {
+   "ok": true,
+   "label": "Flying J",
+   "description": "American truck stop chain",
+   "url": "https://www.wikidata.org/wiki/Q64130592"
+  },
+  "Q6666872": {
+   "ok": true,
+   "label": "Logan's Roadhouse",
+   "description": "chain of restaurants that was founded in 1991 in Lexington, Kentucky, United States",
+   "url": "https://www.wikidata.org/wiki/Q6666872"
+  },
+  "Q672170": {
+   "ok": true,
+   "label": "Publix",
+   "description": "American supermarket chain headquartered in Lakeland, Florida",
+   "url": "https://www.wikidata.org/wiki/Q672170"
+  },
+  "Q6760185": {
+   "ok": true,
+   "label": "Margaritas",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q6760185"
+  },
+  "Q6800562": {
+   "ok": true,
+   "label": "McCormick & Schmick's",
+   "description": "American restaurant chain specializing in seafood",
+   "url": "https://www.wikidata.org/wiki/Q6800562"
+  },
+  "Q7190020": {
+   "ok": true,
+   "label": "Piada Italian Street Food",
+   "description": "American restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q7190020"
+  },
+  "Q7304886": {
+   "ok": true,
+   "label": "Red Robin",
+   "description": "casual dining restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q7304886"
+  },
+  "Q7376154": {
+   "ok": true,
+   "label": "Rubio's Coastal Grill",
+   "description": "fast casual Mexican food chain",
+   "url": "https://www.wikidata.org/wiki/Q7376154"
+  },
+  "Q7376400": {
+   "ok": true,
+   "label": "Ruby Tuesday",
+   "description": "restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q7376400"
+  },
+  "Q7492551": {
+   "ok": true,
+   "label": "Sheetz",
+   "description": "convenience store and gas station chain in the United States",
+   "url": "https://www.wikidata.org/wiki/Q7492551"
+  },
+  "Q7500392": {
+   "ok": true,
+   "label": "Shoney's",
+   "description": "American casual dining restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q7500392"
+  },
+  "Q7579310": {
+   "ok": true,
+   "label": "Sport Clips",
+   "description": "haircutting chain",
+   "url": "https://www.wikidata.org/wiki/Q7579310"
+  },
+  "Q7669631": {
+   "ok": true,
+   "label": "TCBY",
+   "description": "American frozen-yogurt company",
+   "url": "https://www.wikidata.org/wiki/Q7669631"
+  },
+  "Q7707945": {
+   "ok": true,
+   "label": "Texas Roadhouse",
+   "description": "American chain steakhouse",
+   "url": "https://www.wikidata.org/wiki/Q7707945"
+  },
+  "Q784804": {
+   "ok": true,
+   "label": "AutoNation",
+   "description": "American automotive retailer based in Fort Lauderdale, Florida",
+   "url": "https://www.wikidata.org/wiki/Q784804"
+  },
+  "Q7858255": {
+   "ok": true,
+   "label": "Twin Peaks",
+   "description": "chain of sports bars and restaurants",
+   "url": "https://www.wikidata.org/wiki/Q7858255"
+  },
+  "Q846301": {
+   "ok": true,
+   "label": "Red Lobster",
+   "description": "American casual dining restaurant chain",
+   "url": "https://www.wikidata.org/wiki/Q846301"
+  },
+  "Q847743": {
+   "ok": true,
+   "label": "Dunkin'",
+   "description": "American global donut company and coffeehouse",
+   "url": "https://www.wikidata.org/wiki/Q847743"
+  },
+  "Q85785905": {
+   "ok": true,
+   "label": "Mission BBQ",
+   "description": "American restaurant chain specializing in barbeque",
+   "url": "https://www.wikidata.org/wiki/Q85785905"
+  },
+  "Q918151": {
+   "ok": true,
+   "label": "Hard Rock Cafe",
+   "description": "American chain of restaurants",
+   "url": "https://www.wikidata.org/wiki/Q918151"
+  },
+  "Q967265": {
+   "ok": true,
+   "label": "Kohl's",
+   "description": "American department store chain",
+   "url": "https://www.wikidata.org/wiki/Q967265"
+  }
+ }
+}

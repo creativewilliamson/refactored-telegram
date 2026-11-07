@@ -1,0 +1,1393 @@
+{
+ "_readme": "Brand -> All The Places spiders and Wikidata Q-ids, found by research (see tools/make_brands.py). Q-ids are checked on wikidata.org by pipeline/wikidata.py; results in data/wikidata-check.json. expected_us is an approximate public U.S. store count used only to flag low coverage in data/coverage.md; it is never shown to visitors. status 'no_spider' means All The Places has no data for the brand: the site shows a 'Find nearest' map link instead of stores.",
+ "no_store_offers": [
+  "national-parks",
+  "grace-for-vets"
+ ],
+ "brands": {
+  "applebees": {
+   "name": "Applebee's",
+   "offers": [
+    "applebee-s"
+   ],
+   "brand_wikidata": [
+    "Q621532"
+   ],
+   "atp_spiders": [
+    "applebees"
+   ],
+   "expected_us": 1500
+  },
+  "bjs-restaurant": {
+   "name": "BJ's Restaurant & Brewhouse",
+   "offers": [
+    "bj-s-restaurant-and-brewhouse"
+   ],
+   "brand_wikidata": [
+    "Q4835755"
+   ],
+   "atp_spiders": [
+    "bj_restaurant_us"
+   ],
+   "expected_us": 215
+  },
+  "blaze-pizza": {
+   "name": "Blaze Pizza",
+   "offers": [
+    "blaze-pizza"
+   ],
+   "brand_wikidata": [
+    "Q23016666"
+   ],
+   "atp_spiders": [
+    "blaze_pizza"
+   ],
+   "expected_us": 300
+  },
+  "bob-evans": {
+   "name": "Bob Evans",
+   "offers": [
+    "bob-evans"
+   ],
+   "brand_wikidata": [
+    "Q4932386"
+   ],
+   "atp_spiders": [
+    "bob_evans_us"
+   ],
+   "expected_us": 430
+  },
+  "bonefish-grill": {
+   "name": "Bonefish Grill",
+   "offers": [
+    "bonefish-grill"
+   ],
+   "brand_wikidata": [
+    "Q4941599"
+   ],
+   "atp_spiders": [
+    "bonefish_grill"
+   ],
+   "expected_us": 170
+  },
+  "bravo-italian-kitchen": {
+   "name": "BRAVO! Italian Kitchen",
+   "offers": [
+    "bravo-italian-kitchen"
+   ],
+   "brand_wikidata": [
+    "Q64055574"
+   ],
+   "atp_spiders": [
+    "bravo_italian_us"
+   ],
+   "expected_us": 15
+  },
+  "buffalo-wild-wings": {
+   "name": "Buffalo Wild Wings",
+   "offers": [
+    "buffalo-wild-wings"
+   ],
+   "brand_wikidata": [
+    "Q509255"
+   ],
+   "atp_spiders": [
+    "buffalo_wild_wings_us"
+   ],
+   "expected_us": 1200
+  },
+  "california-pizza-kitchen": {
+   "name": "California Pizza Kitchen",
+   "offers": [
+    "california-pizza-kitchen"
+   ],
+   "brand_wikidata": [
+    "Q15109854"
+   ],
+   "atp_spiders": [
+    "california_pizza_kitchen"
+   ],
+   "expected_us": 130
+  },
+  "charleys": {
+   "name": "Charleys Cheesesteaks",
+   "offers": [
+    "charleys-cheesesteaks"
+   ],
+   "brand_wikidata": [
+    "Q1066777"
+   ],
+   "atp_spiders": [
+    "charleys_philly_steaks"
+   ],
+   "expected_us": 600
+  },
+  "chilis": {
+   "name": "Chili's",
+   "offers": [
+    "chili-s"
+   ],
+   "brand_wikidata": [
+    "Q1072948"
+   ],
+   "atp_spiders": [
+    "chilis"
+   ],
+   "expected_us": 1200
+  },
+  "dennys": {
+   "name": "Denny's",
+   "offers": [
+    "denny-s"
+   ],
+   "brand_wikidata": [
+    "Q1189695"
+   ],
+   "atp_spiders": [
+    "dennys_us"
+   ],
+   "expected_us": 1400
+  },
+  "farmer-boys": {
+   "name": "Farmer Boys",
+   "offers": [
+    "farmer-boys"
+   ],
+   "brand_wikidata": [
+    "Q5435711"
+   ],
+   "atp_spiders": [
+    "farmer_boys"
+   ],
+   "expected_us": 100
+  },
+  "freddys": {
+   "name": "Freddy's Frozen Custard & Steakburgers",
+   "offers": [
+    "freddy-s-frozen-custard-and-steakburgers"
+   ],
+   "brand_wikidata": [
+    "Q5496837"
+   ],
+   "atp_spiders": [
+    "freddys_us"
+   ],
+   "expected_us": 530
+  },
+  "golden-corral": {
+   "name": "Golden Corral",
+   "offers": [
+    "golden-corral"
+   ],
+   "brand_wikidata": [
+    "Q4039560"
+   ],
+   "atp_spiders": [
+    "golden_corral"
+   ],
+   "expected_us": 350
+  },
+  "hard-rock-cafe": {
+   "name": "Hard Rock Cafe",
+   "offers": [
+    "hard-rock-cafe"
+   ],
+   "brand_wikidata": [
+    "Q918151"
+   ],
+   "atp_spiders": [
+    "hard_rock"
+   ],
+   "expected_us": 30
+  },
+  "hopdoddy": {
+   "name": "Hopdoddy Burger Bar",
+   "offers": [
+    "hopdoddy-burger-bar"
+   ],
+   "brand_wikidata": [
+    "Q123689179"
+   ],
+   "atp_spiders": [
+    "hopdoddy_burger_bar_us"
+   ],
+   "expected_us": 40
+  },
+  "hy-vee": {
+   "name": "Hy-Vee",
+   "offers": [
+    "hy-vee",
+    "hy-vee-groceries"
+   ],
+   "brand_wikidata": [
+    "Q1639719"
+   ],
+   "atp_spiders": [
+    "hy_vee_us"
+   ],
+   "expected_us": 290
+  },
+  "ihop": {
+   "name": "IHOP",
+   "offers": [
+    "ihop"
+   ],
+   "brand_wikidata": [
+    "Q1185675"
+   ],
+   "atp_spiders": [
+    "ihop"
+   ],
+   "expected_us": 1600
+  },
+  "in-n-out": {
+   "name": "In-N-Out Burger",
+   "offers": [
+    "in-n-out-burger"
+   ],
+   "brand_wikidata": [
+    "Q1205312"
+   ],
+   "atp_spiders": [
+    "innout"
+   ],
+   "expected_us": 400
+  },
+  "kekes": {
+   "name": "Keke's Breakfast Cafe",
+   "offers": [
+    "keke-s-breakfast-cafe"
+   ],
+   "brand_wikidata": [
+    "Q115930150"
+   ],
+   "atp_spiders": [
+    "keke"
+   ],
+   "expected_us": 70
+  },
+  "little-caesars": {
+   "name": "Little Caesars",
+   "offers": [
+    "little-caesars"
+   ],
+   "brand_wikidata": [
+    "Q1393809"
+   ],
+   "atp_spiders": [
+    "little_caesars_us"
+   ],
+   "expected_us": 4000
+  },
+  "logans-roadhouse": {
+   "name": "Logan's Roadhouse",
+   "offers": [
+    "logan-s-roadhouse"
+   ],
+   "brand_wikidata": [
+    "Q6666872"
+   ],
+   "atp_spiders": [
+    "logans_roadhouse_us"
+   ],
+   "expected_us": 100
+  },
+  "lucilles": {
+   "name": "Lucille's Smokehouse BBQ",
+   "offers": [
+    "lucille-s-smokehouse-bbq"
+   ],
+   "brand_wikidata": [
+    "Q17019306"
+   ],
+   "atp_spiders": [
+    "lucilles_smokehouse_bar_b_que_us"
+   ],
+   "expected_us": 20
+  },
+  "main-event": {
+   "name": "Main Event",
+   "offers": [
+    "main-event"
+   ],
+   "brand_wikidata": [
+    "Q56062981"
+   ],
+   "atp_spiders": [
+    "main_event"
+   ],
+   "expected_us": 60
+  },
+  "olive-garden": {
+   "name": "Olive Garden",
+   "offers": [
+    "olive-garden"
+   ],
+   "brand_wikidata": [
+    "Q3045312"
+   ],
+   "atp_spiders": [
+    "olive_garden"
+   ],
+   "expected_us": 900
+  },
+  "outback": {
+   "name": "Outback Steakhouse",
+   "offers": [
+    "outback-steakhouse"
+   ],
+   "brand_wikidata": [
+    "Q1064893"
+   ],
+   "atp_spiders": [
+    "outback_steakhouse"
+   ],
+   "expected_us": 690
+  },
+  "piada": {
+   "name": "Piada Italian Street Food",
+   "offers": [
+    "piada-italian-street-food"
+   ],
+   "brand_wikidata": [
+    "Q7190020"
+   ],
+   "atp_spiders": [
+    "piada_us"
+   ],
+   "expected_us": 50
+  },
+  "pilot-flying-j": {
+   "name": "Pilot & Flying J",
+   "offers": [
+    "pilot-and-flying-j"
+   ],
+   "brand_wikidata": [
+    "Q64128179",
+    "Q64130592"
+   ],
+   "atp_spiders": [
+    "pilot_flying_j"
+   ],
+   "expected_us": 750
+  },
+  "red-lobster": {
+   "name": "Red Lobster",
+   "offers": [
+    "red-lobster"
+   ],
+   "brand_wikidata": [
+    "Q846301"
+   ],
+   "atp_spiders": [
+    "red_lobster_us"
+   ],
+   "expected_us": 550
+  },
+  "red-robin": {
+   "name": "Red Robin",
+   "offers": [
+    "red-robin"
+   ],
+   "brand_wikidata": [
+    "Q7304886"
+   ],
+   "atp_spiders": [
+    "red_robin"
+   ],
+   "expected_us": 500
+  },
+  "ruby-tuesday": {
+   "name": "Ruby Tuesday",
+   "offers": [
+    "ruby-tuesday"
+   ],
+   "brand_wikidata": [
+    "Q7376400"
+   ],
+   "atp_spiders": [
+    "ruby_tuesday_us"
+   ],
+   "expected_us": 200
+  },
+  "shake-shack": {
+   "name": "Shake Shack",
+   "offers": [
+    "shake-shack"
+   ],
+   "brand_wikidata": [
+    "Q1058722"
+   ],
+   "atp_spiders": [
+    "shake_shack"
+   ],
+   "expected_us": 330
+  },
+  "sheetz": {
+   "name": "Sheetz",
+   "offers": [
+    "sheetz"
+   ],
+   "brand_wikidata": [
+    "Q7492551"
+   ],
+   "atp_spiders": [
+    "sheetz"
+   ],
+   "expected_us": 750
+  },
+  "shoneys": {
+   "name": "Shoney's",
+   "offers": [
+    "shoney-s"
+   ],
+   "brand_wikidata": [
+    "Q7500392"
+   ],
+   "atp_spiders": [
+    "shoneys_us"
+   ],
+   "expected_us": 100
+  },
+  "sizzler": {
+   "name": "Sizzler",
+   "offers": [
+    "sizzler"
+   ],
+   "brand_wikidata": [
+    "Q1848822"
+   ],
+   "atp_spiders": [
+    "sizzler_us"
+   ],
+   "expected_us": 70
+  },
+  "smashburger": {
+   "name": "Smashburger",
+   "offers": [
+    "smashburger"
+   ],
+   "brand_wikidata": [
+    "Q17061332"
+   ],
+   "atp_spiders": [
+    "smashburger"
+   ],
+   "expected_us": 200
+  },
+  "texas-roadhouse": {
+   "name": "Texas Roadhouse",
+   "offers": [
+    "texas-roadhouse"
+   ],
+   "brand_wikidata": [
+    "Q7707945"
+   ],
+   "atp_spiders": [
+    "texas_roadhouse"
+   ],
+   "expected_us": 650
+  },
+  "tgi-fridays": {
+   "name": "TGI Fridays",
+   "offers": [
+    "tgi-fridays"
+   ],
+   "brand_wikidata": [
+    "Q1524184"
+   ],
+   "atp_spiders": [
+    "tgi_fridays_us"
+   ],
+   "expected_us": 90
+  },
+  "torchys": {
+   "name": "Torchy's Tacos",
+   "offers": [
+    "torchy-s-tacos"
+   ],
+   "brand_wikidata": [
+    "Q106769573"
+   ],
+   "atp_spiders": [
+    "torchys_tacos_us"
+   ],
+   "expected_us": 130
+  },
+  "twin-peaks": {
+   "name": "Twin Peaks",
+   "offers": [
+    "twin-peaks"
+   ],
+   "brand_wikidata": [
+    "Q7858255"
+   ],
+   "atp_spiders": [
+    "twin_peaks"
+   ],
+   "expected_us": 110
+  },
+  "wendys": {
+   "name": "Wendy's",
+   "offers": [
+    "wendy-s"
+   ],
+   "brand_wikidata": [
+    "Q550258"
+   ],
+   "atp_spiders": [
+    "wendys"
+   ],
+   "expected_us": 6000
+  },
+  "white-castle": {
+   "name": "White Castle",
+   "offers": [
+    "white-castle"
+   ],
+   "brand_wikidata": [
+    "Q1244034"
+   ],
+   "atp_spiders": [
+    "white_castle"
+   ],
+   "expected_us": 340
+  },
+  "yard-house": {
+   "name": "Yard House",
+   "offers": [
+    "yard-house"
+   ],
+   "brand_wikidata": [
+    "Q21189156"
+   ],
+   "atp_spiders": [
+    "yard_house"
+   ],
+   "expected_us": 90
+  },
+  "benihana": {
+   "name": "Benihana",
+   "offers": [
+    "benihana"
+   ],
+   "brand_wikidata": [
+    "Q4887996"
+   ],
+   "atp_spiders": [
+    "benihana"
+   ],
+   "expected_us": 75
+  },
+  "carrabbas": {
+   "name": "Carrabba's Italian Grill",
+   "offers": [
+    "carrabba-s-italian-grill"
+   ],
+   "brand_wikidata": [
+    "Q5045999"
+   ],
+   "atp_spiders": [
+    "carrabbas_italian_grill"
+   ],
+   "expected_us": 200
+  },
+  "chipotle": {
+   "name": "Chipotle",
+   "offers": [
+    "chipotle"
+   ],
+   "brand_wikidata": [
+    "Q465751"
+   ],
+   "atp_spiders": [
+    "chipotle"
+   ],
+   "expected_us": 3600
+  },
+  "firehouse-subs": {
+   "name": "Firehouse Subs",
+   "offers": [
+    "firehouse-subs"
+   ],
+   "brand_wikidata": [
+    "Q5451873"
+   ],
+   "atp_spiders": [
+    "firehouse_subs"
+   ],
+   "expected_us": 1200
+  },
+  "hooters": {
+   "name": "Hooters",
+   "offers": [
+    "hooters"
+   ],
+   "brand_wikidata": [
+    "Q1025921"
+   ],
+   "atp_spiders": [
+    "hooters"
+   ],
+   "expected_us": 250
+  },
+  "longhorn": {
+   "name": "LongHorn Steakhouse",
+   "offers": [
+    "longhorn-steakhouse"
+   ],
+   "brand_wikidata": [
+    "Q3259007"
+   ],
+   "atp_spiders": [
+    "longhorn_steakhouse"
+   ],
+   "expected_us": 580
+  },
+  "rubios": {
+   "name": "Rubio's Coastal Grill",
+   "offers": [
+    "rubio-s-coastal-grill"
+   ],
+   "brand_wikidata": [
+    "Q7376154"
+   ],
+   "atp_spiders": [
+    "rubios_us"
+   ],
+   "expected_us": 80
+  },
+  "eatn-park": {
+   "name": "Eat'n Park",
+   "offers": [
+    "eat-n-park"
+   ],
+   "brand_wikidata": [
+    "Q5331211"
+   ],
+   "atp_spiders": [
+    "eatn_park_us"
+   ],
+   "expected_us": 50
+  },
+  "fogo-de-chao": {
+   "name": "Fogo de Chão",
+   "offers": [
+    "fogo-de-ch-o"
+   ],
+   "brand_wikidata": [
+    "Q5464133"
+   ],
+   "atp_spiders": [
+    "fogo_de_chao"
+   ],
+   "expected_us": 60
+  },
+  "joes-crab-shack": {
+   "name": "Joe's Crab Shack",
+   "offers": [
+    "joe-s-crab-shack"
+   ],
+   "brand_wikidata": [
+    "Q6208210"
+   ],
+   "atp_spiders": [
+    "joes_crab_shack_us"
+   ],
+   "expected_us": 15
+  },
+  "mccormick-schmicks": {
+   "name": "McCormick & Schmick's",
+   "offers": [
+    "mccormick-and-schmick-s"
+   ],
+   "brand_wikidata": [
+    "Q6800562"
+   ],
+   "atp_spiders": [
+    "mccormick_and_schmicks_us"
+   ],
+   "expected_us": 12
+  },
+  "playa-bowls": {
+   "name": "Playa Bowls",
+   "offers": [
+    "playa-bowls"
+   ],
+   "brand_wikidata": [
+    "Q114618507"
+   ],
+   "atp_spiders": [
+    "playa_bowls_us"
+   ],
+   "expected_us": 280
+  },
+  "biggby": {
+   "name": "Biggby Coffee",
+   "offers": [
+    "biggby-coffee"
+   ],
+   "brand_wikidata": [
+    "Q4906876"
+   ],
+   "atp_spiders": [
+    "biggby_coffee_us"
+   ],
+   "expected_us": 300
+  },
+  "brueggers": {
+   "name": "Bruegger's Bagels",
+   "offers": [
+    "bruegger-s-bagels"
+   ],
+   "brand_wikidata": [
+    "Q4978656"
+   ],
+   "atp_spiders": [
+    "brueggers"
+   ],
+   "expected_us": 200
+  },
+  "caseys": {
+   "name": "Casey's",
+   "offers": [
+    "casey-s"
+   ],
+   "brand_wikidata": [
+    "Q2940968"
+   ],
+   "atp_spiders": [
+    "caseys_general_store_us"
+   ],
+   "expected_us": 2900
+  },
+  "dunkin": {
+   "name": "Dunkin'",
+   "offers": [
+    "dunkin"
+   ],
+   "brand_wikidata": [
+    "Q847743"
+   ],
+   "atp_spiders": [
+    "dunkin_us"
+   ],
+   "expected_us": 9500
+  },
+  "einstein-bros": {
+   "name": "Einstein Bros. Bagels",
+   "offers": [
+    "einstein-bros-bagels"
+   ],
+   "brand_wikidata": [
+    "Q5349788"
+   ],
+   "atp_spiders": [
+    "einstein_bros_us"
+   ],
+   "expected_us": 650
+  },
+  "7-brew": {
+   "name": "7 Brew",
+   "offers": [
+    "7-brew"
+   ],
+   "brand_wikidata": [
+    "Q131838275",
+    "Q127688691"
+   ],
+   "atp_spiders": [
+    "7_brew_us"
+   ],
+   "expected_us": 400,
+   "ref_address_pattern": "locations\\.7brew\\.com/(?P<s>[a-z]{2})/(?P<c>[^/]+)/(?P<a>[^/?#]+)"
+  },
+  "starbucks": {
+   "name": "Starbucks",
+   "offers": [
+    "starbucks"
+   ],
+   "brand_wikidata": [
+    "Q37158"
+   ],
+   "atp_spiders": [
+    "starbucks_us"
+   ],
+   "expected_us": 16000
+  },
+  "tcby": {
+   "name": "TCBY",
+   "offers": [
+    "tcby"
+   ],
+   "brand_wikidata": [
+    "Q7669631"
+   ],
+   "atp_spiders": [
+    "tcby"
+   ],
+   "expected_us": 200
+  },
+  "waba-grill": {
+   "name": "WaBa Grill",
+   "offers": [
+    "waba-grill"
+   ],
+   "brand_wikidata": [
+    "Q113163467"
+   ],
+   "atp_spiders": [
+    "waba_grill_us"
+   ],
+   "expected_us": 200
+  },
+  "kohls": {
+   "name": "Kohl's",
+   "offers": [
+    "kohl-s"
+   ],
+   "brand_wikidata": [
+    "Q967265"
+   ],
+   "atp_spiders": [
+    "kohls_us"
+   ],
+   "expected_us": 1150
+  },
+  "walgreens": {
+   "name": "Walgreens",
+   "offers": [
+    "walgreens"
+   ],
+   "brand_wikidata": [
+    "Q1591889"
+   ],
+   "atp_spiders": [
+    "walgreens"
+   ],
+   "expected_us": 8000
+  },
+  "publix": {
+   "name": "Publix",
+   "offers": [
+    "publix"
+   ],
+   "brand_wikidata": [
+    "Q672170"
+   ],
+   "atp_spiders": [
+    "publix_us"
+   ],
+   "expected_us": 1400
+  },
+  "food-lion": {
+   "name": "Food Lion",
+   "offers": [
+    "food-lion"
+   ],
+   "brand_wikidata": [
+    "Q1435950"
+   ],
+   "atp_spiders": [
+    "food_lion_us"
+   ],
+   "expected_us": 1100
+  },
+  "great-clips": {
+   "name": "Great Clips",
+   "offers": [
+    "great-clips"
+   ],
+   "brand_wikidata": [
+    "Q5598967"
+   ],
+   "atp_spiders": [
+    "great_clips"
+   ],
+   "expected_us": 4200
+  },
+  "sport-clips": {
+   "name": "Sport Clips",
+   "offers": [
+    "sport-clips"
+   ],
+   "brand_wikidata": [
+    "Q7579310"
+   ],
+   "atp_spiders": [
+    "sport_clips_us"
+   ],
+   "expected_us": 1800
+  },
+  "dave-and-busters": {
+   "name": "Dave & Buster's",
+   "offers": [
+    "dave-and-buster-s"
+   ],
+   "brand_wikidata": [
+    "Q5228205"
+   ],
+   "atp_spiders": [
+    "dave_and_busters"
+   ],
+   "expected_us": 230
+  },
+  "tractor-supply": {
+   "name": "Tractor Supply",
+   "offers": [
+    "tractor-supply"
+   ],
+   "brand_wikidata": [
+    "Q15109925"
+   ],
+   "atp_spiders": [
+    "tractor_supply"
+   ],
+   "expected_us": 2250
+  },
+  "bar-louie": {
+   "name": "Bar Louie",
+   "offers": [
+    "bar-louie"
+   ],
+   "brand_wikidata": [
+    "Q16935493"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "bombshells": {
+   "name": "Bombshells Restaurant & Bar",
+   "offers": [
+    "bombshells-restaurant-and-bar"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "brio": {
+   "name": "Brio Italian Grille",
+   "offers": [
+    "brio-italian-grille"
+   ],
+   "brand_wikidata": [
+    "Q64055835"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "claim-jumper": {
+   "name": "Claim Jumper",
+   "offers": [
+    "claim-jumper"
+   ],
+   "brand_wikidata": [
+    "Q5125081"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "cotton-patch": {
+   "name": "Cotton Patch Cafe",
+   "offers": [
+    "cotton-patch-cafe"
+   ],
+   "brand_wikidata": [
+    "Q5175713"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "hacienda": {
+   "name": "Hacienda Mexican Restaurant",
+   "offers": [
+    "hacienda-mexican-restaurant"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "haven-hot-chicken": {
+   "name": "Haven Hot Chicken",
+   "offers": [
+    "haven-hot-chicken"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "hofs-hut": {
+   "name": "Hof's Hut",
+   "offers": [
+    "hof-s-hut"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "hoss-s": {
+   "name": "Hoss's Steak & Sea House",
+   "offers": [
+    "hoss-s-steak-and-sea-house"
+   ],
+   "brand_wikidata": [
+    "Q5908897"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "lazy-dog": {
+   "name": "Lazy Dog Restaurants",
+   "offers": [
+    "lazy-dog-restaurants"
+   ],
+   "brand_wikidata": [
+    "Q111304278"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "mission-bbq": {
+   "name": "Mission BBQ",
+   "offers": [
+    "mission-bbq"
+   ],
+   "brand_wikidata": [
+    "Q85785905"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "newks": {
+   "name": "Newk's Eatery",
+   "offers": [
+    "newk-s-eatery"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "paisanos": {
+   "name": "Paisano's Pizza",
+   "offers": [
+    "paisano-s-pizza"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "pluckers": {
+   "name": "Pluckers Wing Bar",
+   "offers": [
+    "pluckers-wing-bar"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "rock-and-brews": {
+   "name": "Rock & Brews",
+   "offers": [
+    "rock-and-brews"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "tuscan-brands": {
+   "name": "Tuscan Brands",
+   "offers": [
+    "tuscan-brands"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "110-grill": {
+   "name": "110 Grill",
+   "offers": [
+    "110-grill"
+   ],
+   "brand_wikidata": [
+    "Q121292194"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "capriottis": {
+   "name": "Capriotti's Sandwich Shop",
+   "offers": [
+    "capriotti-s-sandwich-shop"
+   ],
+   "brand_wikidata": [
+    "Q5036283"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "firebirds": {
+   "name": "Firebirds Wood Fired Grill",
+   "offers": [
+    "firebirds-wood-fired-grill"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "stk": {
+   "name": "STK Steakhouse",
+   "offers": [
+    "stk-steakhouse"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "carolina-ale-house": {
+   "name": "Carolina Ale House",
+   "offers": [
+    "carolina-ale-house"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "54th-street": {
+   "name": "54th Street Grill",
+   "offers": [
+    "54th-street-grill"
+   ],
+   "brand_wikidata": [
+    "Q131290500"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "centraarchy": {
+   "name": "CentraArchy Restaurants",
+   "offers": [
+    "centraarchy-restaurants"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "chicken-salad-chick": {
+   "name": "Chicken Salad Chick",
+   "offers": [
+    "chicken-salad-chick"
+   ],
+   "brand_wikidata": [
+    "Q19720749"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "margaritas": {
+   "name": "Margaritas Mexican Restaurant",
+   "offers": [
+    "margaritas-mexican-restaurant"
+   ],
+   "brand_wikidata": [
+    "Q6760185"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "tocaya": {
+   "name": "Tocaya",
+   "offers": [
+    "tocaya"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "151-coffee": {
+   "name": "151 Coffee",
+   "offers": [
+    "151-coffee"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "marzonis": {
+   "name": "Marzoni's Brick Oven & Brewing",
+   "offers": [
+    "marzoni-s-brick-oven-and-brewing"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "teds-bulletin": {
+   "name": "Ted's Bulletin",
+   "offers": [
+    "ted-s-bulletin"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "rack-room-shoes": {
+   "name": "Rack Room Shoes",
+   "offers": [
+    "rack-room-shoes"
+   ],
+   "brand_wikidata": [
+    "Q17109937"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "the-exchange": {
+   "name": "The Exchange (AAFES)",
+   "offers": [
+    "the-exchange-aafes"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown"
+  },
+  "autonation": {
+   "name": "AutoNation",
+   "offers": [
+    "autonation"
+   ],
+   "brand_wikidata": [
+    "Q784804"
+   ],
+   "atp_spiders": [],
+   "status": "no_spider"
+  },
+  "aspen-creek-grill": {
+   "name": "Aspen Creek Grill",
+   "offers": [
+    "aspen-creek-grill"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "aspen_creek_grill_us"
+  },
+  "biscuit-belly": {
+   "name": "Biscuit Belly",
+   "offers": [
+    "biscuit-belly"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "biscuit_belly_us"
+  },
+  "eddie-merlots": {
+   "name": "Eddie Merlot's",
+   "offers": [
+    "eddie-merlot-s"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "eddie_merlots_us"
+  },
+  "el-chico": {
+   "name": "El Chico",
+   "offers": [
+    "el-chico"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "el_chico_us"
+  },
+  "eureka": {
+   "name": "Eureka!",
+   "offers": [
+    "eureka"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "eureka_us"
+  },
+  "veterans-canteen": {
+   "name": "Veterans Canteen Service (VA medical centers)",
+   "offers": [
+    "veterans-canteen-service"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "department_veterans_affairs"
+  },
+  "wob": {
+   "name": "WOB Bar & Kitchen (World of Beer)",
+   "offers": [
+    "wob-bar-and-kitchen"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "world_of_beer_us"
+  },
+  "perrys": {
+   "name": "Perry's Steakhouse & Grille",
+   "offers": [
+    "perry-s-steakhouse-and-grille"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "perrys_steakhouse_and_grille_us"
+  },
+  "viva-chicken": {
+   "name": "Viva Chicken",
+   "offers": [
+    "viva-chicken"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "viva_chicken"
+  },
+  "pollys-pies": {
+   "name": "Polly's Pies",
+   "offers": [
+    "polly-s-pies"
+   ],
+   "brand_wikidata": [],
+   "atp_spiders": [],
+   "status": "no_spider",
+   "wikidata": "unknown",
+   "atp_spider_without_wikidata": "pollys_pies_us"
+  }
+ }
+}

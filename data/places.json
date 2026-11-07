@@ -1,0 +1,103 @@
+{
+  "_readme": "Single-location offers, entered by hand on 2026-11-07. Every place lists where its address/phone and its coordinates came from. Addresses and phones come only from the place's own official site (or Wikidata where the official site refused automated access). Where no source gives an exact street address, 'a' is empty and the point is the Census Gazetteer internal point of the town: the card then says the exact spot is on the offer page. Nothing here is guessed.",
+  "places": [
+    {
+      "offer": "mount-vernon", "n": "George Washington's Mount Vernon",
+      "a": "3200 Mount Vernon Memorial Highway", "c": "Mount Vernon", "s": "VA", "z": "22121",
+      "la": 38.70778, "lo": -77.08611,
+      "address_source": "https://www.wikidata.org/wiki/Q731635 (P6375 street address; official site returned HTTP 403 to automated reads)",
+      "coord_source": "https://www.wikidata.org/wiki/Q731635 (P625)"
+    },
+    {
+      "offer": "colonial-williamsburg", "n": "Colonial Williamsburg",
+      "a": "", "c": "Williamsburg", "s": "VA", "z": "",
+      "la": 37.27139, "lo": -76.70028,
+      "address_source": "none found (official site returned HTTP 403; Wikidata has no street address)",
+      "coord_source": "https://www.wikidata.org/wiki/Q841700 (P625)"
+    },
+    {
+      "offer": "yorktown-and-jamestown-settlement-museums", "n": "Jamestown Settlement",
+      "a": "", "c": "Williamsburg", "s": "VA", "z": "23187",
+      "la": 37.22667, "lo": -76.78633,
+      "address_source": "https://www.wikidata.org/wiki/Q12346147 (P281 postal code only; official site returned HTTP 403)",
+      "coord_source": "https://www.wikidata.org/wiki/Q12346147 (P625)"
+    },
+    {
+      "offer": "yorktown-and-jamestown-settlement-museums", "n": "American Revolution Museum at Yorktown",
+      "a": "", "c": "Yorktown", "s": "VA", "z": "", "approx": true,
+      "la": 37.23402, "lo": -76.5182,
+      "address_source": "none found (official site returned HTTP 403; no Wikidata or Wikipedia entry)",
+      "coord_source": "Census 2025 Gazetteer Places, Yorktown CDP, VA (GEOID 5188240) internal point: town center, not the museum's exact spot"
+    },
+    {
+      "offer": "museum-of-the-american-revolution", "n": "Museum of the American Revolution",
+      "a": "", "c": "Philadelphia", "s": "PA", "z": "",
+      "la": 39.9484, "lo": -75.1458,
+      "address_source": "none found (official site returned HTTP 403; Wikidata has no street address)",
+      "coord_source": "https://www.wikidata.org/wiki/Q7713548 (P625)"
+    },
+    {
+      "offer": "national-wwi-museum-and-memorial", "n": "National WWI Museum and Memorial",
+      "a": "2 Memorial Drive", "c": "Kansas City", "s": "MO", "z": "64108", "p": "8168888100",
+      "la": 39.0778, "lo": -94.58489,
+      "address_source": "https://www.theworldwar.org/ (site footer)",
+      "coord_source": "U.S. Census Geocoder match for '2 MEMORIAL DR, KANSAS CITY, MO, 64108'"
+    },
+    {
+      "offer": "eisenhower-presidential-library-and-museum", "n": "Eisenhower Presidential Library, Museum & Boyhood Home",
+      "a": "200 SE 4th Street", "c": "Abilene", "s": "KS", "z": "67410", "p": "7852636700",
+      "la": 38.9122, "lo": -97.2108,
+      "address_source": "https://www.eisenhowerlibrary.gov/contact",
+      "coord_source": "https://www.wikidata.org/wiki/Q3270206 (P625); the Census Geocoder only matched NE/NW 4th St, so it was not used"
+    },
+    {
+      "offer": "harley-davidson-museum", "n": "Harley-Davidson Museum",
+      "a": "400 W. Canal St.", "c": "Milwaukee", "s": "WI", "z": "53203", "p": "8774368738",
+      "la": 43.03136, "lo": -87.91568,
+      "address_source": "https://www.harley-davidson.com/us/en/museum/",
+      "coord_source": "U.S. Census Geocoder match for '400 W CANAL ST, MILWAUKEE, WI, 53203'"
+    },
+    {
+      "offer": "aquarium-of-the-pacific", "n": "Aquarium of the Pacific",
+      "a": "100 Aquarium Way", "c": "Long Beach", "s": "CA", "z": "90802", "p": "5625903100",
+      "la": 33.763, "lo": -118.19557,
+      "address_source": "https://www.aquariumofpacific.org/ (site footer)",
+      "coord_source": "U.S. Census Geocoder match for '100 AQUARIUM WAY, LONG BEACH, CA, 90802'"
+    },
+    {
+      "offer": "san-antonio-zoo", "n": "San Antonio Zoo",
+      "a": "3903 N. St. Mary's Street", "c": "San Antonio", "s": "TX", "z": "78212", "p": "2107347184",
+      "la": 29.46215, "lo": -98.47367,
+      "address_source": "https://sazoo.org/ (site footer, Contact Us)",
+      "coord_source": "U.S. Census Geocoder match for \"3903 N ST MARY'S, SAN ANTONIO, TX, 78212\""
+    },
+    {
+      "offer": "legoland-florida", "n": "LEGOLAND Florida Resort",
+      "a": "1 Legoland Way", "c": "Winter Haven", "s": "FL", "z": "33884", "p": "8773505346",
+      "la": 27.98917, "lo": -81.68994,
+      "address_source": "https://www.legoland.com/florida/ (footer); phone from https://www.legoland.com/florida/our-company/contact-us/ (theme park information line)",
+      "coord_source": "https://en.wikipedia.org/wiki/Legoland_Florida (Wikidata Q646122); the Census Geocoder found no match"
+    },
+    {
+      "offer": "legoland-new-york", "n": "LEGOLAND New York Resort",
+      "a": "1 LEGOLAND Way", "c": "Goshen", "s": "NY", "z": "10924", "p": "8662490908",
+      "la": 41.37806, "lo": -74.31333,
+      "address_source": "https://www.legoland.com/new-york/plan-your-visit/planning-tools/directions-parking/; phone from https://www.legoland.com/new-york/about-us/contact-us/ (theme park information line)",
+      "coord_source": "https://en.wikipedia.org/wiki/Legoland_New_York (Wikidata Q81610473); the Census Geocoder found no match"
+    },
+    {
+      "offer": "old-town-trolley-savannah", "n": "Old Town Trolley Tours, Savannah",
+      "a": "", "c": "Savannah", "s": "GA", "z": "", "approx": true,
+      "la": 32.01246, "lo": -81.19416,
+      "address_source": "none found (the official Savannah pages list no boarding address)",
+      "coord_source": "Census 2025 Gazetteer Places, Savannah city, GA (GEOID 1369000) internal point: city center, not the boarding spot"
+    },
+    {
+      "offer": "old-town-trolley-st-augustine", "n": "Old Town Trolley Tours, St. Augustine",
+      "a": "", "c": "St. Augustine", "s": "FL", "z": "", "approx": true,
+      "la": 29.89615, "lo": -81.31113,
+      "address_source": "none found verbatim on the official St. Augustine pages",
+      "coord_source": "Census 2025 Gazetteer Places, St. Augustine city, FL (GEOID 1262500) internal point: city center, not the boarding spot"
+    }
+  ]
+}

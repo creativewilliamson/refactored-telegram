@@ -12,7 +12,7 @@
         "Verify the state list links to /state/{st}/ pages and 'Before you go' mentions proof of service and calling ahead"
       ],
       "evidence": "evidence/F01.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F02",

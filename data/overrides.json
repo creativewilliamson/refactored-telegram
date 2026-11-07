@@ -1,0 +1,149 @@
+{
+  "_readme": "Corrections and additions to data/seed/offers-2026.json. Never edit the seed; put changes here. Every entry needs a reason and a source_url. 'set' may contain: time_window, and corrections to offer fields.",
+  "offers": [
+    {
+      "slug": "aspen-creek-grill",
+      "set": {
+        "time_window": "11 a.m.–6 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"Pick up 11 a.m.–6 p.m.\"); not guessed.",
+      "source_url": "https://aspencreekgrill.com/veterans/"
+    },
+    {
+      "slug": "denny-s",
+      "set": {
+        "time_window": "5 a.m.–noon"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"5 a.m. to noon\"); not guessed.",
+      "source_url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/"
+    },
+    {
+      "slug": "golden-corral",
+      "set": {
+        "time_window": "4 p.m.–close"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"4 p.m. to close\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "hard-rock-cafe",
+      "set": {
+        "time_window": "All day"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"all day\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "hy-vee",
+      "set": {
+        "time_window": "6–10 a.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"Free breakfast, 6–10 a.m.\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "little-caesars",
+      "set": {
+        "time_window": "11 a.m.–2 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"11 a.m.–2 p.m., in store\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "logan-s-roadhouse",
+      "set": {
+        "time_window": "11 a.m.–3 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"11 a.m.–3 p.m.\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "main-event",
+      "set": {
+        "time_window": "All day"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"All day, valid ID\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "shoney-s",
+      "set": {
+        "time_window": "Opening–11 a.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"opening until 11 a.m.\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "sizzler",
+      "set": {
+        "time_window": "Until 4 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"Open until 4 p.m.\"); not guessed.",
+      "source_url": "https://news.va.gov/150505/2026-veterans-day-discounts-free-meals-offers/"
+    },
+    {
+      "slug": "texas-roadhouse",
+      "set": {
+        "time_window": "11 a.m.–2 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"Vouchers handed out 11 a.m.–2 p.m.\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "tgi-fridays",
+      "set": {
+        "time_window": "11 a.m.–7 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"11 a.m.–7 p.m.\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "tuscan-brands",
+      "set": {
+        "time_window": "11 a.m.–4 p.m."
+      },
+      "reason": "Time window parsed from the seed's own wording (\"11 a.m.–4 p.m.\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "veterans-canteen-service",
+      "set": {
+        "time_window": "Morning"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"Morning of Tuesday, Nov 10\"); not guessed.",
+      "source_url": "https://www.vacanteen.va.gov/"
+    },
+    {
+      "slug": "chipotle",
+      "set": {
+        "time_window": "All day"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"All day at participating locations\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "perry-s-steakhouse-and-grille",
+      "set": {
+        "time_window": "4 p.m.–close"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"4 p.m. to close\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "dave-and-buster-s",
+      "set": {
+        "time_window": "All day"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"free unlimited game play all day\"); not guessed.",
+      "source_url": "https://www.military.com/veterans-day/restaurants-veterans-day-military-discounts.html"
+    },
+    {
+      "slug": "eisenhower-presidential-library-and-museum",
+      "set": {
+        "time_window": "9 a.m.–4:30 p.m. Central"
+      },
+      "reason": "Time window parsed from the seed's own wording (\"9 a.m.–4:30 p.m. Central\"); not guessed.",
+      "source_url": "https://www.archives.gov/calendar/event/veterans-day-free-museum-admission-0"
+    }
+  ]
+}

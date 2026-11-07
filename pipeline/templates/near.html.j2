@@ -1,0 +1,107 @@
+{% extends "base.html.j2" %}
+{% block title %}Veterans Day offers near you | {{ site_name }}{% endblock %}
+{% block canonical %}/near/{% endblock %}
+{% block body_class %}page-near{% endblock %}
+{% block main %}
+<div class="wrap">
+  <h1 id="results-h" tabindex="-1">Veterans Day offers near you</h1>
+  <details id="search-box" class="search-box js-only" open>
+  <summary>Search a different place</summary>
+  <form id="near-form" class="search" action="/near/" method="get" role="search" novalidate>
+    <label for="nq">ZIP code, or City, ST</label>
+    <div class="search-row">
+      <input id="nq" name="q" type="text" autocomplete="postal-code" placeholder="46052 or Lebanon, IN"
+             aria-describedby="nq-msg" required>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+    <p id="nq-msg" class="msg" role="alert" hidden></p>
+    <button type="button" class="btn btn-secondary btn-block" id="near-locate">Use my location</button>
+  </form>
+  </details>
+  <noscript>
+    <p class="notice">This search needs JavaScript. You can still see every offer by state:
+      <a href="/">pick your state on the home page</a>.</p>
+  </noscript>
+
+  <p id="status" class="status" role="status" aria-live="polite"></p>
+
+  <section id="results" hidden>
+    <p id="summary" class="summary"></p>
+    <p id="widen-note" class="notice" hidden></p>
+    <p id="offer-filter-note" class="notice" hidden></p>
+
+    <div class="controls">
+      <div class="control">
+        <label for="radius">How far?</label>
+        <select id="radius">
+          <option value="10">10 miles</option>
+          <option value="25" selected>25 miles</option>
+          <option value="50">50 miles</option>
+          <option value="100">100 miles</option>
+        </select>
+      </div>
+      <details class="filters" id="filters">
+        <summary>Filter: kind of offer, free only, who qualifies</summary>
+        <fieldset class="cat-filter">
+          <legend>Kind of offer</legend>
+          <div class="seg" id="cat-buttons">
+            <button type="button" class="seg-btn" data-cat="" aria-pressed="true">All</button>
+            {% for key, label in cats.items() %}
+            <button type="button" class="seg-btn" data-cat="{{ key }}" aria-pressed="false">{{ label }}</button>
+            {% endfor %}
+          </div>
+        </fieldset>
+        <div class="check">
+          <input type="checkbox" id="free-only">
+          <label for="free-only">Free only (no purchase needed)</label>
+        </div>
+        <div class="control">
+          <label for="who">Who qualifies</label>
+          <select id="who">
+            <option value="">Anyone</option>
+            <option value="veteran">Veterans</option>
+            <option value="active">Active duty</option>
+            <option value="guard_reserve">Guard or Reserve</option>
+            <option value="retiree">Military retirees</option>
+            <option value="family">Spouses and family</option>
+            <option value="gold_star">Gold Star families</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-secondary" id="clear-filters">Clear filters</button>
+      </details>
+    </div>
+
+    <p class="tools">
+      <a class="btn btn-secondary" id="print-link" href="/print/">Large-print list</a>
+      <button type="button" class="btn btn-secondary" id="share">Share link</button>
+    </p>
+    <p id="share-msg" class="help" role="status" hidden></p>
+
+    <h2 id="cards-h">Places near you</h2>
+    <p id="cards-empty" class="notice" hidden></p>
+    <ul id="cards" class="cards" aria-labelledby="cards-h"></ul>
+    <button type="button" class="btn btn-secondary btn-block" id="more" hidden>Show more places</button>
+
+    <section id="far" hidden aria-labelledby="far-h">
+      <h2 id="far-h">Worth the drive: special places within 150 miles</h2>
+      <ul id="far-cards" class="cards"></ul>
+    </section>
+
+    <section id="everywhere" aria-labelledby="everywhere-h">
+      <h2 id="everywhere-h">Everywhere</h2>
+      <p id="everywhere-note"></p>
+      <ul id="everywhere-list" class="offer-list"></ul>
+    </section>
+
+    <section id="find" aria-labelledby="find-h">
+      <h2 id="find-h">More chains with offers</h2>
+      <p>We don't have a store list for these chains. Tap <strong>Find nearest</strong> to search a map. It opens Google Maps.</p>
+      <ul id="find-list" class="offer-list compact"></ul>
+    </section>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/near.js') }}" defer></script>
+{% endblock %}

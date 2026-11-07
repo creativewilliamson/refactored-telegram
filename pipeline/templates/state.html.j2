@@ -1,0 +1,63 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import offer_line, search_box %}
+{% block title %}Veterans Day 2026 offers in {{ name }} | {{ site_name }}{% endblock %}
+{% block description %}Free meals and deals for veterans and service members in {{ name }} on Veterans Day, Wed, Nov 11, 2026: {{ here | length + local | length }} offers with stores or places in {{ name }}.{% endblock %}
+{% block canonical %}/state/{{ code | lower }}/{% endblock %}
+{% block main %}
+<div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> › {{ name }}</p>
+  <h1>Veterans Day offers in {{ name }}</h1>
+  <p class="lead">{{ store_count }} store locations with Veterans Day offers in {{ name }}. Call ahead: not every store takes part.</p>
+  {{ search_box("st", "Find offers near you: ZIP code, or City, ST") }}
+
+  {% if cities %}
+  <section class="block" aria-labelledby="cities-h">
+    <h2 id="cities-h">Top cities in {{ name }}</h2>
+    <ul class="link-grid">
+    {% for display, key, cnt in cities %}
+      <li><a href="/near/?city={{ key | urlencode }}&amp;st={{ code }}">{{ display }}</a> <span class="count">({{ cnt }} stores)</span></li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if local %}
+  <section class="block" aria-labelledby="local-h">
+    <h2 id="local-h">Only in {{ name }} and nearby states</h2>
+    <ul class="offer-list">
+    {% for o, cnt in local %}{{ offer_line(o, cnt) }}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="block" aria-labelledby="here-h">
+    <h2 id="here-h">National chains with stores in {{ name }}</h2>
+    {% if here %}
+    <ul class="offer-list">
+    {% for o, cnt in here %}{{ offer_line(o, cnt) }}{% endfor %}
+    </ul>
+    {% else %}
+    <p>We didn't find stores of the national chains in {{ name }}. The offers below still work, and some chains may have a store we don't know about.</p>
+    {% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="everywhere-h">
+    <h2 id="everywhere-h">Everywhere</h2>
+    <p>These offers don't need a store near you.</p>
+    <ul class="offer-list">
+    {% for o in everywhere %}{{ offer_line(o) }}{% endfor %}
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="other-h">
+    <h2 id="other-h">More national offers</h2>
+    <p>We don't have a store list in {{ name }} for these. Check the offer details, or search a map for one near you.</p>
+    <ul class="offer-list compact">
+    {% for o in other %}{{ offer_line(o) }}{% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ asset('js/search.js') }}" defer></script>
+{% endblock %}

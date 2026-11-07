@@ -1,0 +1,38 @@
+{% extends "base.html.j2" %}
+{% block title %}About, sources and privacy | {{ site_name }}{% endblock %}
+{% block canonical %}/about/{% endblock %}
+{% block main %}
+<div class="wrap prose">
+  <h1>About {{ site_name }}</h1>
+  <p class="lead">{{ site_name }} lists Veterans Day 2026 offers for veterans and service members, and shows real places near you. It is free. There is no sign-up and there are no ads.</p>
+
+  <h2>Last checked</h2>
+  <p>Offers were last checked on <strong>{{ verified_long }}</strong>. This site was built on {{ built | long }}. Businesses can change or end an offer at any time, so please tap <strong>Offer details</strong> or call the store before you go.</p>
+
+  <h2>Your privacy, in plain words</h2>
+  <ul>
+    <li>Your ZIP code, city and location <strong>stay on your phone</strong>. The site never sends them to us or to anyone else.</li>
+    <li>The distance math runs on your own phone or computer.</li>
+    <li>To find places near you, your phone downloads map squares and ZIP lists by number only (for example, "all ZIP codes that start with 460"). We can't tell which ZIP you typed.</li>
+    <li>No cookies. No tracking. No ads. No outside scripts.</li>
+    <li>Your last search is saved only in this browser, so the page can come back if your signal drops. Clear your browser's site data to remove it.</li>
+    <li>If you tap a map or "Offer details" link, you leave this site, and that other site's own privacy rules apply.</li>
+    <li>If you share a search link, the link itself includes the ZIP or town you searched, because you chose to share it.</li>
+  </ul>
+
+  <h2>Where the information comes from</h2>
+  <ul>
+    <li><strong>Offers:</strong> {{ counts.offers }} Veterans Day offers, each checked against the business's own announcement or a public news list. Every offer links to its source.</li>
+    <li><strong>Store locations:</strong> {{ counts.stores }} stores of {{ counts.brands }} chains from <a href="https://www.alltheplaces.xyz/" rel="noopener noreferrer" target="_blank">All The Places</a>, a public project that collects store lists from businesses' own websites. We keep only U.S. stores that match the right business by its <a href="https://www.wikidata.org/" rel="noopener noreferrer" target="_blank">Wikidata</a> ID, so a town named Eureka never shows up as the Eureka! restaurant.</li>
+    <li><strong>Museums and other single places:</strong> {{ counts.places }} places entered by hand from their official websites, Wikidata or the U.S. Census.</li>
+    <li><strong>ZIP codes and towns:</strong> U.S. Census Bureau Gazetteer files, plus the open <a href="https://github.com/seanpianka/zipcodes" rel="noopener noreferrer" target="_blank">zipcodes</a> list (MIT licence) for ZIP codes the Census file doesn't cover, like Guam and the U.S. Virgin Islands. Some store addresses were placed on the map with the U.S. Census Geocoder.</li>
+    <li>Some chains don't publish a store list we can use. For those we show a <strong>Find nearest</strong> link that searches a map instead. We never make up a store, phone number or hour.</li>
+  </ul>
+
+  <h2>Not affiliated</h2>
+  <p>{{ site_name }} is not affiliated with, endorsed by or sponsored by any business, agency or group listed here. Business names are shown as plain text only to tell you where an offer is. Offers can change; the business's own page is always the final word.</p>
+
+  <h2>Need help now?</h2>
+  <p>Veterans Crisis Line: <a href="tel:988">call 988, then press 1</a>, or <a href="sms:838255">text 838255</a>. It's free and open all day, every day.</p>
+</div>
+{% endblock %}

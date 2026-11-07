@@ -1,0 +1,24 @@
+{% extends "base.html.j2" %}
+{% block title %}Large-print list | {{ site_name }}{% endblock %}
+{% block canonical %}/print/{% endblock %}
+{% block body_class %}page-print{% endblock %}
+{% block main %}
+<div class="wrap print-wrap">
+  <p class="no-print"><a href="/near/">← Back to results</a>
+    <button type="button" class="btn btn-primary" id="do-print">Print this list</button></p>
+  <h1 id="print-h">Veterans Day offers near you</h1>
+  <p id="print-sub" class="print-sub"></p>
+  <p id="print-status" role="status" aria-live="polite"></p>
+  <ol id="print-list" class="print-list"></ol>
+  <section id="print-everywhere" hidden>
+    <h2>Good anywhere</h2>
+    <ul id="print-everywhere-list" class="print-list"></ul>
+  </section>
+  <p class="print-foot">Bring proof of service. Call ahead: not every store takes part. Offers checked {{ verified_long }}. From {{ site_url | replace("https://", "") }}.</p>
+  <noscript><p class="notice">This list needs JavaScript. <a href="/">Pick your state</a> to see offers there.</p></noscript>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/print.js') }}" defer></script>
+{% endblock %}

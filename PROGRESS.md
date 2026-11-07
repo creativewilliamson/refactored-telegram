@@ -36,3 +36,34 @@ Decisions:
   Garden, Red Lobster, Red Robin, Shake Shack, LongHorn, Tractor Supply,
   Food Lion, Yard House, Pilot Flying J, Charleys, Eat'n Park); for those the
   pipeline uses the newest earlier run where the spider was healthy.
+
+## F01: home page (passes) + data pipeline
+- Built the whole pipeline: offers (pydantic, overrides, eligibility tags ->
+  data/eligibility-map.json), brands.json (114 brands, Q-ids checked on
+  wikidata.org -> data/wikidata-check.json), All The Places stores (81,174
+  kept), Census/zipcodes ZIP + city shards, 0.5-degree tiles, 193 pages.
+  `python -m pipeline.build` (~40 s); `--quick` reuses data for page work.
+- Home: one-line purpose, ZIP/City search, Use my location, Before you go,
+  How it works, 56-state list (2 columns on phones). Evidence: evidence/F01.png.
+- Decisions:
+  - 10 ATP spiders have no brand:wikidata on any store (Eureka!, Eddie
+    Merlot's, Perry's, WOB, El Chico, Aspen Creek, Biscuit Belly, Viva
+    Chicken, Polly's Pies, VA facilities). SPEC 6.2 keeps only Q-id matches,
+    so these show a "Find nearest" link (listed in data/missing-brands.md).
+  - Stores with an address but no coordinates (Hy-Vee, Lucille's, 7 Brew...)
+    are placed with the public U.S. Census Geocoder; unmatched ones dropped.
+    7 Brew's spider only has store-page URLs (locations.7brew.com/st/city/
+    street): the address is read from the URL and kept only on a Census
+    match, showing the Census-matched address. 462 of 561 placed.
+  - Census ZCTA internal points can be far from town in huge rural ZIPs
+    (99701 Fairbanks: 180 mi). When the ZCTA point is >15 mi from the postal
+    town point (zipcodes data), the postal town point is used (324 ZIPs).
+  - Single places (data/places.json): address/phone only from official
+    sites (or Wikidata where the official site refused automated reads);
+    coordinates from the Census Geocoder or Wikidata. Yorktown museum and
+    both Old Town Trolley offers have no sourced street address: they use
+    the Census town point and the card says "about N miles" and that the
+    exact spot is on the offer page. Nothing guessed.
+  - Native Python on this PC needs `python -s` (a user-site entry points at
+    a missing E: drive, outside this project). Docker is unaffected.
+- Next: F02 evidence (results for 46052).
