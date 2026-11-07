@@ -143,7 +143,7 @@
         "Verify Denny's shows a '5 a.m.–noon' chip and Texas Roadhouse shows its voucher date"
       ],
       "evidence": "evidence/F11.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F12",

@@ -196,7 +196,7 @@
         esc(r.c) + ". Check the offer details for the exact spot.</p>";
     }
     if (r.h) {
-      h += '<p class="hours"><strong>Usual hours:</strong> ' + esc(V.fmtHours(r.h)) +
+      h += '<p class="hours"><strong>Usual hours:</strong> ' + esc(V.fmtHours(r.h).replace(/\.$/, "")) +
         ". Call ahead on Veterans Day.</p>";
     }
     h += '<p class="actions">';

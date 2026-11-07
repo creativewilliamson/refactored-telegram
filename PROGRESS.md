@@ -156,3 +156,13 @@ Decisions:
   tests). `docker compose --profile test run --rm e2e`: 52 passed.
 - Found by it: "Home" crumb link was 46px wide with Linux fonts; now
   min-width 48px.
+
+## F11: dates in the visitor's time zone (passes)
+- tests/e2e/test_dates.py: clock fixed at Nov 9, 11, 12 and Dec 1 in New York
+  and Honolulu (8 runs) + one instant (08:00 UTC Nov 12) that is Ended in
+  New York but Today in Honolulu. Before: "Starts Tue, Nov 10" / "Starts Wed,
+  Nov 11"; during: red "Today" (multi-day: "Today, through ..."); after:
+  "Ended" and the card drops below every live card; vouchers: "Voucher good
+  until May 31, 2027" (Texas Roadhouse), Denny's "5 a.m.-noon" chip.
+- Fixed a doubled period after usual hours ("9 p.m.. Call ahead").
+- tools/montage.py builds multi-screenshot evidence. Evidence: evidence/F11.png.
