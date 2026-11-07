@@ -246,7 +246,7 @@
     var shown = cards.slice(0, S.shown);
     var placeLabel = o.label;
 
-    document.title = "Offers near " + placeLabel + " | VetsEatFree";
+    document.title = "Offers near " + placeLabel + " | Vet Day Deals";
     $("results-h").textContent = "Offers near " + placeLabel;
     var n = cards.length;
     $("summary").textContent = n

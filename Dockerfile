@@ -1,4 +1,4 @@
-# VetsEatFree: Python pipeline + static site generator + plain static server.
+# Vet Day Deals: Python pipeline + static site generator + plain static server.
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \

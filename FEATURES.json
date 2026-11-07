@@ -263,7 +263,7 @@
         "Open DEPLOY.md and verify every deploy command uses --project-name vetdaydeals and Way B (Wrangler) is the main path, with a note that dashboard drag-and-drop is limited to 1,000 files"
       ],
       "evidence": "evidence/F26.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F27",

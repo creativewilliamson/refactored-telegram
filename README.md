@@ -1,4 +1,4 @@
-# VetsEatFree: Veterans Day 2026 offers near you
+# Vet Day Deals: Veterans Day 2026 offers near you
 
 A free, static website. A veteran types a ZIP code, "City, ST" or taps "Use
 my location", and sees Veterans Day 2026 offers at real nearby places, with

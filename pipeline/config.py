@@ -11,12 +11,12 @@ DIST = ROOT / "dist"
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 STATIC = Path(__file__).resolve().parent / "static"
 
-SITE_NAME = "VetsEatFree"
-SITE_URL = "https://vetseatfree.pages.dev"
+SITE_NAME = "Vet Day Deals"
+SITE_URL = "https://vetdaydeals.pages.dev"
 EVENT_DATE = "2026-11-11"
 
 # A generic client name for downloads; no personal contact details.
-USER_AGENT = "VetsEatFree-build/1.0 (static site data pipeline)"
+USER_AGENT = "VetDayDeals-build/1.0 (static site data pipeline)"
 
 # Cloudflare Pages limits (fail the build if exceeded).
 MAX_FILES = 20_000

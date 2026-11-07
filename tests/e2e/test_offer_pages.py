@@ -68,10 +68,10 @@ def test_f19_sitemap_and_robots(page):
     assert sm.status == 200
     locs = re.findall(r"<loc>([^<]+)</loc>", sm.text())
     assert len(locs) == 2 + 56 + 130
-    assert all(u.startswith("https://vetseatfree.pages.dev/") for u in locs)
-    assert "https://vetseatfree.pages.dev/offer/texas-roadhouse/" in locs
+    assert all(u.startswith("https://vetdaydeals.pages.dev/") for u in locs)
+    assert "https://vetdaydeals.pages.dev/offer/texas-roadhouse/" in locs
     robots = page.request.get(url("/robots.txt")).text()
-    assert "Sitemap: https://vetseatfree.pages.dev/sitemap.xml" in robots
+    assert "Sitemap: https://vetdaydeals.pages.dev/sitemap.xml" in robots
 
 
 def test_f19_open_graph(page):
@@ -79,7 +79,7 @@ def test_f19_open_graph(page):
     og = page.eval_on_selector_all("meta[property^='og:']", "m => Object.fromEntries(m.map(x => [x.getAttribute('property'), x.content]))")
     for key in ("og:title", "og:description", "og:image", "og:url", "og:type"):
         assert og.get(key), key
-    assert og["og:image"] == "https://vetseatfree.pages.dev/og.png"
+    assert og["og:image"] == "https://vetdaydeals.pages.dev/og.png"
     img = page.request.get(url("/og.png"))
     assert img.headers["content-type"] == "image/png"
     w, h = struct.unpack(">II", img.body()[16:24])

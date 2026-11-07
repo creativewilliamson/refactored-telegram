@@ -1,11 +1,11 @@
-/* VetsEatFree offline helper (service worker).
+/* Vet Day Deals offline helper (service worker).
    Keeps the site's own pages and data files on this phone after they are
    first used, so a reload still works on a weak or lost signal. It never
    sends anything anywhere and stores nothing but files this site served.
    A new build gets a new cache; old caches are deleted. */
 "use strict";
 var VERSION = "{{ version }}";
-var CACHE = "vef-" + VERSION;
+var CACHE = "vdd-" + VERSION;
 var CORE = {{ core | tojson }};
 
 self.addEventListener("install", function (event) {
@@ -20,7 +20,7 @@ self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(keys.filter(function (k) {
-        return k.indexOf("vef-") === 0 && k !== CACHE;
+        return k.indexOf("vdd-") === 0 && k !== CACHE;
       }).map(function (k) { return caches.delete(k); }));
     }).then(function () { return self.clients.claim(); })
   );

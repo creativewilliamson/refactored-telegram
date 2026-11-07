@@ -11,7 +11,7 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
-Write-Host "Building VetsEatFree (data + pages) and starting the web server..."
+Write-Host "Building Vet Day Deals (data + pages) and starting the web server..."
 $env:BUILDKIT_PROGRESS = 'quiet'
 docker compose --progress quiet up --build -d
 if ($LASTEXITCODE -ne 0) {
@@ -26,7 +26,7 @@ while ((Get-Date) -lt $deadline) {
         $r = Invoke-WebRequest -Uri $url -UseBasicParsing -TimeoutSec 5
         if ($r.StatusCode -eq 200) {
             Write-Host ""
-            Write-Host "VetsEatFree is running. Open $url" -ForegroundColor Green
+            Write-Host "Vet Day Deals is running. Open $url" -ForegroundColor Green
             exit 0
         }
     } catch { }

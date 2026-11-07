@@ -5,6 +5,8 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
+from . import config
+
 NAVY = (11, 42, 74)
 RED = (178, 34, 52)
 WHITE = (255, 255, 255)
@@ -25,7 +27,7 @@ def write_image(path: Path) -> None:
     img = Image.new("RGB", (1200, 630), NAVY)
     draw = ImageDraw.Draw(img)
     draw.rectangle([0, 590, 1200, 630], fill=RED)
-    draw.text((80, 110), "VetsEatFree", font=_font(96), fill=WHITE)
+    draw.text((80, 110), config.SITE_NAME, font=_font(96), fill=WHITE)
     draw.text((80, 250), "Veterans Day 2026 offers near you", font=_font(58), fill=WHITE)
     draw.text((80, 350), "Enter your ZIP. See free meals and deals", font=_font(44), fill=WHITE)
     draw.text((80, 410), "for veterans and service members.", font=_font(44), fill=WHITE)

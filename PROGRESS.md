@@ -504,3 +504,15 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
   sources. Every other individual closed/coming-soon store stays polish. No
   sweep of other chains.
 - Playa Bowls threshold side effect: keep as is (accepted).
+
+## Run 2 (2026-11-07 evening)
+- Turn start: no AGENT_STOP, STEER.md empty. Committed J.Will's run-2 plan (b915af5). start.ps1 OK; baseline e2e 130 passed (F01-F19 fine).
+- Process slip: my first e2e command wrote its log to Git Bash's /tmp (outside the folder). I stopped it within seconds and deleted that one
+  159-byte file I had just made; test logs now go to test-results/ (gitignored).
+
+## F26: site renamed "Vet Day Deals" (passes)
+- SITE_NAME/SITE_URL in pipeline/config.py (https://vetdaydeals.pages.dev); og.png, og:image:alt, JS page titles, CSS/JS/sw comments,
+  start.ps1, README, Dockerfile comments. Browser storage/cache keys "vef-" (old initials) -> "vdd-" (site not deployed yet, nothing lost).
+- DEPLOY.md: project vetdaydeals, Wrangler is the main way; dashboard drag-and-drop is limited to 1,000 files (site has ~3,100), so not used.
+- Kept: folder, compose project/image names (vetseatfree), data file names. dist/ has 0 matches for VetsEatFree/Vets Eat Free/vetseatfree.
+- tests/e2e/test_run2.py (8 new). Evidence: evidence/F26.png. Next: F27 "New search" button.

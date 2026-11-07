@@ -1,4 +1,4 @@
-/* VetsEatFree shared code. Everything here runs on the visitor's device:
+/* Vet Day Deals shared code. Everything here runs on the visitor's device:
    ZIP and city lookups read static files by index (first 3 ZIP digits,
    state code, map square), and all distance math happens in this file.
    Nothing the visitor types is ever sent anywhere. */
@@ -336,15 +336,15 @@
 
   // ---- remembered search (this browser only) ----------------------------
   VEF.saveLast = function (s) {
-    try { localStorage.setItem("vef-last", JSON.stringify(s)); } catch (e) { /* ignore */ }
+    try { localStorage.setItem("vdd-last", JSON.stringify(s)); } catch (e) { /* ignore */ }
   };
   VEF.loadLast = function () {
-    try { return JSON.parse(localStorage.getItem("vef-last") || "null"); } catch (e) { return null; }
+    try { return JSON.parse(localStorage.getItem("vdd-last") || "null"); } catch (e) { return null; }
   };
   VEF.takePending = function () {
     try {
-      var v = sessionStorage.getItem("vef-pending");
-      sessionStorage.removeItem("vef-pending");
+      var v = sessionStorage.getItem("vdd-pending");
+      sessionStorage.removeItem("vdd-pending");
       return v ? JSON.parse(v) : null;
     } catch (e) { return null; }
   };

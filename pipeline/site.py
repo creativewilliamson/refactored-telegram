@@ -26,7 +26,7 @@ NEAR_PRELOAD_SCRIPT = (
     "g('/data/offers.json');g('/data/tiles/index.json');"
     r"var q=null,h=0;try{var m=/^\/near\/(\d{5})\/?$/.exec(location.pathname);"
     "if(m){q=m[1];}else if(!location.search){"
-    "var s=JSON.parse(sessionStorage.getItem('vef-pending')||localStorage.getItem('vef-last')||'null');"
+    "var s=JSON.parse(sessionStorage.getItem('vdd-pending')||localStorage.getItem('vdd-last')||'null');"
     "if(s&&s.q){q=String(s.q);}if(s){h=1;}}}catch(e){}"
     # A search is about to run: start in the folded "searching" layout so
     # nothing jumps when the results arrive.

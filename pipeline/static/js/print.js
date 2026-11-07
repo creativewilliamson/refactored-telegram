@@ -53,7 +53,7 @@
       });
       rows.sort(function (a, b) { return a.d - b.d; });
 
-      document.title = "Large-print list: offers near " + o.label + " | VetsEatFree";
+      document.title = "Large-print list: offers near " + o.label + " | Vet Day Deals";
       $("print-h").textContent = "Veterans Day offers near " + o.label;
       $("print-sub").textContent = rows.length + " places within " + radius + " miles, closest first. Printed " +
         V.fmtLong(today) + ".";

@@ -6,7 +6,7 @@
 
   function go(search) {
     try {
-      sessionStorage.setItem("vef-pending", JSON.stringify(search));
+      sessionStorage.setItem("vdd-pending", JSON.stringify(search));
     } catch (e) { /* storage blocked: /near/ shows its own search box */ }
     window.location.href = "/near/";
   }
