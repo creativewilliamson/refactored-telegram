@@ -90,3 +90,12 @@ Decisions:
 - tests/test_pipeline.py: 39 pytest checks (seed, overrides, tags, brands,
   US-only records, collision-prone brands, lookups, Pages limits, headers).
 - Evidence: evidence/F03.png, evidence/F03-source.png. Next: F04.
+
+## F04: Everywhere + special places (passes)
+- Every results page has "Everywhere" (Grace for Vets, National Parks).
+- Decision: single-location offers get their own section, "Museums and
+  special places within 150 miles", above the store cards and always listed
+  in full (they used to sit in the store list and Yorktown hid behind
+  "Show more"). 23185: Colonial Williamsburg 2.2 mi, Jamestown 4.8 mi,
+  Yorktown museum about 10 mi, Mount Vernon 104 mi.
+- Evidence: evidence/F04.png, evidence/F04-everywhere.png. Next: F05.

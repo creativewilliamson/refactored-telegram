@@ -52,7 +52,7 @@
         "Search 23185 (Williamsburg, VA) and verify Colonial Williamsburg and Yorktown appear with miles"
       ],
       "evidence": "evidence/F04.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F05",

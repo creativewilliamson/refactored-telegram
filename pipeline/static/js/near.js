@@ -142,10 +142,6 @@
       var offers = offersAt(x.r.b).filter(function (o) { return V.offerPasses(o, f); });
       if (offers.length) { cards.push(card(x.r, x.d, offers, today, null)); }
     });
-    placesWithin(S.radius).forEach(function (x) {
-      var o = S.data._byId[x.p.offer];
-      if (o && V.offerPasses(o, f)) { cards.push(card(x.p, x.d, [o], today, x.p)); }
-    });
     cards.sort(function (a, b) {
       if (a.ended !== b.ended) { return a.ended ? 1 : -1; }
       return a.d - b.d;
@@ -244,7 +240,7 @@
     document.title = "Offers near " + placeLabel + " | VetsEatFree";
     $("results-h").textContent = "Offers near " + placeLabel;
     var n = cards.length;
-    $("summary").textContent = n + (n === 1 ? " place" : " places") + " within " + S.radius +
+    $("summary").textContent = n + (n === 1 ? " store" : " stores") + " with offers within " + S.radius +
       " miles of " + placeLabel + ", closest first.";
 
     var widen = $("widen-note");
@@ -252,7 +248,7 @@
       widen.textContent = "Showing up to " + S.widened + " miles because few places are close by.";
       widen.hidden = false;
     } else if (S.userRadius && n < MIN_PLACES && S.radius < 100) {
-      widen.innerHTML = "Only " + n + (n === 1 ? " place" : " places") + " within " + S.radius +
+      widen.innerHTML = "Only " + n + (n === 1 ? " store" : " stores") + " within " + S.radius +
         ' miles. <button type="button" class="linkish" id="widen-btn">Show up to ' + nextRadius() + " miles</button>";
       widen.hidden = false;
     } else {
@@ -294,15 +290,13 @@
       more.hidden = true;
     }
 
-    // Single places beyond the radius but within 150 miles.
+    // Single places (museums, zoos...) within 150 miles, whatever the radius.
     var far = [];
-    if (S.radius < PLACE_RANGE) {
-      placesWithin(PLACE_RANGE).forEach(function (x) {
-        var off = S.data._byId[x.p.offer];
-        if (x.d > S.radius && off && V.offerPasses(off, f)) { far.push(card(x.p, x.d, [off], V.today(), x.p)); }
-      });
-      far.sort(function (a, b) { return a.d - b.d; });
-    }
+    placesWithin(PLACE_RANGE).forEach(function (x) {
+      var off = S.data._byId[x.p.offer];
+      if (off && V.offerPasses(off, f)) { far.push(card(x.p, x.d, [off], V.today(), x.p)); }
+    });
+    far.sort(function (a, b) { return a.d - b.d; });
     $("far").hidden = !far.length;
     $("far-cards").innerHTML = far.map(function (c, i) { return renderCard(c, "far-" + i); }).join("");
 
@@ -328,7 +322,7 @@
     $("share").hidden = !!o.geo;
     results.hidden = false;
     var tail = S.failed ? " Some places may be missing." : "";
-    say("Found " + n + (n === 1 ? " place" : " places") + " within " + S.radius + " miles." + tail, true);
+    say("Found " + n + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles." + tail, true);
     if (fresh) { foldSearch(true); $("results-h").focus(); }
   }
 
