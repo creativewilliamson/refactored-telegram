@@ -452,3 +452,20 @@ def test_f20_excluded_stores_gone_open_neighbours_stay(records):
         assert not has("wendys", street), street
     assert has("wendys", "4206 I-40 West")          # open Wendy's in Amarillo stays
     assert sum(1 for r in records if r["b"] == "wendys") > 5000
+
+
+# ---- run 2: F25 ------------------------------------------------------------
+def test_f25_og_image_text_fits_with_margin():
+    from PIL import Image
+    from pipeline import config, og
+    boxes = og.layout()
+    assert boxes[0][0] == "Vet Day Deals" == config.SITE_NAME
+    for text, _font, _xy, (x0, y0, x1, y1) in boxes:
+        assert x0 >= 60 and x1 <= og.W - 60, (text, x0, x1)       # inside, with margin
+        assert y0 >= 40 and y1 <= og.BAND_TOP - 20, (text, y0, y1)
+    for (_, _, _, a), (_, _, _, b) in zip(boxes, boxes[1:]):
+        assert a[3] < b[1], "lines overlap"
+    img = Image.open(DIST / "og.png")
+    assert img.size == (1200, 630)
+    # Text only: the image uses just the three site colors (plus anti-aliasing between them).
+    assert len(img.convert("RGB").getcolors(1_000_000)) < 2000

@@ -580,3 +580,10 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
   "How it works" step 3 now says "to see where the offer was announced".
 - Also renamed the JS namespace window.VEF / VEF_PRE (old initials) to VDD / VDD_PRE.
 - e2e 188 passed; pytest 80. Evidence: evidence/F24.png.
+
+## F25: share image og.png fits (passes)
+- pipeline/og.py measures each line with the real font and shrinks it until it fits inside the 80px side margins
+  ("Veterans Day 2026 offers near you" was cut off at 58px); site name from config ("Vet Day Deals"). Text only, no logos.
+- Unit test checks every line's ink box is inside the margins, above the red band, with no overlaps. Evidence: evidence/F25.png
+  (og.png opened in the browser).
+- All 27 features now pass. Next: full test run, then the evaluator (round 1 of at most 3).

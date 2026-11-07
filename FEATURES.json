@@ -353,7 +353,7 @@
         "Open dist/og.png and verify every word fits inside the image with margin"
       ],
       "evidence": "evidence/F25.png",
-      "passes": false
+      "passes": true
     }
   ]
 }
