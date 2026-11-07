@@ -185,3 +185,15 @@ def test_f22_results_to_print_and_back(page):
     assert back.bounding_box()["height"] >= 48
     back.click()
     page.wait_for_selector("#cards li")
+
+
+# ------------------------------------------- CSP: no inline script blocked
+@pytest.mark.parametrize("path", ["/", "/near/46052", "/print/?zip=46052&r=25", "/state/in/", "/offer/hy-vee/"])
+def test_no_csp_violations(page, path):
+    """The inline scripts' hashes in _headers must match the pages (a stale
+    hash silently blocks the results page's early data loading)."""
+    msgs = []
+    page.on("console", lambda m: msgs.append(m.text) if m.type == "error" else None)
+    page.goto(url(path))
+    page.wait_for_load_state("networkidle")
+    assert not [m for m in msgs if "Content Security Policy" in m], msgs

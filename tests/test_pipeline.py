@@ -418,8 +418,37 @@ def test_round9_closed_or_unopened_examples_gone(records):
 
 
 def test_no_store_page_sweep():
-    """STEER (J.Will, Nov 7): no automatic store-page status sweep; closed
-    stores are added one by one to data/location-exclusions.json."""
+    """STEER (J.Will, Nov 7): no automatic store-page status sweep. Run 2 F20
+    re-checked only the round-9 list (tools/round9-flagged.json); every
+    exclusion is one of the 20 hand-added ones or a record from that list."""
     from pipeline import config
     assert not (config.DATA / "store-status.json").exists()
-    assert len(load("data/location-exclusions.json")["exclusions"]) == 20
+    flagged = {(r["spider"], str(r["ref"])) for r in load("tools/round9-flagged.json")["records"]}
+    ex = load("data/location-exclusions.json")["exclusions"]
+    hand_added = ex[:20]
+    assert all("F20 re-check" not in e["reason"] for e in hand_added)
+    for e in ex[20:]:
+        assert (e["spider"], str(e["ref"])) in flagged, e
+        assert "F20 re-check" in e["reason"] and e["page_says"]
+
+
+# ---- run 2: F20 ------------------------------------------------------------
+def test_f20_exclusions_only_for_status_a_visitor_can_see():
+    """Dunkin' TEMP_CLOSED is not a store closure (its pages say "Open Now");
+    only "Coming Soon", visible under the address, counts for Dunkin'."""
+    ex = load("data/location-exclusions.json")["exclusions"]
+    dunkin = [e for e in ex if e["spider"] == "dunkin_us"]
+    assert dunkin and not any("TEMP_CLOSED" in e.get("page_says", "") for e in dunkin)
+    for e in ex:
+        assert e["reason"] and e["source_url"].startswith("https://") and e["checked"]
+    results = load("data/round9-recheck.json")
+    assert results["summary"]["dunkin_us"].get("page looks open", 0) >= 100
+
+
+def test_f20_excluded_stores_gone_open_neighbours_stay(records):
+    def has(b, start):
+        return any(r["b"] == b and (r.get("a") or "").lower().startswith(start.lower()) for r in records)
+    for street in ("2000 Ross Osage", "485 N Mathilda", "1467 W Chinden", "1010 East Hollywood"):
+        assert not has("wendys", street), street
+    assert has("wendys", "4206 I-40 West")          # open Wendy's in Amarillo stays
+    assert sum(1 for r in records if r["b"] == "wendys") > 5000

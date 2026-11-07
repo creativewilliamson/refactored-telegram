@@ -292,7 +292,7 @@
         "Verify data/coverage.md and the store count are updated"
       ],
       "evidence": "evidence/F20.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F21",

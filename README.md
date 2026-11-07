@@ -39,6 +39,10 @@ and Census data into `data\cache\` (a minute or two); later starts reuse it.
 - `data/places.json`: single-location offers (museums, zoos) with sources.
 - `data/location-exclusions.json`: individual store listings the chain's own
   page shows as closed, each with a reason and the page that proves it.
+  Most entries come from the run-2 re-check of run 1's round-9 list
+  (`tools/round9-flagged.json` -> `tools/recheck_flagged.py`; every outcome in
+  `data/round9-recheck.json`). Only a status a visitor can see on the chain's
+  page counts, or a page that is gone; no other chains are swept.
 - `pipeline/`: Python. `build.py` runs everything: offers -> eligibility
   tags (`data/eligibility-map.json`) -> store locations from All The Places,
   kept only when in the U.S./territories and matching the brand's Q-id ->

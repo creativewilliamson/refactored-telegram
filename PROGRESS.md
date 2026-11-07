@@ -539,3 +539,20 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - Results -> print link now adds fixed=1 when the visitor picked the radius (print keeps it) or w=1 when results already widened
   (print shows the same note). /print/?zip=00802&r=25 and 96910&r=25 opened directly now show the 100-mile list.
 - "← Back to results" uses .back-link (48px). e2e: test_run2 + test_print 33 passed. Evidence: evidence/F22.png.
+
+## F20: closed / coming-soon / gone stores from the round-9 list left out (passes)
+- tools/round9-flagged.json: the 645 source records run 1's sweep flagged (2aab420 data/store-status.json: fff5812's chains + Dunkin').
+  Read "~600, recover from fff5812 and 2aab420" as this whole list (645 records, 586 pages); nothing outside it was fetched except a
+  10-page 404 control sample per chain. tools/recheck_flagged.py: robots.txt per site, 1 request/s per site, honest UA, answers cached
+  in data/cache/recheck/. Every outcome in data/round9-recheck.json.
+- Decision (checked in a real browser): only a status a visitor can SEE counts. Dunkin' "TEMP_CLOSED" is not a closure (Sauk Village IL
+  page says "Open Now - Closes at 6:45 PM"; Mc Cook IL shows its hours; looks like online ordering), so those 126 stay listed
+  (run 1's sweep would have hidden 126 open stores). Dunkin' COMING_SOON shows "Coming Soon" under the address: excluded.
+  Wendy's "Temporarily Closed" is a store-specific note under the restaurant and drive-thru hours (107 of ~5,900 pages); the page's
+  "Open until" line is computed from regular hours. Kept as excluded; the reason says where the page says it.
+- 509 new exclusions (529 total), each with reason, https source_url, page_says, date. 404s count only when every source link 404s
+  and 10/10 control pages of that chain load. Stores 80,176 -> 80,086 (most flagged records were already dropped by run 1's
+  no-hours rule; coverage.md updated). Browser spot-check of 12 pages: all as recorded. 5 excluded Wendy's ZIPs: gone, neighbours stay.
+- Found while testing: the local server kept the CSP hash it read at startup, so after F26 the results page's preload script was
+  blocked (Slow 4G 4.0 s > 3 s). serve.py now re-reads _headers/_redirects on change (cf46eea); new e2e CSP test.
+- pytest 80 passed; e2e 165 passed. Evidence: evidence/F20.png (our pages + a spot-check table; no chain pages, so no logos).
