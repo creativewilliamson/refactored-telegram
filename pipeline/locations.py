@@ -138,7 +138,10 @@ def is_placeholder_phone(d: str) -> bool:
 # markers count there.
 STREET_NOT_PUBLIC = re.compile(
     r"do not use|do not order|closed|coming soon|secure\s*acc|not (yet )?open|"
-    r"temp(orary)? address|subject to change",
+    # provisional addresses: the store isn't built or open yet
+    r"(temp|temporary|provisional) address|address (to change|pending|tbd)|(subject|to) change|"
+    # inside the Pentagon (badge-only), not the public Pentagon City / Pentagon Row malls
+    r"(^|,)\s*pentagon\s*\.?$",
     re.I,
 )
 

@@ -266,6 +266,10 @@ def test_not_public_source_fields():
     assert not not_public({"start_date": "2026-11-09", "branch": "Corpus Christi"})
     assert not_public({"addr:street_address": "790 state route 7, TEMP ADDRESS"})
     assert not_public({"addr:street_address": "45343 Alton Lane, (Subject to Change)"})
+    assert not_public({"addr:street_address": "207 Sabal Loop, Address to change"})
+    assert not_public({"addr:street_address": "Shirley Memorial Hwy, Pentagon"})
+    assert not not_public({"addr:street_address": "1100 S. Hayes St.", "branch": "Fashion Center at Pentagon City"})
+    assert not not_public({"addr:street_address": "3286 Pentagon Blvd"})
     assert not_public({"branch": "Brownsburg", "phone": "x"}, ("opening_hours", "website"))
 
 

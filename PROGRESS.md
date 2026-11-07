@@ -303,3 +303,19 @@ Decisions:
   Round Rock now 16 mi from 78701), else dropped.
 - pytest 66 passed (round-2 names, source fields, town-distance check);
   e2e 112 passed; spot check 20/20. 80,964 stores.
+
+## Evaluator round 3: NEEDS_WORK (2 blocking) -> work items
+- W5: Dunkin' "207 Sabal Loop, Address to change" (Laredo; no phone/hours):
+  catch all provisional-address wording, not just "temp address".
+- W6: Dunkin' inside the Pentagon (badge-only): drop stores inside the
+  Pentagon (not Pentagon City / Pentagon Row, which are public malls).
+
+## Evaluator round 3 fixes (W5, W6)
+- Street rule now covers provisional addresses generally ("Address to
+  change", address pending/TBD, (subject|to) change, temp/provisional address)
+  and the Pentagon itself as an address line (not Pentagon City/Row or
+  Pentagon Blvd). Exactly 2 stores dropped (Laredo Dunkin', Pentagon Dunkin').
+  Scanned the source for other provisional/restricted-site wording first:
+  none left except what the evaluator rated polish (base access, Kennedy
+  Space Center, ", TBD" suites on open stores).
+- pytest 66 passed; e2e 112 passed. 80,962 stores.
