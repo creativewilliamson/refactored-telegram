@@ -99,3 +99,10 @@ Decisions:
   "Show more"). 23185: Colonial Williamsburg 2.2 mi, Jamestown 4.8 mi,
   Yorktown museum about 10 mi, Mount Vernon 104 mi.
 - Evidence: evidence/F04.png, evidence/F04-everywhere.png. Next: F05.
+
+## F05: radius + auto-widen (passes)
+- 46052 radius 10/25/50/100 -> 21/353/777/1333 stores. A radius the visitor
+  picks is respected (no auto-widen; a "Show up to N miles" button appears
+  when under 10). Fresh searches widen 25 -> 50 -> 100 while under 10 places.
+- 59301 Miles City: widens to 100 mi, 5 stores, message shown.
+- Evidence: evidence/F05.png. Next: F06 (13 test ZIPs).

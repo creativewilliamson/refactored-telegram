@@ -64,7 +64,7 @@
         "Search 59301 (Miles City, MT) and verify the auto-widen message and results"
       ],
       "evidence": "evidence/F05.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F06",
