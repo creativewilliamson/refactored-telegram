@@ -909,7 +909,8 @@
     "food_lion_us"
    ],
    "expected_us": 1100,
-   "store_open_days_min": 7
+   "store_open_days_min": 7,
+   "store_opens_by": "08:00"
   },
   "great-clips": {
    "name": "Great Clips",

@@ -361,3 +361,22 @@ def test_each_card_is_the_store_listing(records):
         if r["b"] in ("food-lion", "hy-vee") and r.get("h") and r["h"] != "24/7":
             days, _ = open_days_and_last_close(r["h"])
             assert not days or len(days) == 7, r
+
+
+# ---- evaluator round 7 -------------------------------------------------------
+def test_no_placeholder_listings_in_complete_chains(records):
+    from pipeline.locations import COMPLETE_CHAIN_SHARE
+    import collections
+    by = collections.defaultdict(list)
+    for r in records:
+        by[r["b"]].append(r)
+    for b, rs in by.items():
+        bare = [r for r in rs if not r.get("p") and not r.get("h")]
+        if bare:
+            assert 1 - len(bare) / len(rs) < COMPLETE_CHAIN_SHARE, b
+    assert not any(r["b"] == "ihop" and (r.get("a") or "").startswith("SWC I-10") for r in records)
+
+
+def test_food_lion_pharmacy_listings_gone(records):
+    fl = [r for r in records if r["b"] == "food-lion" and "Hughes" in (r.get("a") or "") and r.get("c") == "Elizabeth City"]
+    assert len(fl) == 1 and fl[0]["p"] == "2523311301"

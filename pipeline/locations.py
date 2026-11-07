@@ -53,6 +53,7 @@ NOT_PUBLIC = re.compile(
     re.I,
 )
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
+COMPLETE_CHAIN_SHARE = 0.985   # see the "phone or hours" rule at the end of build()
 
 
 def miles(lat1, lng1, lat2, lng2) -> float:
@@ -324,6 +325,7 @@ class BrandStats:
     geocoded: int = 0
     not_public: int = 0
     not_store: int = 0
+    incomplete: int = 0
     placeholder_phone: int = 0
     bad_coords: int = 0
     state_fixed: int = 0
@@ -363,6 +365,8 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
             cats = set(b.get("store_categories") or ())
             not_store_names = re.compile(b["not_store_names"], re.I) if b.get("not_store_names") else None
             min_days = int(b.get("store_open_days_min") or 0)
+            ob = str(b.get("store_opens_by") or "")
+            opens_by = int(ob[:2]) * 60 + int(ob[3:5]) if ob else None
             for f in feats:
                 st.features += 1
                 p = f.get("properties") or {}
@@ -382,6 +386,12 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
                     days, _close = open_days_and_last_close(str(p["opening_hours"]))
                     if p["opening_hours"].strip() not in ("24/7",) and days and len(days) < min_days:
                         st.not_store += 1         # grocery stores open daily; their pharmacies don't
+                        continue
+                if opens_by and p.get("opening_hours"):
+                    starts = [int(a) * 60 + int(m) for a, m in
+                              re.findall(r"(\d{2}):(\d{2})-", str(p["opening_hours"]))]
+                    if starts and min(starts) > opens_by:
+                        st.not_store += 1         # Food Lion stores open 6-7 a.m.; pharmacies at 9
                         continue
                 raw = re.sub(r"\D", "", str(p.get("phone") or "").split(";")[0])[-10:]
                 if len(raw) == 10 and is_placeholder_phone(raw):
@@ -539,12 +549,28 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
         grid[key].append(rec)
         out.append(rec)
     out.sort(key=lambda r: (r["b"], r["la"], r["lo"]))
+    # In a chain where nearly every listing has a phone or hours, a listing
+    # with neither is a placeholder for a store not open yet (IHOP "SWC I-10
+    # and Nuevo Hueco Tanks Road" shows "Coming Soon" on IHOP's own site).
+    by_brand: dict[str, list[dict]] = collections.defaultdict(list)
     for rec in out:
+        by_brand[rec["b"]].append(rec)
+    final: list[dict] = []
+    for slug, recs in by_brand.items():
+        bare = [r for r in recs if not r.get("p") and not r.get("h")]
+        complete_share = 1 - len(bare) / len(recs)
+        drop_bare = bare and complete_share >= COMPLETE_CHAIN_SHARE
+        for rec in recs:
+            if drop_bare and not rec.get("p") and not rec.get("h"):
+                stats[slug].incomplete += 1
+                continue
+            final.append(rec)
+    for rec in final:
         stats[rec["b"]].kept += 1
         for k in [k for k, v in rec.items() if v in (None, "")]:
             if k not in ("a", "c"):
                 del rec[k]
-    return out, stats, {sp: c for sp, c in choices.items()}
+    return final, stats, {sp: c for sp, c in choices.items()}
 
 
 def derived_states(records: list[dict]) -> dict[str, list[str]]:

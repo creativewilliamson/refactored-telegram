@@ -141,7 +141,7 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 }
 .link-grid li { display: flex; align-items: center; flex-wrap: wrap; min-height: 48px; }
 .link-grid .count { margin-left: 0.4rem; }
-.link-grid a { display: inline-flex; align-items: center; min-height: 48px; }
+.link-grid a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 48px; }
 .offer-list { list-style: none; padding: 0; margin: 0; }
 .offer-row { border-top: 1px solid var(--line); padding: 0.9rem 0; }
 .offer-name { font-size: 1.2rem; margin-bottom: 0.25rem; }

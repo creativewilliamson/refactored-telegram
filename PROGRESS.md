@@ -397,3 +397,26 @@ Decisions:
   aren't), Hy-Vee names HealthMarket Rx / Rx / pharmacy / Fast & Fresh and
   Casey's "Tobacco City" are not stores.
 - pytest 72 passed; e2e 120 passed. 80,752 stores.
+
+## Evaluator round 7: NEEDS_WORK (3 blocking) -> work items
+- W16: listings with neither phone nor hours in chains where nearly every
+  listing has them (IHOP "SWC I-10 and Nuevo Hueco Tanks Road" = Coming Soon;
+  Casey's "Sec Grand Haven & Sternberg").
+- W17: Food Lion pharmacy listings that open on Sunday (683 Hughes Blvd,
+  Elizabeth City): identify Food Lion pharmacy listings directly.
+- W18: "Top cities" links narrower than 48px on state pages (Hilo, Troy...).
+
+## Evaluator round 7 fixes (W16-W18)
+- W16: in a chain where >= 98.5% of listings have a phone or hours, a listing
+  with neither is treated as not open yet and left out (23 dropped: IHOP SWC
+  I-10 & Nuevo Hueco Tanks "Coming Soon", Casey's Sec Grand Haven &
+  Sternberg, the Wendy's whose page is gone...). Dunkin' (97.7%), Benihana
+  and Playa Bowls are below the line and unchanged.
+- W17: Food Lion listings that open after 8 a.m. are its pharmacies (the
+  1,100 grocery stores open 6-7 a.m.); 683 Hughes Blvd now shows one card,
+  the store's (252) 331-1301.
+- W18: state-page city links min-width 48px; the size test now covers the
+  HI/MI/DE/TX state pages and 404 (e2e 130 passed).
+- Correction to the F19 note: "find the nearest X" widens until it finds one
+  X, but only up to 100 miles (beyond that the page says none within 100 mi).
+- pytest 74 passed; e2e 130 passed. 80,729 stores.

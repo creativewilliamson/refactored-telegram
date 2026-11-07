@@ -191,6 +191,9 @@ def main() -> None:
     brands["hy-vee"]["not_store_names"] = r"healthmarket|\brx\b|pharmacy|fast\s*&\s*fresh"
     brands["hy-vee"]["store_open_days_min"] = 7
     brands["food-lion"]["store_open_days_min"] = 7
+    # Food Lion grocery stores open at 6-7 a.m. (1,100 of 1,153 listings); the
+    # in-store pharmacy listings open at 9 a.m., some also on Sundays.
+    brands["food-lion"]["store_opens_by"] = "08:00"
     brands["caseys"]["not_store_names"] = r"tobacco"
     covered = {o for b in brands.values() for o in b["offers"]} | set(NO_STORE)
     need = {s for s, o in seed.items() if o["scope"] != "single_location"}

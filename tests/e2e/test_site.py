@@ -146,6 +146,7 @@ def test_f08_about(page):
 
 # ---- F10 accessibility ---------------------------------------------------------------
 A11Y_PAGES = ["/", "/near/46052", "/state/in/", "/offer/texas-roadhouse/", "/print/?zip=46052&r=25", "/about/"]
+SIZE_PAGES = A11Y_PAGES + ["/state/hi/", "/state/mi/", "/state/de/", "/state/tx/", "/404.html"]
 
 
 @pytest.mark.parametrize("scheme", ["light", "dark"])
@@ -166,7 +167,7 @@ def test_f10_axe(page, axe_source, path, scheme):
 
 
 @pytest.mark.parametrize("width", [375, 640])
-@pytest.mark.parametrize("path", A11Y_PAGES)
+@pytest.mark.parametrize("path", SIZE_PAGES)
 def test_f10_sizes(page, path, width):
     page.set_viewport_size({"width": width, "height": 800})
     page.goto(url(path))
