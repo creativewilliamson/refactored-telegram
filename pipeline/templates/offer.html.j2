@@ -27,7 +27,7 @@
       {% else %}{% if o.states %}{{ o.states | join(", ") }}. {% endif %}We don't have this chain's store list. Search a map for the nearest one.{% endif %}
     </dd>
     <dt>Source</dt>
-    <dd><a class="src-link" href="{{ o.src }}" rel="noopener noreferrer" target="_blank">Offer details on the business's page</a> <span class="checked">(checked {{ o.checked | long }})</span></dd>
+    <dd><a class="src-link" href="{{ o.src }}" rel="noopener noreferrer" target="_blank">{% if o.roundup %}Offer details (opens the offer list where we found this){% else %}Offer details on the business's page{% endif %}</a> <span class="checked">(checked {{ o.checked | long }})</span></dd>
   </dl>
 
   {% if o.kind == "place" %}

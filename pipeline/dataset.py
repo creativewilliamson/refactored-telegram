@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import collections
 import json
+import urllib.parse
 
 from . import config, offers as offers_mod
 
@@ -35,6 +36,11 @@ def offer_kind(o, brand_of: dict, brands: dict, no_store: set, kept: dict) -> st
     return FIND
 
 
+def _host(url: str) -> str:
+    host = urllib.parse.urlsplit(url).netloc.lower()
+    return host[4:] if host.startswith("www.") else host
+
+
 def build_offers_json(offers, brands_doc: dict, kept: dict, derived: dict, places: list[dict]) -> dict:
     brands = brands_doc["brands"]
     no_store = set(brands_doc.get("no_store_offers", []))
@@ -55,10 +61,15 @@ def build_offers_json(offers, brands_doc: dict, kept: dict, derived: dict, place
             "scope": o.scope, "states": states, "src": str(o.source_url),
             "map": o.map_query, "kind": kind, "brand": brand_of.get(o.slug),
             "checked": o.verified_on.isoformat(),
+            "roundup": True if _host(str(o.source_url)) in config.ROUNDUP_HOSTS else None,
         }
         out_offers.append({k: v for k, v in rec.items() if v is not None})
-    brand_out = {slug: {"name": b["name"], "offers": b["offers"]}
-                 for slug, b in brands.items() if kept.get(slug, 0) > 0}
+    brand_out = {}
+    for slug, b in brands.items():
+        if kept.get(slug, 0) > 0:
+            brand_out[slug] = {"name": b["name"], "offers": b["offers"]}
+            if 0 < len(derived.get(slug, [])) <= config.MAX_STATES_LISTED:
+                brand_out[slug]["st"] = derived[slug]
     return {
         "event": config.EVENT_DATE,
         "cats": offers_mod.CATEGORY_LABELS,

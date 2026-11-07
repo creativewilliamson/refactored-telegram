@@ -10,7 +10,7 @@
   </p>
   <p class="who"><strong>Who:</strong> {{ o.elig }}</p>
   {% if o.terms %}<p class="terms">{{ o.terms }}</p>{% endif %}
-  <p class="links"><a href="{{ o.src }}" rel="noopener noreferrer" target="_blank">Offer details<span class="sr-only"> for {{ o.name }} (opens the business's page)</span></a></p>
+  <p class="links"><a href="{{ o.src }}" rel="noopener noreferrer" target="_blank">Offer details<span class="sr-only"> for {{ o.name }} ({{ "opens the offer list where we found this" if o.roundup else "opens the business's page" }})</span></a></p>
 </li>
 {% endmacro %}
 

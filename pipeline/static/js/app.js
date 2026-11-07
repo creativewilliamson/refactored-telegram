@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var VEF = {};
+  var VDD = {};
   var cache = {};
 
   var STATES = {
@@ -24,7 +24,7 @@
     GU: "Guam", VI: "U.S. Virgin Islands", AS: "American Samoa",
     MP: "Northern Mariana Islands"
   };
-  VEF.STATES = STATES;
+  VDD.STATES = STATES;
 
   var STATE_ALIASES = {
     "virgin islands": "VI", "us virgin islands": "VI", "u s virgin islands": "VI",
@@ -33,7 +33,19 @@
   };
 
   // ---- small helpers ----------------------------------------------------
-  VEF.esc = function (s) {
+  /* Where an "Offer details" link goes: the business's own page, or an
+     offer roundup (military.com, VA News, legion.org) where we found it. */
+  VDD.srcNote = function (o) {
+    return o.roundup ? "opens the offer list where we found this" : "opens the business’s page";
+  };
+
+  /* "Iowa, Illinois and Missouri" from ["IA", "IL", "MO"]. */
+  VDD.stateList = function (codes) {
+    var names = codes.map(function (c) { return VDD.STATES[c] || c; });
+    return names.length < 2 ? names.join("") : names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+  };
+
+  VDD.esc = function (s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -45,14 +57,14 @@
     if (extra) { for (var k in extra) { e[k] = extra[k]; } }
     return e;
   }
-  VEF.Err = Err;
+  VDD.Err = Err;
 
-  VEF.getJSON = function (url) {
+  VDD.getJSON = function (url) {
     if (cache[url]) { return cache[url]; }
-    var pre = window.VEF_PRE && window.VEF_PRE[url];
+    var pre = window.VDD_PRE && window.VDD_PRE[url];
     if (pre) {
       // Started early by the small script at the top of the results page.
-      delete window.VEF_PRE[url];
+      delete window.VDD_PRE[url];
       var early = pre.catch(function (status) { throw Err(status === 404 ? "missing" : "network"); });
       cache[url] = early;
       early.catch(function () { delete cache[url]; });
@@ -72,7 +84,7 @@
 
   // Mirrors pipeline/geo.py norm_name().
   var FIRST = { st: "saint", ste: "sainte", ft: "fort", mt: "mount", pt: "point" };
-  VEF.normName = function (s) {
+  VDD.normName = function (s) {
     s = String(s || "");
     if (s.normalize) { s = s.normalize("NFKD").replace(/[̀-ͯ]/g, ""); }
     s = s.toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/\./g, " ");
@@ -84,7 +96,7 @@
 
   var STATE_BY_NAME = (function () {
     var m = {};
-    Object.keys(STATES).forEach(function (c) { m[VEF.normName(STATES[c])] = c; });
+    Object.keys(STATES).forEach(function (c) { m[VDD.normName(STATES[c])] = c; });
     Object.keys(STATE_ALIASES).forEach(function (k) { m[k] = STATE_ALIASES[k]; });
     return m;
   })();
@@ -100,46 +112,46 @@
     var p = iso.split("-");
     return new Date(+p[0], +p[1] - 1, +p[2]);
   }
-  VEF.today = function () {
+  VDD.today = function () {
     var d = new Date();
     return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
   };
-  VEF.fmtDay = function (iso) {
+  VDD.fmtDay = function (iso) {
     var d = parseISO(iso);
     return DAYS[d.getDay()] + ", " + MONTHS[d.getMonth()] + " " + d.getDate();
   };
-  VEF.fmtLong = function (iso) {
+  VDD.fmtLong = function (iso) {
     var d = parseISO(iso);
     return FULL[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
   };
-  VEF.fmtShortLong = function (iso) {
+  VDD.fmtShortLong = function (iso) {
     var d = parseISO(iso);
     return MONTHS[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
   };
   /* Status of an offer on the visitor's local date:
      soon ("Starts Tue, Nov 10"), today, voucher (after the giveaway, voucher
      still good), ended. */
-  VEF.status = function (o, today) {
-    today = today || VEF.today();
-    if (today < o.start) { return { k: "soon", label: "Starts " + VEF.fmtDay(o.start) }; }
+  VDD.status = function (o, today) {
+    today = today || VDD.today();
+    if (today < o.start) { return { k: "soon", label: "Starts " + VDD.fmtDay(o.start) }; }
     if (today <= o.end) {
-      return { k: "today", label: o.end > today ? "Today, through " + VEF.fmtDay(o.end) : "Today" };
+      return { k: "today", label: o.end > today ? "Today, through " + VDD.fmtDay(o.end) : "Today" };
     }
     if (o.redeem_by && today <= o.redeem_by) {
-      return { k: "voucher", label: "Voucher good until " + VEF.fmtShortLong(o.redeem_by) };
+      return { k: "voucher", label: "Voucher good until " + VDD.fmtShortLong(o.redeem_by) };
     }
     return { k: "ended", label: "Ended" };
   };
-  VEF.dateText = function (o) {
-    if (o.start === o.end) { return VEF.fmtDay(o.start); }
-    return VEF.fmtDay(o.start) + " to " + VEF.fmtDay(o.end);
+  VDD.dateText = function (o) {
+    if (o.start === o.end) { return VDD.fmtDay(o.start); }
+    return VDD.fmtDay(o.start) + " to " + VDD.fmtDay(o.end);
   };
 
   // ---- formatting -------------------------------------------------------
-  VEF.fmtPhone = function (p) {
+  VDD.fmtPhone = function (p) {
     return p && p.length === 10 ? "(" + p.slice(0, 3) + ") " + p.slice(3, 6) + "-" + p.slice(6) : "";
   };
-  VEF.fmtMiles = function (d) {
+  VDD.fmtMiles = function (d) {
     if (d < 0.1) { return "less than 0.1 miles"; }
     var v = d < 10 ? d.toFixed(1) : String(Math.round(d));
     return v + (v === "1.0" ? " mile" : " miles");
@@ -155,7 +167,7 @@
     var h12 = h % 12 === 0 ? 12 : h % 12;
     return h12 + (min === "00" ? "" : ":" + min) + " " + suffix;
   }
-  VEF.fmtHours = function (h) {
+  VDD.fmtHours = function (h) {
     if (!h) { return ""; }
     if (/^(24\/7|Mo-Su 00:00-24:00|Mo-Su 00:00-23:59)$/.test(h)) { return "Open 24 hours"; }
     return h.split(/;\s*/).map(function (part) {
@@ -168,7 +180,7 @@
   };
 
   // ---- distance ---------------------------------------------------------
-  VEF.miles = function (lat1, lng1, lat2, lng2) {
+  VDD.miles = function (lat1, lng1, lat2, lng2) {
     var r = 3958.8, rad = Math.PI / 180;
     var dp = (lat2 - lat1) * rad, dl = (lng2 - lng1) * rad;
     var a = Math.sin(dp / 2) * Math.sin(dp / 2) +
@@ -177,8 +189,8 @@
   };
 
   // ---- data -------------------------------------------------------------
-  VEF.loadOffers = function () {
-    return VEF.getJSON("/data/offers.json").then(function (data) {
+  VDD.loadOffers = function () {
+    return VDD.getJSON("/data/offers.json").then(function (data) {
       if (!data._byId) {
         data._byId = {};
         data.offers.forEach(function (o) { data._byId[o.id] = o; });
@@ -188,21 +200,21 @@
   };
 
   /* Turn what the visitor typed into a search. */
-  VEF.parseQuery = function (q) {
+  VDD.parseQuery = function (q) {
     q = String(q || "").replace(/\s+/g, " ").trim();
     var m = /^(\d{5})(-\d{4})?$/.exec(q);
     if (m) { return { type: "zip", zip: m[1] }; }
     if (/^\d+$/.test(q.replace(/[\s-]/g, ""))) { return { type: "badzip", text: q }; }
-    var n = VEF.normName(q);
+    var n = VDD.normName(q);
     if (!n) { return { type: "empty" }; }
     if (STATE_BY_NAME[n]) { return { type: "state", st: STATE_BY_NAME[n] }; }
     if (n.length === 2 && STATES[n.toUpperCase()]) { return { type: "state", st: n.toUpperCase() }; }
     var parts = q.split(",");
     if (parts.length >= 2) {
-      var stPart = VEF.normName(parts[parts.length - 1]);
+      var stPart = VDD.normName(parts[parts.length - 1]);
       var cityPart = parts.slice(0, -1).join(",");
       var st = STATE_BY_NAME[stPart] || (stPart.length === 2 && STATES[stPart.toUpperCase()] ? stPart.toUpperCase() : null);
-      if (st && VEF.normName(cityPart)) { return { type: "city", city: VEF.normName(cityPart), raw: cityPart.trim(), st: st }; }
+      if (st && VDD.normName(cityPart)) { return { type: "city", city: VDD.normName(cityPart), raw: cityPart.trim(), st: st }; }
     }
     // "Lebanon IN" or "Lebanon Indiana"
     for (var i = 0; i < STATE_NAMES_LONGEST.length; i++) {
@@ -234,9 +246,9 @@
   }
 
   /* Resolve a parsed query to an origin {lat, lng, label, st, zip?, cityKey?}. */
-  VEF.resolve = function (p) {
+  VDD.resolve = function (p) {
     if (p.type === "zip") {
-      return VEF.getJSON("/data/zip/" + p.zip.slice(0, 3) + ".json").then(function (shard) {
+      return VDD.getJSON("/data/zip/" + p.zip.slice(0, 3) + ".json").then(function (shard) {
         var v = shard[p.zip];
         if (v === "M") { throw Err("military", { zip: p.zip }); }
         if (!v) { throw Err("unknown_zip", { zip: p.zip }); }
@@ -248,7 +260,7 @@
       });
     }
     if (p.type === "city") {
-      return VEF.getJSON("/data/city/" + p.st.toLowerCase() + ".json").then(function (shard) {
+      return VDD.getJSON("/data/city/" + p.st.toLowerCase() + ".json").then(function (shard) {
         var v = shard[p.city];
         if (v) {
           return { lat: v[0], lng: v[1], st: p.st, cityKey: p.city, city: v[2], label: v[2] + ", " + p.st };
@@ -266,17 +278,17 @@
     if (s !== s.toUpperCase()) { return s; }
     return s.toLowerCase().replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
   }
-  VEF.titleCase = titleCase;
+  VDD.titleCase = titleCase;
 
   // ---- tiles ------------------------------------------------------------
-  VEF.loadTileIndex = function () { return VEF.getJSON("/data/tiles/index.json"); };
+  VDD.loadTileIndex = function () { return VDD.getJSON("/data/tiles/index.json"); };
 
   function leafIds(id, node, out) {
     if (node === 1) { out.push(id); return; }
     Object.keys(node).forEach(function (q) { leafIds(id + "_" + q, node[q], out); });
   }
 
-  VEF.tilesFor = function (index, lat, lng, radius) {
+  VDD.tilesFor = function (index, lat, lng, radius) {
     var deg = index.deg;
     var dLat = radius / 69.0;
     var dLng = radius / (69.17 * Math.max(0.05, Math.cos(lat * Math.PI / 180)));
@@ -292,18 +304,18 @@
 
   /* Load every store within `radius` miles. Resolves to
      {records: [...each with .d miles], failed: number of tiles that failed}. */
-  VEF.loadNearby = function (origin, radius) {
-    return VEF.loadTileIndex().then(function (index) {
-      var ids = VEF.tilesFor(index, origin.lat, origin.lng, radius);
+  VDD.loadNearby = function (origin, radius) {
+    return VDD.loadTileIndex().then(function (index) {
+      var ids = VDD.tilesFor(index, origin.lat, origin.lng, radius);
       var failed = 0;
       return Promise.all(ids.map(function (id) {
-        return VEF.getJSON("/data/tiles/" + id + ".json").catch(function () { failed++; return []; });
+        return VDD.getJSON("/data/tiles/" + id + ".json").catch(function () { failed++; return []; });
       })).then(function (lists) {
         var out = [];
         lists.forEach(function (list) {
           for (var k = 0; k < list.length; k++) {
             var r = list[k];
-            var d = VEF.miles(origin.lat, origin.lng, r.la, r.lo);
+            var d = VDD.miles(origin.lat, origin.lng, r.la, r.lo);
             if (d <= radius) { out.push({ r: r, d: d }); }
           }
         });
@@ -314,19 +326,19 @@
   };
 
   // ---- links ------------------------------------------------------------
-  VEF.googleDir = function (lat, lng) {
+  VDD.googleDir = function (lat, lng) {
     return "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lng;
   };
-  VEF.appleDir = function (lat, lng) {
+  VDD.appleDir = function (lat, lng) {
     return "https://maps.apple.com/?daddr=" + lat + "," + lng;
   };
-  VEF.findNearest = function (mapQuery, near) {
+  VDD.findNearest = function (mapQuery, near) {
     return "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent(mapQuery + (near ? " near " + near : " near me"));
   };
 
   // ---- offer filters ----------------------------------------------------
-  VEF.offerPasses = function (o, f) {
+  VDD.offerPasses = function (o, f) {
     if (f.offer && o.id !== f.offer) { return false; }
     if (f.cat && o.cat !== f.cat) { return false; }
     if (f.free && o.type !== "free") { return false; }
@@ -335,13 +347,13 @@
   };
 
   // ---- remembered search (this browser only) ----------------------------
-  VEF.saveLast = function (s) {
+  VDD.saveLast = function (s) {
     try { localStorage.setItem("vdd-last", JSON.stringify(s)); } catch (e) { /* ignore */ }
   };
-  VEF.loadLast = function () {
+  VDD.loadLast = function () {
     try { return JSON.parse(localStorage.getItem("vdd-last") || "null"); } catch (e) { return null; }
   };
-  VEF.takePending = function () {
+  VDD.takePending = function () {
     try {
       var v = sessionStorage.getItem("vdd-pending");
       sessionStorage.removeItem("vdd-pending");
@@ -358,5 +370,5 @@
     });
   }
 
-  window.VEF = VEF;
+  window.VDD = VDD;
 })();

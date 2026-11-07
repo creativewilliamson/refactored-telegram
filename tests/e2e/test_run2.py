@@ -250,3 +250,64 @@ def test_f23_dc_washington_once(page):
     page.goto(url("/state/dc/"))
     cities = page.locator("#cities-h + .link-grid li a").all_inner_texts()
     assert [c.strip().lower() for c in cities].count("washington") == 1
+
+
+# ------------------------------------------------------ F24 small messages
+def test_f24_find_nearest_none_in_range_says_so(page):
+    page.goto(url("/offer/hy-vee/"))
+    page.fill("form[data-search] input[type=text]", "46052")
+    page.locator("form[data-search] button[type=submit]").click()
+    page.wait_for_selector("#cards-empty:not([hidden])")
+    text = page.locator("#cards-empty").inner_text()
+    assert text.startswith("The nearest Hy-Vee is more than 100 miles from Lebanon, IN 46052.")
+    assert "Hy-Vee has stores in" in text and "Iowa" in text
+    assert "chains listed below" not in text
+    # Only Hy-Vee is missing; Lebanon has plenty of other stores.
+    assert page.locator("#everywhere-note").inner_text() == "These offers don’t need a store near you."
+
+
+def test_f24_no_mention_of_an_empty_chain_list(page):
+    page.goto(url("/near/96799"))
+    page.wait_for_selector("#cards-empty:not([hidden])")
+    mentions = "chains listed below" in page.locator("#cards-empty").inner_text()
+    assert mentions == (page.locator("#find-list li").count() > 0)
+
+
+def test_f24_bad_share_link_is_not_the_last_search(page):
+    page.goto(url("/near/46052"))
+    page.wait_for_selector("#cards > li")
+    page.goto(url("/near/abc"))
+    page.wait_for_selector("#nq-msg:not([hidden])")
+    assert "couldn’t find “abc”" in page.locator("#nq-msg").inner_text()
+    assert page.locator("#results").is_hidden()
+    page.goto(url("/near/"))                      # the real last search still comes back
+    page.wait_for_selector("#cards > li")
+    assert "46052" in page.locator("h1").inner_text()
+
+
+@pytest.mark.parametrize("slug,roundup", [("110-grill", True), ("texas-roadhouse", True),
+                                          ("applebee-s", False), ("national-parks", False)])
+def test_f24_source_link_wording(page, slug, roundup):
+    page.goto(url(f"/offer/{slug}/"))
+    link = page.locator("a.src-link")
+    text, host = link.inner_text(), link.get_attribute("href")
+    if roundup:
+        assert re.search(r"military\.com|news\.va\.gov|legion\.org", host)
+        assert "opens the offer list where we found this" in text
+    else:
+        assert not re.search(r"military\.com|news\.va\.gov|legion\.org", host)
+        assert text == "Offer details on the business's page"
+
+
+def test_f24_card_notes_match_source(page):
+    page.goto(url("/near/46052"))
+    page.wait_for_selector("#cards > li")
+    pairs = page.eval_on_selector_all(
+        "#cards .links a, #everywhere-list a, #find-list a",
+        "els => els.filter(a => a.querySelector('.sr-only') && /opens/.test(a.textContent))"
+        ".map(a => [a.hostname, a.querySelector('.sr-only').textContent])")
+    assert pairs
+    for host, note in pairs:
+        roundup = bool(re.search(r"military\.com|news\.va\.gov|legion\.org", host))
+        assert ("offer list where we found this" in note) == roundup, (host, note)
+        assert ("business’s page" in note) == (not roundup), (host, note)

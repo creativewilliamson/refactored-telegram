@@ -3,7 +3,7 @@
    search kept in this browser, then lists nearby places, closest first. */
 (function () {
   "use strict";
-  var V = window.VEF;
+  var V = window.VDD;
   var $ = function (id) { return document.getElementById(id); };
   var esc = V.esc;
   var PAGE = 50;
@@ -41,6 +41,14 @@
     var params = new URLSearchParams(location.search);
     var offer = params.get("offer");
     if (m) { return { q: m[1], shared: true, offer: offer }; }
+    var other = /^\/near\/([^/]+)$/.exec(path);
+    if (other) {
+      // A mistyped or broken share link (/near/abc): search for what it says,
+      // so the visitor gets the plain "couldn't find" message, not an old search.
+      var said;
+      try { said = decodeURIComponent(other[1]); } catch (e) { said = other[1]; }
+      return { q: said.replace(/[+_]/g, " ").trim(), shared: true, link: true, offer: offer };
+    }
     if (params.get("city") && params.get("st")) {
       return { q: params.get("city") + ", " + params.get("st"), shared: true, offer: offer };
     }
@@ -183,7 +191,7 @@
       '<p class="who"><strong>Who:</strong> ' + esc(o.elig) + "</p>" +
       (o.terms ? '<p class="terms">' + esc(o.terms) + "</p>" : "") +
       '<p class="links"><a href="' + esc(o.src) + '" target="_blank" rel="noopener noreferrer">Offer details' +
-      '<span class="sr-only"> for ' + esc(name) + " (opens the business’s page)</span></a></p></li>";
+      '<span class="sr-only"> for ' + esc(name) + " (" + V.srcNote(o) + ")</span></a></p></li>";
   }
 
   function renderCard(c, i) {
@@ -235,7 +243,7 @@
         " on Google Maps</span></a> ";
     }
     h += '<a href="' + esc(o.src) + '" target="_blank" rel="noopener noreferrer">Offer details' +
-      '<span class="sr-only"> for ' + esc(o.name) + " (opens the business’s page)</span></a></p></li>";
+      '<span class="sr-only"> for ' + esc(o.name) + " (" + V.srcNote(o) + ")</span></a></p></li>";
     return h;
   }
 
@@ -284,11 +292,22 @@
     var list = $("cards");
     list.innerHTML = shown.map(renderCard).join("");
     var empty = $("cards-empty");
+    var finds = findOffers(f, o.st);
     if (!n) {
-      empty.textContent = anyFilter()
-        ? "No places match these filters within " + S.radius + " miles. Try clearing the filters."
-        : "We didn’t find stores with Veterans Day offers within " + S.radius + " miles of " + placeLabel +
-          ". The offers under Everywhere work anywhere, and the chains listed below may still have a store near you.";
+      var want = S.offer && S.data._byId[S.offer];
+      if (want && !anyFilter()) {
+        // "Find the nearest X" and there is no X in range: say so plainly.
+        var b = S.data.brands[want.brand] || {};
+        var xname = b.name || want.name;
+        empty.textContent = "The nearest " + xname + " is more than " + S.radius + " miles from " + placeLabel + "." +
+          (b.st && b.st.length ? " " + xname + " has stores in " + V.stateList(b.st) + "." : "");
+      } else {
+        empty.textContent = anyFilter()
+          ? "No places match these filters within " + S.radius + " miles. Try clearing the filters."
+          : "We didn’t find stores with Veterans Day offers within " + S.radius + " miles of " + placeLabel +
+            ". The offers under Everywhere work anywhere" +
+            (finds.length ? ", and the chains listed below may still have a store near you." : ".");
+      }
       empty.hidden = false;
     } else {
       empty.hidden = true;
@@ -319,18 +338,14 @@
 
     // Everywhere: offers with no store.
     var every = S.data.offers.filter(function (x) { return x.kind === "everywhere" && V.offerPasses(x, f); });
-    $("everywhere-note").textContent = n
+    // (Showing only one chain: an empty list says nothing about other stores.)
+    $("everywhere-note").textContent = n || S.offer
       ? "These offers don’t need a store near you."
       : "Nothing with a store list is close to " + placeLabel + ", so start here: these offers work anywhere.";
     $("everywhere-list").innerHTML = every.map(function (x) { return offerListItem(x, true); }).join("") ||
       "<li>No offers here match your filters.</li>";
 
     // Chains without a store list (regional ones only in their states).
-    var st = o.st;
-    var finds = S.data.offers.filter(function (x) {
-      if (x.kind !== "find" || !V.offerPasses(x, f)) { return false; }
-      return x.scope !== "regional" || !st || (x.states || []).indexOf(st) >= 0;
-    });
     $("find").hidden = !finds.length;
     $("find-list").innerHTML = finds.map(function (x) { return offerListItem(x, true); }).join("");
 
@@ -343,6 +358,13 @@
     if (fresh) { foldSearch(true); }
     doneLoading();
     if (fresh) { $("results-h").focus(); }
+  }
+
+  function findOffers(f, st) {
+    return S.data.offers.filter(function (x) {
+      if (x.kind !== "find" || !V.offerPasses(x, f)) { return false; }
+      return x.scope !== "regional" || !st || (x.states || []).indexOf(st) >= 0;
+    });
   }
 
   function nextRadius() { return S.radius < 25 ? 25 : S.radius < 50 ? 50 : 100; }
@@ -386,6 +408,9 @@
       } else {
         text += " Check the spelling, or type your ZIP code.";
       }
+    } else if (code === "nostate" && S.search && S.search.link) {
+      text = "We couldn’t find “" + esc(q) + "”. The link may be mistyped. Type a ZIP code, like 46052, " +
+        "or a city and state, like Lebanon, IN.";
     } else if (code === "nostate") {
       text = "Please add the state, like “" + esc(q || "Lebanon") + ", IN”, or type your ZIP code.";
     } else if (code === "badzip") {

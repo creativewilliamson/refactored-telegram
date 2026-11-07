@@ -3,7 +3,7 @@
    big type, no images: name, offer, address, phone, distance. */
 (function () {
   "use strict";
-  var V = window.VEF;
+  var V = window.VDD;
   var $ = function (id) { return document.getElementById(id); };
   var esc = V.esc;
 

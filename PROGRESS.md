@@ -566,3 +566,17 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - DC top cities: "Washington" and "WASHINGTON" were one town under two spellings; pages.py merges by the normalized key
   ("Washington (123 stores)" once).
 - e2e test_run2 + test_site 112 passed. Evidence: evidence/F23.png.
+
+## F24: small messages read right (passes)
+- "Find the nearest X" with none in range: "The nearest Hy-Vee is more than 100 miles from Lebanon, IN 46052. Hy-Vee has stores in
+  Iowa, Illinois, ... and Wisconsin." (offers.json brands carry "st" when a chain is in <= 12 states). The general empty message
+  only mentions "the chains listed below" when that list has entries; in one-chain mode Everywhere no longer says "Nothing with a
+  store list is close to Lebanon" (only Hy-Vee was missing).
+- /near/<anything not a ZIP> is treated as a shared link: /near/abc says "We couldn't find "abc". The link may be mistyped..."
+  and never reopens the last search (which /near/ still restores). The "like "abc, IN"" hint for typed text is unchanged
+  (GOAL: nothing else from run 1's Known bugs).
+- Roundup sources (config.ROUNDUP_HOSTS: military.com, news.va.gov, legion.org; 100 of 130 offers) say "opens the offer list where
+  we found this" (offer page link text and the screen-reader note on cards/lists); own sites keep "the business's page". Home
+  "How it works" step 3 now says "to see where the offer was announced".
+- Also renamed the JS namespace window.VEF / VEF_PRE (old initials) to VDD / VDD_PRE.
+- e2e 188 passed; pytest 80. Evidence: evidence/F24.png.

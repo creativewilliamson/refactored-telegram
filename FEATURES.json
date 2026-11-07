@@ -342,7 +342,7 @@
         "Open an offer sourced from military.com and one from a brand's own site and compare the link wording"
       ],
       "evidence": "evidence/F24.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F25",

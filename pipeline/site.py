@@ -20,7 +20,7 @@ JS_FLAG_SCRIPT = "document.documentElement.className='js';"
 # by-index files the page would ask for anyway (offer list, map index, and
 # the ZIP or state file of the search), never the search itself.
 NEAR_PRELOAD_SCRIPT = (
-    "(function(){var P=window.VEF_PRE={};"
+    "(function(){var P=window.VDD_PRE={};"
     "function g(u){P[u]=fetch(u,{credentials:'omit'}).then(function(r){"
     "if(!r.ok){throw r.status;}return r.json();});P[u].catch(function(){});}"
     "g('/data/offers.json');g('/data/tiles/index.json');"

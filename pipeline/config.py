@@ -15,6 +15,13 @@ SITE_NAME = "Vet Day Deals"
 SITE_URL = "https://vetdaydeals.pages.dev"
 EVENT_DATE = "2026-11-11"
 
+# Sources that are offer roundups, not the business's own page. Their links
+# say "opens the offer list where we found this".
+ROUNDUP_HOSTS = {"military.com", "news.va.gov", "legion.org"}
+# "Find the nearest X" with none in range names X's states when it has
+# stores in this many or fewer.
+MAX_STATES_LISTED = 12
+
 # A generic client name for downloads; no personal contact details.
 USER_AGENT = "VetDayDeals-build/1.0 (static site data pipeline)"
 
