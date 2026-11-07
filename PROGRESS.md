@@ -352,3 +352,29 @@ Decisions:
   temp-closed / test-restaurant (Charleys x2, In-N-Out Camarillo, Main Event
   Brea, Firehouse "test-restaurant-789").
 - pytest 68 passed; e2e 120 passed. 80,955 stores.
+
+## Evaluator round 5: NEEDS_WORK (2 blocking) -> work items
+- W12: de-duplication kept whichever same-brand feature sorted first, so
+  cards showed the fuel pumps' hours (Casey's "Open 24 hours") or the
+  pharmacy's phone (Publix). Pick the store feature itself; never fill a
+  store's phone/hours from a neighbouring feature.
+- W13: places where the offer can't be used: pharmacy-only Hy-Vee/Publix
+  sites (incl. hospital pharmacies) shown with grocery/breakfast offers;
+  staff-only workplace sites (USPS sorting facility, Capital One and Verizon
+  campuses, state office buildings, Sanofi campus).
+
+## Evaluator round 5 fixes (W12, W13)
+- W12: brands.json "store_categories" for the only three multi-feature
+  chains (Casey's shop=convenience; Publix and Hy-Vee shop=supermarket):
+  fuel pumps, pharmacies, liquor stores and pharmacy-only sites (incl.
+  hospital pharmacies) are left out, so each card shows the store's own hours
+  and phone (Casey's Lebanon #1: 4 a.m.-10 p.m.; Publix Islamorada: the
+  store's number). De-duplication now fills a missing phone/hours only from a
+  copy of the same street address, never from a neighbouring store/feature.
+- W13: staff-only workplace cafes: weekdays-only and closed by 4 p.m. (or
+  weekdays-only with no phone) are dropped (Verizon HQ, Capital One campus,
+  NJ state offices, Sanofi campus...); Olive Garden's Monday-only source
+  hours don't trigger it (needs >= 3 weekdays); Walgreens pharmacy 9-5 hours
+  don't (cutoff 4 p.m.). USPS / sorting / processing / distribution-center
+  addresses dropped.
+- pytest 70 passed; e2e 120 passed. 80,769 stores. Re-took evidence/F02.png.

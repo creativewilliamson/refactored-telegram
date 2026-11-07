@@ -55,6 +55,10 @@ NOT_PUBLIC = re.compile(
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
 
 
+def norm_street(a: str | None) -> str:
+    return re.sub(r"[^a-z0-9]", "", (a or "").lower())
+
+
 def miles(lat1, lng1, lat2, lng2) -> float:
     r = 3958.8
     p1, p2 = math.radians(lat1), math.radians(lat2)
@@ -146,7 +150,10 @@ STREET_NOT_PUBLIC = re.compile(
     # Veterans Day federal holiday (State Dept, USDA, Library of Congress...)
     r"(dept|department) of (state|justice|agriculture|defense|energy|labor|commerce|education|"
     r"transportation|the treasury|treasury|the interior|interior|homeland security|health|"
-    r"veterans affairs|housing)\b|,\s*usda\s*$|library of congress|(house|senate) office building",
+    r"veterans affairs|housing)\b|,\s*usda\s*$|library of congress|(house|senate) office building|"
+    # postal plants and other industrial sites
+    r"\busps\b|postal (service|facility)|sorting (facility|center)|processing (center|plant|facility)|"
+    r"distribution cent(er|re)",
     re.I,
 )
 
@@ -185,7 +192,46 @@ def near_test_point(f: dict, pts: list[tuple[float, float]]) -> bool:
     return any(miles(lat, lng, a, b) <= TEST_CLUSTER_MI for a, b in pts)
 
 
+CATEGORY_KEYS = ("shop", "amenity", "healthcare", "office")
+WEEK = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
+
+
+def open_days_and_last_close(hours: str) -> tuple[set, int | None]:
+    """Days a store opens and its latest closing minute, from an OSM-style
+    string like 'Mo-Th 07:30-15:15; Fr 07:30-13:15'. (set(), None) if unclear."""
+    days: set = set()
+    ends: list[int] = []
+    for part in (hours or "").split(";"):
+        part = part.strip()
+        if not part or re.search(r"off|closed", part):
+            continue
+        m = re.match(r"((?:Mo|Tu|We|Th|Fr|Sa|Su)(?:[-,](?:Mo|Tu|We|Th|Fr|Sa|Su))*)\s+(.*)$", part)
+        if not m:
+            return set(), None
+        for seg in m.group(1).split(","):
+            if "-" in seg:
+                a, b = seg.split("-")
+                i, j = WEEK.index(a), WEEK.index(b)
+                days.update(WEEK[i:j + 1] if i <= j else WEEK[i:] + WEEK[:j + 1])
+            else:
+                days.add(seg)
+        ends += [int(h) * 60 + int(mi) for h, mi in re.findall(r"-(\d{2}):(\d{2})", m.group(2))]
+    return days, (max(ends) if ends else None)
+
+
+def workplace_hours(p: dict) -> bool:
+    """Weekdays only and closed by 4 p.m. (or weekdays only with no public
+    phone): a cafe inside an office campus, state office or plant, not a store
+    a visitor walks into (Verizon HQ, Capital One campus, NJ state offices)."""
+    days, close = open_days_and_last_close(str(p.get("opening_hours") or ""))
+    if len(days) < 3 or {"Sa", "Su"} & days or close is None:
+        return False
+    return close <= 16 * 60 or not p.get("phone")
+
+
 def not_public(p: dict, live_requires: tuple = ()) -> bool:
+    if workplace_hours(p):
+        return True
     if p.get("office"):                       # office=company: a head office, not a store
         return True
     start = str(p.get("start_date") or "").strip()
@@ -252,6 +298,7 @@ class BrandStats:
     no_place: int = 0
     geocoded: int = 0
     not_public: int = 0
+    not_store: int = 0
     placeholder_phone: int = 0
     bad_coords: int = 0
     state_fixed: int = 0
@@ -288,6 +335,7 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
             feats = atp.load_features(atp.spider_file(sp, pick[0], offline))
             labs = test_points(feats, qids)
             live = tuple(b.get("live_listing_requires") or ())
+            cats = set(b.get("store_categories") or ())
             for f in feats:
                 st.features += 1
                 p = f.get("properties") or {}
@@ -296,6 +344,9 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
                     continue
                 if not_public(p, live) or near_test_point(f, labs):
                     st.not_public += 1
+                    continue
+                if cats and not any(f"{k}={p.get(k)}" in cats for k in CATEGORY_KEYS if p.get(k)):
+                    st.not_store += 1             # fuel pumps, pharmacy, liquor store...
                     continue
                 raw = re.sub(r"\D", "", str(p.get("phone") or "").split(";")[0])[-10:]
                 if len(raw) == 10 and is_placeholder_phone(raw):
@@ -441,9 +492,12 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
                 for other in grid.get((rec["b"], key[1] + di, key[2] + dj), ()):
                     if miles(rec["la"], rec["lo"], other["la"], other["lo"]) < DEDUP_MI:
                         dup = True
-                        for k in ("p", "h", "n", "z", "a"):
-                            if not other.get(k) and rec.get(k):
-                                other[k] = rec[k]
+                        # Fill gaps only from a copy of the same store (same
+                        # street), never from a neighbouring feature or store.
+                        if norm_street(other.get("a")) == norm_street(rec.get("a")):
+                            for k in ("p", "h", "n", "z"):
+                                if not other.get(k) and rec.get(k):
+                                    other[k] = rec[k]
                         break
                 if dup:
                     break

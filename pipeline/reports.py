@@ -52,6 +52,8 @@ def coverage(brands_doc: dict, stats: dict, choices: dict, records: list[dict], 
         f"wrong brand Q-id {sum(s.wrong_brand for s in stats.values())}, "
         f"marked by the source as test/lab, closed, coming soon or staff-only "
         f"{sum(s.not_public for s in stats.values())}, "
+        f"not the store itself (fuel pumps, pharmacy, liquor store of a multi-feature chain) "
+        f"{sum(s.not_store for s in stats.values())}, "
         f"outside the U.S. {sum(s.not_us for s in stats.values())}, "
         f"no coordinates and no usable address {sum(s.no_place for s in stats.values())}, "
         f"coordinates far from their ZIP or outside the U.S. {sum(s.bad_coords for s in stats.values())}, "

@@ -177,6 +177,13 @@ def main() -> None:
     brands["texas-roadhouse"]["live_listing_note"] = (
         "Open restaurants all have opening_hours and website in the source; listings without them "
         "include 'Open 12/7' / 'Opens December 2026' restaurants and internal entries.")
+    # Some spiders list several features per site (store, fuel pumps,
+    # pharmacy, liquor store). Only the store itself carries the offer, and its
+    # own hours and phone must be shown. Pharmacy-only sites (incl. hospital
+    # pharmacies) don't sell groceries or breakfast, so they are left out.
+    brands["caseys"]["store_categories"] = ["shop=convenience"]
+    brands["publix"]["store_categories"] = ["shop=supermarket"]
+    brands["hy-vee"]["store_categories"] = ["shop=supermarket"]
     covered = {o for b in brands.values() for o in b["offers"]} | set(NO_STORE)
     need = {s for s, o in seed.items() if o["scope"] != "single_location"}
     assert need == covered, (need - covered, covered - need)

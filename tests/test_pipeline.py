@@ -320,3 +320,24 @@ def test_tcby_and_twin_peaks_have_full_addresses(records):
     for r in tcby:
         if r.get("c") == "Harrison" and r["s"] == "AR":
             assert miles(r["la"], r["lo"], 36.23, -93.11) < 15
+
+
+# ---- evaluator round 5 -------------------------------------------------------
+def test_workplace_hours_rule():
+    from pipeline.locations import workplace_hours as w
+    assert w({"opening_hours": "Tu-Th 07:30-14:45", "phone": "8042841566"})      # Capital One campus
+    assert w({"opening_hours": "Mo-Fr 07:30-14:45", "phone": "7326084423"})      # Verizon HQ
+    assert w({"opening_hours": "Mo-Fr 07:00-16:30"})                              # Sanofi, no phone
+    assert not w({"opening_hours": "Mo 11:00-22:00", "phone": "1"})               # source glitch, not weekday-only
+    assert not w({"opening_hours": "Mo-Fr 09:00-17:00", "phone": "1"})            # Walgreens pharmacy hours
+    assert not w({"opening_hours": "Mo-Su 05:00-21:00", "phone": "1"})
+
+
+def test_store_feature_not_pumps_or_pharmacy(records):
+    casey = [r for r in records if r["b"] == "caseys" and r.get("a") == "723 Indianapolis Ave"]
+    assert casey and casey[0]["h"] == "Mo-Su 04:00-22:00"          # the store, not the 24/7 pumps
+    names = {(r["b"], r.get("n") or "") for r in records}
+    assert not any(b == "publix" and "Moffitt" in n for b, n in names)
+    assert sum(1 for r in records if r["b"] == "hy-vee" and r.get("c") == "Lamoni") == 1
+    from pipeline.locations import not_public
+    assert not_public({"addr:street_address": "80 County Rd, USPS Sorting Facility"})

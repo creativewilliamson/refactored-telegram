@@ -225,7 +225,10 @@
    "atp_spiders": [
     "hy_vee_us"
    ],
-   "expected_us": 290
+   "expected_us": 290,
+   "store_categories": [
+    "shop=supermarket"
+   ]
   },
   "ihop": {
    "name": "IHOP",
@@ -764,7 +767,10 @@
    "atp_spiders": [
     "caseys_general_store_us"
    ],
-   "expected_us": 2900
+   "expected_us": 2900,
+   "store_categories": [
+    "shop=convenience"
+   ]
   },
   "dunkin": {
    "name": "Dunkin'",
@@ -883,7 +889,10 @@
    "atp_spiders": [
     "publix_us"
    ],
-   "expected_us": 1400
+   "expected_us": 1400,
+   "store_categories": [
+    "shop=supermarket"
+   ]
   },
   "food-lion": {
    "name": "Food Lion",
