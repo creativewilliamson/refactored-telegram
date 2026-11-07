@@ -16,6 +16,12 @@
 
   var P = params();
   var radius = [10, 25, 50, 100].indexOf(+P.get("r")) >= 0 ? +P.get("r") : 25;
+  // Like the results page: the default 25 miles widens to 50, then 100,
+  // while fewer than 10 places are found. A radius the visitor picked on the
+  // results page comes with fixed=1 and is kept as it is.
+  var MIN_PLACES = 10;
+  var ISLANDS = { PR: 1, VI: 1, GU: 1, AS: 1, MP: 1, HI: 1 };
+  var autoWiden = radius === 25 && P.get("fixed") !== "1";
   var f = { cat: P.get("cat") || "", free: P.get("free") === "1", who: P.get("who") || "", offer: P.get("offer") || "" };
 
   $("do-print").addEventListener("click", function () { window.print(); });
@@ -32,10 +38,39 @@
     return Promise.reject(V.Err("none"));
   }
 
+  function placesWithin(data, o, r) {
+    return (data.places || []).filter(function (p) { return V.miles(o.lat, o.lng, p.la, p.lo) <= r; });
+  }
+
+  /* Same rule as the results page: count every store and place in range
+     (or, for "find the nearest X", only X and stop at one). */
+  function gather(o, data, first) {
+    var steps = autoWiden ? [25, 50, 100] : [radius];
+    function check(i, near) {
+      var r = steps[i];
+      var count = near.records.length + placesWithin(data, o, r).length, enough = MIN_PLACES;
+      if (f.offer && data._byId[f.offer]) {
+        var want = data._byId[f.offer].brand;
+        count = near.records.filter(function (x) { return x.r.b === want; }).length +
+          placesWithin(data, o, r).filter(function (p) { return p.offer === f.offer; }).length;
+        enough = 1;
+      }
+      if (count < enough && i < steps.length - 1) {
+        return V.loadNearby(o, steps[i + 1]).then(function (next) { return check(i + 1, next); });
+      }
+      radius = r;
+      // w=1: the results page already widened to this radius.
+      return { near: near, widened: r > steps[0] || P.get("w") === "1" };
+    }
+    return Promise.resolve(check(0, first));
+  }
+
   $("print-status").textContent = "Loading the list…";
   origin().then(function (o) {
     return Promise.all([V.loadOffers(), V.loadNearby(o, radius)]).then(function (res) {
-      var data = res[0], near = res[1], today = V.today(), rows = [];
+      return gather(o, res[0], res[1]).then(function (g) { return [res[0], g.near, g.widened]; });
+    }).then(function (res) {
+      var data = res[0], near = res[1], widened = res[2], today = V.today(), rows = [];
       near.records.forEach(function (x) {
         var b = data.brands[x.r.b];
         if (!b) { return; }
@@ -58,6 +93,12 @@
       $("print-sub").textContent = (rows.length
         ? rows.length + (rows.length === 1 ? " place" : " places") + " within " + radius + " miles, closest first."
         : "No places within " + radius + " miles.") + " Printed " + V.fmtLong(today) + ".";
+      var island = ISLANDS[o.st] && rows.some(function (row) { return row.r.s && row.r.s !== o.st; })
+        ? " Some of these places are on another island, across the water." : "";
+      $("print-widen").textContent = widened
+        ? "Showing up to " + radius + " miles because few places are close by." + island
+        : island.trim();
+      $("print-widen").hidden = !$("print-widen").textContent;
       $("print-list").innerHTML = rows.map(function (row) {
         var r = row.r;
         var addr = (r.a ? r.a + ", " : "") + [r.c, r.s].filter(Boolean).join(", ") + (r.z ? " " + r.z : "");

@@ -4,10 +4,11 @@
 {% block body_class %}page-print{% endblock %}
 {% block main %}
 <div class="wrap print-wrap">
-  <p class="no-print"><a href="/near/">← Back to results</a>
+  <p class="no-print print-actions"><a class="back-link" href="/near/">← Back to results</a>
     <button type="button" class="btn btn-primary" id="do-print">Print this list</button></p>
   <h1 id="print-h">Veterans Day offers near you</h1>
   <p id="print-sub" class="print-sub"></p>
+  <p id="print-widen" class="print-widen" hidden></p>
   <p id="print-status" role="status" aria-live="polite"></p>
   <ol id="print-list" class="print-list"></ol>
   <section id="print-everywhere" hidden>

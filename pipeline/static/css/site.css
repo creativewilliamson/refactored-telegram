@@ -248,6 +248,8 @@ section[id="far"], section[id="everywhere"], section[id="find"] { margin-top: 1.
 .print-miles { font-weight: 400; }
 .print-offer { font-weight: 700; margin: 0.15rem 0; }
 .print-when, .print-addr, .print-phone { margin: 0.15rem 0; }
+.print-actions .back-link { margin-right: 1rem; }
+.print-widen { font-weight: 700; }
 .print-foot { margin-top: 1.5rem; border-top: 2px solid var(--fg); padding-top: 0.5rem; }
 
 @media (max-width: 30rem) {

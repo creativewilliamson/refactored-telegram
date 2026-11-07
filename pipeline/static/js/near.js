@@ -354,6 +354,7 @@
     else if (o.cityKey) { q.push("city=" + encodeURIComponent(o.cityKey), "st=" + o.st); }
     else { q.push("lat=" + o.lat.toFixed(4), "lng=" + o.lng.toFixed(4)); }
     q.push("r=" + S.radius);
+    if (S.userRadius) { q.push("fixed=1"); } else if (S.widened) { q.push("w=1"); }
     if (S.cat) { q.push("cat=" + S.cat); }
     if (S.free) { q.push("free=1"); }
     if (S.who) { q.push("who=" + S.who); }

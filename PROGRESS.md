@@ -532,3 +532,10 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - Print page: "1 place within 10 miles"; with nothing found it now says "No places within 100 miles." (not "0 places ..., closest first").
   Results page JS already used the rule (n === 1 ? store : stores); grep of templates + JS finds no other count label.
 - Built F21 while the F20 re-check was fetching pages (the two touch different files). e2e test_run2.py 24 passed. Evidence: evidence/F21.png.
+
+## F22: print page widens like the results page; 48px back link (passes)
+- print.js: with r=25 (or no r) it widens 25 -> 50 -> 100 while fewer than 10 places (same count and "find the nearest X" rule as
+  /near/), and says "Showing up to 100 miles because few places are close by." (+ the island note). Prints too (useful on paper).
+- Results -> print link now adds fixed=1 when the visitor picked the radius (print keeps it) or w=1 when results already widened
+  (print shows the same note). /print/?zip=00802&r=25 and 96910&r=25 opened directly now show the 100-mile list.
+- "← Back to results" uses .back-link (48px). e2e: test_run2 + test_print 33 passed. Evidence: evidence/F22.png.

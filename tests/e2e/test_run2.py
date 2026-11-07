@@ -147,3 +147,41 @@ def test_f21_no_bad_plurals_in_pages(page):
         many = r"\b(?:0|[2-9]|[1-9][\d,]+) "
         assert not re.search(many + r"(?:store location|place|offer|chain)(?![s\w])", text), path
         assert not re.search(many + r"store(?![s\w]| location)", text), path
+
+
+# ------------------------------------------------- F22 print page widening
+def _print_read(page):
+    page.wait_for_selector("#print-sub:not(:empty)")
+    w = page.locator("#print-widen")
+    return page.locator("#print-sub").inner_text(), (w.inner_text() if w.is_visible() else "")
+
+
+@pytest.mark.parametrize("zip_", ["00802", "96910"])
+def test_f22_print_widens_when_few_places(page, zip_):
+    page.goto(url(f"/print/?zip={zip_}&r=25"))
+    sub, note = _print_read(page)
+    assert "within 100 miles" in sub
+    assert note.startswith("Showing up to 100 miles because few places are close by.")
+    assert page.locator("#print-list > li").count() >= 1
+
+
+@pytest.mark.parametrize("query,miles", [("zip=46052&r=25", 25), ("zip=00802&r=10", 10),
+                                         ("zip=00802&r=25&fixed=1", 25)])
+def test_f22_print_keeps_radius(page, query, miles):
+    page.goto(url("/print/?" + query))
+    sub, note = _print_read(page)
+    assert f"within {miles} miles" in sub
+    assert "Showing up to" not in note
+
+
+def test_f22_results_to_print_and_back(page):
+    page.goto(url("/near/00802"))
+    page.wait_for_selector("#cards li")
+    assert "w=1" in page.locator("#print-link").get_attribute("href")
+    page.click("#print-link")
+    sub, note = _print_read(page)
+    assert "within 100 miles" in sub and note.startswith("Showing up to 100 miles")
+    back = page.locator(".print-actions .back-link")
+    assert back.bounding_box()["height"] >= 48
+    back.click()
+    page.wait_for_selector("#cards li")

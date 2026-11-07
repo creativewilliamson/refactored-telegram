@@ -317,7 +317,7 @@
         "Measure the Back to results link height"
       ],
       "evidence": "evidence/F22.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F23",
