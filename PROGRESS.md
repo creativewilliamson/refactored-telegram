@@ -190,3 +190,11 @@ Decisions:
   /near/?city=&st=), local/regional offers, national chains with stores in
   the state (with counts), Everywhere, and every other national offer.
 - Fixed "1 stores" -> "1 store". Evidence: evidence/F14.png.
+
+## F15: filters (passes)
+- 46052: each category (Meals, Coffee & treats, Shopping, Haircuts & car
+  care, Attractions) shows only that category and lowers the count; Free only
+  removes discounts and "free with purchase"; Gold Star -> 2 stores (only
+  offers tagged gold_star or everyone); Clear filters restores. Filters also
+  apply to Everywhere, special places and Find nearest lists, and to Print.
+- Evidence: evidence/F15.png. Tests: tests/e2e/test_filters.py (9).

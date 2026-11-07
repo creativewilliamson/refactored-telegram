@@ -196,7 +196,7 @@
         "Open data/eligibility-map.json and verify every offer has at least one tag"
       ],
       "evidence": "evidence/F15.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F16",
