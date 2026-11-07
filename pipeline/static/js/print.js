@@ -55,8 +55,9 @@
 
       document.title = "Large-print list: offers near " + o.label + " | Vet Day Deals";
       $("print-h").textContent = "Veterans Day offers near " + o.label;
-      $("print-sub").textContent = rows.length + " places within " + radius + " miles, closest first. Printed " +
-        V.fmtLong(today) + ".";
+      $("print-sub").textContent = (rows.length
+        ? rows.length + (rows.length === 1 ? " place" : " places") + " within " + radius + " miles, closest first."
+        : "No places within " + radius + " miles.") + " Printed " + V.fmtLong(today) + ".";
       $("print-list").innerHTML = rows.map(function (row) {
         var r = row.r;
         var addr = (r.a ? r.a + ", " : "") + [r.c, r.s].filter(Boolean).join(", ") + (r.z ? " " + r.z : "");

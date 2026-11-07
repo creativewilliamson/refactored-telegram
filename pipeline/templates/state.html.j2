@@ -1,13 +1,13 @@
 {% extends "base.html.j2" %}
 {% from "macros.html.j2" import offer_line, search_box %}
 {% block title %}Veterans Day 2026 offers in {{ name }} | {{ site_name }}{% endblock %}
-{% block description %}Free meals and deals for veterans and service members in {{ name }} on Veterans Day, Wed, Nov 11, 2026: {{ here | length + local | length }} offers with stores or places in {{ name }}.{% endblock %}
+{% block description %}Free meals and deals for veterans and service members in {{ name }} on Veterans Day, Wed, Nov 11, 2026: {{ (here | length + local | length) | plural("offer") }} with stores or places in {{ name }}.{% endblock %}
 {% block canonical %}/state/{{ code | lower }}/{% endblock %}
 {% block main %}
 <div class="wrap">
   <p class="crumbs"><a href="/">Home</a> › {{ name }}</p>
   <h1>Veterans Day offers in {{ name }}</h1>
-  <p class="lead">{{ store_count | commas }} store locations with Veterans Day offers in {{ name }}. Call ahead: not every store takes part.</p>
+  <p class="lead">{{ store_count | plural("store location") }} with Veterans Day offers in {{ name }}. Call ahead: not every store takes part.</p>
   {{ search_box("st", "Find offers near you: ZIP code, or City, ST") }}
 
   {% if cities %}
@@ -15,7 +15,7 @@
     <h2 id="cities-h">Top cities in {{ name }}</h2>
     <ul class="link-grid">
     {% for display, key, cnt in cities %}
-      <li><a href="/near/?city={{ key | urlencode }}&amp;st={{ code }}">{{ display }}</a> <span class="count">({{ cnt }} {{ 'store' if cnt == 1 else 'stores' }})</span></li>
+      <li><a href="/near/?city={{ key | urlencode }}&amp;st={{ code }}">{{ display }}</a> <span class="count">({{ cnt | plural("store") }})</span></li>
     {% endfor %}
     </ul>
   </section>

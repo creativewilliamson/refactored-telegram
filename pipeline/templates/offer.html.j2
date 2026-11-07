@@ -23,7 +23,7 @@
     <dd>
       {% if o.kind == "everywhere" %}Good anywhere in the U.S.; no store needed.
       {% elif o.kind == "place" %}{% for p in places %}{{ p.n }}, {{ p.c }}, {{ p.s }}{% if not loop.last %}; {% endif %}{% endfor %}
-      {% elif o.kind == "stores" %}{{ store_total }} stores in {{ states_with | length }} {{ 'state or territory' if states_with | length == 1 else 'states and territories' }} on our map.{% if o.scope == "regional" %} Regional offer: {{ o.states | join(", ") }}.{% endif %}
+      {% elif o.kind == "stores" %}{{ store_total | plural("store") }} in {{ states_with | length }} {{ 'state or territory' if states_with | length == 1 else 'states and territories' }} on our map.{% if o.scope == "regional" %} Regional offer: {{ o.states | join(", ") }}.{% endif %}
       {% else %}{% if o.states %}{{ o.states | join(", ") }}. {% endif %}We don't have this chain's store list. Search a map for the nearest one.{% endif %}
     </dd>
     <dt>Source</dt>

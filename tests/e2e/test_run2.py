@@ -50,7 +50,7 @@ NEW_SEARCH_PAGES = ["/near/46052", "/offer/texas-roadhouse/", "/state/in/",
 
 def _home_focused(page):
     page.wait_for_url(url("/"))
-    page.wait_for_function("document.activeElement && document.activeElement.id === 'q'")
+    page.wait_for_selector("#q:focus")  # (not wait_for_function: the site's CSP blocks eval)
     assert page.evaluate("window.scrollY") == 0
 
 
@@ -70,7 +70,7 @@ def test_f27_top_button_by_keyboard(page, path):
         # Results move focus to their heading (for screen readers); the
         # button sits just above it, one Shift+Tab back.
         page.wait_for_selector("#cards li")
-        page.wait_for_function("document.activeElement.id === 'results-h'")
+        page.wait_for_selector("#results-h:focus")
         page.keyboard.press("Shift+Tab")
     else:
         for _ in range(3):  # skip link, site name, New search
@@ -115,3 +115,35 @@ def test_f27_hidden_when_printed(page):
     assert page.locator(".new-search-top a").is_visible()
     page.emulate_media(media="print")
     assert not page.locator(".new-search-top a").is_visible()
+
+
+# ------------------------------------------------------------- F21 counts
+@pytest.mark.parametrize("path,text", [
+    ("/state/vi/", "1 store location with Veterans Day offers"),
+    ("/state/as/", "0 store locations with Veterans Day offers"),
+    ("/state/in/", "store locations with Veterans Day offers"),
+])
+def test_f21_state_counts(page, path, text):
+    page.goto(url(path))
+    assert text in page.locator("p.lead").first.inner_text()
+
+
+@pytest.mark.parametrize("query,expect", [
+    ("zip=00802&r=10", re.compile(r"^1 place within 10 miles")),
+    ("zip=46052&r=10", re.compile(r"^\d+ places within 10 miles")),
+    ("zip=96799&r=100", re.compile(r"^No places within 100 miles")),
+])
+def test_f21_print_counts(page, query, expect):
+    page.goto(url("/print/?" + query))
+    page.wait_for_selector("#print-sub:not(:empty)")
+    assert expect.search(page.locator("#print-sub").inner_text())
+
+
+def test_f21_no_bad_plurals_in_pages(page):
+    for path in ("/state/vi/", "/state/as/", "/about/", "/offer/hy-vee/", "/state/dc/"):
+        page.goto(url(path))
+        text = page.locator("main").inner_text()
+        assert not re.search(r"\b1 (store locations|stores|places|offers|chains)\b", text), path
+        many = r"\b(?:0|[2-9]|[1-9][\d,]+) "
+        assert not re.search(many + r"(?:store location|place|offer|chain)(?![s\w])", text), path
+        assert not re.search(many + r"store(?![s\w]| location)", text), path

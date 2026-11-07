@@ -1,6 +1,6 @@
 {% macro offer_line(o, count=None, place_name=None, show_name=True) %}
 <li class="offer-row">
-  {% if show_name %}<h3 class="offer-name"><a href="/offer/{{ o.id }}/">{{ o.name }}</a>{% if count %} <span class="count">· {{ count }} {{ 'store' if count == 1 else 'stores' }} here</span>{% endif %}</h3>{% endif %}
+  {% if show_name %}<h3 class="offer-name"><a href="/offer/{{ o.id }}/">{{ o.name }}</a>{% if count %} <span class="count">· {{ count | plural("store") }} here</span>{% endif %}</h3>{% endif %}
   <p class="offer-text">{{ o.offer }}</p>
   <p class="chips">
     <span class="chip chip-type">{{ types[o.type] }}</span>

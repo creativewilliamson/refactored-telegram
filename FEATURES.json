@@ -305,7 +305,7 @@
         "Grep the templates for other count labels and verify each uses the rule"
       ],
       "evidence": "evidence/F21.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F22",

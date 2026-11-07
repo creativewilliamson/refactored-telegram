@@ -39,6 +39,11 @@ def fmt_phone(p: str | None) -> str:
     return f"({p[:3]}) {p[3:6]}-{p[6:]}"
 
 
+def count_of(n: int, singular: str, plural: str | None = None) -> str:
+    """'1 store location', '0 store locations', '1,891 store locations'."""
+    return f"{n:,} {singular if n == 1 else (plural or singular + 's')}"
+
+
 def make_env(assets, data, states):
     env = site.make_env(assets, {
         "site_name": config.SITE_NAME,
@@ -53,7 +58,7 @@ def make_env(assets, data, states):
         "built": data.get("built"),
     })
     env.filters.update(day=fmt_day, long=fmt_long, range=fmt_range, phone=fmt_phone,
-                       commas=lambda n: f"{n:,}")
+                       commas=lambda n: f"{n:,}", plural=count_of)
     return env
 
 

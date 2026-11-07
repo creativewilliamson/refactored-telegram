@@ -525,3 +525,10 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - Results page: focus still moves to the results heading (F10); the button is one Shift+Tab above it. Elsewhere it's the 3rd Tab stop.
 - Also: the service worker now deletes every cache but its own build's (old "vef-" caches from local testing were left behind).
 - e2e test_run2.py: 17 passed. Evidence: evidence/F27.png. Next: F20 re-check of the round-9 flagged stores.
+
+## F21: counts read correctly (passes)
+- New Jinja filter `plural` (pipeline/pages.py count_of): state lead "1 store location"/"0 store locations", state description,
+  top-city counts, offer "N stores in", About counts, per-chain "N stores here". Named `plural` because Jinja has a built-in `count`.
+- Print page: "1 place within 10 miles"; with nothing found it now says "No places within 100 miles." (not "0 places ..., closest first").
+  Results page JS already used the rule (n === 1 ? store : stores); grep of templates + JS finds no other count label.
+- Built F21 while the F20 re-check was fetching pages (the two touch different files). e2e test_run2.py 24 passed. Evidence: evidence/F21.png.
