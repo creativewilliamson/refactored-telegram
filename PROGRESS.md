@@ -319,3 +319,36 @@ Decisions:
   none left except what the evaluator rated polish (base access, Kennedy
   Space Center, ", TBD" suites on open stores).
 - pytest 66 passed; e2e 112 passed. 80,962 stores.
+
+## Evaluator round 4: NEEDS_WORK (6 blocking) -> work items
+- W7: parse "Street, City, ST, ZIP" (TCBY) and 9-digit ZIPs without a hyphen;
+  use addr:full as the street when it has no comma (Twin Peaks). Then TCBY
+  gets the normal ZIP/town placement check (TCBY "Harrison" 58 mi off).
+- W8: badge-only federal headquarters (Dunkin' at the State Department,
+  USDA HQ).
+- W9: "Washington, DC" must be a city search, not the state page.
+- W10: no ZIP in a URL even if search.js fails to load (forms must not
+  submit the typed text natively).
+- W11: source URL/image fields that say coming-soon / temp-closed.
+
+## Evaluator round 4 fixes (W7-W11)
+- W7: one address parser for "street, City, ST 12345", "street, City, ST,
+  12345" (TCBY), trailing ", US" (Hard Rock) and 9-digit ZIPs with no
+  hyphen (Olive Garden, Sheetz...; also folded in this polish item since it's
+  the same parse bug and it lets those stores get the ZIP check). Twin Peaks'
+  bare-street addr:full is now the street. TCBY now has town + ZIP and goes
+  through the normal placement check; TCBY "Harrison" (58 mi off) could not
+  be re-placed by the Census Geocoder, so it is dropped.
+- W8: stores inside government department buildings (Dept of State, USDA,
+  Library of Congress, NJ Dept of Justice, House office building) dropped;
+  "Courthouse Rd" / "Government St" street names are not affected.
+- W9: "Washington, DC" / "Washington DC" / "Washington, D.C." search the city
+  (only "DC" / "District of Columbia" open the state page); the DC state
+  page's city links now open results.
+- W10: search boxes have no name attribute, so if the script fails to load a
+  plain submit sends nothing; /near/ no longer reads ?q=. Browser test blocks
+  the scripts and checks no request carries the ZIP on 4 page types.
+- W11: the source's website/ref/image fields are checked for coming-soon /
+  temp-closed / test-restaurant (Charleys x2, In-N-Out Camarillo, Main Event
+  Brea, Firehouse "test-restaurant-789").
+- pytest 68 passed; e2e 120 passed. 80,955 stores.

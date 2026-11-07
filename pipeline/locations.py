@@ -28,7 +28,7 @@ US_COUNTRIES = {"US", "PR", "GU", "VI", "AS", "MP"}
 STATE_BY_NAME = {v.lower(): k for k, v in config.STATES.items()}
 STATE_BY_NAME.update({"virgin islands": "VI", "us virgin islands": "VI", "washington dc": "DC",
                       "washington, d.c.": "DC", "puerto rico": "PR"})
-ZIP_RE = re.compile(r"\b(\d{5})(?:-\d{4})?\b")
+ZIP_RE = re.compile(r"\b(\d{5})(?:-?\d{4})?\b")   # 12345, 12345-6789, 123456789
 MAX_FROM_ANY_ZIP_MI = 60   # store must be this close to some U.S. ZIP centroid
 ZIP_SLACK_MI = 10          # ...and within (ZIP radius + this) of its own ZIP
 MIN_ZIP_ALLOWANCE_MI = 15
@@ -141,9 +141,18 @@ STREET_NOT_PUBLIC = re.compile(
     # provisional addresses: the store isn't built or open yet
     r"(temp|temporary|provisional) address|address (to change|pending|tbd)|(subject|to) change|"
     # inside the Pentagon (badge-only), not the public Pentagon City / Pentagon Row malls
-    r"(^|,)\s*pentagon\s*\.?$",
+    r"(^|,)\s*pentagon\s*\.?$|"
+    # inside government department buildings: badge-only or closed on the
+    # Veterans Day federal holiday (State Dept, USDA, Library of Congress...)
+    r"(dept|department) of (state|justice|agriculture|defense|energy|labor|commerce|education|"
+    r"transportation|the treasury|treasury|the interior|interior|homeland security|health|"
+    r"veterans affairs|housing)\b|,\s*usda\s*$|library of congress|(house|senate) office building",
     re.I,
 )
+
+
+URL_NOT_PUBLIC = re.compile(
+    r"coming[-_ ]?soon|temp(orarily)?[-_ ]?closed|permanently[-_ ]?closed|test[-_]restaurant", re.I)
 
 
 TEST_SITE = re.compile(r"\b(test|testing|qa|lab|dev|demo|uat|sandbox)\b|do not (use|order)|support cent(er|re)", re.I)
@@ -192,10 +201,32 @@ def not_public(p: dict, live_requires: tuple = ()) -> bool:
         v = p.get(key)
         if v and STREET_NOT_PUBLIC.search(str(v)):
             return True
+    # The source's own page/image URLs sometimes carry the status
+    # (".../coming-soon-outlet-shoppes-at-el-paso/", "temp-closed.png").
+    for key in ("website", "ref", "image", "@source_uri"):
+        v = p.get(key)
+        if v and URL_NOT_PUBLIC.search(str(v)):
+            return True
     end = str(p.get("end_date") or "").strip()
     if end and (end == "yes" or end <= dt.date.today().isoformat()):
         return True
     return False
+
+
+FULL_ADDR = re.compile(
+    r"^(?P<street>.+?),\s*(?P<city>[^,]+?),\s*(?P<st>[A-Za-z]{2})\.?,?\s+(?P<zip>\d{5})(?:-?\d{4})?"
+    r"(?:\s*,\s*(?:US|USA|United States))?\s*$"
+)
+
+
+def parse_full(full: str) -> tuple[str | None, str | None, str | None, str | None]:
+    """Split addr:full into (street, city, state, zip). Handles 'street, City,
+    ST 12345', 'street, City, ST, 12345' (TCBY), 9-digit ZIPs, and a trailing
+    ', US' (Hard Rock). Returns Nones when it doesn't look like a full address."""
+    m = FULL_ADDR.match((full or "").strip())
+    if not m:
+        return None, None, None, None
+    return m.group("street").strip(), m.group("city").strip(), m.group("st").upper(), m.group("zip")
 
 
 def street_of(p: dict) -> str:
@@ -204,18 +235,13 @@ def street_of(p: dict) -> str:
     hn, st = p.get("addr:housenumber"), p.get("addr:street")
     if st:
         return f"{hn} {st}".strip() if hn else st.strip()
-    full = p.get("addr:full") or ""
+    full = (p.get("addr:full") or "").strip()
+    street, _c, _s, _z = parse_full(full)
+    if street:
+        return street
+    if full and "," not in full and (p.get("addr:city") or p.get("addr:postcode")):
+        return full            # Twin Peaks: addr:full is the street alone
     return full.split(",")[0].strip() if "," in full else ""
-
-
-def parse_full(full: str) -> tuple[str | None, str | None, str | None]:
-    """Pull (city, state, zip) out of 'street, City, ST 12345'."""
-    if not full:
-        return None, None, None
-    m = re.search(r",\s*([^,]+?),?\s+([A-Za-z]{2})\.?\s+(\d{5})(?:-\d{4})?\s*$", full)
-    if m:
-        return m.group(1).strip(), m.group(2).upper(), m.group(3)
-    return None, None, None
 
 
 @dataclass
@@ -275,7 +301,7 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
                 if len(raw) == 10 and is_placeholder_phone(raw):
                     st.placeholder_phone += 1
                 country = (p.get("addr:country") or "").upper() or None
-                fc, fs, fz = parse_full(p.get("addr:full") or "")
+                _fa, fc, fs, fz = parse_full(p.get("addr:full") or "")
                 state = norm_state(p.get("addr:state")) or fs
                 if country and country not in US_COUNTRIES:
                     st.not_us += 1

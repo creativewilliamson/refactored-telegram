@@ -45,7 +45,6 @@
       return { q: params.get("city") + ", " + params.get("st"), shared: true, offer: offer };
     }
     if (params.get("zip")) { return { q: params.get("zip"), shared: true, offer: offer }; }
-    if (params.get("q")) { return { q: params.get("q"), shared: true, offer: offer }; }
     var pending = V.takePending();
     if (pending) { return pending; }
     var last = V.loadLast();

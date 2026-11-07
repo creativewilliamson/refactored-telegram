@@ -28,7 +28,7 @@
 
   var STATE_ALIASES = {
     "virgin islands": "VI", "us virgin islands": "VI", "u s virgin islands": "VI",
-    "washington dc": "DC", "washington d c": "DC", "d c": "DC",
+    "d c": "DC",   // "Washington, DC" stays a city search: it isn't an alias
     "northern marianas": "MP", "cnmi": "MP", "samoa": "AS"
   };
 

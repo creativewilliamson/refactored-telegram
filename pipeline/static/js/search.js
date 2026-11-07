@@ -21,7 +21,9 @@
 
   var forms = document.querySelectorAll("form[data-search]");
   Array.prototype.forEach.call(forms, function (form) {
-    var input = form.querySelector("input[name=q]");
+    // The box has no name attribute on purpose: if this script ever fails to
+    // load, a plain form submit sends nothing, never the ZIP.
+    var input = form.querySelector("input[type=text]");
     var msg = form.querySelector(".msg");
     var brand = form.getAttribute("data-brand") || null;
 

@@ -270,6 +270,13 @@ def test_not_public_source_fields():
     assert not_public({"addr:street_address": "Shirley Memorial Hwy, Pentagon"})
     assert not not_public({"addr:street_address": "1100 S. Hayes St.", "branch": "Fashion Center at Pentagon City"})
     assert not not_public({"addr:street_address": "3286 Pentagon Blvd"})
+    assert not_public({"addr:street_address": "2201 C St NW, US Dept of State"})
+    assert not_public({"addr:street_address": "1400 Jefferson Dr SW, USDA"})
+    assert not_public({"addr:street_address": "101 Independence Ave SE, Library of Congress"})
+    assert not not_public({"addr:street_address": "113 Courthouse Rd"})
+    assert not not_public({"addr:street_address": "607 W Government St"})
+    assert not_public({"website": "https://www.charleys.com/locations/coming-soon-outlet-shoppes-at-el-paso-canutillo-tx/"})
+    assert not_public({"image": "https://www.in-n-out.com/x/large/temp-closed.png"})
     assert not_public({"branch": "Brownsburg", "phone": "x"}, ("opening_hours", "website"))
 
 
@@ -291,3 +298,25 @@ def test_points_agree_with_their_town(records, data):
     assert ("bjs-restaurant", "15081 South La Grange Road") not in names or any(
         r["b"] == "bjs-restaurant" and r.get("a") == "15081 South La Grange Road" and r["s"] == "IL" for r in records)
     assert not any(r["b"] == "texas-roadhouse" and "Open 12/7" in (r.get("n") or "") for r in records)
+
+
+# ---- evaluator round 4 -------------------------------------------------------
+def test_address_formats_parse():
+    from pipeline.locations import parse_full, street_of, ZIP_RE
+    assert parse_full("1313 Hwy 65 N, Harrison, AR, 72601") == ("1313 Hwy 65 N", "Harrison", "AR", "72601")
+    assert parse_full("6801 Hollywood Blvd, Suite 105, Los Angeles, CA, 90028, US")[1:] == ("Los Angeles", "CA", "90028")
+    assert street_of({"addr:full": "5260 Belt Line Rd.", "addr:city": "Dallas"}) == "5260 Belt Line Rd."
+    assert ZIP_RE.search("170505251").group(1) == "17050"
+
+
+def test_tcby_and_twin_peaks_have_full_addresses(records):
+    tcby = [r for r in records if r["b"] == "tcby"]
+    tp = [r for r in records if r["b"] == "twin-peaks"]
+    assert tcby and all(r.get("c") and r.get("a") for r in tcby)
+    assert sum(1 for r in tcby if r.get("z")) >= 0.9 * len(tcby)
+    assert tp and all(r.get("a") for r in tp)
+    # TCBY "Harrison" sits in Harrison, AR (or is gone), never near Clinton.
+    from pipeline.locations import miles
+    for r in tcby:
+        if r.get("c") == "Harrison" and r["s"] == "AR":
+            assert miles(r["la"], r["lo"], 36.23, -93.11) < 15

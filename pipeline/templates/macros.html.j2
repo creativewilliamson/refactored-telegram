@@ -18,7 +18,7 @@
 <form class="search js-only" data-search {% if brand %}data-brand="{{ brand }}"{% endif %} action="/near/" method="get" role="search" novalidate>
   <label for="{{ id_prefix }}-q">{{ label }}</label>
   <div class="search-row">
-    <input id="{{ id_prefix }}-q" name="q" type="text" autocomplete="postal-code"
+    <input id="{{ id_prefix }}-q" type="text" autocomplete="postal-code"
            placeholder="46052 or Lebanon, IN" aria-describedby="{{ id_prefix }}-msg" required>
     <button type="submit" class="btn btn-primary">Search</button>
   </div>

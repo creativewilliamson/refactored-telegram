@@ -68,3 +68,34 @@ def test_f12_location_only_asked_on_tap(browser):
         page.wait_for_load_state("networkidle")
         assert page.evaluate("window.__geoCalls") == 0, path
     ctx.close()
+
+
+@pytest.mark.parametrize("q", ["Washington, DC", "Washington DC", "Washington, D.C."])
+def test_washington_dc_is_a_city_search(page, q):
+    search_from_home(page, q)
+    page.wait_for_selector("#cards > li")
+    assert page.text_content("#results-h").startswith("Offers near Washington, DC")
+
+
+def test_dc_state_page_city_link_opens_results(page):
+    page.goto(url("/state/dc/"))
+    page.click("#cities-h + ul a")
+    page.wait_for_selector("#cards > li")
+    assert "/state/" not in page.url
+    assert page.text_content("#results-h").startswith("Offers near Washington, DC")
+
+
+@pytest.mark.parametrize("path,box", [("/", "#q"), ("/near/", "#nq"), ("/state/in/", "#st-q"), ("/offer/starbucks/", "#of-q")])
+def test_zip_never_in_a_request_even_without_search_script(browser, path, box):
+    ctx = browser.new_context(service_workers="block")
+    page = ctx.new_page()
+    page.route("**/js/search.*.js", lambda r: r.abort())
+    page.route("**/js/near.*.js", lambda r: r.abort())
+    urls = []
+    page.on("request", lambda r: urls.append(r.url))
+    page.goto(url(path))
+    page.fill(box, "46052")
+    page.press(box, "Enter")
+    page.wait_for_timeout(1500)
+    ctx.close()
+    assert not any("46052" in u for u in urls), urls
