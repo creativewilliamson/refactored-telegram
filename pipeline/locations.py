@@ -53,7 +53,12 @@ NOT_PUBLIC = re.compile(
     re.I,
 )
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
-COMPLETE_CHAIN_SHARE = 0.985   # see the "phone or hours" rule at the end of build()
+# Listings the chain hasn't filled in yet are placeholders for stores not open
+# yet (checked against chains' own pages in evaluator round 8: Dunkin' with
+# neither phone nor hours 19/21 COMING_SOON; Chipotle with no hours 29/44
+# "COMING SOON!"; Wendy's with no hours 5/6 pages gone). See end of build().
+COMPLETE_CHAIN_SHARE = 0.975   # >= this share has a phone or hours -> drop listings with neither
+HOURS_CHAIN_SHARE = 0.97       # >= this share has hours -> drop listings without hours
 
 
 def miles(lat1, lng1, lat2, lng2) -> float:
@@ -558,10 +563,11 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
     final: list[dict] = []
     for slug, recs in by_brand.items():
         bare = [r for r in recs if not r.get("p") and not r.get("h")]
-        complete_share = 1 - len(bare) / len(recs)
-        drop_bare = bare and complete_share >= COMPLETE_CHAIN_SHARE
+        no_hours = [r for r in recs if not r.get("h")]
+        drop_bare = bare and 1 - len(bare) / len(recs) >= COMPLETE_CHAIN_SHARE
+        drop_no_hours = no_hours and 1 - len(no_hours) / len(recs) >= HOURS_CHAIN_SHARE
         for rec in recs:
-            if drop_bare and not rec.get("p") and not rec.get("h"):
+            if (drop_bare and not rec.get("p") and not rec.get("h")) or (drop_no_hours and not rec.get("h")):
                 stats[slug].incomplete += 1
                 continue
             final.append(rec)

@@ -420,3 +420,20 @@ Decisions:
 - Correction to the F19 note: "find the nearest X" widens until it finds one
   X, but only up to 100 miles (beyond that the page says none within 100 mi).
 - pytest 74 passed; e2e 130 passed. 80,729 stores.
+
+## Evaluator round 8: NEEDS_WORK (1 blocking) -> work item
+- W19: unopened stores still listed: Dunkin' with neither phone nor hours
+  (19 of 21 checked = COMING_SOON on dunkindonuts.com), Chipotle with no
+  hours (29 of 44 = "COMING SOON!"), Applebee's Porter TX temporarily closed.
+
+## Evaluator round 8 fix (W19)
+- Placeholder listings for stores not open yet: in a chain where >= 97% of
+  listings have hours, a listing without hours is left out; where >= 97.5%
+  have a phone or hours, a listing with neither is left out. Backed by the
+  chains' own pages (Dunkin' bare 19/21 COMING_SOON, Chipotle no-hours 29/44
+  "COMING SOON!", Wendy's no-hours 5/6 store pages now 404). 552 dropped
+  (Dunkin' 240, Wendy's 154, Little Caesars 52, Chipotle 44, ...); Applebee's
+  Porter TX (temporarily closed) gone. Charleys, Hy-Vee, Playa Bowls are
+  below the thresholds and unchanged. The IHOP sharing that Porter address is
+  a separate, open (24/7) store.
+- pytest 75 passed; e2e 130 passed. 80,198 stores.

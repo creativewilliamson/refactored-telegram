@@ -365,7 +365,7 @@ def test_each_card_is_the_store_listing(records):
 
 # ---- evaluator round 7 -------------------------------------------------------
 def test_no_placeholder_listings_in_complete_chains(records):
-    from pipeline.locations import COMPLETE_CHAIN_SHARE
+    from pipeline.locations import COMPLETE_CHAIN_SHARE, HOURS_CHAIN_SHARE
     import collections
     by = collections.defaultdict(list)
     for r in records:
@@ -374,9 +374,20 @@ def test_no_placeholder_listings_in_complete_chains(records):
         bare = [r for r in rs if not r.get("p") and not r.get("h")]
         if bare:
             assert 1 - len(bare) / len(rs) < COMPLETE_CHAIN_SHARE, b
+        no_hours = [r for r in rs if not r.get("h")]
+        if no_hours:
+            assert 1 - len(no_hours) / len(rs) < HOURS_CHAIN_SHARE, b
     assert not any(r["b"] == "ihop" and (r.get("a") or "").startswith("SWC I-10") for r in records)
 
 
 def test_food_lion_pharmacy_listings_gone(records):
     fl = [r for r in records if r["b"] == "food-lion" and "Hughes" in (r.get("a") or "") and r.get("c") == "Elizabeth City"]
     assert len(fl) == 1 and fl[0]["p"] == "2523311301"
+
+
+# ---- evaluator round 8 -------------------------------------------------------
+def test_round8_unopened_examples_gone(records):
+    addr = {(r["b"], r.get("a") or "") for r in records}
+    assert ("dunkin", "3363 East Pershing Boulevard") not in addr
+    assert ("chipotle", "3520 Saint Lola Ln") not in addr
+    assert not any(b == "applebees" and a == "23681 Church St" for b, a in addr)
