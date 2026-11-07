@@ -340,5 +340,14 @@
     } catch (e) { return null; }
   };
 
+
+  // Offline helper: keeps this site's own pages and data on the phone so a
+  // reload works on a weak signal. Sends nothing anywhere.
+  if ("serviceWorker" in navigator && window.isSecureContext) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () { /* optional */ });
+    });
+  }
+
   window.VEF = VEF;
 })();

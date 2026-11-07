@@ -1,0 +1,65 @@
+/* VetsEatFree offline helper (service worker).
+   Keeps the site's own pages and data files on this phone after they are
+   first used, so a reload still works on a weak or lost signal. It never
+   sends anything anywhere and stores nothing but files this site served.
+   A new build gets a new cache; old caches are deleted. */
+"use strict";
+var VERSION = "{{ version }}";
+var CACHE = "vef-" + VERSION;
+var CORE = {{ core | tojson }};
+
+self.addEventListener("install", function (event) {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then(function (cache) { return cache.addAll(CORE); })
+      .then(function () { return self.skipWaiting(); })
+  );
+});
+
+self.addEventListener("activate", function (event) {
+  event.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.filter(function (k) {
+        return k.indexOf("vef-") === 0 && k !== CACHE;
+      }).map(function (k) { return caches.delete(k); }));
+    }).then(function () { return self.clients.claim(); })
+  );
+});
+
+function saveCopy(key, response) {
+  if (response && response.ok) {
+    var copy = response.clone();
+    caches.open(CACHE).then(function (cache) { cache.put(key, copy); });
+  }
+  return response;
+}
+
+self.addEventListener("fetch", function (event) {
+  var req = event.request;
+  if (req.method !== "GET") { return; }
+  var url = new URL(req.url);
+  if (url.origin !== self.location.origin) { return; }
+
+  // Pages: try the network, fall back to the copy on this phone.
+  // Every /near/... link is the same results page, so one copy serves all.
+  if (req.mode === "navigate") {
+    var key = url.pathname.indexOf("/near/") === 0 ? "/near/"
+      : url.pathname.indexOf("/print/") === 0 ? "/print/" : url.pathname;
+    event.respondWith(
+      fetch(req).then(function (res) { return saveCopy(key, res); }).catch(function () {
+        return caches.match(key).then(function (hit) { return hit || caches.match("/"); });
+      })
+    );
+    return;
+  }
+
+  // Styles, scripts and data files are fixed for each build: use the copy
+  // on this phone first, then the network.
+  if (/^\/(css|js|data)\//.test(url.pathname) || url.pathname === "/favicon.svg") {
+    event.respondWith(
+      caches.match(req).then(function (hit) {
+        return hit || fetch(req).then(function (res) { return saveCopy(req, res); });
+      })
+    );
+  }
+});

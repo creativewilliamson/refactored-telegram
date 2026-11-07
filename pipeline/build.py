@@ -40,6 +40,7 @@ def headers_file(csp: str) -> str:
 """]
     for route in HTML_ROUTES:
         parts.append(f"{route}\n  Cache-Control: public, max-age=300\n")
+    parts.append("/sw.js\n  Cache-Control: no-cache\n")
     parts.append("/data/*\n  Cache-Control: public, max-age=3600\n")
     parts.append("/css/*\n  Cache-Control: public, max-age=31536000, immutable\n")
     parts.append("/js/*\n  Cache-Control: public, max-age=31536000, immutable\n")

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import collections
 import datetime as dt
+import hashlib
 
 from . import config, dataset, geo as geo_mod, site
 
@@ -112,6 +113,14 @@ def render_all(dist, assets, data: dict, records: list[dict], g) -> int:
         page(f"/offer/{o['id']}/", "offer.html.j2", o=o, places=places,
              store_total=sum(brand_states[o["brand"]].values()) if o.get("brand") else 0,
              states_with=states_with)
+
+    # Offline helper: precache the core pages, styles, scripts and offer list.
+    core = ["/", "/near/", "/print/", "/favicon.svg", "/data/offers.json", "/data/tiles/index.json"]
+    core += [assets.url(k) for k in ("css/site.css", "js/app.js", "js/near.js", "js/search.js", "js/print.js")]
+    version = hashlib.sha256("|".join(core + [data.get("built") or ""]).encode()).hexdigest()[:12]
+    (dist / "sw.js").write_text(env.get_template("sw.js.j2").render(core=core, version=version),
+                                encoding="utf-8")
+    n += 1
 
     urls = ["/", "/about/"] + [f"/state/{c.lower()}/" for c, _ in states] + [f"/offer/{o['id']}/" for o in data["offers"]]
     lastmod = data.get("built") or dt.date.today().isoformat()

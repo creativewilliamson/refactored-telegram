@@ -167,7 +167,7 @@ def test_pages_and_pages_limits():
     assert len(list((DIST / "state").glob("*/index.html"))) == 56
     assert len(list((DIST / "offer").glob("*/index.html"))) == 130
     for name in ("index.html", "near/index.html", "print/index.html", "about/index.html",
-                 "404.html", "sitemap.xml", "robots.txt", "og.png"):
+                 "404.html", "sitemap.xml", "robots.txt", "og.png", "sw.js"):
         assert (DIST / name).exists(), name
 
 
@@ -176,6 +176,7 @@ def test_redirects_and_headers():
     headers = (DIST / "_headers").read_text()
     assert "/data/*\n  Cache-Control: public, max-age=3600" in headers
     assert "Content-Security-Policy: default-src 'self'" in headers
+    assert "/sw.js\n  Cache-Control: no-cache" in headers
 
 
 def test_no_third_party_scripts_or_images():

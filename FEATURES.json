@@ -209,7 +209,7 @@
         "Search, reload the page, and verify the search comes back"
       ],
       "evidence": "evidence/F16.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F17",

@@ -18,7 +18,7 @@ fonts = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "C:/Windows/Fon
 font = next((ImageFont.truetype(f, 18) for f in fonts if Path(f).exists()), ImageFont.load_default())
 tiles = []
 for item in items:
-    cap, path = item.split("=", 1)
+    cap, path = item.rsplit("=", 1)
     im = Image.open(path).convert("RGB")
     im = im.crop((0, 0, im.width, min(height, im.height)))
     tiles.append((cap, im))

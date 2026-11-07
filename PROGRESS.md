@@ -198,3 +198,14 @@ Decisions:
   offers tagged gold_star or everyone); Clear filters restores. Filters also
   apply to Everywhere, special places and Find nearest lists, and to Print.
 - Evidence: evidence/F15.png. Tests: tests/e2e/test_filters.py (9).
+
+## F16: share links + reload (passes)
+- /near/46052 and /near/?city=lebanon&st=IN open the same search (via
+  _redirects). Share link button: navigator.share, else copies the link.
+- Searches keep the ZIP out of the address bar; the last search lives in
+  localStorage, so a reload brings it back.
+- Decision: added a small service worker (dist/sw.js, versioned per build,
+  no-cache header) that keeps the site's own pages, scripts and the data
+  files this phone already used. A reload with no connection shows the same
+  results. About page privacy text now says so. Tested offline in Playwright.
+- Evidence: evidence/F16.png. Tests: tests/e2e/test_share.py (5).
