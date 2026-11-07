@@ -46,6 +46,10 @@ CHAINS = {
                re.compile(r'(?:c-location-hours-additional-text|LocationInfo-hoursInfo)">\s*' + WORDS, re.I)),
     "applebees": ({"Q621532"}, lambda u: u,
                   re.compile(r'no-hours-message[^"]*">\s*' + WORDS, re.I)),
+    # Dunkin' pages carry one machine-readable status: the store's own.
+    "dunkin_us": ({"Q847743"}, lambda u: u,
+                  re.compile(r'"status"\s*:\s*"(COMING_SOON|TEMPORARILY_CLOSED|TEMP_CLOSED|CLOSED|'
+                             r'PERMANENTLY_CLOSED|INACTIVE)"')),
     "chipotle": ({"Q465751"}, lambda u: u,
                  re.compile(r'Restaurant Hours</div><div class="[^"]*"><p class="[^"]*">\s*' + WORDS, re.I)),
 }

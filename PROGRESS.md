@@ -481,3 +481,5 @@ Decisions:
   Blaze skipped (template text). 259 stores flagged; 80,094 stores kept.
 - README + DEPLOY.md: how to re-run the sweep before a rebuild.
 - pytest 78 passed; e2e 130 passed.
+- Also swept Dunkin' (its pages carry one machine-readable status, the
+  store's own): 196 COMING_SOON, 126 TEMP_CLOSED, 5 gone. 79,969 stores kept.

@@ -3452,6 +3452,3284 @@
    "trust_404": false,
    "flagged": [],
    "checked": "2026-11-07"
+  },
+  "dunkin_us": {
+   "pages": 10488,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "dunkin_us",
+     "ref": "365472",
+     "url": "https://www.dunkindonuts.com/locations/us/al/dora/5960-flat-top-road/store-365472/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5960 Flat Top Road",
+     "city": "Dora",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364481",
+     "url": "https://www.dunkindonuts.com/locations/us/az/glendale/4402-west-glendale-avenue/store-364481/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4402 West Glendale Avenue",
+     "city": "Glendale",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Phoenix\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365496",
+     "url": "https://www.dunkindonuts.com/locations/us/az/glendale/5151-north-99th-avenue/store-365496/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5151 North 99th Avenue",
+     "city": "Glendale",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Phoenix\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365943",
+     "url": "https://www.dunkindonuts.com/locations/us/az/marana/11389-w-tangerine-rd/store-365943/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "11389 W Tangerine Rd",
+     "city": "Marana",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Phoenix\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366759",
+     "url": "https://www.dunkindonuts.com/locations/us/az/mesa/6033-south-sossaman-road/store-366759/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6033 South Sossaman Road, Post Security Gate 3 Area",
+     "city": "Mesa",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Phoenix\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365736",
+     "url": "https://www.dunkindonuts.com/locations/us/az/oro-valley/2150-e-tangerine-road/store-365736/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2150 E Tangerine Road",
+     "city": "Oro Valley",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Phoenix\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367178",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/gilroy/7150-camino-arroyo/store-367178/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "7150 CAMINO ARROYO, WM2002",
+     "city": "GILROY",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365645",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/lindsay/1647-west-tulare-road/store-365645/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1647 West Tulare Road, 1647 Avenue 232",
+     "city": "Lindsay",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367041",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/martinez/1021-arnold-dr/store-367041/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1021 ARNOLD DR, WM3493",
+     "city": "MARTINEZ",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367045",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/north-highlands/4675-watt-ave/store-367045/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4675 WATT AVE, WM4393",
+     "city": "NORTH HIGHLANDS",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367334",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/pleasant-hill/1900-contra-costa-blvd/store-367334/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1900 Contra Costa Blvd",
+     "city": "Pleasant Hill",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366036",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/redding/14361-holiday-road/store-366036/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "14361 Holiday Road",
+     "city": "Redding",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367116",
+     "url": "https://www.dunkindonuts.com/locations/us/ca/santa-maria/2220-s-bradley-rd/store-367116/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2220 S BRADLEY RD, WM2507",
+     "city": "SANTA MARIA",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Los_Angeles\",\"resta"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367258",
+     "url": "https://www.dunkindonuts.com/locations/us/co/alamosa/3333-clark-street/store-367258/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3333 Clark Street, WM869",
+     "city": "Alamosa",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367033",
+     "url": "https://www.dunkindonuts.com/locations/us/co/fort-collins/1250-e-magnolia-st/store-367033/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1250 E MAGNOLIA ST, WM2729",
+     "city": "FORT COLLINS",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366222",
+     "url": "https://www.dunkindonuts.com/locations/us/co/fort-morgan/1115-main-st/store-366222/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1115 Main St",
+     "city": "Fort Morgan",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367179",
+     "url": "https://www.dunkindonuts.com/locations/us/co/longmont/2285-e-ken-pratt-blvd/store-367179/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2285 E KEN PRATT BLVD, WM905",
+     "city": "LONGMONT",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354320",
+     "url": "https://www.dunkindonuts.com/locations/us/co/silverthorne/120-blue-river-parkway/store-354320/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "120 Blue River Parkway",
+     "city": "Silverthorne",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365137",
+     "url": "https://www.dunkindonuts.com/locations/us/co/thornton/3575-east-104th-avenue/store-365137/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3575 East 104th Avenue",
+     "city": "Thornton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367359",
+     "url": "https://www.dunkindonuts.com/locations/us/co/windsor/6435-crossroads-boulevard/store-367359/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6435 Crossroads Boulevard",
+     "city": "Windsor",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355192",
+     "url": "https://www.dunkindonuts.com/locations/us/ct/hartford/1214-main-st/store-355192/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1214 Main St, Hartford Yard Goats Baseball",
+     "city": "Hartford",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354288",
+     "url": "https://www.dunkindonuts.com/locations/us/ct/middlefield/144-meriden-rd/store-354288/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "144 Meriden Rd",
+     "city": "Middlefield",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343272",
+     "url": "https://www.dunkindonuts.com/locations/us/ct/putnam/319-kennedy-dr/store-343272/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "319 Kennedy Dr",
+     "city": "Putnam",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "308136",
+     "url": "https://www.dunkindonuts.com/locations/us/ct/terryville/311-main-st/store-308136/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "311 Main St, IGA Plaza",
+     "city": "Terryville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367239",
+     "url": "https://www.dunkindonuts.com/locations/us/ct/west-haven/515-saw-mill-rd/store-367239/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "515 SAW MILL RD, WM3803",
+     "city": "WEST HAVEN",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363428",
+     "url": "https://www.dunkindonuts.com/locations/us/dc/washington/2721-naylor-road-southeast/store-363428/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2721 Naylor Road Southeast",
+     "city": "Washington",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366726",
+     "url": "https://www.dunkindonuts.com/locations/us/dc/washington/300-7th-street-southwest/store-366726/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "300 7th Street Southwest",
+     "city": "Washington",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365667",
+     "url": "https://www.dunkindonuts.com/locations/us/de/delmar/3-gerald-court/store-365667/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3 Gerald Court",
+     "city": "Delmar",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343921",
+     "url": "https://www.dunkindonuts.com/locations/us/de/fenwick-island/40055-lighthouse-rd/store-343921/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "40055 Lighthouse Rd",
+     "city": "Fenwick Island",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"12:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365967",
+     "url": "https://www.dunkindonuts.com/locations/us/de/milton/407-broadkill-road/store-365967/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "407 Broadkill Road",
+     "city": "Milton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366030",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/callahan/542547-us-hwy-1/store-366030/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "542547 US Hwy 1",
+     "city": "Callahan",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "359152",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/clearwater/st--pete-clearwater-int-airport/store-359152/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "St. Pete-Clearwater Int Airport, 14700 Terminal Parkway",
+     "city": "Clearwater",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "310428",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/coconut-creek/6502-n-state-road-7/store-310428/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "6502 N State Road 7",
+     "city": "Coconut Creek",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "304530",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/delray-beach/1911-s-federal-hwy/store-304530/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1911 S Federal Hwy",
+     "city": "Delray Beach",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366240",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/fort-myers/13600-goldenwood-drive/store-366240/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "13600 Goldenwood Drive, Suite 101",
+     "city": "Fort Myers",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "346222",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/fort-myers/ft-myers-intl-airport/store-346222/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "Ft Myers Intl Airport, 11000 Terminal Access Rd",
+     "city": "Fort Myers",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "349193",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/ft-pierce/4090-w-midway-rd/store-349193/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "4090 W Midway Rd",
+     "city": "Ft Pierce",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354296",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/gainesville/2900-sw-42nd-st/store-354296/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2900 SW 42nd St, Wal-Mart",
+     "city": "Gainesville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354057",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/gulf-breeze/250-gulf-breeze-pkwy/store-354057/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "250 Gulf Breeze Pkwy",
+     "city": "Gulf Breeze",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"12:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366957",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/lauderdale-lakes/3001-n-state-road-7/store-366957/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3001 N STATE ROAD 7, WM3625",
+     "city": "LAUDERDALE LAKES",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354920",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/miami/10880-biscayne-blvd/store-354920/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "10880 Biscayne Blvd",
+     "city": "Miami",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367339",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/middleburg/5082-county-road-218/store-367339/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5082 County Road 218",
+     "city": "Middleburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "359055",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/miramar/6297-99-county-line-road/store-359055/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6297-99 County Line Road",
+     "city": "Miramar",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364198",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/naples/13119-collier-blvd/store-364198/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "13119 Collier Blvd",
+     "city": "Naples",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355449",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/osprey/13140-s-tamiami-trail/store-355449/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "13140 S Tamiami Trail, Wal-Mart Store # 5264",
+     "city": "Osprey",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366393",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/pembroke-pines/11401-pines-boulevard/store-366393/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "11401 Pines Boulevard, Pembroke Lakes Mall Suite 806",
+     "city": "Pembroke Pines",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366394",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/pembroke-pines/11401-pines-boulevard/store-366394/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "11401 Pines Boulevard, Pembroke Lakes Mall Suite 412",
+     "city": "Pembroke Pines",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366881",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/pensacola/9201-blue-angel-trail/store-366881/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "9201 Blue Angel Trail",
+     "city": "Pensacola",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365664",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/san-antonio/30903-county-road-52/store-365664/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "30903 County Road 52",
+     "city": "San Antonio",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343785",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/sarasota/8445-tamiami-tr/store-343785/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "8445 Tamiami Tr",
+     "city": "Sarasota",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:30\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "310131",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/sebastian/900-us-highway-1/store-310131/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "900 US Highway 1",
+     "city": "Sebastian",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366756",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/st-augustine/8470-st-johns-parkway/store-366756/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "8470 St Johns Parkway",
+     "city": "St Augustine",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367016",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/stuart/4001-se-federal-hwy/store-367016/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4001 SE FEDERAL HWY, WM1087",
+     "city": "STUART",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366854",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/tampa/5403-airport-service-road/store-366854/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5403 Airport Service Road, TPA Car Rental Center",
+     "city": "Tampa",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"14:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366728",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/venice/405-serano-way/store-366728/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "405 Serano Way",
+     "city": "Venice",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "350650",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/wellington/2741-s-state-road-7/store-350650/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2741 S State Road 7, Marathon Gas Station",
+     "city": "Wellington",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "308442",
+     "url": "https://www.dunkindonuts.com/locations/us/fl/west-palm-beach/194-s-state-road-7/store-308442/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "194 S State Road 7, Home Depot Plaza",
+     "city": "West Palm Beach",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302116",
+     "url": "https://www.dunkindonuts.com/locations/us/ga/decatur/2704-candler-rd/store-302116/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2704 Candler Rd",
+     "city": "Decatur",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355977",
+     "url": "https://www.dunkindonuts.com/locations/us/ga/jasper/751-noah-dr/store-355977/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "751 Noah Dr",
+     "city": "Jasper",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364689",
+     "url": "https://www.dunkindonuts.com/locations/us/ga/ringgold/11343-us-highway-41-south/store-364689/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "11343 US Highway 41 South",
+     "city": "Ringgold",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "357556",
+     "url": "https://www.dunkindonuts.com/locations/us/ia/fort-madison/5002-avenue-o/store-357556/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "5002 Avenue O",
+     "city": "Fort Madison",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354234",
+     "url": "https://www.dunkindonuts.com/locations/us/ia/iowa-city/2580-naples-ave-sw/store-354234/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2580 Naples Ave SW",
+     "city": "Iowa City",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "357570",
+     "url": "https://www.dunkindonuts.com/locations/us/ia/mediapolis/109-wapello-st-s/store-357570/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "109 Wapello St S",
+     "city": "Mediapolis",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"22:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "357569",
+     "url": "https://www.dunkindonuts.com/locations/us/ia/muscatine/2418-stewart-rd/store-357569/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2418 Stewart Rd",
+     "city": "Muscatine",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367304",
+     "url": "https://www.dunkindonuts.com/locations/us/ia/webster-city/407-closz-drive/store-367304/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "407 Closz Drive",
+     "city": "Webster City",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367456",
+     "url": "https://www.dunkindonuts.com/locations/us/il/belvidere/1150-north-state-street/store-367456/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1150 North State Street",
+     "city": "Belvidere",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "338384",
+     "url": "https://www.dunkindonuts.com/locations/us/il/berwyn/2945-s-harlem/store-338384/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2945 S Harlem",
+     "city": "Berwyn",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:30\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302744",
+     "url": "https://www.dunkindonuts.com/locations/us/il/bloomingdale/142-s-gary-ave/store-302744/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "142 S Gary Ave",
+     "city": "Bloomingdale",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366826",
+     "url": "https://www.dunkindonuts.com/locations/us/il/bradley/2000-illinois-50/store-366826/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2000 Illinois 50",
+     "city": "Bradley",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366218",
+     "url": "https://www.dunkindonuts.com/locations/us/il/channahon/24349-west-eames-street/store-366218/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "24349 West Eames Street",
+     "city": "Channahon",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "338368",
+     "url": "https://www.dunkindonuts.com/locations/us/il/chicago/100-w-randolph-st/store-338368/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "100 W Randolph St, Ste 112",
+     "city": "Chicago",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "340343",
+     "url": "https://www.dunkindonuts.com/locations/us/il/chicago/3843-n--cicero/store-340343/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3843 N. Cicero",
+     "city": "Chicago",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "301316",
+     "url": "https://www.dunkindonuts.com/locations/us/il/chicago/5000-w--irving-park-rd/store-301316/",
+     "status": "store page gone (404)",
+     "street": "5000 W. Irving Park Rd",
+     "city": "Chicago",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351160",
+     "url": "https://www.dunkindonuts.com/locations/us/il/chicago/6701-s-jeffery-blvd/store-351160/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "6701 S Jeffery Blvd",
+     "city": "Chicago",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "362788",
+     "url": "https://www.dunkindonuts.com/locations/us/il/deer-park/20817-north-quentin-road/store-362788/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "20817 North Quentin Road",
+     "city": "Deer Park",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364980",
+     "url": "https://www.dunkindonuts.com/locations/us/il/frankfort/20400-south-la-grange-road/store-364980/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "20400 South La Grange Road",
+     "city": "Frankfort",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366434",
+     "url": "https://www.dunkindonuts.com/locations/us/il/matteson/5640-211th-street/store-366434/",
+     "status": "store page gone (404)",
+     "street": "5640 211th Street",
+     "city": "Matteson",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341144",
+     "url": "https://www.dunkindonuts.com/locations/us/il/mc-cook/8147-west-joliet-rd/store-341144/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "8147 West Joliet Rd",
+     "city": "Mc Cook",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"11:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367097",
+     "url": "https://www.dunkindonuts.com/locations/us/il/new-lenox/801-maple-road/store-367097/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "801 Maple Road",
+     "city": "New Lenox",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356496",
+     "url": "https://www.dunkindonuts.com/locations/us/il/oak-park/3-erie-ct/store-356496/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3 Erie Ct, West Suburban Medical Center",
+     "city": "Oak Park",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363996",
+     "url": "https://www.dunkindonuts.com/locations/us/il/park-ridge/808-west-higgins-road/store-363996/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "808 West Higgins Road",
+     "city": "Park Ridge",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366442",
+     "url": "https://www.dunkindonuts.com/locations/us/il/plainfield/4702-caton-farm-road/store-366442/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4702 Caton Farm Road",
+     "city": "Plainfield",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364903",
+     "url": "https://www.dunkindonuts.com/locations/us/il/pontoon-beach/5123-pagano-ct,/store-364903/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5123 Pagano Ct",
+     "city": "Pontoon Beach",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "338440",
+     "url": "https://www.dunkindonuts.com/locations/us/il/sauk-village/2703-e-sauk-trail/store-338440/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2703 E Sauk Trail",
+     "city": "Sauk Village",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "353832",
+     "url": "https://www.dunkindonuts.com/locations/us/il/schaumburg/517-mall-dr/store-353832/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "517 Mall Dr, Shell Gas Station",
+     "city": "Schaumburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365715",
+     "url": "https://www.dunkindonuts.com/locations/us/il/schaumburg/517-mall-drive/store-365715/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "517 Mall Drive",
+     "city": "Schaumburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363847",
+     "url": "https://www.dunkindonuts.com/locations/us/il/volo/31785-north-mcnally-lane/store-363847/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "31785 North McNally Lane",
+     "city": "Volo",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366059",
+     "url": "https://www.dunkindonuts.com/locations/us/in/austin/691-west-main-street/store-366059/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "691 West Main Street",
+     "city": "Austin",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Indiana/Indianapoli"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366015",
+     "url": "https://www.dunkindonuts.com/locations/us/in/charlestown/1111-market-street/store-366015/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1111 Market Street",
+     "city": "Charlestown",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Kentucky/Louisville"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366936",
+     "url": "https://www.dunkindonuts.com/locations/us/in/fort-wayne/5311-coldwater-rd/store-366936/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5311 COLDWATER RD, WM1419",
+     "city": "FORT WAYNE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Indiana/Indianapoli"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367227",
+     "url": "https://www.dunkindonuts.com/locations/us/in/goshen/4024-elkhart-rd/store-367227/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4024 ELKHART RD, WM1566",
+     "city": "GOSHEN",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Indiana/Indianapoli"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366132",
+     "url": "https://www.dunkindonuts.com/locations/us/in/hebron/3421-east-181st-avenue/store-366132/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3421 East 181st Avenue",
+     "city": "Hebron",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366097",
+     "url": "https://www.dunkindonuts.com/locations/us/in/indianapolis/4954-lafayette-road/store-366097/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4954 Lafayette Road",
+     "city": "Indianapolis",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Indiana/Indianapoli"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366782",
+     "url": "https://www.dunkindonuts.com/locations/us/in/kokomo/2116-east-markland-avenue/store-366782/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2116 East Markland Avenue",
+     "city": "Kokomo",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Indiana/Indianapoli"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366541",
+     "url": "https://www.dunkindonuts.com/locations/us/in/new-whiteland/533-country-gate-dr,-ste-100/store-366541/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "533 Country Gate Dr, Ste 100",
+     "city": "New Whiteland",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Indiana/Indianapoli"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366381",
+     "url": "https://www.dunkindonuts.com/locations/us/in/sellersburg/7504-highway-311/store-366381/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "7504 Highway 311",
+     "city": "Sellersburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Kentucky/Louisville"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367137",
+     "url": "https://www.dunkindonuts.com/locations/us/ks/emporia/2301-industrial-rd/store-367137/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2301 INDUSTRIAL RD, WM557",
+     "city": "EMPORIA",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367203",
+     "url": "https://www.dunkindonuts.com/locations/us/ks/wichita/11411-e-kellogg-dr/store-367203/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "11411 E KELLOGG DR, WM3492",
+     "city": "WICHITA",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "306066",
+     "url": "https://www.dunkindonuts.com/locations/us/ky/crescent-springs/2410-high-st/store-306066/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2410 High St",
+     "city": "Crescent Springs",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366447",
+     "url": "https://www.dunkindonuts.com/locations/us/ky/cynthiana/805-u-s--27/store-366447/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "805 U.S. 27, WM Store # 591",
+     "city": "Cynthiana",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365236",
+     "url": "https://www.dunkindonuts.com/locations/us/ky/jeffersontown/9021-taylorsville-road/store-365236/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "9021 Taylorsville Road",
+     "city": "Jeffersontown",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Kentucky/Louisville"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365335",
+     "url": "https://www.dunkindonuts.com/locations/us/ky/owensboro/3011-a-frederica-street/store-365335/",
+     "status": "store page gone (404)",
+     "street": "3011-A Frederica Street",
+     "city": "Owensboro",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "349989",
+     "url": "https://www.dunkindonuts.com/locations/us/ky/owensboro/3011-frederica-st/store-349989/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3011 Frederica St",
+     "city": "Owensboro",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366819",
+     "url": "https://www.dunkindonuts.com/locations/us/la/alexandria/1111-macarthur-drive/store-366819/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1111 Macarthur Drive",
+     "city": "Alexandria",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366923",
+     "url": "https://www.dunkindonuts.com/locations/us/la/lake-charles/3415-gerstner-memorial-blvd/store-366923/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3415 GERSTNER MEMORIAL BLVD, WM469",
+     "city": "LAKE CHARLES",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366415",
+     "url": "https://www.dunkindonuts.com/locations/us/la/roanoke/15125-highway-395/store-366415/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "15125 Highway 395",
+     "city": "Roanoke",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "330526",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/blackstone/2-main-st/store-330526/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2 Main St",
+     "city": "Blackstone",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "334916",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/boston/111-state-st/store-334916/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "111 State St",
+     "city": "Boston",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "352645",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/charlton/57-n-main-st/store-352645/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "57 N Main St",
+     "city": "Charlton",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "342613",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/chelsea/936-942-broadway/store-342613/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "936-942 Broadway, Tedeschis",
+     "city": "Chelsea",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356013",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/chicopee/650-memorial-dr/store-356013/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "650 Memorial Dr, BJs Wholesale Club",
+     "city": "Chicopee",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"08:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343784",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/danvers/160-andover-street/store-343784/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "160 Andover Street, Cumberland Farms",
+     "city": "Danvers",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302124",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/danvers/79-andover-st/store-302124/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "79 Andover St",
+     "city": "Danvers",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "307497",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/ipswich/6-lord-sq/store-307497/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "6 Lord Sq",
+     "city": "Ipswich",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "342723",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/leicester/1081-main-st/store-342723/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1081 Main St",
+     "city": "Leicester",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302883",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/lynnfield/7-post-office-sq/store-302883/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "7 Post Office Sq",
+     "city": "Lynnfield",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "330617",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/medford/2-and-4-salem-st/store-330617/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2 And 4 Salem St",
+     "city": "Medford",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "308229",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/methuen/58-broadway/store-308229/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "58 Broadway",
+     "city": "Methuen",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343072",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/natick/1245-worcester-st/store-343072/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1245 Worcester St, Natick Mall",
+     "city": "Natick",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"10:00\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "332134",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/west-bridgewater/506-w-center-st/store-332134/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "506 W Center St, Shell Station",
+     "city": "West Bridgewater",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366805",
+     "url": "https://www.dunkindonuts.com/locations/us/ma/whitinsville/100-valley-parkway/store-366805/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "100 Valley Parkway, Store # 2629",
+     "city": "Whitinsville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365601",
+     "url": "https://www.dunkindonuts.com/locations/us/md/baltimore/3320-sinclair-lane/store-365601/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3320 Sinclair Lane",
+     "city": "Baltimore",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367317",
+     "url": "https://www.dunkindonuts.com/locations/us/md/baltimore/421-west-baltimore-street/store-367317/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "421 West Baltimore Street",
+     "city": "Baltimore",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364660",
+     "url": "https://www.dunkindonuts.com/locations/us/md/california/45343-alton-lane/store-364660/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "45343 Alton Lane, (Subject to Change)",
+     "city": "California",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351858",
+     "url": "https://www.dunkindonuts.com/locations/us/md/cockeysville/11121-york-rd/store-351858/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "11121 York Rd, Suite F",
+     "city": "Cockeysville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:30\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366388",
+     "url": "https://www.dunkindonuts.com/locations/us/md/hagerstown/17724-garland-groh-blvd/store-366388/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "17724 Garland Groh Blvd",
+     "city": "Hagerstown",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343292",
+     "url": "https://www.dunkindonuts.com/locations/us/md/lusby/174-village-center-dr/store-343292/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "174 Village Center Dr",
+     "city": "Lusby",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351860",
+     "url": "https://www.dunkindonuts.com/locations/us/md/ocean-city/406-s-baltimore-ave/store-351860/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "406 S Baltimore Ave",
+     "city": "Ocean City",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "349095",
+     "url": "https://www.dunkindonuts.com/locations/us/md/ocean-city/5601-coastal-hwy/store-349095/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "5601 Coastal Hwy, Unit 5",
+     "city": "Ocean City",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "357042",
+     "url": "https://www.dunkindonuts.com/locations/us/md/ocean-city/6701-coastal-highway/store-357042/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "6701 Coastal Highway, Unit 12",
+     "city": "Ocean City",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "346355",
+     "url": "https://www.dunkindonuts.com/locations/us/md/ocean-city/8101-coastal-hwy/store-346355/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "8101 Coastal Hwy",
+     "city": "Ocean City",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "358744",
+     "url": "https://www.dunkindonuts.com/locations/us/md/oxon-hill/6013-oxon-hill-road/store-358744/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6013 Oxon Hill Road",
+     "city": "Oxon Hill",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365386",
+     "url": "https://www.dunkindonuts.com/locations/us/md/waldorf/3425-leonardtown-road/store-365386/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3425 Leonardtown Road",
+     "city": "Waldorf",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355367",
+     "url": "https://www.dunkindonuts.com/locations/us/me/hermon/2402-route-2/store-355367/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2402 Route 2, Suite V",
+     "city": "Hermon",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365305",
+     "url": "https://www.dunkindonuts.com/locations/us/me/waldoboro/1341-atlantic-highway/store-365305/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1341 Atlantic Highway",
+     "city": "Waldoboro",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366727",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/escanaba/111-north-lincoln-road/store-366727/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "111 North Lincoln Road",
+     "city": "Escanaba",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355651",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/garden-city/28484-ford-road/store-355651/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "28484 Ford Road",
+     "city": "Garden City",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366737",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/grosse-pointe-woods/21043-mack-avenue/store-366737/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "21043 Mack Avenue",
+     "city": "Grosse Pointe Woods",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365060",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/highland/140-highland-road/store-365060/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "140 Highland Road",
+     "city": "Highland",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365412",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/jackson/5841-ann-arbor-road/store-365412/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5841 Ann Arbor Road",
+     "city": "Jackson",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366870",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/muskegon/1750-east-sherman-boulevard/store-366870/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1750 East Sherman Boulevard",
+     "city": "Muskegon",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366370",
+     "url": "https://www.dunkindonuts.com/locations/us/mi/pinckney/75-south-dexter-street/store-366370/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "75 South Dexter Street",
+     "city": "Pinckney",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Detroit\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367259",
+     "url": "https://www.dunkindonuts.com/locations/us/mn/albert-lea/1550-blake-avenue/store-367259/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1550 Blake Avenue, WM1020",
+     "city": "Albert Lea",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366944",
+     "url": "https://www.dunkindonuts.com/locations/us/mn/baxter/7295-glory-rd/store-366944/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "7295 GLORY RD, WM1654",
+     "city": "BAXTER",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367139",
+     "url": "https://www.dunkindonuts.com/locations/us/mn/hutchinson/1300-highway-15-s/store-367139/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1300 HIGHWAY 15 S, WM1738",
+     "city": "HUTCHINSON",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367043",
+     "url": "https://www.dunkindonuts.com/locations/us/mn/monticello/9320-cedar-st/store-367043/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "9320 CEDAR ST, WM3624",
+     "city": "MONTICELLO",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355415",
+     "url": "https://www.dunkindonuts.com/locations/us/mn/new-hope/7820-42nd-ave-n/store-355415/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "7820 42nd Ave N",
+     "city": "New Hope",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367344",
+     "url": "https://www.dunkindonuts.com/locations/us/mn/waconia/10600-10th-street-w/store-367344/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "10600 10th Street W",
+     "city": "Waconia",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366259",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/benton/6156-missouri-77/store-366259/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6156 Missouri 77",
+     "city": "Benton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367183",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/boonville/2150-main-st/store-367183/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2150 MAIN ST, WM820",
+     "city": "BOONVILLE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367383",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/branson-west/18401-state-hwy-13/store-367383/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "18401 STATE HWY 13, WM2175",
+     "city": "BRANSON WEST",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366775",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/independence/2400-route-291/store-366775/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2400 Route 291",
+     "city": "Independence",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367156",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/manchester/201-highlands-boulevard-dr/store-367156/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "201 HIGHLANDS BOULEVARD DR, WM1177",
+     "city": "MANCHESTER",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365471",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/mound-city/20717-highway-18/store-365471/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "20717 Highway 18",
+     "city": "Mound City",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367426",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/pineville/100-commercial-ln/store-367426/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "100 COMMERCIAL LN, WM5261",
+     "city": "PINEVILLE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367202",
+     "url": "https://www.dunkindonuts.com/locations/us/mo/sedalia/3201-w-broadway-blvd/store-367202/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3201 W BROADWAY BLVD, WM219",
+     "city": "SEDALIA",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365041",
+     "url": "https://www.dunkindonuts.com/locations/us/ms/hernando/401-n-getwell-road/store-365041/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "401 N Getwell Road",
+     "city": "Hernando",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366780",
+     "url": "https://www.dunkindonuts.com/locations/us/ms/jackson/501-north-west-street/store-366780/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "501 North West Street",
+     "city": "Jackson",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "362617",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/calabash/9786-ocean-hwy-w/store-362617/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "9786 Ocean Hwy W.",
+     "city": "Calabash",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "342259",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/charlotte/231-n-graham-st/store-342259/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "231 N Graham St, Ste B",
+     "city": "Charlotte",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "349866",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/corolla/809-ocean-trl/store-349866/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "809 Ocean Trl",
+     "city": "Corolla",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "346378",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/fort-bragg/bldg-c5934-ardennes-st/store-346378/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "Bldg C5934 Ardennes St",
+     "city": "Fort Bragg",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367000",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/greensboro/1109-west-gate-city-boulevard/store-367000/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1109 West Gate City Boulevard, Unit 115-117",
+     "city": "Greensboro",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "352457",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/hickory/956-16th-st-ne/store-352457/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "956 16th St NE, Exxon Gas Station",
+     "city": "Hickory",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367350",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/old-fort/356-state-road-1103/store-367350/",
+     "status": "store page gone (404)",
+     "street": "356 State Road 1103",
+     "city": "Old Fort",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365031",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/raleigh/5111-forestville-rd/store-365031/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5111 Forestville Rd.",
+     "city": "Raleigh",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367169",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/roanoke-rapids/251-premier-blvd/store-367169/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "251 PREMIER BLVD, WM1502",
+     "city": "ROANOKE RAPIDS",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367195",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/siler-city/14215-us-highway-64-w/store-367195/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "14215 US HIGHWAY 64 W, WM2845",
+     "city": "SILER CITY",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366480",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/taylorsville/545-north-carolina-16/store-366480/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "545 North Carolina 16",
+     "city": "Taylorsville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366644",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/waynesville/1897-south-main-street/store-366644/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1897 South Main Street",
+     "city": "Waynesville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366641",
+     "url": "https://www.dunkindonuts.com/locations/us/nc/wilson/690-us-highway-301/store-366641/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "690 US Highway 301",
+     "city": "Wilson",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367187",
+     "url": "https://www.dunkindonuts.com/locations/us/ne/omaha/1606-s-72nd-st/store-367187/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1606 S 72ND ST, WM4358",
+     "city": "OMAHA",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "345240",
+     "url": "https://www.dunkindonuts.com/locations/us/nh/durham/2-dover-rd/store-345240/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2 Dover Rd",
+     "city": "Durham",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343457",
+     "url": "https://www.dunkindonuts.com/locations/us/nh/new-london/217-main-st/store-343457/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "217 Main St",
+     "city": "New London",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "359987",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/blairstown/144-new-jersey-94/store-359987/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "144 New Jersey 94",
+     "city": "Blairstown",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341412",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/bound-brook/109-e-main-st/store-341412/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "109 E Main St, Ste 111",
+     "city": "Bound Brook",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "335577",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/brigantine/4012-brigantine-blvd/store-335577/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "4012 Brigantine Blvd",
+     "city": "Brigantine",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302509",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/camden/16-s-broadway-st/store-302509/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "16 S Broadway St",
+     "city": "Camden",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:15\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363289",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/east-orange/533-main-street/store-363289/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "533 Main Street",
+     "city": "East Orange",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366258",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/flemington/2100-wescott-drive/store-366258/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2100 Wescott Drive",
+     "city": "Flemington",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365124",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/frankford/83-u-s--206/store-365124/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "83 U.S. 206",
+     "city": "Frankford",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "342475",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/freehold/843-route-33/store-342475/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "843 Route 33, Cousins Plaza, Unit #10",
+     "city": "Freehold",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"14:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "345269",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/hillsdale/60-broadway/store-345269/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "60 Broadway, Riggins Gas Station",
+     "city": "Hillsdale",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "304408",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/irvington/857-springfield-ave/store-304408/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "857 Springfield Ave",
+     "city": "Irvington",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356171",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/kearny/180-passaic-ave/store-356171/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "180 Passaic Ave, BJ's Wholesale Club",
+     "city": "Kearny",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363073",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/kearny/267-kearny-avenue/store-363073/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "267 Kearny Avenue",
+     "city": "Kearny",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341061",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/lafayette/183-state-route-15/store-341061/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "183 State Route 15",
+     "city": "Lafayette",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "339089",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/lavallette/604-grand-central-ave/store-339089/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "604 Grand Central Ave",
+     "city": "Lavallette",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "308659",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/livingston/43-s--livingston-ave/store-308659/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "43 S. Livingston Ave",
+     "city": "Livingston",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "362684",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/north-brunswick/511-milltown-road/store-362684/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "511 Milltown Road",
+     "city": "North Brunswick",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356304",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/paramus/30-n-route-17/store-356304/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "30 N Route 17, BJs Wholesale Club",
+     "city": "Paramus",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"10:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341932",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/parsippany/450-n-beverwyck-rd/store-341932/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "450 N Beverwyck Rd",
+     "city": "Parsippany",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366296",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/piscataway/1280-centennial-avenue/store-366296/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1280 Centennial Avenue",
+     "city": "Piscataway",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351483",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/ship-bottom/330-w-8th-st/store-351483/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "330 W 8th St",
+     "city": "Ship Bottom",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "359317",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/somerville/89-u-s--206/store-359317/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "89 U.S. 206",
+     "city": "Somerville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "330997",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/union/320-chestnut-st/store-330997/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "320 Chestnut St",
+     "city": "Union",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "359050",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/voorhees/101-route-73-south/store-359050/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "101 Route 73 South",
+     "city": "Voorhees",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354000",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/weehawken/500-port-imperial-blvd/store-354000/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "500 Port Imperial Blvd",
+     "city": "Weehawken",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356808",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/wildwood/2402-boardwalk/store-356808/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2402 Boardwalk",
+     "city": "Wildwood",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351585",
+     "url": "https://www.dunkindonuts.com/locations/us/nj/wildwood/4014-boardwalk/store-351585/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "4014 Boardwalk",
+     "city": "Wildwood",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364549",
+     "url": "https://www.dunkindonuts.com/locations/us/nm/albuquerque/3501-isleta-boulevard-southwest/store-364549/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3501 Isleta Boulevard Southwest",
+     "city": "Albuquerque",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366274",
+     "url": "https://www.dunkindonuts.com/locations/us/nm/albuquerque/4013-ranger-rd/store-366274/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4013 Ranger Rd",
+     "city": "Albuquerque",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367206",
+     "url": "https://www.dunkindonuts.com/locations/us/nm/artesia/604-n-26th-st/store-367206/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "604 N 26TH ST, WM3427",
+     "city": "ARTESIA",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "300471",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/albany/1040-central-ave/store-300471/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1040 Central Ave",
+     "city": "Albany",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "310340",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/astoria/2502-31st-st/store-310340/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "2502 31st St",
+     "city": "Astoria",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356290",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/bellport/790-s-sunrise-hwy/store-356290/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "790 S Sunrise Hwy, BJs Wholesale Club",
+     "city": "Bellport",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"09:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366811",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/binghamton/267-court-street/store-366811/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "267 Court Street",
+     "city": "Binghamton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354864",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/brewster/1617-rt-22/store-354864/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1617 RT 22",
+     "city": "Brewster",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356319",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/bronx/610-exterior-st/store-356319/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "610 Exterior St, BJs Wholesale Club",
+     "city": "Bronx",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"08:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356151",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/brooklyn/1752-shore-pkwy/store-356151/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1752 Shore Pkwy, BJs Wholesale Club",
+     "city": "Brooklyn",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"08:00\",\"endTime\":\"20:15\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "352140",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/brooklyn/8509-5th-ave/store-352140/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "8509 5th Ave",
+     "city": "Brooklyn",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367107",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/camillus/5399-w-genesee-st/store-367107/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "5399 W GENESEE ST, WM2581",
+     "city": "CAMILLUS",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356167",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/college-point/137-05-20th-ave/store-356167/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "137-05 20th Ave, BJs Wholesale Club",
+     "city": "College Point",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"08:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "350214",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/college-point/1834-college-point-blvd/store-350214/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1834 College Point Blvd",
+     "city": "College Point",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:30\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365555",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/falconer/20-west-main-street/store-365555/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "20 West Main Street",
+     "city": "Falconer",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "356165",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/flushing/13107-40th-rd/store-356165/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "13107 40th Rd, BJs Wholesale Club",
+     "city": "Flushing",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"08:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343714",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/glenville/245-saratoga-rd/store-343714/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "245 Saratoga Rd",
+     "city": "Glenville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "310225",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/goldens-bridge/5-goldens-bridge-shopping-ctr/store-310225/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "5 Goldens Bridge Shopping Ctr",
+     "city": "Goldens Bridge",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367113",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/hamburg/5360-southwestern-blvd/store-367113/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5360 SOUTHWESTERN BLVD, WM2405",
+     "city": "HAMBURG",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366250",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/hilton/144-south-avenue,-suite-b/store-366250/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "144 South Avenue, Suite B",
+     "city": "Hilton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355507",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/horseheads/1400-county-rd-64/store-355507/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1400 County Rd 64, Wal-Mart Store",
+     "city": "Horseheads",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341284",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/horseheads/3317-chambers-rd/store-341284/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3317 Chambers Rd",
+     "city": "Horseheads",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341975",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/hudson/460-fairview-ave/store-341975/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "460 Fairview Ave, Wal Mart",
+     "city": "Hudson",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302222",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/huntington/336-w-jericho-tpke/store-302222/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "336 W Jericho Tpke",
+     "city": "Huntington",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302733",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/jackson-heights/7520-37th-ave/store-302733/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "7520 37th Ave",
+     "city": "Jackson Heights",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363184",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/massapequa/5599-merrick-road/store-363184/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5599 Merrick Road",
+     "city": "Massapequa",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365914",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/mohegan-lake/1833-east-main-street/store-365914/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1833 East Main Street",
+     "city": "Mohegan Lake",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "341931",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/monroe/1197-route-208/store-341931/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1197 Route 208",
+     "city": "Monroe",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "354060",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/monticello/144-jefferson-st/store-354060/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "144 Jefferson St",
+     "city": "Monticello",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "344018",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/new-york/455-park-ave-s/store-344018/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "455 Park Ave S",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"14:15\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "352201",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/new-york/48-w-37th-st/store-352201/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "48 W 37th St, #56",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343540",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/new-york/6-east-46th-st/store-343540/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "6 East 46th St",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"15:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351273",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/new-york/712-3rd-ave/store-351273/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "712 3rd Ave",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"14:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366419",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/new-york/one-penn-plaza-a-k-a-penn-2/store-366419/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "One Penn Plaza a/k/a Penn 2, LIRR Concourse C107",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367186",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/newark/6788-state-route-31-e/store-367186/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6788 STATE ROUTE 31 E, WM1813",
+     "city": "NEWARK",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363659",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/orangeburg/60-orangetown-shopping-center/store-363659/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "60 Orangetown Shopping Center",
+     "city": "Orangeburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "353014",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/poughkeepsie/1-civic-center-plaza/store-353014/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1 Civic Center Plaza",
+     "city": "Poughkeepsie",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"15:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365665",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/queens/jfk-terminal-4-departures/store-365665/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "JFK Terminal 4 Departures, Gate B25 Space CB12",
+     "city": "Queens",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "357836",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/queens/laguardia-airport/store-357836/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "Laguardia Airport, 5 Marine Terminal Rd",
+     "city": "Queens",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"21:15\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "340752",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/roslyn-heights/191-mineola-ave/store-340752/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "191 Mineola Ave, #219",
+     "city": "Roslyn Heights",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "348908",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/southampton/20-county-rd-39/store-348908/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "20 County Rd 39",
+     "city": "Southampton",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366616",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/southampton/850-county-rd-39/store-366616/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "850 County Rd 39",
+     "city": "Southampton",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "302834",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/syracuse/3336-w-genesee-st/store-302834/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3336 W Genesee St",
+     "city": "Syracuse",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "340099",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/syracuse/746-s--crouse-ave/store-340099/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "746 S. Crouse Ave",
+     "city": "Syracuse",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367255",
+     "url": "https://www.dunkindonuts.com/locations/us/ny/watkins-glen/515-e-4th-st/store-367255/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "515 E 4TH ST, WM3221",
+     "city": "WATKINS GLEN",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364524",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/akron/297-perkins-street/store-364524/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "297 Perkins Street",
+     "city": "Akron",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "357695",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/beavercreek/1326-n-fairfield-rd/store-357695/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1326 N Fairfield Rd",
+     "city": "Beavercreek",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"22:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367209",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/cambridge/61205-southgate-rd/store-367209/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "61205 SOUTHGATE RD, WM3262",
+     "city": "CAMBRIDGE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367215",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/canal-fulton/420-beverly-avenue/store-367215/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "420 Beverly Avenue",
+     "city": "Canal Fulton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367752",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/canal-winchester/8200-diley-road/store-367752/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "8200 Diley Road",
+     "city": "Canal Winchester",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365511",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/cincinnati/2057-beechmont-avenue/store-365511/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2057 Beechmont Avenue",
+     "city": "Cincinnati",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367526",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/cleves/151-cooper-avenue/store-367526/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "151 Cooper Avenue",
+     "city": "Cleves",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365130",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/columbus/6031-east-main-street/store-365130/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6031 East Main Street",
+     "city": "Columbus",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367200",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/dayton/3465-york-commons-blvd/store-367200/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3465 YORK COMMONS BLVD, WM3783",
+     "city": "DAYTON",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365957",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/girard/2690-salt-springs-rd/store-365957/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2690 Salt Springs Rd",
+     "city": "Girard",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365795",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/lorain/154-cooper-foster-park-rd/store-365795/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "154 Cooper Foster Park Rd.",
+     "city": "Lorain",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"21:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366321",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/moraine/3010-kettering-boulevard/store-366321/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3010 Kettering Boulevard",
+     "city": "Moraine",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365616",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/north-royalton/7375-royalton-road/store-365616/",
+     "status": "store page gone (404)",
+     "street": "7375 Royalton Road",
+     "city": "North Royalton",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366555",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/pataskala/8929-hazelton-etna-road-southwest/store-366555/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "8929 Hazelton-Etna Road Southwest",
+     "city": "Pataskala",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366061",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/toledo/2131-n-holland-sylvania-rd/store-366061/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2131 N Holland Sylvania Rd",
+     "city": "Toledo",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367136",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/west-chester/8288-cincinnati-dayton-rd/store-367136/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "8288 CINCINNATI DAYTON RD, WM2309",
+     "city": "WEST CHESTER",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366573",
+     "url": "https://www.dunkindonuts.com/locations/us/oh/westerville/714-polaris-parkway/store-366573/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "714 Polaris Parkway",
+     "city": "Westerville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366701",
+     "url": "https://www.dunkindonuts.com/locations/us/ok/durant/2432-west-main-street/store-366701/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2432 West Main Street",
+     "city": "Durant",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367171",
+     "url": "https://www.dunkindonuts.com/locations/us/ok/sand-springs/220-s-highway-97/store-367171/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "220 S HIGHWAY 97, WM838",
+     "city": "SAND SPRINGS",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366501",
+     "url": "https://www.dunkindonuts.com/locations/us/ok/stillwater/424-west-6th-avenue/store-366501/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "424 West 6th Avenue",
+     "city": "Stillwater",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364557",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/bedford/140-hoss's-drive/store-364557/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "140 Hoss's Drive",
+     "city": "Bedford",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "303687",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/belle-vernon/5120-state-route-51/store-303687/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "5120 State Route 51",
+     "city": "Belle Vernon",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"15:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366700",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/coraopolis/407-montour-street/store-366700/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "407 Montour Street",
+     "city": "Coraopolis",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "346220",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/emmaus/4030-chestnut-st/store-346220/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "4030 Chestnut St",
+     "city": "Emmaus",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367228",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/greenville/45-williamson-rd/store-367228/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "45 WILLIAMSON RD, WM2674",
+     "city": "GREENVILLE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365965",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/harrisburg/2552-paxton-street/store-365965/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2552 Paxton Street",
+     "city": "Harrisburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "349859",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/langhorne/628-w-maple-ave/store-349859/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "628 W Maple Ave",
+     "city": "Langhorne",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "300652",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/morrisville/395-w-trenton-ave/store-300652/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "395 W Trenton Ave",
+     "city": "Morrisville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:30\",\"endTime\":\"20:15\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "345986",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/philadelphia/3218-willits-rd/store-345986/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3218 Willits Rd, Sunoco",
+     "city": "Philadelphia",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"16:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365438",
+     "url": "https://www.dunkindonuts.com/locations/us/pa/thomasville/5373-west-lincoln-highway/store-365438/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5373 West Lincoln Highway",
+     "city": "Thomasville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "345396",
+     "url": "https://www.dunkindonuts.com/locations/us/ri/warwick/t-f--green-airport/store-345396/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "T.F. Green Airport, 2000 Post Rd",
+     "city": "Warwick",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"17:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "330220",
+     "url": "https://www.dunkindonuts.com/locations/us/sc/greenville/1779-woodruff-rd/store-330220/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1779 Woodruff Rd",
+     "city": "Greenville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367584",
+     "url": "https://www.dunkindonuts.com/locations/us/sc/greenwood/1304-bypass-72-nw/store-367584/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1304 Bypass 72 NW",
+     "city": "Greenwood",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "344963",
+     "url": "https://www.dunkindonuts.com/locations/us/sc/greer/1129-w--wade-hampton-blvd/store-344963/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1129 W. Wade Hampton Blvd",
+     "city": "Greer",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"06:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367121",
+     "url": "https://www.dunkindonuts.com/locations/us/sc/hardeeville/4400-us-highway-278/store-367121/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4400 US HIGHWAY 278, WM2832",
+     "city": "HARDEEVILLE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367007",
+     "url": "https://www.dunkindonuts.com/locations/us/sc/myrtle-beach/541-seaboard-street/store-367007/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "541 Seaboard Street, Store # 2712",
+     "city": "Myrtle Beach",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365735",
+     "url": "https://www.dunkindonuts.com/locations/us/tn/arlington/5249-airline-road/store-365735/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5249 Airline Road",
+     "city": "Arlington",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366807",
+     "url": "https://www.dunkindonuts.com/locations/us/tn/bulls-gap/13425-west-andrew-johnson-highway/store-366807/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "13425 West Andrew Johnson Highway",
+     "city": "Bulls Gap",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366709",
+     "url": "https://www.dunkindonuts.com/locations/us/tn/johnson-city/2695-boones-creek-road/store-366709/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2695 Boones Creek Road",
+     "city": "Johnson City",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367265",
+     "url": "https://www.dunkindonuts.com/locations/us/tn/knoxville/8445-walbrook-drive/store-367265/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "8445 Walbrook Drive, WM2065",
+     "city": "Knoxville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "347325",
+     "url": "https://www.dunkindonuts.com/locations/us/tn/knoxville/9411-northshore-dr/store-347325/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "9411 Northshore Dr",
+     "city": "Knoxville",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366578",
+     "url": "https://www.dunkindonuts.com/locations/us/tn/memphis/1511-union-avenue/store-366578/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1511 Union Avenue",
+     "city": "Memphis",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366220",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/arlington/2520-northeast-green-oaks-boulevard/store-366220/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2520 Northeast Green Oaks Boulevard",
+     "city": "Arlington",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367301",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/fort-worth/6417-mccart-avenue/store-367301/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6417 McCart Avenue",
+     "city": "Fort Worth",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367037",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/garland/555-w-interstate-30/store-367037/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "555 W INTERSTATE 30, WM3224",
+     "city": "GARLAND",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364721",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/houston/7100-lawndale-street/store-364721/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "7100 Lawndale Street",
+     "city": "Houston",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"23:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "351125",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/houston/bush-intl-airport/store-351125/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "Bush Intl Airport, 3950 S Terminal Rd",
+     "city": "Houston",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"18:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366812",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/laredo/207-sabal-loop/store-366812/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "207 Sabal Loop, Address to change",
+     "city": "Laredo",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367329",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/mckinney/7701-stacy-road/store-367329/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "7701 Stacy Road, Ste 100",
+     "city": "McKinney",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367071",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/paige/3907-u-s--290/store-367071/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3907 U.S. 290",
+     "city": "Paige",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"23:45\",\"isTwentyFourHourService\":false}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367683",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/palmhurst/215-e-mile-3-rd/store-367683/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "215 E MILE 3 RD",
+     "city": "Palmhurst",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "353980",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/san-marcos/100-w-woods-st/store-353980/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "100 W Woods St, Texas State",
+     "city": "San Marcos",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:30\",\"endTime\":\"15:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366340",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/tomball/25539-sh-249,-suite-100/store-366340/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "25539 SH 249, Suite 100",
+     "city": "Tomball",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366460",
+     "url": "https://www.dunkindonuts.com/locations/us/tx/winnie/642-meadow-lane/store-366460/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "642 Meadow Lane",
+     "city": "Winnie",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367205",
+     "url": "https://www.dunkindonuts.com/locations/us/ut/american-fork/949-w-grassland-dr/store-367205/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "949 W GRASSLAND DR, WM2511",
+     "city": "AMERICAN FORK",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367180",
+     "url": "https://www.dunkindonuts.com/locations/us/ut/taylorsville/5469-s-redwood-rd/store-367180/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5469 S REDWOOD RD, WM1686",
+     "city": "TAYLORSVILLE",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "343294",
+     "url": "https://www.dunkindonuts.com/locations/us/va/alexandria/1500-belle-view-blvd/store-343294/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "1500 Belle View Blvd",
+     "city": "Alexandria",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"07:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "331809",
+     "url": "https://www.dunkindonuts.com/locations/us/va/arlington/3100-columbia-pike/store-331809/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3100 Columbia Pike",
+     "city": "Arlington",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"04:00\",\"endTime\":\"20:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355671",
+     "url": "https://www.dunkindonuts.com/locations/us/va/centreville/13839-lee-highway/store-355671/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "13839 Lee Highway",
+     "city": "Centreville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366754",
+     "url": "https://www.dunkindonuts.com/locations/us/va/dulles/1-saarinen--circle/store-366754/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1 Saarinen Circle",
+     "city": "Dulles",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367393",
+     "url": "https://www.dunkindonuts.com/locations/us/va/franklin/1500-armory-dr/store-367393/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1500 ARMORY DR, WM2705",
+     "city": "FRANKLIN",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367219",
+     "url": "https://www.dunkindonuts.com/locations/us/va/gloucester/6819-walton-ln/store-367219/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "6819 WALTON LN, WM1759",
+     "city": "GLOUCESTER",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366003",
+     "url": "https://www.dunkindonuts.com/locations/us/va/hampton/5200-west-mercury-boulevard/store-366003/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "5200 West Mercury Boulevard",
+     "city": "Hampton",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366503",
+     "url": "https://www.dunkindonuts.com/locations/us/va/harrisonburg/1655-stone-spring-road/store-366503/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1655 Stone Spring Road",
+     "city": "Harrisonburg",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366840",
+     "url": "https://www.dunkindonuts.com/locations/us/va/lovettsville/11-town-center-drive/store-366840/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "11 Town Center Drive",
+     "city": "Lovettsville",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367140",
+     "url": "https://www.dunkindonuts.com/locations/us/va/midlothian/12200-chattanooga-plz/store-367140/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "12200 CHATTANOOGA PLZ, WM2808",
+     "city": "MIDLOTHIAN",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367608",
+     "url": "https://www.dunkindonuts.com/locations/us/va/richmond/1017-north-arthur-ashe-boulevard/store-367608/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1017 North Arthur Ashe Boulevard",
+     "city": "Richmond",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "355496",
+     "url": "https://www.dunkindonuts.com/locations/us/va/roanoke/3424-orange-ave-ne/store-355496/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "3424 Orange Ave NE",
+     "city": "Roanoke",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367253",
+     "url": "https://www.dunkindonuts.com/locations/us/va/tappahannock/1660-tappahannock-blvd/store-367253/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "1660 TAPPAHANNOCK BLVD, WM1730",
+     "city": "TAPPAHANNOCK",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366586",
+     "url": "https://www.dunkindonuts.com/locations/us/va/vienna/411-maple-avenue-east/store-366586/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "411 Maple Avenue East",
+     "city": "Vienna",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "363307",
+     "url": "https://www.dunkindonuts.com/locations/us/va/woodbridge/14514-richmond-highway/store-363307/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "14514 Richmond Highway",
+     "city": "Woodbridge",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367151",
+     "url": "https://www.dunkindonuts.com/locations/us/va/woodstock/461-w-reservoir-rd/store-367151/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "461 W RESERVOIR RD, WM2647",
+     "city": "WOODSTOCK",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366866",
+     "url": "https://www.dunkindonuts.com/locations/us/wi/oshkosh/790-west-murdock-avenue/store-366866/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "790 West Murdock Avenue",
+     "city": "Oshkosh",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366560",
+     "url": "https://www.dunkindonuts.com/locations/us/wi/portage/2971-new-pinery-road/store-366560/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "2971 New Pinery Road, Suite A",
+     "city": "Portage",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366315",
+     "url": "https://www.dunkindonuts.com/locations/us/wi/racine/3064-douglas-avenue/store-366315/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3064 Douglas Avenue",
+     "city": "Racine",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "367172",
+     "url": "https://www.dunkindonuts.com/locations/us/wi/superior/3705-tower-ave/store-367172/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3705 TOWER AVE, WM1447",
+     "city": "SUPERIOR",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "350274",
+     "url": "https://www.dunkindonuts.com/locations/us/wi/waunakee/404-w-main-st/store-350274/",
+     "status": "store's hours block says 'TEMP_CLOSED'",
+     "street": "404 W Main St",
+     "city": "Waunakee",
+     "checked": "2026-11-07",
+     "context": "se},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"05:00\",\"endTime\":\"19:45\",\"isTwentyFourHourService\":false}],\"status\":\"TEMP_CLOSED\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365594",
+     "url": "https://www.dunkindonuts.com/locations/us/wi/whitewater/500-north-prairie-street/store-365594/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "500 North Prairie Street",
+     "city": "Whitewater",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Chicago\",\"restauran"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "364637",
+     "url": "https://www.dunkindonuts.com/locations/us/wv/berkeley-springs/77-cavendish-drive,/store-364637/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "77 Cavendish Drive, Suite A",
+     "city": "Berkeley Springs",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366538",
+     "url": "https://www.dunkindonuts.com/locations/us/wv/elkins/720-beverly-pike/store-366538/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "720 Beverly Pike",
+     "city": "Elkins",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "365527",
+     "url": "https://www.dunkindonuts.com/locations/us/wv/south-charleston/4404-maccorkle-ave-sw/store-365527/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "4404 MacCorkle Ave SW",
+     "city": "South Charleston",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/New_York\",\"restaura"
+    },
+    {
+     "spider": "dunkin_us",
+     "ref": "366084",
+     "url": "https://www.dunkindonuts.com/locations/us/wy/cheyenne/3363-east-pershing-boulevard/store-366084/",
+     "status": "store's hours block says 'COMING_SOON'",
+     "street": "3363 East Pershing Boulevard",
+     "city": "Cheyenne",
+     "checked": "2026-11-07",
+     "context": "rue},{\"dayOfWeek\":\"SUNDAY\",\"startTime\":\"00:00\",\"endTime\":\"00:00\",\"isTwentyFourHourService\":true}],\"status\":\"COMING_SOON\",\"timezone\":\"America/Denver\",\"restaurant"
+    }
+   ],
+   "checked": "2026-11-07"
   }
  },
  "_readme": "Stores whose own chain page shows them closed, coming soon, or gone, found by tools/status_sweep.py. The build leaves these out. Each entry has the page and date."
