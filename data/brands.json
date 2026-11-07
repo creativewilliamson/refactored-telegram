@@ -228,7 +228,9 @@
    "expected_us": 290,
    "store_categories": [
     "shop=supermarket"
-   ]
+   ],
+   "not_store_names": "healthmarket|\\brx\\b|pharmacy|fast\\s*&\\s*fresh",
+   "store_open_days_min": 7
   },
   "ihop": {
    "name": "IHOP",
@@ -770,7 +772,8 @@
    "expected_us": 2900,
    "store_categories": [
     "shop=convenience"
-   ]
+   ],
+   "not_store_names": "tobacco"
   },
   "dunkin": {
    "name": "Dunkin'",
@@ -905,7 +908,8 @@
    "atp_spiders": [
     "food_lion_us"
    ],
-   "expected_us": 1100
+   "expected_us": 1100,
+   "store_open_days_min": 7
   },
   "great-clips": {
    "name": "Great Clips",

@@ -378,3 +378,22 @@ Decisions:
   don't (cutoff 4 p.m.). USPS / sorting / processing / distribution-center
   addresses dropped.
 - pytest 70 passed; e2e 120 passed. 80,769 stores. Re-took evidence/F02.png.
+
+## Evaluator round 6: NEEDS_WORK (W12/W13 only partly fixed) -> work items
+- W14: de-dup must pick each site's own store listing and never copy phone or
+  hours between features: Food Lion in-store pharmacies (tagged
+  shop=supermarket in the source) won over the store at 19 sites; Casey's
+  "TOBACCO CITY" shops; airport Dunkin's borrowed a different store's hours.
+- W15: Hy-Vee "HealthMarket Rx" pharmacies (tagged supermarket) and "Fast &
+  Fresh" fuel sites still offer breakfast/groceries.
+
+## Evaluator round 6 fixes (W14, W15)
+- W14: de-duplication now keeps, per site, the same-brand listing open the
+  most hours a week (store beats in-store pharmacy, tobacco shop, other
+  gates' stores) and copies nothing between listings. Food Lion Durham/
+  Roxboro now show the store's own phone and 7 a.m.-10/11 p.m. hours.
+- W15 (+W14): brands.json per-brand rules with reasons: Food Lion and Hy-Vee
+  listings must be open 7 days (their grocery stores are; their pharmacies
+  aren't), Hy-Vee names HealthMarket Rx / Rx / pharmacy / Fast & Fresh and
+  Casey's "Tobacco City" are not stores.
+- pytest 72 passed; e2e 120 passed. 80,752 stores.

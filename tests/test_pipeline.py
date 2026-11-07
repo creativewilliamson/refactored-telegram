@@ -341,3 +341,23 @@ def test_store_feature_not_pumps_or_pharmacy(records):
     assert sum(1 for r in records if r["b"] == "hy-vee" and r.get("c") == "Lamoni") == 1
     from pipeline.locations import not_public
     assert not_public({"addr:street_address": "80 County Rd, USPS Sorting Facility"})
+
+
+# ---- evaluator round 6 -------------------------------------------------------
+def test_weekly_open_minutes():
+    from pipeline.locations import weekly_open_minutes as w
+    assert w("24/7") == 7 * 24 * 60
+    assert w("Mo-Su 07:00-22:00") > w("Mo-Fr 09:00-19:00; Sa 09:00-16:00; Su closed")
+
+
+def test_each_card_is_the_store_listing(records):
+    by = lambda b, a: [r for r in records if r["b"] == b and (r.get("a") or "").startswith(a)]
+    fl = by("food-lion", "3808 Guess")
+    assert fl and fl[0]["p"] == "9194710817" and fl[0]["h"] == "Mo-Su 07:00-22:00"
+    assert not any(r["b"] == "caseys" and "TOBACCO" in (r.get("n") or "").upper() for r in records)
+    assert not any(r["b"] == "hy-vee" and (r.get("n") or "") in ("Spring Valley", "St. Charles", "Preston") for r in records)
+    from pipeline.locations import open_days_and_last_close
+    for r in records:
+        if r["b"] in ("food-lion", "hy-vee") and r.get("h") and r["h"] != "24/7":
+            days, _ = open_days_and_last_close(r["h"])
+            assert not days or len(days) == 7, r

@@ -184,6 +184,14 @@ def main() -> None:
     brands["caseys"]["store_categories"] = ["shop=convenience"]
     brands["publix"]["store_categories"] = ["shop=supermarket"]
     brands["hy-vee"]["store_categories"] = ["shop=supermarket"]
+    # The source also tags some non-store listings as supermarkets: Hy-Vee
+    # HealthMarket Rx pharmacies and Fast & Fresh fuel/convenience sites, Food
+    # Lion in-store pharmacies, and Casey's Tobacco City shops. Grocery stores
+    # of these chains open every day; their pharmacies don't (2026-11-07 data).
+    brands["hy-vee"]["not_store_names"] = r"healthmarket|\brx\b|pharmacy|fast\s*&\s*fresh"
+    brands["hy-vee"]["store_open_days_min"] = 7
+    brands["food-lion"]["store_open_days_min"] = 7
+    brands["caseys"]["not_store_names"] = r"tobacco"
     covered = {o for b in brands.values() for o in b["offers"]} | set(NO_STORE)
     need = {s for s, o in seed.items() if o["scope"] != "single_location"}
     assert need == covered, (need - covered, covered - need)

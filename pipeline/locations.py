@@ -55,10 +55,6 @@ NOT_PUBLIC = re.compile(
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
 
 
-def norm_street(a: str | None) -> str:
-    return re.sub(r"[^a-z0-9]", "", (a or "").lower())
-
-
 def miles(lat1, lng1, lat2, lng2) -> float:
     r = 3958.8
     p1, p2 = math.radians(lat1), math.radians(lat2)
@@ -219,6 +215,35 @@ def open_days_and_last_close(hours: str) -> tuple[set, int | None]:
     return days, (max(ends) if ends else None)
 
 
+def weekly_open_minutes(hours: str | None) -> int:
+    """Rough minutes open per week from an OSM-style hours string (0 if unknown)."""
+    h = (hours or "").strip()
+    if not h:
+        return 0
+    if h == "24/7":
+        return 7 * 24 * 60
+    total = 0
+    for part in h.split(";"):
+        part = part.strip()
+        m = re.match(r"((?:Mo|Tu|We|Th|Fr|Sa|Su)(?:[-,](?:Mo|Tu|We|Th|Fr|Sa|Su))*)\s+(.*)$", part)
+        if not m or re.search(r"off|closed", m.group(2)):
+            continue
+        days = 0
+        for seg in m.group(1).split(","):
+            if "-" in seg:
+                a, b = seg.split("-")
+                i, j = WEEK.index(a), WEEK.index(b)
+                days += (j - i + 1) if i <= j else (7 - i + j + 1)
+            else:
+                days += 1
+        span = 0
+        for a1, a2, b1, b2 in re.findall(r"(\d{2}):(\d{2})-(\d{2}):(\d{2})", m.group(2)):
+            start, end = int(a1) * 60 + int(a2), int(b1) * 60 + int(b2)
+            span += (end - start) if end > start else (24 * 60 - start + end)
+        total += days * span
+    return total
+
+
 def workplace_hours(p: dict) -> bool:
     """Weekdays only and closed by 4 p.m. (or weekdays only with no public
     phone): a cafe inside an office campus, state office or plant, not a store
@@ -336,6 +361,8 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
             labs = test_points(feats, qids)
             live = tuple(b.get("live_listing_requires") or ())
             cats = set(b.get("store_categories") or ())
+            not_store_names = re.compile(b["not_store_names"], re.I) if b.get("not_store_names") else None
+            min_days = int(b.get("store_open_days_min") or 0)
             for f in feats:
                 st.features += 1
                 p = f.get("properties") or {}
@@ -348,6 +375,14 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
                 if cats and not any(f"{k}={p.get(k)}" in cats for k in CATEGORY_KEYS if p.get(k)):
                     st.not_store += 1             # fuel pumps, pharmacy, liquor store...
                     continue
+                if not_store_names and not_store_names.search(f"{p.get('name') or ''} {p.get('branch') or ''}"):
+                    st.not_store += 1             # Hy-Vee HealthMarket Rx, Casey's Tobacco City...
+                    continue
+                if min_days and p.get("opening_hours"):
+                    days, _close = open_days_and_last_close(str(p["opening_hours"]))
+                    if p["opening_hours"].strip() not in ("24/7",) and days and len(days) < min_days:
+                        st.not_store += 1         # grocery stores open daily; their pharmacies don't
+                        continue
                 raw = re.sub(r"\D", "", str(p.get("phone") or "").split(";")[0])[-10:]
                 if len(raw) == 10 and is_placeholder_phone(raw):
                     st.placeholder_phone += 1
@@ -481,33 +516,29 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
         else:
             stats[rec["b"]].bad_coords += 1
 
-    # De-duplicate (same brand, ~100 m apart).
+    # De-duplicate (same brand, ~100 m apart). Of listings sharing a site,
+    # keep the one open the most hours a week: the store itself beats an
+    # in-store pharmacy or a shop next door. Each card shows only its own
+    # listing's phone and hours; nothing is copied between listings.
     out: list[dict] = []
     grid: dict[tuple[str, int, int], list[dict]] = collections.defaultdict(list)
-    for rec in sorted(checked, key=lambda r: (r["b"], r["la"], r["lo"])):
+
+    def rank(r: dict) -> tuple:
+        return (-weekly_open_minutes(r.get("h")), -bool(r.get("p")), r["b"], r["la"], r["lo"])
+
+    for rec in sorted(checked, key=rank):
         key = (rec["b"], int(rec["la"] * 100), int(rec["lo"] * 100))
-        dup = False
-        for di in (-1, 0, 1):
-            for dj in (-1, 0, 1):
-                for other in grid.get((rec["b"], key[1] + di, key[2] + dj), ()):
-                    if miles(rec["la"], rec["lo"], other["la"], other["lo"]) < DEDUP_MI:
-                        dup = True
-                        # Fill gaps only from a copy of the same store (same
-                        # street), never from a neighbouring feature or store.
-                        if norm_street(other.get("a")) == norm_street(rec.get("a")):
-                            for k in ("p", "h", "n", "z"):
-                                if not other.get(k) and rec.get(k):
-                                    other[k] = rec[k]
-                        break
-                if dup:
-                    break
-            if dup:
-                break
+        dup = any(
+            miles(rec["la"], rec["lo"], other["la"], other["lo"]) < DEDUP_MI
+            for di in (-1, 0, 1) for dj in (-1, 0, 1)
+            for other in grid.get((rec["b"], key[1] + di, key[2] + dj), ())
+        )
         if dup:
             stats[rec["b"]].duplicates += 1
             continue
         grid[key].append(rec)
         out.append(rec)
+    out.sort(key=lambda r: (r["b"], r["la"], r["lo"]))
     for rec in out:
         stats[rec["b"]].kept += 1
         for k in [k for k, v in rec.items() if v in (None, "")]:
