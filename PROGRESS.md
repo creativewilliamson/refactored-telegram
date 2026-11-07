@@ -174,3 +174,12 @@ Decisions:
   the state page. Use my location (mocked Anchorage) lists AK stores; a test
   proves no page calls geolocation before the tap.
 - Evidence: evidence/F12.png. Tests: tests/e2e/test_search_kinds.py (12).
+
+## F13: large-print list (passes)
+- /print/?zip=46052&r=25 (also #zip=... from the results page so the ZIP
+  stays out of requests): one column, >=16pt in print media (header and
+  buttons hidden), no images; name + miles, offer, when + who, address,
+  phone. Ended offers are left off. Filters carry over from results.
+- Note: the Playwright MCP browser ignores print emulation, so F13 is
+  verified in the Docker e2e browser (tests/e2e/test_print.py, 3 passed).
+- Evidence: evidence/F13.png (+ F13-print.pdf, a real print render).

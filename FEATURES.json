@@ -169,7 +169,7 @@
         "Verify a 'Print' link is on the results page"
       ],
       "evidence": "evidence/F13.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F14",
