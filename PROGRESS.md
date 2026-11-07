@@ -121,3 +121,10 @@ Decisions:
   contains 46052, Lebanon or the coordinates; no cookies, no third parties.
   ZIP lookup fetches /data/zip/460.json; city lookup /data/city/in.json.
 - Evidence: evidence/F07.png (log), evidence/F07-location-results.png.
+
+## F08: footer + About (passes)
+- Footer on home, results, state, print, About, offer and 404 pages: Crisis
+  Line "Call 988, press 1 · Text 838255" (tel:/sms: links), not-affiliated
+  notice, About link. About: last-checked date (from the seed's verified_on),
+  plain-words privacy, sources (ATP, Wikidata, Census, zipcodes MIT).
+- Evidence: evidence/F08.png, evidence/F08-footer-state.png.

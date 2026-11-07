@@ -103,7 +103,7 @@
         "Verify About lists sources, the last-checked date and the privacy statement"
       ],
       "evidence": "evidence/F08.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F09",

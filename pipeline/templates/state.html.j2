@@ -7,7 +7,7 @@
 <div class="wrap">
   <p class="crumbs"><a href="/">Home</a> › {{ name }}</p>
   <h1>Veterans Day offers in {{ name }}</h1>
-  <p class="lead">{{ store_count }} store locations with Veterans Day offers in {{ name }}. Call ahead: not every store takes part.</p>
+  <p class="lead">{{ store_count | commas }} store locations with Veterans Day offers in {{ name }}. Call ahead: not every store takes part.</p>
   {{ search_box("st", "Find offers near you: ZIP code, or City, ST") }}
 
   {% if cities %}

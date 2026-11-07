@@ -51,7 +51,8 @@ def make_env(assets, data, states):
         "verified_long": fmt_long(data["verified"]) if data.get("verified") else "",
         "built": data.get("built"),
     })
-    env.filters.update(day=fmt_day, long=fmt_long, range=fmt_range, phone=fmt_phone)
+    env.filters.update(day=fmt_day, long=fmt_long, range=fmt_range, phone=fmt_phone,
+                       commas=lambda n: f"{n:,}")
     return env
 
 

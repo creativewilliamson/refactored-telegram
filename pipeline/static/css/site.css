@@ -165,6 +165,7 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .place-list { list-style: none; padding: 0; }
 .place-list li { border-top: 1px solid var(--line); padding: 0.75rem 0; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.5rem 0 0; }
+.prose { padding-top: 1rem; }
 .prose ul { padding-left: 1.4rem; }
 .prose li { margin-bottom: 0.5rem; }
 .prose a { overflow-wrap: anywhere; }
