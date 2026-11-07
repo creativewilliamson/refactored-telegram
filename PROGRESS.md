@@ -183,3 +183,10 @@ Decisions:
 - Note: the Playwright MCP browser ignores print emulation, so F13 is
   verified in the Docker e2e browser (tests/e2e/test_print.py, 3 passed).
 - Evidence: evidence/F13.png (+ F13-print.pdf, a real print render).
+
+## F14: no-JavaScript state pages (passes)
+- JS off: home hides the search (noscript note), all 56 state links answer
+  200. /state/in/, /gu/, /tx/: top cities (by store count, linking to
+  /near/?city=&st=), local/regional offers, national chains with stores in
+  the state (with counts), Everywhere, and every other national offer.
+- Fixed "1 stores" -> "1 store". Evidence: evidence/F14.png.

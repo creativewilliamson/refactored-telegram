@@ -15,7 +15,7 @@
     <h2 id="cities-h">Top cities in {{ name }}</h2>
     <ul class="link-grid">
     {% for display, key, cnt in cities %}
-      <li><a href="/near/?city={{ key | urlencode }}&amp;st={{ code }}">{{ display }}</a> <span class="count">({{ cnt }} stores)</span></li>
+      <li><a href="/near/?city={{ key | urlencode }}&amp;st={{ code }}">{{ display }}</a> <span class="count">({{ cnt }} {{ 'store' if cnt == 1 else 'stores' }})</span></li>
     {% endfor %}
     </ul>
   </section>

@@ -182,7 +182,7 @@
         "Verify 56 state pages exist in dist/"
       ],
       "evidence": "evidence/F14.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F15",
