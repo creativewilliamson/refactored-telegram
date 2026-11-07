@@ -58,7 +58,12 @@ PROGRESS.md, commit, and move on. Don't fake a pass.
 12. If NEEDS_WORK: add its blocking findings to PROGRESS.md as work
     items, fix them the same way (steps 6–10), then run the evaluator
     again. Don't fix items it lists as Polish; put them under Known bugs
-    in RUN-REPORT.md.
+    in RUN-REPORT.md. Number each round in PROGRESS.md
+    ("Evaluator round N", restarting at 1 each run). Run at most 3
+    rounds (or the cap in GOAL.md): after the third NEEDS_WORK, fix
+    nothing more, list its remaining blocking findings under Known bugs
+    marked "unfixed (round cap)", write RUN-REPORT.md, commit, and print
+    "RUN-REPORT.md written; evaluator round cap reached".
 13. If PASS: write RUN-REPORT.md (format below), commit, print
     "RUN-REPORT.md written; evaluator PASS".
 
@@ -89,7 +94,7 @@ PROGRESS.md, commit, and move on. Don't fake a pass.
 
 ## RUN-REPORT.md format
 # Run report — <app> — <date and time>
-**Run ended by:** done bar met / time limit / turn limit / AGENT_STOP
+**Run ended by:** done bar met / evaluator round cap / time limit / turn limit / AGENT_STOP
 **Start it:** `.\start.ps1`, then open <url>
 ## Try these
 <one line per core flow: what to click and what you should see>

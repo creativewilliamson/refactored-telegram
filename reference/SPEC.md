@@ -1,6 +1,8 @@
 # SPEC — Veterans Day Finder
 
-Site name: VetsEatFree. Planned URL: https://vetseatfree.pages.dev.
+Site name: Vet Day Deals (renamed in run 2; was VetsEatFree, which is kept
+for a later app and must not appear on this site). Planned URL:
+https://vetdaydeals.pages.dev. Cloudflare Pages project name: vetdaydeals.
 Contact email: none yet (hide the "report a problem" email line).
 
 ## 1. Mission and hard rules

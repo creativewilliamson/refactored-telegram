@@ -490,3 +490,17 @@ Decisions:
 - Added only the stores round 9 named to data/location-exclusions.json, each with its source page and reason: Playa Bowls x9 (playabowls.com/api/locations "coming soon"),
   IHOP New Smyrna Beach and Crowley, Ruby Tuesday Harriman and West Ashley, Wendy's Radford, 3900 Georgia Ave NW DC and Lawrenceville NJ (all source records of each store). 20 entries with Charleys Fort Buchanan.
 - From here, individual closed or coming-soon stores are polish (Known bugs in RUN-REPORT.md), not blocking. STEER.md emptied. Next: rebuild, tests, evaluator once more, RUN-REPORT.md.
+
+Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
+- Build only F20-F27 (see GOAL.md "Run 2 goal"). F01-F19 must keep passing.
+- F27 second: J.Will asked for a back button to the search page. It's a
+  "New search" link to the home page, not browser Back, so it works when the
+  link was opened fresh from Facebook or a text.
+- F26 first: J.Will renamed the public site to "Vet Day Deals"
+  (vetdaydeals.pages.dev). No mention of VetsEatFree anywhere on the site.
+  Folder, repo and data file names stay as they are.
+- F20 replaces the run 1 STEER note for one list only: the ~600 records the
+  round-9 sweep flagged get re-checked on their own pages and excluded with
+  sources. Every other individual closed/coming-soon store stays polish. No
+  sweep of other chains.
+- Playa Bowls threshold side effect: keep as is (accepted).

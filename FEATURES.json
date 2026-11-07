@@ -250,6 +250,110 @@
       ],
       "evidence": "evidence/F19.png",
       "passes": true
+    },
+    {
+      "id": "F26",
+      "core_flow": 7,
+      "priority": 20,
+      "description": "The site is named 'Vet Day Deals' everywhere a visitor or search engine sees it: page titles, header, footer, About, print page, Open Graph tags, the share image og.png, sitemap.xml and canonical links. SITE_URL is https://vetdaydeals.pages.dev and DEPLOY.md uses project name vetdaydeals. The words 'VetsEatFree' / 'Vets Eat Free' appear nowhere in dist/. The app folder, repo and data files keep their names.",
+      "steps": [
+        "Open the home, results, state, offer, print and About pages and verify the name 'Vet Day Deals'",
+        "Search dist/ for 'VetsEatFree', 'Vets Eat Free' and 'vetseatfree' and verify zero matches",
+        "Open dist/sitemap.xml and the home page's canonical and og:url tags and verify https://vetdaydeals.pages.dev",
+        "Open DEPLOY.md and verify every deploy command uses --project-name vetdaydeals and Way B (Wrangler) is the main path, with a note that dashboard drag-and-drop is limited to 1,000 files"
+      ],
+      "evidence": "evidence/F26.png",
+      "passes": false
+    },
+    {
+      "id": "F27",
+      "core_flow": 1,
+      "priority": 21,
+      "description": "Every page except the home page has a clear 'New search' button at the top (at least 48px tall, plain words, works by keyboard and with a screen reader) that takes the visitor back to the home page search box. On the results page it sits above the results and also appears again at the bottom after 'Show more'. Pages: results (/near/), offer pages, state pages, print page (hidden when printed), About and the 404 page. It always goes to the search page, not the browser's history, so it works when the link was opened from Facebook, a text or a share.",
+      "steps": [
+        "Search 46052, then tap 'New search' at the top and verify the home page search box is shown and focused",
+        "Scroll to the bottom of the 46052 results and verify the second 'New search' button works",
+        "Open /near/46052 directly in a fresh tab (no history) and verify 'New search' still goes to the search page",
+        "Verify the button on an offer page, a state page, the print page, About and the 404 page; verify it doesn't appear when the print page is printed",
+        "Tab to it with the keyboard and check its height is at least 48px at 375px wide"
+      ],
+      "evidence": "evidence/F27.png",
+      "passes": false
+    },
+    {
+      "id": "F20",
+      "core_flow": 7,
+      "priority": 22,
+      "description": "Stores that the chain's own store page shows as temporarily closed, coming soon, or gone are not listed. Scope: only the ~600 source records run 1's round-9 sweep flagged (mostly Wendy's, plus Chipotle, Charleys, Pilot/Flying J and Great Clips; recover the list from commits fff5812 and 2aab420). Re-check just those pages politely (cached, rate-limited, respecting robots.txt) and add each confirmed one to data/location-exclusions.json with reason, source_url and date. No sweep of other chains.",
+      "steps": [
+        "Open data/location-exclusions.json and verify the new entries each have a reason, an https source_url and a date",
+        "Spot-check 10 new exclusions: open each source page and confirm it says closed, coming soon, or is gone",
+        "Search the ZIPs of 5 excluded Wendy's and verify they no longer appear, while open Wendy's nearby still do",
+        "Verify data/coverage.md and the store count are updated"
+      ],
+      "evidence": "evidence/F20.png",
+      "passes": false
+    },
+    {
+      "id": "F21",
+      "core_flow": 5,
+      "priority": 23,
+      "description": "Counts read correctly everywhere: '1 store location' / '0 store locations' on state pages, '1 place' on the print page, and the same singular/plural rule on results",
+      "steps": [
+        "Open /state/vi/ and /state/as/ and verify the wording",
+        "Open /print/?zip=00802&r=100 and verify '1 place' or 'N places' as fits",
+        "Grep the templates for other count labels and verify each uses the rule"
+      ],
+      "evidence": "evidence/F21.png",
+      "passes": false
+    },
+    {
+      "id": "F22",
+      "core_flow": 5,
+      "priority": 24,
+      "description": "The print page widens the radius the same way the results page does when few places are close (opening /print/?zip=00802&r=25 directly shows the widened list and says so), and its 'Back to results' link is at least 48px tall",
+      "steps": [
+        "Open /print/?zip=00802&r=25 and /print/?zip=96910&r=25 directly and verify the widened list and message",
+        "Measure the Back to results link height"
+      ],
+      "evidence": "evidence/F22.png",
+      "passes": false
+    },
+    {
+      "id": "F23",
+      "core_flow": 7,
+      "priority": 25,
+      "description": "Every standalone link and button is at least 48px tall; links inside sentences meet WCAG 2.2 target-size rules (inline links are allowed smaller). Covers About, offer pages, the 404 page and the DC state page's duplicate 'Washington' links (show it once)",
+      "steps": [
+        "Run the tap-target check on every page type at 375px",
+        "Open /state/dc/ and verify 'Washington' appears once in top cities"
+      ],
+      "evidence": "evidence/F23.png",
+      "passes": false
+    },
+    {
+      "id": "F24",
+      "core_flow": 6,
+      "priority": 26,
+      "description": "Small messages read right: 'Find the nearest' never shows an empty chain list (Hy-Vee from 46052 says plainly that the nearest is over 100 miles or in which states it has stores); /near/abc shows the unknown-search message instead of reopening the last search; source links to roundups (military.com, VA News, legion.org) say 'Opens the offer list where we found this' instead of 'Opens the business's page'",
+      "steps": [
+        "Open /offer/hy-vee/ and use Find the nearest from 46052",
+        "Open /near/abc directly",
+        "Open an offer sourced from military.com and one from a brand's own site and compare the link wording"
+      ],
+      "evidence": "evidence/F24.png",
+      "passes": false
+    },
+    {
+      "id": "F25",
+      "core_flow": 6,
+      "priority": 27,
+      "description": "The share image og.png shows its whole text, with the new name 'Vet Day Deals' (nothing cut off at the edges), and still contains no logos",
+      "steps": [
+        "Open dist/og.png and verify every word fits inside the image with margin"
+      ],
+      "evidence": "evidence/F25.png",
+      "passes": false
     }
   ]
 }

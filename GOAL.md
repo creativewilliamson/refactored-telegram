@@ -1,4 +1,17 @@
-# GOAL — Veterans Day Finder (VetsEatFree)
+# GOAL — Vet Day Deals (Veterans Day finder; app folder vetseatfree-finder)
+
+## Run 2 goal (polish, Sat Nov 7 evening)
+Run 1 is done (RUN-REPORT.md, evaluator PASS on 8ebb79a). Run 2 builds only
+the new features F20-F27 in FEATURES.json: rename the public site to
+"Vet Day Deals" (F26, first), add a "New search" button on every page
+(F27, second), leave out stores the chains' own pages show
+as closed or not open yet, and fix the small wording, size and print
+polish from run 1's Known bugs. The name VetsEatFree is kept for a later
+app, so it must not appear anywhere on this site. Every run 1 feature must
+keep passing. Keep the Playa Bowls threshold behavior as it is (J.Will
+accepted it). Don't start anything else from run 1's Known bugs.
+When done, rewrite RUN-REPORT.md for run 2 (same format; say "Run 2" in
+the title).
 
 ## End goal
 A free public website where any veteran or service member in the U.S.
@@ -64,7 +77,10 @@ who print a large-print list for vets without smartphones.
 - Full rules and details: reference/SPEC.md.
 
 ## Limits
-- Stop after: 30 hours or 600 turns, whichever comes first.
+- Run 2: stop after 3 hours or 80 turns, whichever comes first.
+- Evaluator rounds: at most 3. After the third NEEDS_WORK, remaining
+  findings go under Known bugs and the run ends.
+- (Run 1 limit was 30 hours or 600 turns.)
 
 ## Done bar (fixed — do not edit per app)
 1. Starts with one documented command and opens locally.

@@ -25,7 +25,7 @@ if (Test-Path AGENT_STOP) {
 
 # --- The goal (filled in by the planning chat) ---
 $goal = @'
-/goal Every feature in FEATURES.json has passes true with browser evidence in evidence/, the evaluator subagent returned PASS on the final build, and RUN-REPORT.md is written per CLAUDE.md. Or stop after 30 hours or 600 turns and write RUN-REPORT.md saying the limit ended the run. No files outside this folder are changed.
+/goal Run 2: features F20-F27 in FEATURES.json have passes true with browser evidence in evidence/ and F01-F19 still pass, the evaluator subagent returned PASS on the final build (or 3 evaluator rounds ran this run and the remaining findings are listed under Known bugs), and RUN-REPORT.md is rewritten for run 2 per CLAUDE.md. Or stop after 3 hours or 80 turns and write RUN-REPORT.md saying the limit ended the run. No files outside this folder are changed.
 '@
 
 Write-Host "Run started $(Get-Date -Format 'yyyy-MM-dd HH:mm'). Watching: Get-Content run.log -Wait" -ForegroundColor Green
