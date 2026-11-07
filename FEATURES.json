@@ -77,7 +77,7 @@
         "Save one screenshot that shows the territory results"
       ],
       "evidence": "evidence/F06.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F07",

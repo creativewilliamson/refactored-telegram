@@ -106,3 +106,11 @@ Decisions:
   when under 10). Fresh searches widen 25 -> 50 -> 100 while under 10 places.
 - 59301 Miles City: widens to 100 mi, 5 stores, message shown.
 - Evidence: evidence/F05.png. Next: F06 (13 test ZIPs).
+
+## F06: nationwide test ZIPs (passes)
+- All 13 SPEC ZIPs return stores + Everywhere; no errors or blanks. Guam (6
+  stores) and St. Thomas widen to 100 mi; also checked 96799 American Samoa
+  and 96950 Saipan: no stores, clear "nothing is close" note, Everywhere first.
+- Added: island searches note when results are on another island (St.
+  Thomas -> Puerto Rico); zero-store summary reads "No stores with offers...".
+- Evidence: evidence/F06.png (Guam), F06-american-samoa.png, F06-st-thomas.png.

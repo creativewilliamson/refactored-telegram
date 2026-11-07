@@ -9,6 +9,7 @@
   var PAGE = 50;
   var MIN_PLACES = 10;
   var PLACE_RANGE = 150;
+  var ISLANDS = { PR: 1, VI: 1, GU: 1, AS: 1, MP: 1, HI: 1 };
 
   var S = {
     origin: null, search: null, radius: 25, userRadius: false, widened: 0,
@@ -240,12 +241,20 @@
     document.title = "Offers near " + placeLabel + " | VetsEatFree";
     $("results-h").textContent = "Offers near " + placeLabel;
     var n = cards.length;
-    $("summary").textContent = n + (n === 1 ? " store" : " stores") + " with offers within " + S.radius +
-      " miles of " + placeLabel + ", closest first.";
+    $("summary").textContent = n
+      ? n + (n === 1 ? " store" : " stores") + " with offers within " + S.radius + " miles of " + placeLabel + ", closest first."
+      : "No stores with offers within " + S.radius + " miles of " + placeLabel + ".";
 
     var widen = $("widen-note");
+    var islandNote = "";
+    if (ISLANDS[o.st] && cards.some(function (c) { return c.r.s && c.r.s !== o.st; })) {
+      islandNote = " Some of these places are on another island, across the water.";
+    }
     if (S.widened) {
-      widen.textContent = "Showing up to " + S.widened + " miles because few places are close by.";
+      widen.textContent = "Showing up to " + S.widened + " miles because few places are close by." + islandNote;
+      widen.hidden = false;
+    } else if (islandNote) {
+      widen.textContent = islandNote.trim();
       widen.hidden = false;
     } else if (S.userRadius && n < MIN_PLACES && S.radius < 100) {
       widen.innerHTML = "Only " + n + (n === 1 ? " store" : " stores") + " within " + S.radius +
