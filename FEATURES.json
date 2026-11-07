@@ -156,7 +156,7 @@
         "Tap 'Use my location' with a mocked location and verify results"
       ],
       "evidence": "evidence/F12.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F13",

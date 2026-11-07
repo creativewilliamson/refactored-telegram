@@ -166,3 +166,11 @@ Decisions:
   until May 31, 2027" (Texas Roadhouse), Denny's "5 a.m.-noon" chip.
 - Fixed a doubled period after usual hours ("9 p.m.. Call ahead").
 - tools/montage.py builds multi-screenshot evidence. Evidence: evidence/F11.png.
+
+## F12: City, ST / state name / location (passes)
+- "Lebanon, IN", "San Juan, PR", "Fairbanks, AK", "lebanon in", "Hagåtña, GU",
+  "St. Thomas, VI" all resolve (Census places + postal city names; accents
+  and St./Saint normalized). "Indiana", "IN", "Puerto Rico", "new york" open
+  the state page. Use my location (mocked Anchorage) lists AK stores; a test
+  proves no page calls geolocation before the tap.
+- Evidence: evidence/F12.png. Tests: tests/e2e/test_search_kinds.py (12).
