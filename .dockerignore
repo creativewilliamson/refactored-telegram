@@ -1,0 +1,11 @@
+.git
+dist
+data
+evidence
+run.log
+node_modules
+.venv
+**/__pycache__
+.pytest_cache
+test-results
+.playwright-mcp

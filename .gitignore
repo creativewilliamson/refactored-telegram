@@ -1,0 +1,13 @@
+# Build output and download cache (rebuilt by the pipeline)
+dist/
+data/cache/
+# Run logs and local tooling
+run.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/
+test-results/
+.playwright-mcp/
+AGENT_STOP

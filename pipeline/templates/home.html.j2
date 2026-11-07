@@ -1,0 +1,55 @@
+{% extends "base.html.j2" %}
+{% block body_class %}page-home{% endblock %}
+{% block main %}
+<section class="hero">
+  <div class="wrap">
+    <h1>Find Veterans Day offers near you</h1>
+    <p class="lead">Free meals and deals for veterans and service members. Free to use. No sign-up.</p>
+    <form class="search js-only" id="search-form" action="/near/" method="get" role="search" novalidate>
+      <label for="q">Your ZIP code, or City, ST</label>
+      <div class="search-row">
+        <input id="q" name="q" type="text" inputmode="text" autocomplete="postal-code"
+               placeholder="46052 or Lebanon, IN" aria-describedby="q-help search-msg" required>
+        <button type="submit" class="btn btn-primary">Find offers</button>
+      </div>
+      <p id="q-help" class="help">You can also type a state, like Indiana.</p>
+      <p id="search-msg" class="msg" role="alert" hidden></p>
+      <button type="button" class="btn btn-secondary btn-block" id="locate">Use my location</button>
+      <p class="help small">Your ZIP and location stay on your phone. We never see them.</p>
+    </form>
+    <noscript>
+      <p class="notice">Search needs JavaScript. Pick your state below to see its offers.</p>
+    </noscript>
+  </div>
+</section>
+
+<section class="wrap block" aria-labelledby="before-h">
+  <h2 id="before-h">Before you go</h2>
+  <ul class="tips">
+    <li><strong>Bring proof of service.</strong> A military or VA ID card, a DD-214, or a driver's license with a veteran mark.</li>
+    <li><strong>Call ahead.</strong> Not every store takes part, and hours change on Veterans Day.</li>
+    <li><strong>Check the rules.</strong> Many meals are dine-in only. Drinks and tip are often extra.</li>
+  </ul>
+</section>
+
+<section class="wrap block" aria-labelledby="how-h">
+  <h2 id="how-h">How it works</h2>
+  <ol class="steps">
+    <li>Type your ZIP code, or tap <strong>Use my location</strong>.</li>
+    <li>See places near you, closest first, with phone numbers and directions.</li>
+    <li>Tap <strong>Offer details</strong> to check the business's own page.</li>
+  </ol>
+</section>
+
+<section class="wrap block" aria-labelledby="states-h">
+  <h2 id="states-h">Offers by state</h2>
+  <ul class="state-list">
+  {% for code, name in states %}
+    <li><a href="/state/{{ code | lower }}/">{{ name }}</a></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ asset('js/home.js') }}" defer></script>
+{% endblock %}

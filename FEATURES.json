@@ -1,0 +1,255 @@
+{
+  "_rules": "Builder may only change a feature's 'passes' value, and only after opening its evidence file. Never add, delete, or reword features.",
+  "features": [
+    {
+      "id": "F01",
+      "core_flow": 1,
+      "priority": 1,
+      "description": "A visitor opens the home page and sees one line saying what the site does, a search box (ZIP, City, ST, or state), a 'Use my location' button, a state list, and a short 'Before you go' note",
+      "steps": [
+        "Run start.ps1 and open http://localhost:8095 at 375px wide",
+        "Verify the search box and 'Use my location' are on the first screen with nothing competing",
+        "Verify the state list links to /state/{st}/ pages and 'Before you go' mentions proof of service and calling ahead"
+      ],
+      "evidence": "evidence/F01.png",
+      "passes": false
+    },
+    {
+      "id": "F02",
+      "core_flow": 1,
+      "priority": 2,
+      "description": "A veteran enters ZIP 46052 and sees real nearby locations sorted by distance, one card per location, with name, offer(s), dates and time window, street address, miles, tap-to-call phone, Google and Apple directions links, and an 'Offer details' link",
+      "steps": [
+        "Open the home page and search 46052",
+        "Verify results load from /near/ and are sorted nearest first",
+        "Verify a location with several offers shows them stacked on one card",
+        "Verify each card has every field listed, and 'Show more' appears past 50 cards"
+      ],
+      "evidence": "evidence/F02.png",
+      "passes": false
+    },
+    {
+      "id": "F03",
+      "core_flow": 7,
+      "priority": 3,
+      "description": "Every place shown is real and belongs to the right brand: locations come only from the data pipeline (All The Places filtered by country and brand:wikidata, or hand-entered single locations with a source), every offer links to its source, and data/coverage.md and data/missing-brands.md exist",
+      "steps": [
+        "Open data/coverage.md and verify locations per brand, low-count flags, and test-ZIP counts are listed",
+        "Spot-check 10 random locations: brand Q-id matches, state and coordinates are in the US or a US territory",
+        "Search 10001 and open three 'Offer details' links; verify each goes to the offer's source_url",
+        "Verify brands with no location data show a 'Find nearest' maps link instead of invented stores"
+      ],
+      "evidence": "evidence/F03.png",
+      "passes": false
+    },
+    {
+      "id": "F04",
+      "core_flow": 3,
+      "priority": 4,
+      "description": "Every results page has an 'Everywhere' section for offers with no store (like National Parks), and single-location offers within 150 miles appear with their distance",
+      "steps": [
+        "Search 46052 and verify the Everywhere section lists offers with no store",
+        "Search 23185 (Williamsburg, VA) and verify Colonial Williamsburg and Yorktown appear with miles"
+      ],
+      "evidence": "evidence/F04.png",
+      "passes": false
+    },
+    {
+      "id": "F05",
+      "core_flow": 2,
+      "priority": 5,
+      "description": "A veteran can change the radius (10/25/50/100 miles, default 25); when fewer than 10 places are found, the radius widens 25 to 50 to 100 automatically and the page says 'Showing up to 100 miles because few places are close by.'",
+      "steps": [
+        "Search 46052 and switch the radius between 10, 25, 50 and 100; verify the count changes",
+        "Search 59301 (Miles City, MT) and verify the auto-widen message and results"
+      ],
+      "evidence": "evidence/F05.png",
+      "passes": false
+    },
+    {
+      "id": "F06",
+      "core_flow": 3,
+      "priority": 6,
+      "description": "All 13 test ZIPs in reference/SPEC.md section 7 (including 00901 San Juan, 96910 Hagatna and 00802 St. Thomas) return locations or a clear Everywhere section with a note; none errors or shows a blank page",
+      "steps": [
+        "Search each of the 13 test ZIPs in turn",
+        "Verify each shows results or an explained Everywhere section",
+        "Save one screenshot that shows the territory results"
+      ],
+      "evidence": "evidence/F06.png",
+      "passes": false
+    },
+    {
+      "id": "F07",
+      "core_flow": 7,
+      "priority": 7,
+      "description": "The visitor's ZIP, city and coordinates never leave the browser: no request contains them, all distance math runs on the page, no cookies, no third-party scripts",
+      "steps": [
+        "Record the network log while searching 46052, 'Lebanon, IN', and a mocked location",
+        "Verify only static files from the same origin are requested (ZIP shard and tile files by index only)",
+        "Verify no cookies are set and no request URL or body contains the ZIP, city or coordinates"
+      ],
+      "evidence": "evidence/F07.png",
+      "passes": false
+    },
+    {
+      "id": "F08",
+      "core_flow": 7,
+      "priority": 8,
+      "description": "Every page footer shows the Veterans Crisis Line ('Call 988, press 1 · Text 838255'), a not-affiliated-with-any-listed-business notice, and links to About; the About page explains sources, last-checked date and privacy in plain words",
+      "steps": [
+        "Open the home, results, state, print and About pages",
+        "Verify the footer text on each",
+        "Verify About lists sources, the last-checked date and the privacy statement"
+      ],
+      "evidence": "evidence/F08.png",
+      "passes": false
+    },
+    {
+      "id": "F09",
+      "core_flow": 7,
+      "priority": 9,
+      "description": "The production build in dist/ is deploy-ready for Cloudflare Pages: _headers and _redirects are in place, file count and sizes are under Pages limits (build fails if not), and DEPLOY.md gives J.Will exact steps to deploy, add a custom domain, turn on Web Analytics, and rebuild daily",
+      "steps": [
+        "Run the documented build command and verify dist/ is produced",
+        "Verify the build reports file count under 20,000 and every file under 25 MiB",
+        "Verify /near/46052 works when dist/ is served as plain static files",
+        "Open DEPLOY.md and verify the steps and the one-line daily rebuild command"
+      ],
+      "evidence": "evidence/F09.png",
+      "passes": false
+    },
+    {
+      "id": "F10",
+      "core_flow": 7,
+      "priority": 10,
+      "description": "Every page type is accessible: axe shows zero violations, the whole search works by keyboard, it works at 200% zoom, body text is at least 18px, tap targets at least 48px, in both light and dark themes",
+      "steps": [
+        "Run axe on home, results, state, offer, print and About pages in light and dark",
+        "Tab through a full search with the keyboard only",
+        "Check results at 200% zoom and at 375px wide"
+      ],
+      "evidence": "evidence/F10.png",
+      "passes": false
+    },
+    {
+      "id": "F11",
+      "core_flow": 4,
+      "priority": 11,
+      "description": "Offer timing follows the visitor's own time zone: 'Starts Tue, Nov 10' before the start, a highlighted 'Today' during, 'Ended' and moved to the bottom after the end, 'Voucher good until ...' when there is a redeem-by date, and a time-window chip parsed into data/overrides.json (never guessed)",
+      "steps": [
+        "With the clock set to Nov 9, 11 and 12 and Dec 1, in New York and Hawaii time zones, search 46052",
+        "Verify the labels and ordering for each date",
+        "Verify Denny's shows a '5 a.m.–noon' chip and Texas Roadhouse shows its voucher date"
+      ],
+      "evidence": "evidence/F11.png",
+      "passes": false
+    },
+    {
+      "id": "F12",
+      "core_flow": 1,
+      "priority": 12,
+      "description": "A veteran can search by 'City, ST' (e.g. 'Lebanon, IN', 'San Juan, PR', 'Fairbanks, AK') or a state name, or tap 'Use my location' (asked only on tap) and get the same kind of results",
+      "steps": [
+        "Search 'Lebanon, IN', 'San Juan, PR' and 'Fairbanks, AK'",
+        "Search 'Indiana' and verify it goes to the state page",
+        "Tap 'Use my location' with a mocked location and verify results"
+      ],
+      "evidence": "evidence/F12.png",
+      "passes": false
+    },
+    {
+      "id": "F13",
+      "core_flow": 5,
+      "priority": 13,
+      "description": "A post volunteer opens /print/?zip=46052&r=25 and gets a large-print list: 16pt or larger, one column, no images, with name, offer, address, phone and distance",
+      "steps": [
+        "Open /print/?zip=46052&r=25",
+        "Emulate print media and verify the layout",
+        "Verify a 'Print' link is on the results page"
+      ],
+      "evidence": "evidence/F13.png",
+      "passes": false
+    },
+    {
+      "id": "F14",
+      "core_flow": 5,
+      "priority": 14,
+      "description": "With JavaScript turned off, the home page state list leads to 56 pre-rendered /state/{st}/ pages (50 states, DC, PR, GU, VI, AS, MP) showing national offers, that state's offers, and top cities",
+      "steps": [
+        "Disable JavaScript and open the home page",
+        "Open /state/in/, /state/gu/ and /state/tx/ and verify the content",
+        "Verify 56 state pages exist in dist/"
+      ],
+      "evidence": "evidence/F14.png",
+      "passes": false
+    },
+    {
+      "id": "F15",
+      "core_flow": 2,
+      "priority": 15,
+      "description": "A veteran can filter results by category (meals, coffee & treats, shopping, haircuts & car care, attractions), free only, and who qualifies (veteran, active duty, Guard/Reserve, retiree, spouse or family, Gold Star), using eligibility tags from data/eligibility-map.json",
+      "steps": [
+        "Search 46052 and apply each category filter",
+        "Turn on 'Free only' and verify discounts disappear",
+        "Pick 'Gold Star' and verify only matching offers remain",
+        "Open data/eligibility-map.json and verify every offer has at least one tag"
+      ],
+      "evidence": "evidence/F15.png",
+      "passes": false
+    },
+    {
+      "id": "F16",
+      "core_flow": 6,
+      "priority": 16,
+      "description": "Search links can be shared: /near/46052 and /near/?city=lebanon&st=IN both reopen the same search, and the last search is remembered so a reload works on a bad connection",
+      "steps": [
+        "Open /near/46052 directly and verify results",
+        "Open /near/?city=lebanon&st=IN directly and verify results",
+        "Search, reload the page, and verify the search comes back"
+      ],
+      "evidence": "evidence/F16.png",
+      "passes": false
+    },
+    {
+      "id": "F17",
+      "core_flow": 6,
+      "priority": 17,
+      "description": "Errors show a plain message and a way forward: unknown ZIP, denied location permission, offline, and a failed tile load",
+      "steps": [
+        "Search 00000 and verify the message",
+        "Deny the location prompt and verify the message",
+        "Go offline and block one tile file; verify the message and that the rest still works"
+      ],
+      "evidence": "evidence/F17.png",
+      "passes": false
+    },
+    {
+      "id": "F18",
+      "core_flow": 7,
+      "priority": 18,
+      "description": "The site is fast on old phones: home page under 60 KB transferred (gzipped), results usable within 3 seconds on Slow 4G, Lighthouse mobile 95+ for performance and accessibility, works in Safari 14 and Chrome 90",
+      "steps": [
+        "Measure home page transfer size",
+        "Throttle to Slow 4G and time a 46052 search",
+        "Run Lighthouse mobile on home and results",
+        "Smoke-test a search in Playwright WebKit"
+      ],
+      "evidence": "evidence/F18.png",
+      "passes": false
+    },
+    {
+      "id": "F19",
+      "core_flow": 5,
+      "priority": 19,
+      "description": "Each offer has a pre-rendered /offer/{slug}/ page with details, terms, who qualifies, source and a 'find the nearest' search; the site has sitemap.xml, robots.txt, Open Graph tags and a text-only OG image",
+      "steps": [
+        "Open /offer/texas-roadhouse/ and /offer/national-parks/",
+        "Verify an offer page exists for every offer in dist/",
+        "Open sitemap.xml and robots.txt; check OG tags on the home page"
+      ],
+      "evidence": "evidence/F19.png",
+      "passes": false
+    }
+  ]
+}

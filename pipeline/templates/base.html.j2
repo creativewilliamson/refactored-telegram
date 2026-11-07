@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site_name }}: Veterans Day 2026 offers near you{% endblock %}</title>
+<meta name="description" content="{% block description %}Free meals and deals for veterans and service members on Veterans Day, Wed, Nov 11, 2026. Enter your ZIP to see offers near you.{% endblock %}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0b2a4a">
+<link rel="canonical" href="{{ site_url }}{% block canonical %}/{% endblock %}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site_name }}">
+<meta property="og:title" content="{{ self.title() | trim }}">
+<meta property="og:description" content="{{ self.description() | trim }}">
+<meta property="og:url" content="{{ site_url }}{{ self.canonical() | trim }}">
+<meta property="og:image" content="{{ site_url }}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VetsEatFree: Veterans Day 2026 offers near you. Free. No sign-up.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ asset('css/site.css') }}">
+<script>{{ js_flag_script | safe }}</script>
+{% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/">{{ site_name }}</a>
+    <span class="brand-tag">Veterans Day · Wed, Nov 11, 2026</span>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+{% block main %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="crisis"><strong>Veterans Crisis Line:</strong>
+      <a href="tel:988">Call 988, press 1</a> ·
+      <a href="sms:838255">Text 838255</a></p>
+    <p>This site is not affiliated with any business listed. Offers can change, so call ahead.</p>
+    <p class="footer-links"><a href="/about/">About, sources and privacy</a> <a href="/">Search again</a></p>
+  </div>
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>
