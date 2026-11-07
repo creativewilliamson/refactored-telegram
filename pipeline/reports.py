@@ -60,7 +60,9 @@ def coverage(brands_doc: dict, stats: dict, choices: dict, records: list[dict], 
         f"Placeholder phone numbers removed (store kept, no phone shown): "
         f"{sum(s.placeholder_phone for s in stats.values())}. "
         f"State corrected to the ZIP's state: {sum(s.state_fixed for s in stats.values())}. "
-        f"ZIP hidden because it contradicts the store's own town: {sum(s.zip_hidden for s in stats.values())}.",
+        f"ZIP hidden because it contradicts the store's own town: {sum(s.zip_hidden for s in stats.values())}. "
+        f"Map point disagreed with the address and was replaced by the Census Geocoder's match: "
+        f"{sum(s.replaced for s in stats.values())}.",
         "",
         f"Total store locations: **{len(records)}**. Single places: **{len(places)}**.",
         "",

@@ -169,6 +169,14 @@ def main() -> None:
     # read from that URL and kept only if the Census Geocoder matches it.
     brands["7-brew"]["ref_address_pattern"] = (
         r"locations\.7brew\.com/(?P<s>[a-z]{2})/(?P<c>[^/]+)/(?P<a>[^/?#]+)")
+    # Texas Roadhouse's store list also carries restaurants that aren't open
+    # yet ("Granbury, TX (Open 12/7)") and internal entries. Every open
+    # restaurant (723 of 787 on 2026-11-07) has opening hours and a store web
+    # page; the rest have neither. Keep only listings with both.
+    brands["texas-roadhouse"]["live_listing_requires"] = ["opening_hours", "website"]
+    brands["texas-roadhouse"]["live_listing_note"] = (
+        "Open restaurants all have opening_hours and website in the source; listings without them "
+        "include 'Open 12/7' / 'Opens December 2026' restaurants and internal entries.")
     covered = {o for b in brands.values() for o in b["offers"]} | set(NO_STORE)
     need = {s for s, o in seed.items() if o["scope"] != "single_location"}
     assert need == covered, (need - covered, covered - need)

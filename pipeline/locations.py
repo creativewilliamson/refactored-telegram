@@ -38,9 +38,18 @@ STATE_BORDER_MI = 15
 # The source itself marks these as not real public stores: test and lab
 # entries, closed or not-yet-open stores, and staff-only sites.
 NOT_PUBLIC = re.compile(
-    r"\b(test|testing|qa|lab|dev|demo|uat|sandbox)\b|do not use|do not order|support cent(er|re)|training (center|store)|"
-    r"corporate office|secure access|closed to (the )?public|\bclosed\b|coming soon|opening soon|"
-    r"not (yet )?open|future (site|location)|\bplaceholder\b",
+    # test and lab entries
+    r"\b(test|testing|qa|lab|dev|demo|uat|sandbox)\b|do not use|do not order|support cent(er|re)|"
+    r"training (center|store)|\bplaceholder\b|"
+    # offices, staff-only and restricted sites
+    r"\b(corporate|head|company) office\b|\b(hq|headquarters)\b|\bcatering\b|secure\s*acc|\brestricted\b|\bprivate\b|\bno access\b|"
+    r"\b(employees?|staff|associates?|students?|members?)\b[^|]{0,30}\bonly\b|"
+    r"\bonly\b[^|]{0,15}\b(employees?|staff)\b|closed to (the )?public|"
+    # closed or not open yet ("(Open 12/7)", "Opens December 2026")
+    r"\bclosed\b|coming soon|opening soon|not (yet )?open|future (site|location)|"
+    r"\bopen(s|ing)?\s+(\d{1,2}/\d{1,2}|(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b|20\d\d)|"
+    # cruise ships listed at a cruise line's office
+    r"\b(ncl|rci)\b|of the seas|\bcruise\b|\bship\b",
     re.I,
 )
 DEDUP_MI = 0.06            # ~100 m: same brand closer than this = one store
@@ -127,7 +136,11 @@ def is_placeholder_phone(d: str) -> bool:
 
 # Street fields hold real names like "Test Drive", so only unmistakable
 # markers count there.
-STREET_NOT_PUBLIC = re.compile(r"do not use|do not order|closed|coming soon|secure access|not (yet )?open", re.I)
+STREET_NOT_PUBLIC = re.compile(
+    r"do not use|do not order|closed|coming soon|secure\s*acc|not (yet )?open|"
+    r"temp(orary)? address|subject to change",
+    re.I,
+)
 
 
 TEST_SITE = re.compile(r"\b(test|testing|qa|lab|dev|demo|uat|sandbox)\b|do not (use|order)|support cent(er|re)", re.I)
@@ -160,7 +173,14 @@ def near_test_point(f: dict, pts: list[tuple[float, float]]) -> bool:
     return any(miles(lat, lng, a, b) <= TEST_CLUSTER_MI for a, b in pts)
 
 
-def not_public(p: dict) -> bool:
+def not_public(p: dict, live_requires: tuple = ()) -> bool:
+    if p.get("office"):                       # office=company: a head office, not a store
+        return True
+    start = str(p.get("start_date") or "").strip()
+    if start and start[:10] > config.EVENT_DATE:   # opens after Veterans Day
+        return True
+    if any(not p.get(k) for k in live_requires):   # brand's listing not live yet
+        return True
     for key in ("branch", "name", "addr:unit"):
         v = p.get(key)
         if v and NOT_PUBLIC.search(str(v)):
@@ -206,6 +226,7 @@ class BrandStats:
     placeholder_phone: int = 0
     bad_coords: int = 0
     state_fixed: int = 0
+    replaced: int = 0
     zip_hidden: int = 0
     duplicates: int = 0
     kept: int = 0
@@ -237,13 +258,14 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
             st.run = pick[0]
             feats = atp.load_features(atp.spider_file(sp, pick[0], offline))
             labs = test_points(feats, qids)
+            live = tuple(b.get("live_listing_requires") or ())
             for f in feats:
                 st.features += 1
                 p = f.get("properties") or {}
                 if p.get("brand:wikidata") not in qids:
                     st.wrong_brand += 1
                     continue
-                if not_public(p) or near_test_point(f, labs):
+                if not_public(p, live) or near_test_point(f, labs):
                     st.not_public += 1
                     continue
                 raw = re.sub(r"\D", "", str(p.get("phone") or "").split(";")[0])[-10:]
@@ -310,49 +332,74 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
             stats[slug].no_place += 1
 
     # Coordinate checks, state/ZIP fill-in, rounding.
-    checked: list[dict] = []
-    for rec in records:
-        lat, lng = rec["la"], rec["lo"]
-        st = stats[rec["b"]]
+    def place(rec: dict, lat: float, lng: float) -> str:
+        """'ok' (rec updated), 'retry' (point disagrees with the address:
+        place it again from the address) or 'drop'."""
         if not (-15.0 <= lat <= 72.0) or not (-180.0 <= lng <= -64.0 or 144.0 <= lng <= 146.5):
-            st.bad_coords += 1
-            continue
+            return "retry"
         near_d, near_state = zindex.nearest(lat, lng)
         if near_d > MAX_FROM_ANY_ZIP_MI:
-            st.bad_coords += 1
-            continue
+            return "retry"
         # The point must agree with the store's own ZIP (allowing for big
-        # rural ZIPs) or, if the ZIP itself is off, with its own town.
+        # rural ZIPs). If it doesn't, it may still be right when the ZIP is the
+        # odd one out (ZIP far from the store's own town, point in that town).
+        # When the ZIP and town agree with each other, the point is wrong.
         z = rec.get("z")
         town = None
         if rec.get("s") and rec.get("c"):
             town = cities.get(rec["s"], {}).get(norm_name(rec["c"]))
         near_town = bool(town) and miles(lat, lng, town[0], town[1]) <= CITY_ALLOWANCE_MI
+        zip_state = None
+        hide_zip = False
         if z and z in zindex.zips:
             zlat, zlng, zcity, zst = zindex.zips[z]
             radius = math.sqrt(areas.get(z, 0.0) / math.pi)
             allowed = max(MIN_ZIP_ALLOWANCE_MI, radius + ZIP_SLACK_MI)
             if miles(lat, lng, zlat, zlng) <= allowed:
-                if rec["s"] and rec["s"] != zst:
-                    st.state_fixed += 1          # e.g. "New York, NJ 10001" -> NY
-                rec["s"] = zst
-                rec["c"] = rec["c"] or zcity.title()
-            elif near_town:
-                del rec["z"]                     # ZIP contradicts the place: don't show it
-                st.zip_hidden += 1
+                zip_state = zst
             else:
-                st.bad_coords += 1
-                continue
+                zip_matches_town = bool(town) and miles(zlat, zlng, town[0], town[1]) <= allowed
+                if near_town and not zip_matches_town:
+                    hide_zip = True
+                else:
+                    return "retry"
         elif town and not near_town:
-            st.bad_coords += 1
-            continue
-        if not rec["s"]:
-            rec["s"] = near_state
-        if rec["s"] != near_state and not zindex.state_near(lat, lng, rec["s"], STATE_BORDER_MI):
-            st.bad_coords += 1
-            continue
+            return "retry"
+        state = zip_state or rec["s"] or near_state
+        if state != near_state and not zindex.state_near(lat, lng, state, STATE_BORDER_MI):
+            return "retry"
+        st = stats[rec["b"]]
+        if zip_state:
+            if rec["s"] and rec["s"] != zip_state:
+                st.state_fixed += 1              # e.g. "New York, NJ 10001" -> NY
+            rec["c"] = rec["c"] or zindex.zips[z][2].title()
+        if hide_zip:
+            del rec["z"]                         # ZIP contradicts the place: don't show it
+            st.zip_hidden += 1
+        rec["s"] = state
         rec["la"], rec["lo"] = round(lat, 5), round(lng, 5)
-        checked.append(rec)
+        return "ok"
+
+    checked: list[dict] = []
+    retry: list[dict] = []
+    for rec in records:
+        if place(rec, rec["la"], rec["lo"]) == "ok":
+            checked.append(rec)
+        elif rec.get("a"):
+            retry.append(rec)
+        else:
+            stats[rec["b"]].bad_coords += 1
+    # Points that disagree with their own address: ask the Census Geocoder
+    # for the address and keep the store only if that answer fits.
+    rows = [(str(i), r["a"], r.get("c") or "", r.get("s") or "", r.get("z") or "") for i, r in enumerate(retry)]
+    found = geocode.batch(rows, offline)
+    for i, rec in enumerate(retry):
+        hit = found.get(str(i))
+        if hit and place(rec, hit.lat, hit.lng) == "ok":
+            stats[rec["b"]].replaced += 1
+            checked.append(rec)
+        else:
+            stats[rec["b"]].bad_coords += 1
 
     # De-duplicate (same brand, ~100 m apart).
     out: list[dict] = []

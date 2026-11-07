@@ -274,3 +274,32 @@ Decisions:
 - pytest: no not-public names, no placeholder phones, every store near its
   ZIP with the ZIP's state (43 passed); e2e 112 passed. 81,0xx stores.
 - Re-took evidence/F06.png (Guam now 3 real stores).
+
+## Evaluator round 2: NEEDS_WORK (W1/W2 only partly fixed) -> work items
+- W3 (blocking): more not-public wording: employee(s)/staff only, restricted,
+  private location, SECUREACCESS / "Secure Acc", "(Open 12/7)", future
+  opening dates in the source, office=company tags, cruise ships (NCL), TEMP
+  ADDRESS / Subject to Change, and Texas Roadhouse entries with no phone,
+  hours or website (not open yet).
+- W4 (blocking): when ZIP and town agree but the point is far from both
+  (BJ's Orland Park placed in IN), don't rescue by town: re-place from the
+  address with the Census Geocoder, or drop.
+
+## Evaluator round 2 fixes (W3, W4)
+- W3: not-public rules widened and checked one by one against every match
+  (no false positives found): employee(s)/staff/associates/students/members
+  ... only, restricted, private, secure acc / SECUREACCESS, "no access",
+  corporate/head office, HQ/headquarters, catering, "(Open 12/7)" / "Opens
+  December 2026", cruise ships (NCL/RCI/"of the seas"); streets: TEMP
+  ADDRESS, Subject to Change; source office=company tags; start_date after
+  Nov 11 (Yard House x3, Publix Palmetto Place; Corpus Christi Nov 9 kept).
+  brands.json: Texas Roadhouse listings must have opening_hours and website
+  (all 723 open restaurants do; the other 64 include "Open 12/7" ones).
+  Narrowed "office" after it caught "Office Park" / "Box Office".
+- W4: placement now returns ok / retry. A ZIP is hidden only when it's the
+  odd one out (ZIP far from the store's own town, point in that town). If ZIP
+  and town agree and the point disagrees, the address is re-placed with the
+  Census Geocoder and kept only if that answer fits (8 kept, e.g. BWW GO
+  Round Rock now 16 mi from 78701), else dropped.
+- pytest 66 passed (round-2 names, source fields, town-distance check);
+  e2e 112 passed; spot check 20/20. 80,964 stores.

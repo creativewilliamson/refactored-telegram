@@ -83,10 +83,11 @@ def test_f17_one_tile_fails_rest_still_works(browser):
     note = page.text_content("#cards-empty")
     assert "didn’t load" in note and "Try again" in note
     assert page.locator("#cards > li").count() > 0       # stores from the other tiles still show
+    blocked_count = int(page.text_content("#summary").split()[0])
     if SHOTS:
         page.screenshot(path="evidence/F17-tile-failed.png")
     page.unroute("**/data/tiles/80_-173.json")
     page.click("#retry-tiles")
     page.wait_for_function("() => document.getElementById('cards-empty').hidden")
-    assert page.text_content("#summary").startswith("353 stores")
+    assert int(page.text_content("#summary").split()[0]) > blocked_count
     ctx.close()

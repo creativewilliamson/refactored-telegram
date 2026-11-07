@@ -486,7 +486,12 @@
    "atp_spiders": [
     "texas_roadhouse"
    ],
-   "expected_us": 650
+   "expected_us": 650,
+   "live_listing_requires": [
+    "opening_hours",
+    "website"
+   ],
+   "live_listing_note": "Open restaurants all have opening_hours and website in the source; listings without them include 'Open 12/7' / 'Opens December 2026' restaurants and internal entries."
   },
   "tgi-fridays": {
    "name": "TGI Fridays",

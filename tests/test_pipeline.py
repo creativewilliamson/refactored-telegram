@@ -238,3 +238,52 @@ def test_stores_sit_near_their_zip_and_show_its_state(records):
             allowed = max(MIN_ZIP_ALLOWANCE_MI, math.sqrt(areas.get(z, 0) / math.pi) + ZIP_SLACK_MI)
             assert miles(r["la"], r["lo"], zl[0], zl[1]) <= allowed + 0.01, r
             assert r["s"] == zl[3], r
+
+
+# ---- evaluator round 2 -------------------------------------------------------
+@pytest.mark.parametrize("name", [
+    "Granbury, TX (Open 12/7)", "Vero Beach, FL (Opens December 2026)", "EMPLOYEES ONLY-575 Washington",
+    "Milstein staff & visitors only", "FIT- PRIVATE LOCATION SCHOOL O", "Pentagon - Restricted Access",
+    "JHH Weinberg Bldg - Secure Acc", "SECUREACCESS Bath & Body Works", "NCL Jade", "RCI Oasis of the Seas",
+    "JPMC EMPLOYEES ONLY (NO ACCESS", "HMSHost Corporate Office", "Hilton Headquarters", "LV Petroleum HQ",
+    "M&S Catering at The Museum of Flight"])
+def test_not_public_names_caught(name):
+    from pipeline.locations import NOT_PUBLIC
+    assert NOT_PUBLIC.search(name)
+
+
+@pytest.mark.parametrize("name", ["Little Rd & Office Park", "Resorts World Box Office", "Now Open- Camp Verde",
+                                  "Township Center", "Shipyard Plaza", "I-10 & Litchfield"])
+def test_public_names_kept(name):
+    from pipeline.locations import NOT_PUBLIC
+    assert not NOT_PUBLIC.search(name)
+
+
+def test_not_public_source_fields():
+    from pipeline.locations import not_public
+    assert not_public({"office": "company", "name": "Publix Office"})
+    assert not_public({"start_date": "2026-12-07", "branch": "Livonia"})
+    assert not not_public({"start_date": "2026-11-09", "branch": "Corpus Christi"})
+    assert not_public({"addr:street_address": "790 state route 7, TEMP ADDRESS"})
+    assert not_public({"addr:street_address": "45343 Alton Lane, (Subject to Change)"})
+    assert not_public({"branch": "Brownsburg", "phone": "x"}, ("opening_hours", "website"))
+
+
+def test_points_agree_with_their_town(records, data):
+    # A store whose own town is known must sit within 25 miles of it, unless it
+    # sits within its ZIP's allowance (big rural ZIPs).
+    from pipeline.locations import CITY_ALLOWANCE_MI, miles
+    from pipeline.geo import norm_name
+    cities = {}
+    for st in config.STATES:
+        cities[st] = load(f"dist/data/city/{st.lower()}.json")
+    far = []
+    for r in records:
+        town = cities.get(r["s"], {}).get(norm_name(r.get("c") or ""))
+        if town and miles(r["la"], r["lo"], town[0], town[1]) > CITY_ALLOWANCE_MI and "z" not in r:
+            far.append(r)
+    assert far == []
+    names = {(r["b"], r.get("a")) for r in records}
+    assert ("bjs-restaurant", "15081 South La Grange Road") not in names or any(
+        r["b"] == "bjs-restaurant" and r.get("a") == "15081 South La Grange Road" and r["s"] == "IL" for r in records)
+    assert not any(r["b"] == "texas-roadhouse" and "Open 12/7" in (r.get("n") or "") for r in records)
