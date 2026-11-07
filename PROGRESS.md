@@ -67,3 +67,13 @@ Decisions:
   - Native Python on this PC needs `python -s` (a user-site entry points at
     a missing E: drive, outside this project). Docker is unaffected.
 - Next: F02 evidence (results for 46052).
+
+## F02: results for a ZIP (passes)
+- Search from home -> /near/ (no ZIP in the URL or any request). 46052: 353
+  places within 25 mi, nearest first; all 50 shown cards have name, offer,
+  date chip, address, miles, call link or "No phone listed", Google + Apple
+  directions, Offer details; Denny's shows "5 a.m.-noon"; Show more at 50.
+- Stacked offers: only Hy-Vee has two offers; nearest Hy-Vee to 46052 is
+  135 mi away, so verified with 50309 (Des Moines): both offers on one card.
+  Evidence: evidence/F02.png, evidence/F02-stacked.png.
+- Next: F03 (data provenance checks + Docker build via start.ps1).
