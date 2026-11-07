@@ -440,11 +440,16 @@
       if (S.origin) { render(false); }
     });
   });
-  $("free-only").addEventListener("change", function () { S.free = this.checked; S.shown = PAGE; if (S.origin) { render(false); } });
+  $("free-only").addEventListener("click", function () {
+    S.free = this.getAttribute("aria-pressed") !== "true";
+    this.setAttribute("aria-pressed", S.free ? "true" : "false");
+    S.shown = PAGE;
+    if (S.origin) { render(false); }
+  });
   $("who").addEventListener("change", function () { S.who = this.value; S.shown = PAGE; if (S.origin) { render(false); } });
   $("clear-filters").addEventListener("click", function () {
     S.cat = ""; S.free = false; S.who = "";
-    $("free-only").checked = false; $("who").value = "";
+    $("free-only").setAttribute("aria-pressed", "false"); $("who").value = "";
     Array.prototype.forEach.call(document.querySelectorAll("#cat-buttons .seg-btn"), function (x) {
       x.setAttribute("aria-pressed", x.getAttribute("data-cat") === "" ? "true" : "false");
     });

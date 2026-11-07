@@ -130,7 +130,7 @@
         "Check results at 200% zoom and at 375px wide"
       ],
       "evidence": "evidence/F10.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F11",

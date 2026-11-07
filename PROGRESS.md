@@ -139,3 +139,12 @@ Decisions:
   rebuild + deploy. README.md: commands (data, build, test, serve).
 - Dropped the deprecated interest-cohort Permissions-Policy (console noise).
 - Evidence: evidence/F09.png, evidence/F09-near.png. Next: F10 (axe/a11y).
+
+## F10: accessibility (passes)
+- axe-core 4.14.0 (WCAG 2.0/2.1/2.2 A+AA + best-practice): 0 violations on
+  home, results (filters open), state, offer, print, About, 404, in light and
+  dark, at 375px and 200% zoom. Min text 18px; every non-inline control
+  >= 48x48 px; no sideways scroll. Keyboard-only search works end to end.
+- Fixes: "Free only" is now a 48px toggle button (aria-pressed) instead of a
+  28px checkbox; short chain-name links get min-width 48px; back link 48px.
+- Evidence: evidence/F10.png (+ F10-keyboard.png, F10-dark-zoom200.png).
