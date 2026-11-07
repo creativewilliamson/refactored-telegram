@@ -148,7 +148,23 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self._respond(head=False)
 
+    def _refresh_rules(self) -> None:
+        """Re-read _redirects and _headers when a rebuild changes them (Pages
+        reads them on every deploy; the local server must not serve a stale
+        CSP hash after the pages are rebuilt)."""
+        cls = type(self)
+        stamp = tuple(os.path.getmtime(f) if f.exists() else 0.0
+                      for f in (cls.root / "_redirects", cls.root / "_headers"))
+        if stamp == getattr(cls, "_rules_stamp", None):
+            return
+        with self._lock:
+            if stamp != getattr(cls, "_rules_stamp", None):
+                cls.redirects = parse_redirects(cls.root / "_redirects")
+                cls.headers_rules = parse_headers(cls.root / "_headers")
+                cls._rules_stamp = stamp
+
     def _respond(self, head: bool) -> None:
+        self._refresh_rules()
         fs, status, location = self._resolve()
         if location:
             self.send_response(status)
@@ -199,8 +215,8 @@ def make_handler(root: Path) -> type[Handler]:
         pass
 
     Bound.root = root.resolve()
-    Bound.redirects = parse_redirects(root / "_redirects")
-    Bound.headers_rules = parse_headers(root / "_headers")
+    Bound.redirects, Bound.headers_rules = [], []
+    Bound._rules_stamp = None          # filled in on the first request
     return Bound
 
 
