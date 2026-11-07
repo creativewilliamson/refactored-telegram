@@ -101,13 +101,15 @@ def render_all(dist, assets, data: dict, records: list[dict], g) -> int:
         here.sort(key=lambda t: (-t[1], t[0]["name"].lower()))
         everywhere = [o for o in elsewhere if o["kind"] == dataset.EVERYWHERE]
         other = [o for o in elsewhere if o["kind"] != dataset.EVERYWHERE]
-        cities = []
-        for city, cnt in dataset.top_cities(records, code, 15):
+        # Spellings of one town ("Washington", "WASHINGTON") share a key:
+        # show the town once with the stores added up.
+        merged: dict[str, int] = {}
+        for city, cnt in dataset.top_cities(records, code, 40):
             key = geo_mod.norm_name(city)
             if key in g.cities.get(code, {}):
-                cities.append((g.cities[code][key][2], key, cnt))
-            if len(cities) >= 12:
-                break
+                merged[key] = merged.get(key, 0) + cnt
+        cities = [(g.cities[code][key][2], key, cnt)
+                  for key, cnt in sorted(merged.items(), key=lambda kv: -kv[1])[:12]]
         page(f"/state/{code.lower()}/", "state.html.j2", code=code, name=name,
              here=here, local=local_rows, everywhere=everywhere, other=other, cities=cities,
              store_count=sum(1 for r in records if r["s"] == code))

@@ -556,3 +556,13 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - Found while testing: the local server kept the CSP hash it read at startup, so after F26 the results page's preload script was
   blocked (Slow 4G 4.0 s > 3 s). serve.py now re-reads _headers/_redirects on change (cf46eea); new e2e CSP test.
 - pytest 80 passed; e2e 165 passed. Evidence: evidence/F20.png (our pages + a spot-check table; no chain pages, so no logos).
+
+## F23: tap targets (passes)
+- Audit of every page type at 375px (home, results, state DC/IN/AS/HI, offer pages of all four kinds, print, About, 404): every
+  standalone link/button/field >= 48px; the only smaller ones left are links inside sentences (About's All The Places / Wikidata /
+  zipcodes), which WCAG 2.2 2.5.8's inline exception allows.
+- Offer page source link is now a 48px standalone link (date after it). About's crisis line: two 48px buttons (Call / Text).
+  404: "See every offer by state" button instead of a small link in a sentence.
+- DC top cities: "Washington" and "WASHINGTON" were one town under two spellings; pages.py merges by the normalized key
+  ("Washington (123 stores)" once).
+- e2e test_run2 + test_site 112 passed. Evidence: evidence/F23.png.

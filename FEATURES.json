@@ -329,7 +329,7 @@
         "Open /state/dc/ and verify 'Washington' appears once in top cities"
       ],
       "evidence": "evidence/F23.png",
-      "passes": false
+      "passes": true
     },
     {
       "id": "F24",

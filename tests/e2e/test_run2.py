@@ -197,3 +197,56 @@ def test_no_csp_violations(page, path):
     page.goto(url(path))
     page.wait_for_load_state("networkidle")
     assert not [m for m in msgs if "Content Security Policy" in m], msgs
+
+
+# ------------------------------------------------------ F23 tap targets
+TAP_PAGES = ["/", "/near/46052", "/state/dc/", "/state/in/", "/state/as/", "/state/hi/",
+             "/offer/texas-roadhouse/", "/offer/aquarium-of-the-pacific/", "/offer/national-parks/",
+             "/offer/110-grill/", "/print/?zip=46052&r=25", "/about/", "/no-such-page/"]
+
+TAP_CHECK = """() => {
+  const vis = el => { const s = getComputedStyle(el); const b = el.getBoundingClientRect();
+    return s.visibility !== 'hidden' && s.display !== 'none' && b.width > 0 && b.height > 0 && !el.closest('.sr-only'); };
+  const bad = [];
+  document.querySelectorAll('a, button, input, select, summary').forEach(el => {
+    if (!vis(el)) return;
+    const b = el.getBoundingClientRect();
+    if (b.height >= 47.5 && b.width >= 47.5) return;
+    // WCAG 2.2 (2.5.8) inline exception: a link inside a sentence of text.
+    const par = el.parentElement;
+    const own = el.textContent.trim().length;
+    const inSentence = el.tagName === 'A' && getComputedStyle(el).display === 'inline'
+      && /^(P|LI|DD|SPAN)$/.test(par.tagName) && par.textContent.trim().length >= own + 15;
+    if (!inSentence) bad.push(el.outerHTML.slice(0, 90) + ' ' + Math.round(b.width) + 'x' + Math.round(b.height));
+  });
+  return bad;
+}"""
+
+
+@pytest.mark.parametrize("path", TAP_PAGES)
+def test_f23_tap_targets(page, path):
+    page.set_viewport_size({"width": 375, "height": 800})
+    page.goto(url(path))
+    if path.startswith("/near/"):
+        page.wait_for_selector("#cards > li")
+        page.click("#filters summary")
+    if path.startswith("/print/"):
+        page.wait_for_selector("#print-list > li")
+    assert page.evaluate(TAP_CHECK) == []
+
+
+def test_f23_key_links_are_48px(page):
+    page.set_viewport_size({"width": 375, "height": 800})
+    page.goto(url("/offer/texas-roadhouse/"))
+    assert page.locator("a.src-link").bounding_box()["height"] >= 48
+    page.goto(url("/about/"))
+    for name in ("Call 988, then press 1", "Text 838255"):
+        assert page.locator("main").get_by_role("link", name=name).bounding_box()["height"] >= 48
+    page.goto(url("/no-such-page/"))
+    assert page.get_by_role("link", name="See every offer by state").bounding_box()["height"] >= 48
+
+
+def test_f23_dc_washington_once(page):
+    page.goto(url("/state/dc/"))
+    cities = page.locator("#cities-h + .link-grid li a").all_inner_texts()
+    assert [c.strip().lower() for c in cities].count("washington") == 1
