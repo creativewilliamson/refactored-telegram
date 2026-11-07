@@ -152,6 +152,7 @@ label { font-weight: 700; display: block; margin-bottom: 0.35rem; }
 .offer-name a { display: inline-flex; align-items: center; min-height: 48px; min-width: 48px; }
 .back-link { display: inline-flex; align-items: center; min-height: 48px; }
 .src-link { display: inline-flex; align-items: center; min-height: 48px; }
+.notice .empty-find { margin-top: 0.5rem; }
 .offer-text { font-weight: 600; margin-bottom: 0.4rem; }
 .offer-big { font-size: 1.35rem; font-weight: 700; }
 .who, .terms { margin-bottom: 0.4rem; }

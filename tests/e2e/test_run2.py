@@ -311,3 +311,36 @@ def test_f24_card_notes_match_source(page):
         roundup = bool(re.search(r"military\.com|news\.va\.gov|legion\.org", host))
         assert ("offer list where we found this" in note) == roundup, (host, note)
         assert ("business’s page" in note) == (not roundup), (host, note)
+
+
+# ------------------------------ evaluator round 1 (run 2), W1: no invented distance
+@pytest.mark.parametrize("slug,zip_", [("mission-bbq", "21061"), ("eureka", "93710"),
+                                       ("chicken-salad-chick", "36830"), ("veterans-canteen-service", "46202")])
+def test_w1_no_store_list_claims_no_distance(page, slug, zip_):
+    page.goto(url(f"/offer/{slug}/"))
+    page.fill("form[data-search] input[type=text]", zip_)
+    page.locator("form[data-search] button[type=submit]").click()
+    page.wait_for_selector("#cards-empty:not([hidden])")
+    body = page.locator("#results").inner_text()
+    assert "is more than" not in body and "No stores with offers within" not in body
+    assert page.locator("#summary").inner_text().startswith("We don’t have a store list for ")
+    assert page.locator("#widen-note").is_hidden()
+    assert page.locator("#radius").input_value() == "25"
+    assert "google.com/maps/search" in page.locator("#cards-empty a").get_attribute("href")
+    assert "No offers here match your filters" not in page.locator("#everywhere-list").inner_text()
+
+
+def test_w1_every_unlisted_chain(page):
+    """All "find" offers (no store list) from one ZIP: never a distance claim."""
+    offers = page.request.get(url("/data/offers.json")).json()["offers"]
+    finds = [o for o in offers if o["kind"] == "find"]
+    assert len(finds) >= 40
+    page.goto(url("/near/46052"))                 # warm the same ZIP once
+    page.wait_for_selector("#cards > li")
+    for o in finds:
+        page.goto(url(f"/offer/{o['id']}/"))
+        page.fill("form[data-search] input[type=text]", "46052")
+        page.locator("form[data-search] button[type=submit]").click()
+        page.wait_for_selector("#cards-empty:not([hidden])")
+        assert "is more than" not in page.locator("#results").inner_text(), o["id"]
+        assert page.locator("#summary").inner_text().startswith("We don’t have a store list"), o["id"]

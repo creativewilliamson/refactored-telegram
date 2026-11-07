@@ -113,7 +113,9 @@
       return V.loadNearby(S.origin, r).then(function (res) {
         var count = res.records.length + placesWithin(r).length;
         var enough = MIN_PLACES;
-        if (S.offer && S.data._byId[S.offer]) {
+        if (noStoreList()) {
+          enough = 0;              // no store list for X: nothing to count, don't widen
+        } else if (S.offer && S.data._byId[S.offer]) {
           // "Find the nearest X": widen until at least one X is in range.
           var want = S.data._byId[S.offer].brand;
           count = res.records.filter(function (x) { return x.r.b === want; }).length +
@@ -257,7 +259,10 @@
     document.title = "Offers near " + placeLabel + " | Vet Day Deals";
     $("results-h").textContent = "Offers near " + placeLabel;
     var n = cards.length;
-    $("summary").textContent = n
+    var unlisted = noStoreList();
+    $("summary").textContent = unlisted
+      ? "We don’t have a store list for " + unlisted.name + ", so we can’t say how far the nearest one is."
+      : n
       ? n + (n === 1 ? " store" : " stores") + " with offers within " + S.radius + " miles of " + placeLabel + ", closest first."
       : "No stores with offers within " + S.radius + " miles of " + placeLabel + ".";
 
@@ -266,7 +271,9 @@
     if (ISLANDS[o.st] && cards.some(function (c) { return c.r.s && c.r.s !== o.st; })) {
       islandNote = " Some of these places are on another island, across the water.";
     }
-    if (S.widened) {
+    if (unlisted) {
+      widen.hidden = true;
+    } else if (S.widened) {
       widen.textContent = "Showing up to " + S.widened + " miles because few places are close by." + islandNote;
       widen.hidden = false;
     } else if (islandNote) {
@@ -295,7 +302,13 @@
     var finds = findOffers(f, o.st);
     if (!n) {
       var want = S.offer && S.data._byId[S.offer];
-      if (want && !anyFilter()) {
+      if (unlisted) {
+        // We can't know where this chain's stores are: point to the map search.
+        empty.innerHTML = "Tap <strong>Find nearest</strong> to search a map for the closest " + esc(unlisted.name) +
+          ". It opens Google Maps.<br>" + '<a class="btn btn-secondary empty-find" href="' +
+          esc(V.findNearest(unlisted.map, S.nearCity)) + '" target="_blank" rel="noopener noreferrer">Find nearest' +
+          '<span class="sr-only"> ' + esc(unlisted.name) + " on Google Maps</span></a>";
+      } else if (want && !anyFilter()) {
         // "Find the nearest X" and there is no X in range: say so plainly.
         var b = S.data.brands[want.brand] || {};
         var xname = b.name || want.name;
@@ -343,7 +356,9 @@
       ? "These offers don’t need a store near you."
       : "Nothing with a store list is close to " + placeLabel + ", so start here: these offers work anywhere.";
     $("everywhere-list").innerHTML = every.map(function (x) { return offerListItem(x, true); }).join("") ||
-      "<li>No offers here match your filters.</li>";
+      (S.offer && S.data._byId[S.offer] && !anyFilter()
+        ? "<li>Showing only " + esc(S.data._byId[S.offer].name) + ". Tap <strong>Show all offers</strong> at the top to see these.</li>"
+        : "<li>No offers here match your filters.</li>");
 
     // Chains without a store list (regional ones only in their states).
     $("find").hidden = !finds.length;
@@ -354,10 +369,17 @@
     $("share").hidden = !!o.geo;
     results.hidden = false;
     var tail = S.failed ? " Some places may be missing." : "";
-    say("Found " + n + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles." + tail, true);
+    say(unlisted ? "We don’t have a store list for " + unlisted.name + ". Use Find nearest to search a map."
+      : "Found " + n + (n === 1 ? " store" : " stores") + " within " + S.radius + " miles." + tail, true);
     if (fresh) { foldSearch(true); }
     doneLoading();
     if (fresh) { $("results-h").focus(); }
+  }
+
+  /* "Find the nearest X" for a chain we have no store list for: the offer. */
+  function noStoreList() {
+    var o = S.offer && S.data && S.data._byId[S.offer];
+    return o && o.kind === "find" ? o : null;
   }
 
   function findOffers(f, st) {

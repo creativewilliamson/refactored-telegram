@@ -587,3 +587,20 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - Unit test checks every line's ink box is inside the margins, above the red band, with no overlaps. Evidence: evidence/F25.png
   (og.png opened in the browser).
 - All 27 features now pass. Next: full test run, then the evaluator (round 1 of at most 3).
+
+## Evaluator round 1 (run 2): NEEDS_WORK (1 blocking) -> work item
+- W1: "Find the nearest X" for the 42 chains with NO store list (kind "find") says "The nearest X is more than 100 miles from ..."
+  (Mission BBQ from 21061 Glen Burnie, its home town): an invented claim, introduced by F24 (near.js empty-message branch didn't
+  check the offer kind). Same branch: Everywhere says "No offers here match your filters." in one-chain mode with no filters set.
+- Polish (not fixed, to Known bugs): 2nd New search far from page bottom, /print/?zip=abc reads as a signal problem, print
+  "Back to results" goes to the last search, WebKit CSP console noise for <details>, "Found 0 stores" in one-chain mode,
+  no thousands separators in results counts, nps.gov/archives.gov called "the business's page", /near/index.html locally.
+
+## Evaluator round 1 fix (W1) done
+- near.js noStoreList(): "Find the nearest X" for a chain with no store list (kind "find", 42 offers) no longer widens (nothing to
+  count) and claims no distance: summary "We don't have a store list for Mission BBQ, so we can't say how far the nearest one is.",
+  the notice has a Find nearest (Google Maps) button, no widen / "Only 0 stores" note, status says the same. Chains WITH a list
+  (Hy-Vee) keep the F24 message. One-chain mode: an empty Everywhere list says "Showing only X. Tap Show all offers at the top..."
+  instead of "No offers here match your filters."
+- New e2e tests: the 4 named cases + every one of the 42 "find" offers from 46052. e2e 193 passed. Evidence: evidence/R2-W1.png.
+- Next: evaluator round 2.
