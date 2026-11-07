@@ -37,6 +37,8 @@ and Census data into `data\cache\` (a minute or two); later starts reuse it.
   and a source.
 - `data/brands.json`: each chain's Wikidata Q-id and All The Places spider.
 - `data/places.json`: single-location offers (museums, zoos) with sources.
+- `data/location-exclusions.json`: individual store listings the chain's own
+  page shows as closed, each with a reason and the page that proves it.
 - `pipeline/`: Python. `build.py` runs everything: offers -> eligibility
   tags (`data/eligibility-map.json`) -> store locations from All The Places,
   kept only when in the U.S./territories and matching the brand's Q-id ->

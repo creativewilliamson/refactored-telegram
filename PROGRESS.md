@@ -437,3 +437,8 @@ Decisions:
   below the thresholds and unchanged. The IHOP sharing that Porter address is
   a separate, open (24/7) store.
 - pytest 75 passed; e2e 130 passed. 80,198 stores.
+- Own pre-check of the chains just under the thresholds (Charleys 29 and
+  Hy-Vee 9 listings without hours) against the chains' pages: only Charleys
+  Fort Buchanan PR says "temporarily closed". New data/location-exclusions.json
+  (spider + ref, reason, source_url, date) leaves it out; the build refuses
+  an exclusion without a source. pytest 76; e2e 130. 80,197 stores.

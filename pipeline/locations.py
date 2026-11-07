@@ -221,6 +221,20 @@ def open_days_and_last_close(hours: str) -> tuple[set, int | None]:
     return days, (max(ends) if ends else None)
 
 
+def load_exclusions() -> set[tuple[str, str]]:
+    """(spider, ref) pairs from data/location-exclusions.json; every entry must
+    carry a reason and a source_url."""
+    path = config.DATA / "location-exclusions.json"
+    if not path.exists():
+        return set()
+    out = set()
+    for e in json.loads(path.read_text(encoding="utf-8")).get("exclusions", []):
+        if not (e.get("reason") and str(e.get("source_url", "")).startswith("https://")):
+            raise ValueError(f"location exclusion without reason/source: {e}")
+        out.add((e["spider"], str(e["ref"])))
+    return out
+
+
 def weekly_open_minutes(hours: str | None) -> int:
     """Rough minutes open per week from an OSM-style hours string (0 if unknown)."""
     h = (hours or "").strip()
@@ -350,6 +364,7 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
     zindex = ZipIndex({k: v for k, v in zips.items() if isinstance(v, list)})
     spiders = sorted({s for b in brands.values() for s in b.get("atp_spiders", [])})
     choices = atp.choose_runs(spiders, offline)
+    excluded = load_exclusions()
     stats: dict[str, BrandStats] = {}
     pending: list[tuple[str, dict, dict]] = []   # (brand, props, partial record)
     records: list[dict] = []
@@ -378,7 +393,7 @@ def build(brands: dict, zips: dict[str, list], offline: bool, areas: dict[str, f
                 if p.get("brand:wikidata") not in qids:
                     st.wrong_brand += 1
                     continue
-                if not_public(p, live) or near_test_point(f, labs):
+                if (sp, str(p.get("ref"))) in excluded or not_public(p, live) or near_test_point(f, labs):
                     st.not_public += 1
                     continue
                 if cats and not any(f"{k}={p.get(k)}" in cats for k in CATEGORY_KEYS if p.get(k)):

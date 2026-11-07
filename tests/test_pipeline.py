@@ -391,3 +391,10 @@ def test_round8_unopened_examples_gone(records):
     assert ("dunkin", "3363 East Pershing Boulevard") not in addr
     assert ("chipotle", "3520 Saint Lola Ln") not in addr
     assert not any(b == "applebees" and a == "23681 Church St" for b, a in addr)
+
+
+def test_location_exclusions_have_sources_and_apply(records):
+    doc = load("data/location-exclusions.json")
+    for e in doc["exclusions"]:
+        assert e["reason"] and e["source_url"].startswith("https://") and e["checked"]
+    assert not any(r["b"] == "charleys" and r.get("n") == "Fort Buchanan" for r in records)

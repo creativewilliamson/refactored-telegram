@@ -1,0 +1,13 @@
+{
+  "_readme": "Store listings from All The Places that the chain's own page shows as closed or not open, where nothing in the source data says so. Each entry names the source record (spider + ref), the reason, the page that proves it, and the date it was checked. The pipeline leaves these out. Like data/overrides.json: no entry without a source.",
+  "exclusions": [
+    {
+      "spider": "charleys_philly_steaks",
+      "ref": "fort-buchanan",
+      "name": "Charleys Philly Steaks, Fort Buchanan, PR",
+      "reason": "The chain's own store page says this location is temporarily closed.",
+      "source_url": "https://www.charleys.com/locations/fort-buchanan/",
+      "checked": "2026-11-07"
+    }
+  ]
+}
