@@ -117,7 +117,12 @@ PowerShell in this folder:
 docker compose run --rm build; if ($LASTEXITCODE -eq 0) { npx wrangler pages deploy dist --project-name vetseatfree --branch main }
 ```
 
-It re-reads the offers and overrides, checks All The Places for a newer
+Optional, every few days (about 20 minutes, read-only visits to the chains'
+own store pages): `docker compose run --rm build python tools/status_sweep.py`
+refreshes data/store-status.json, the list of stores whose own page says
+closed or coming soon. Commit it, then run the line above.
+
+The daily line re-reads the offers and overrides, checks All The Places for a newer
 weekly store run (it falls back to the cached files if offline), rebuilds
 `dist/`, re-checks the Pages limits, and uploads only if the build passed.
 Without Wrangler, run just `docker compose run --rm build` and drag `dist`

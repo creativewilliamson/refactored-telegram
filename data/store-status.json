@@ -1,0 +1,3458 @@
+{
+ "chains": {
+  "ruby_tuesday_us": {
+   "pages": 164,
+   "flagged": [
+    {
+     "spider": "ruby_tuesday_us",
+     "ref": "4174",
+     "url": "https://www.rubytuesday.com/locations/airport-interplex/",
+     "status": "store page says 'Temporarily Closed'",
+     "street": "8680 BARTRAM AVE PHILADELPHIA PA 19153",
+     "city": "Philadelphia",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ruby_tuesday_us",
+     "ref": "4240",
+     "url": "https://www.rubytuesday.com/locations/harriman/",
+     "status": "store page says 'Temp Closed'",
+     "street": "1640 S. ROANE ST HARRIMAN TN 37748",
+     "city": "Harriman",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ruby_tuesday_us",
+     "ref": "5302",
+     "url": "https://www.rubytuesday.com/locations/lewisburg/",
+     "status": "store page says 'Permanently Closed'",
+     "street": "151 COLEMAN DRIVE LEWISBURG WV 24901",
+     "city": "Lewisburg",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ruby_tuesday_us",
+     "ref": "4371",
+     "url": "https://www.rubytuesday.com/locations/moss-point/",
+     "status": "store page says 'Temporarily Closed'",
+     "street": "6736 HIGHWAY 63 MOSS POINT MS 39563",
+     "city": "Moss Point",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ruby_tuesday_us",
+     "ref": "2149",
+     "url": "https://www.rubytuesday.com/locations/treasure-coast/",
+     "status": "store page says 'Temporarily Closed'",
+     "street": "3000 N.W. FEDERAL HWY. JENSEN BEACH FL 34957",
+     "city": "Jensen Beach",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ruby_tuesday_us",
+     "ref": "3682",
+     "url": "https://www.rubytuesday.com/locations/west-ashley/",
+     "status": "not on the chain's locations list",
+     "street": "1953 SAVANNAH HIGHWAY CHARLESTON SC 29407",
+     "city": "Charleston",
+     "checked": "2026-11-07"
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "ihop": {
+   "pages": 1685,
+   "errors": 0,
+   "flagged": [
+    {
+     "spider": "ihop",
+     "ref": "360254",
+     "url": "https://restaurants.ihop.com/fl/newsmyrnabeach/breakfast-1830-state-rd-44-360254",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1830 State Rd 44",
+     "city": "New Smyrna Beach",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ihop",
+     "ref": "3944",
+     "url": "https://restaurants.ihop.com/la/alexandria/breakfast-1500-macarthur-drive-3944",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1500 MacArthur Drive",
+     "city": "Alexandria",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ihop",
+     "ref": "3881",
+     "url": "https://restaurants.ihop.com/tx/crowley/breakfast-9607-old-granbury-road-3881",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "9607 Old Granbury Road",
+     "city": "Crowley",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ihop",
+     "ref": "3931",
+     "url": "https://restaurants.ihop.com/tx/elpaso/breakfast-swc-i-10-and-nuevo-hueco-tanks-road-3931",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "SWC I-10 and Nuevo Hueco Tanks Road",
+     "city": "El Paso",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ihop",
+     "ref": "3941",
+     "url": "https://restaurants.ihop.com/va/warrenton/breakfast-105-west-lee-highway-3941",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "105 West Lee Highway",
+     "city": "Warrenton",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "ihop",
+     "ref": "3945",
+     "url": "https://restaurants.ihop.com/wi/plover/breakfast-1400-commerce-pl-3945",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1400 Commerce Pl",
+     "city": "Plover",
+     "checked": "2026-11-07"
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "applebees": {
+   "pages": 1452,
+   "errors": 0,
+   "flagged": [
+    {
+     "spider": "applebees",
+     "ref": "74098",
+     "url": "https://restaurants.applebees.com/en-us/tx/porter/23681-church-st-74098",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "23681 Church St",
+     "city": "Porter",
+     "checked": "2026-11-07"
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "chipotle": {
+   "pages": 4203,
+   "errors": 0,
+   "flagged": [
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/az/gilbert/681-s-higley-rd",
+     "url": "https://locations.chipotle.com/az/gilbert/681-s-higley-rd",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "681 S Higley Rd.",
+     "city": "Gilbert",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/az/tucson/10100-e-old-vail-rd",
+     "url": "https://locations.chipotle.com/az/tucson/10100-e-old-vail-rd",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "10100 E Old Vail Rd",
+     "city": "Tucson",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ca/modesto/3401-oakdale-rd",
+     "url": "https://locations.chipotle.com/ca/modesto/3401-oakdale-rd",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "3401 Oakdale Rd",
+     "city": "Modesto",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ca/tracy/2038-ellis-town-dr",
+     "url": "https://locations.chipotle.com/ca/tracy/2038-ellis-town-dr",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "2038 Ellis Town Dr",
+     "city": "Tracy",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ca/westchester/8901-s-sepulveda-blvd",
+     "url": "https://locations.chipotle.com/ca/westchester/8901-s-sepulveda-blvd",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "8901 S Sepulveda Blvd",
+     "city": "Westchester",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/fl/naples/1955-oil-well-rd",
+     "url": "https://locations.chipotle.com/fl/naples/1955-oil-well-rd",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1955 Oil Well Rd",
+     "city": "Naples",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/fl/north-port/1355-sun-market-place",
+     "url": "https://locations.chipotle.com/fl/north-port/1355-sun-market-place",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1355 Sun Market Place",
+     "city": "North Port",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/fl/wesley-chapel/32157-mercantile-drive",
+     "url": "https://locations.chipotle.com/fl/wesley-chapel/32157-mercantile-drive",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "32157 Mercantile Drive",
+     "city": "Wesley Chapel",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ga/lawrenceville/1015-old-peachtree-road-nw",
+     "url": "https://locations.chipotle.com/ga/lawrenceville/1015-old-peachtree-road-nw",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1015 Old Peachtree Road NW",
+     "city": "Lawrenceville",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ga/mcdonough/5875-e-lake-pkwy",
+     "url": "https://locations.chipotle.com/ga/mcdonough/5875-e-lake-pkwy",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "5875 E Lake Pkwy",
+     "city": "McDonough",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/id/coeur-d-alene/167-w-neider-ave",
+     "url": "https://locations.chipotle.com/id/coeur-d-alene/167-w-neider-ave",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "167 W Neider Ave",
+     "city": "Coeur D Alene",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/in/fort-wayne/5770-coventry-ln",
+     "url": "https://locations.chipotle.com/in/fort-wayne/5770-coventry-ln",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "5770 Coventry Ln",
+     "city": "Fort Wayne",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ma/dedham/762-providence-hwy",
+     "url": "https://locations.chipotle.com/ma/dedham/762-providence-hwy",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "762 Providence Hwy",
+     "city": "Dedham",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/md/bowie/3520-saint-lola-ln",
+     "url": "https://locations.chipotle.com/md/bowie/3520-saint-lola-ln",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "3520 Saint Lola Ln",
+     "city": "Bowie",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/mi/saint-clair-shores/22651-e-9-mile-rd",
+     "url": "https://locations.chipotle.com/mi/saint-clair-shores/22651-e-9-mile-rd",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "22651 E 9 Mile Rd",
+     "city": "Saint Clair Shores",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/mo/saint-joseph/715-n-belt-hwy",
+     "url": "https://locations.chipotle.com/mo/saint-joseph/715-n-belt-hwy",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "715 N Belt Hwy",
+     "city": "Saint Joseph",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/nc/cary/5340-arco-st",
+     "url": "https://locations.chipotle.com/nc/cary/5340-arco-st",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "5340 Arco St",
+     "city": "Cary",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/nc/denver/7266-nc-73-hwy",
+     "url": "https://locations.chipotle.com/nc/denver/7266-nc-73-hwy",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "7266 NC 73 Hwy",
+     "city": "Denver",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/nj/clifton/40-amenity-way",
+     "url": "https://locations.chipotle.com/nj/clifton/40-amenity-way",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "40 Amenity Way",
+     "city": "Clifton",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/nm/albuquerque/241-98th-street-nw",
+     "url": "https://locations.chipotle.com/nm/albuquerque/241-98th-street-nw",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "241 98th Street NW",
+     "city": "Albuquerque",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ny/new-york/1492-3rd-ave",
+     "url": "https://locations.chipotle.com/ny/new-york/1492-3rd-ave",
+     "status": "store page gone (404)",
+     "street": "1492 3rd Ave",
+     "city": "New York",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/oh/cleveland/8114-euclid-ave",
+     "url": "https://locations.chipotle.com/oh/cleveland/8114-euclid-ave",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "8114 Euclid Ave",
+     "city": "Cleveland",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/oh/tipp-city/952-w-main-st",
+     "url": "https://locations.chipotle.com/oh/tipp-city/952-w-main-st",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "952 W Main St",
+     "city": "Tipp City",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ok/edmond/2725-market-street",
+     "url": "https://locations.chipotle.com/ok/edmond/2725-market-street",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "2725 Market Street",
+     "city": "Edmond",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/pa/clarion/22541-rte-68",
+     "url": "https://locations.chipotle.com/pa/clarion/22541-rte-68",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "22541 Rte 68",
+     "city": "Clarion",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/pa/irwin/9174-state-route-30",
+     "url": "https://locations.chipotle.com/pa/irwin/9174-state-route-30",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "9174 State Route 30",
+     "city": "Irwin",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/tx/ennis/391-n-sonoma-trail",
+     "url": "https://locations.chipotle.com/tx/ennis/391-n-sonoma-trail",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "391 N Sonoma Trail",
+     "city": "Ennis",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/tx/kingwood/25661-highway-59-n",
+     "url": "https://locations.chipotle.com/tx/kingwood/25661-highway-59-n",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "25661 Highway 59 N",
+     "city": "Kingwood",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/tx/lewisville/1131-fm-407",
+     "url": "https://locations.chipotle.com/tx/lewisville/1131-fm-407",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1131 FM 407",
+     "city": "Lewisville",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/ut/magna/8375-w-arbor-park-dr",
+     "url": "https://locations.chipotle.com/ut/magna/8375-w-arbor-park-dr",
+     "status": "store page gone (404)",
+     "street": "8375 W Arbor Park Dr",
+     "city": "Magna",
+     "checked": "2026-11-07"
+    },
+    {
+     "spider": "chipotle",
+     "ref": "https://locations.chipotle.com/wi/menomonie/1827-broadway-st-n",
+     "url": "https://locations.chipotle.com/wi/menomonie/1827-broadway-st-n",
+     "status": "store's hours block says 'Coming Soon'",
+     "street": "1827 Broadway St N",
+     "city": "Menomonie",
+     "checked": "2026-11-07"
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "wendys": {
+   "pages": 5868,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356310",
+     "url": "https://locations.wendys.com/united-states/al/anniston/1501-quintard-ave",
+     "status": "store page gone (404)",
+     "street": "1501 Quintard Ave",
+     "city": "Anniston",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356297",
+     "url": "https://locations.wendys.com/united-states/al/dothan/2100-ross-clark-cir-sw",
+     "status": "store page gone (404)",
+     "street": "2100 Ross Clark Cir S.W.",
+     "city": "Dothan",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356311",
+     "url": "https://locations.wendys.com/united-states/al/dothan/3456-ross-clark-circle-nw",
+     "status": "store page gone (404)",
+     "street": "3456 Ross Clark Circle Nw",
+     "city": "Dothan",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356377",
+     "url": "https://locations.wendys.com/united-states/al/gardendale/1009-fulton-ave",
+     "status": "store page gone (404)",
+     "street": "1009 Fulton Ave",
+     "city": "Gardendale",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356373",
+     "url": "https://locations.wendys.com/united-states/al/mobile/3270-dauphin-st",
+     "status": "store page gone (404)",
+     "street": "3270 Dauphin St.",
+     "city": "Mobile",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356326",
+     "url": "https://locations.wendys.com/united-states/al/montgomery/1414-ann-street",
+     "status": "store page gone (404)",
+     "street": "1414 Ann Street",
+     "city": "Montgomery",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356254",
+     "url": "https://locations.wendys.com/united-states/ar/blytheville/1010-east-hollywood-avenue",
+     "status": "store page gone (404)",
+     "street": "1010 East Hollywood Avenue",
+     "city": "Blytheville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065530602",
+     "url": "https://locations.wendys.com/united-states/ar/rogers/2200-west-walnut",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2200 West Walnut",
+     "city": "Rogers",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065480588",
+     "url": "https://locations.wendys.com/united-states/ar/rogers/2200-west-walnut",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2200 West Walnut",
+     "city": "Rogers",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255329",
+     "url": "https://locations.wendys.com/united-states/ar/rogers/2200-west-walnut",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2200 West Walnut",
+     "city": "Rogers",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531971",
+     "url": "https://locations.wendys.com/united-states/ar/west-helena/278-richmond-hill-drive",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "278 Richmond Hill Drive",
+     "city": "West Helena",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481081",
+     "url": "https://locations.wendys.com/united-states/ar/west-helena/278-richmond-hill-drive",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "278 Richmond Hill Drive",
+     "city": "West Helena",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9256269",
+     "url": "https://locations.wendys.com/united-states/ar/west-helena/278-richmond-hill-drive",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "278 Richmond Hill Drive",
+     "city": "West Helena",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356399",
+     "url": "https://locations.wendys.com/united-states/az/phoenix/3200-sky-harbor-blvd",
+     "status": "store page gone (404)",
+     "street": "3200 Sky Harbor Blvd Terminal 2",
+     "city": "Phoenix",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356406",
+     "url": "https://locations.wendys.com/united-states/az/phoenix/3300-e-sky-harbor-blvd",
+     "status": "store page gone (404)",
+     "street": "3300 E Sky Harbor Blvd Terminal 3, Unit FS2",
+     "city": "Phoenix",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356269",
+     "url": "https://locations.wendys.com/united-states/ca/canoga-park/8232-desoto-avenue",
+     "status": "store page gone (404)",
+     "street": "8232 Desoto Avenue",
+     "city": "Canoga Park",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478424",
+     "url": "https://locations.wendys.com/united-states/ca/citrus-heights/6435-antelope-road",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "6435 Antelope Road",
+     "city": "Citrus Heights",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479132",
+     "url": "https://locations.wendys.com/united-states/ca/corona/415-magnolia",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "415 Magnolia",
+     "city": "Corona",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479341",
+     "url": "https://locations.wendys.com/united-states/ca/long-beach/2201-bellflower-blvd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2201 Bellflower Blvd.",
+     "city": "Long Beach",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356290",
+     "url": "https://locations.wendys.com/united-states/ca/oxnard/2551-e-vineyard-ave",
+     "status": "store page gone (404)",
+     "street": "2551 E Vineyard Ave",
+     "city": "Oxnard",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065530895",
+     "url": "https://locations.wendys.com/united-states/ca/red-bluff/1150-s-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1150 S. Main St.",
+     "city": "Red Bluff",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065480415",
+     "url": "https://locations.wendys.com/united-states/ca/red-bluff/1150-s-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1150 S. Main St.",
+     "city": "Red Bluff",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255178",
+     "url": "https://locations.wendys.com/united-states/ca/red-bluff/1150-s-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1150 S. Main St.",
+     "city": "Red Bluff",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356320",
+     "url": "https://locations.wendys.com/united-states/ca/san-diego/9290-clairemont-mesa",
+     "status": "store page gone (404)",
+     "street": "9290 Clairemont Mesa",
+     "city": "San Diego",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356327",
+     "url": "https://locations.wendys.com/united-states/ca/san-francisco/san-francisco-international-airport",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "San Francisco International Airport",
+     "city": "San Francisco",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531358",
+     "url": "https://locations.wendys.com/united-states/ca/stockton/725-west-hammer-lane",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "725 West Hammer Lane",
+     "city": "Stockton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481130",
+     "url": "https://locations.wendys.com/united-states/ca/stockton/725-west-hammer-lane",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "725 West Hammer Lane",
+     "city": "Stockton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255858",
+     "url": "https://locations.wendys.com/united-states/ca/stockton/725-west-hammer-lane",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "725 West Hammer Lane",
+     "city": "Stockton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356333",
+     "url": "https://locations.wendys.com/united-states/ca/sunnyvale/485-n-mathilda-ave",
+     "status": "store page gone (404)",
+     "street": "485 N Mathilda Ave",
+     "city": "Sunnyvale",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356408",
+     "url": "https://locations.wendys.com/united-states/co/wheat-ridge/3955-wadsworth-blvd",
+     "status": "store page gone (404)",
+     "street": "3955 Wadsworth Blvd.",
+     "city": "Wheat Ridge",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531005",
+     "url": "https://locations.wendys.com/united-states/ct/putnam/66-providence-pike",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "66 Providence Pike",
+     "city": "Putnam",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255118",
+     "url": "https://locations.wendys.com/united-states/ct/putnam/66-providence-pike",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "66 Providence Pike",
+     "city": "Putnam",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356395",
+     "url": "https://locations.wendys.com/united-states/dc/washington/100-new-york-ave-ne",
+     "status": "store page gone (404)",
+     "street": "100 New York Ave Ne",
+     "city": "Washington",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2070758366",
+     "url": "https://locations.wendys.com/united-states/dc/washington/3900-georgia-avenue-nw",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3900 Georgia Avenue N.w.",
+     "city": "Washington",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356251",
+     "url": "https://locations.wendys.com/united-states/fl/casselberry/386-hwy-436-e",
+     "status": "store page gone (404)",
+     "street": "386 Hwy 436 E.",
+     "city": "Casselberry",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356348",
+     "url": "https://locations.wendys.com/united-states/fl/fort-lauderdale/2031-e-oakland-pk-blvd",
+     "status": "store page gone (404)",
+     "street": "2031 E Oakland Pk Blvd",
+     "city": "Fort Lauderdale",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356350",
+     "url": "https://locations.wendys.com/united-states/fl/fort-myers/10879-terminal-access-rd",
+     "status": "store page gone (404)",
+     "street": "10879 Terminal Access Rd",
+     "city": "Fort Myers",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356263",
+     "url": "https://locations.wendys.com/united-states/fl/jacksonville/14447-beach-boulevard",
+     "status": "store page gone (404)",
+     "street": "14447 Beach Boulevard",
+     "city": "Jacksonville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356249",
+     "url": "https://locations.wendys.com/united-states/fl/jacksonville/4907-big-island-dr",
+     "status": "store page gone (404)",
+     "street": "4907 Big Island Dr",
+     "city": "Jacksonville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356429",
+     "url": "https://locations.wendys.com/united-states/fl/lutz/25600-sierra-center-blvd",
+     "status": "store page gone (404)",
+     "street": "25600 Sierra Center Blvd",
+     "city": "Lutz",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356433",
+     "url": "https://locations.wendys.com/united-states/fl/marianna/4256-lafayette-st",
+     "status": "store page gone (404)",
+     "street": "4256 Lafayette St",
+     "city": "Marianna",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356449",
+     "url": "https://locations.wendys.com/united-states/fl/melbourne/1150-babcock-st",
+     "status": "store page gone (404)",
+     "street": "1150 Babcock St.",
+     "city": "Melbourne",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356343",
+     "url": "https://locations.wendys.com/united-states/fl/miami/3301-biscayne-blvd",
+     "status": "store page gone (404)",
+     "street": "3301 Biscayne Blvd",
+     "city": "Miami",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356262",
+     "url": "https://locations.wendys.com/united-states/fl/orlando/2400-north-orange-avenue",
+     "status": "store page gone (404)",
+     "street": "2400 North Orange Avenue",
+     "city": "Orlando",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356246",
+     "url": "https://locations.wendys.com/united-states/fl/orlando/7091-s-orange-blossom-tr",
+     "status": "store page gone (404)",
+     "street": "7091 S. Orange Blossom Tr",
+     "city": "Orlando",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356418",
+     "url": "https://locations.wendys.com/united-states/fl/pembroke-pines/2050-nw-146th-street",
+     "status": "store page gone (404)",
+     "street": "2050 Nw 146th Street",
+     "city": "Pembroke Pines",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356412",
+     "url": "https://locations.wendys.com/united-states/fl/pensacola/1049-navy-blvd",
+     "status": "store page gone (404)",
+     "street": "1049 Navy Blvd.",
+     "city": "Pensacola",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356424",
+     "url": "https://locations.wendys.com/united-states/fl/pensacola/250-saufley-street",
+     "status": "store page gone (404)",
+     "street": "250 Saufley Street",
+     "city": "Pensacola",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356304",
+     "url": "https://locations.wendys.com/united-states/fl/pensacola/450-e-nine-mile-rd",
+     "status": "store page gone (404)",
+     "street": "450 E. Nine Mile Rd",
+     "city": "Pensacola",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356319",
+     "url": "https://locations.wendys.com/united-states/fl/pensacola/6800-pensacola-blvd",
+     "status": "store page gone (404)",
+     "street": "6800 Pensacola Blvd.",
+     "city": "Pensacola",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065530971",
+     "url": "https://locations.wendys.com/united-states/fl/reddick/7401-w-hwy-318",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "7401 W. Hwy 318",
+     "city": "Reddick",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065480586",
+     "url": "https://locations.wendys.com/united-states/fl/reddick/7401-w-hwy-318",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "7401 W. Hwy 318",
+     "city": "Reddick",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255183",
+     "url": "https://locations.wendys.com/united-states/fl/reddick/7401-w-hwy-318",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "7401 W. Hwy 318",
+     "city": "Reddick",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356361",
+     "url": "https://locations.wendys.com/united-states/fl/saint-augustine/2040-a1a-s",
+     "status": "store page gone (404)",
+     "street": "2040 A1a S",
+     "city": "Saint Augustine",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356371",
+     "url": "https://locations.wendys.com/united-states/fl/saint-augustine/3531-n-ponce-de-leon-blvd",
+     "status": "store page gone (404)",
+     "street": "3531 N. Ponce De Leon Blvd",
+     "city": "Saint Augustine",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531054",
+     "url": "https://locations.wendys.com/united-states/fl/sarasota/301-north-beneva-road",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "301 North Beneva Road",
+     "city": "Sarasota",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255530",
+     "url": "https://locations.wendys.com/united-states/fl/sarasota/301-north-beneva-road",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "301 North Beneva Road",
+     "city": "Sarasota",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356356",
+     "url": "https://locations.wendys.com/united-states/fl/stuart/726-s-federal-hwy",
+     "status": "store page gone (404)",
+     "street": "726 S Federal Hwy",
+     "city": "Stuart",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356257",
+     "url": "https://locations.wendys.com/united-states/ga/alpharetta/1100-n-point-drive",
+     "status": "store page gone (404)",
+     "street": "1100 N. Point Drive",
+     "city": "Alpharetta",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356271",
+     "url": "https://locations.wendys.com/united-states/ga/alpharetta/13794-highway-9",
+     "status": "store page gone (404)",
+     "street": "13794 Highway 9",
+     "city": "Alpharetta",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356281",
+     "url": "https://locations.wendys.com/united-states/ga/atlanta/125-university-avenue",
+     "status": "store page gone (404)",
+     "street": "125 University Avenue",
+     "city": "Atlanta",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356285",
+     "url": "https://locations.wendys.com/united-states/ga/augusta/2738-washington-rd",
+     "status": "store page gone (404)",
+     "street": "2738 Washington Rd.",
+     "city": "Augusta",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528361",
+     "url": "https://locations.wendys.com/united-states/ga/east-point/3350-shelby-lane",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3350 Shelby Lane",
+     "city": "East Point",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479030",
+     "url": "https://locations.wendys.com/united-states/ga/east-point/3350-shelby-lane",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3350 Shelby Lane",
+     "city": "East Point",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252105",
+     "url": "https://locations.wendys.com/united-states/ga/east-point/3350-shelby-lane",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3350 Shelby Lane",
+     "city": "East Point",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356302",
+     "url": "https://locations.wendys.com/united-states/ga/la-fayette/401-n-main-street",
+     "status": "store page gone (404)",
+     "street": "401 N Main Street",
+     "city": "La Fayette",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356381",
+     "url": "https://locations.wendys.com/united-states/ga/snellville/1918-scenic-highway",
+     "status": "store page gone (404)",
+     "street": "1918 Scenic Highway",
+     "city": "Snellville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356390",
+     "url": "https://locations.wendys.com/united-states/ia/davenport/2955-e-53rd-street",
+     "status": "store page gone (404)",
+     "street": "2955 E. 53rd Street",
+     "city": "Davenport",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356322",
+     "url": "https://locations.wendys.com/united-states/ia/des-moines/4105-sw-9th-st",
+     "status": "store page gone (404)",
+     "street": "4105 S.W. 9th St.",
+     "city": "Des Moines",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481058",
+     "url": "https://locations.wendys.com/united-states/ia/west-des-moines/225-grand-avenue",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "225 Grand Avenue",
+     "city": "West Des Moines",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481625",
+     "url": "https://locations.wendys.com/united-states/id/meridian/1467-w-chinden-blvd",
+     "status": "store page gone (404)",
+     "street": "1467 W Chinden Blvd",
+     "city": "Meridian",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356442",
+     "url": "https://locations.wendys.com/united-states/id/rexburg/545-n-2nd-e",
+     "status": "store page gone (404)",
+     "street": "545 N 2nd E",
+     "city": "Rexburg",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356314",
+     "url": "https://locations.wendys.com/united-states/in/evansville/3351-1st-ave",
+     "status": "store page gone (404)",
+     "street": "3351 1st. Ave.",
+     "city": "Evansville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356438",
+     "url": "https://locations.wendys.com/united-states/in/noblesville/230-conner-st",
+     "status": "store page gone (404)",
+     "street": "230 Conner St",
+     "city": "Noblesville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481222",
+     "url": "https://locations.wendys.com/united-states/in/scottsburg/1502-w-mcclain-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1502 W Mcclain Ave",
+     "city": "Scottsburg",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356450",
+     "url": "https://locations.wendys.com/united-states/in/south-bend/3401-lincoln-way-west",
+     "status": "store page gone (404)",
+     "street": "3401 Lincoln Way West",
+     "city": "South Bend",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479459",
+     "url": "https://locations.wendys.com/united-states/ks/junction-city/440-w-6th-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "440 W. 6th St.",
+     "city": "Junction City",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065527263",
+     "url": "https://locations.wendys.com/united-states/ky/bowling-green/624-us-31w-byp",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "624 Us 31w Byp",
+     "city": "Bowling Green",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065477989",
+     "url": "https://locations.wendys.com/united-states/ky/bowling-green/624-us-31w-byp",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "624 Us 31w Byp",
+     "city": "Bowling Green",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9251013",
+     "url": "https://locations.wendys.com/united-states/ky/bowling-green/624-us-31w-byp",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "624 Us 31w Byp",
+     "city": "Bowling Green",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065529319",
+     "url": "https://locations.wendys.com/united-states/la/houma/5946-w-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "5946 W. Main St.",
+     "city": "Houma",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252982",
+     "url": "https://locations.wendys.com/united-states/la/houma/5946-w-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "5946 W. Main St.",
+     "city": "Houma",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356261",
+     "url": "https://locations.wendys.com/united-states/la/lafayette/241-donlon-avenue",
+     "status": "store page gone (404)",
+     "street": "241 Donlon Avenue",
+     "city": "Lafayette",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356275",
+     "url": "https://locations.wendys.com/united-states/la/lafayette/3300-johnston-street",
+     "status": "store page gone (404)",
+     "street": "3300 Johnston Street",
+     "city": "Lafayette",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356330",
+     "url": "https://locations.wendys.com/united-states/la/monroe/1700-martin-luther-king-jr-dr",
+     "status": "store page gone (404)",
+     "street": "1700 Martin Luther King Jr Dr",
+     "city": "Monroe",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065530073",
+     "url": "https://locations.wendys.com/united-states/la/new-orleans/4200-s-claiborne",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "4200 S. Claiborne",
+     "city": "New Orleans",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479871",
+     "url": "https://locations.wendys.com/united-states/la/new-orleans/4200-s-claiborne",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "4200 S. Claiborne",
+     "city": "New Orleans",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9254443",
+     "url": "https://locations.wendys.com/united-states/la/new-orleans/4200-s-claiborne",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "4200 S. Claiborne",
+     "city": "New Orleans",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065480915",
+     "url": "https://locations.wendys.com/united-states/la/thibodaux/1135-audubon-drive",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1135 Audubon Drive",
+     "city": "Thibodaux",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356268",
+     "url": "https://locations.wendys.com/united-states/ma/boston/551-boylston-street",
+     "status": "store page gone (404)",
+     "street": "551 Boylston Street",
+     "city": "Boston",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065527180",
+     "url": "https://locations.wendys.com/united-states/ma/brockton/660-oak-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "660 Oak Street",
+     "city": "Brockton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065477991",
+     "url": "https://locations.wendys.com/united-states/ma/brockton/660-oak-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "660 Oak Street",
+     "city": "Brockton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9251080",
+     "url": "https://locations.wendys.com/united-states/ma/brockton/660-oak-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "660 Oak Street",
+     "city": "Brockton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356421",
+     "url": "https://locations.wendys.com/united-states/ma/east-boston/100-hotel-dr",
+     "status": "store page gone (404)",
+     "street": "100 Hotel Dr Terminal A",
+     "city": "East Boston",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356375",
+     "url": "https://locations.wendys.com/united-states/ma/natick/355-worcester-st",
+     "status": "store page gone (404)",
+     "street": "355 Worcester St",
+     "city": "Natick",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531860",
+     "url": "https://locations.wendys.com/united-states/ma/stoughton/351-washington-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "351 Washington St.",
+     "city": "Stoughton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065480898",
+     "url": "https://locations.wendys.com/united-states/ma/stoughton/351-washington-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "351 Washington St.",
+     "city": "Stoughton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255866",
+     "url": "https://locations.wendys.com/united-states/ma/stoughton/351-washington-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "351 Washington St.",
+     "city": "Stoughton",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531708",
+     "url": "https://locations.wendys.com/united-states/ma/west-bridgewater/707-west-center-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "707 West Center Street",
+     "city": "West Bridgewater",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481199",
+     "url": "https://locations.wendys.com/united-states/ma/west-bridgewater/707-west-center-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "707 West Center Street",
+     "city": "West Bridgewater",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9256256",
+     "url": "https://locations.wendys.com/united-states/ma/west-bridgewater/707-west-center-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "707 West Center Street",
+     "city": "West Bridgewater",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356242",
+     "url": "https://locations.wendys.com/united-states/md/abingdon/2910-emmorton-road",
+     "status": "store page gone (404)",
+     "street": "2910 Emmorton Road",
+     "city": "Abingdon",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356295",
+     "url": "https://locations.wendys.com/united-states/md/annapolis/153-defense-hwy",
+     "status": "store page gone (404)",
+     "street": "153 Defense Hwy",
+     "city": "Annapolis",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356325",
+     "url": "https://locations.wendys.com/united-states/md/baltimore/2339-frederick-ave",
+     "status": "store page gone (404)",
+     "street": "2339 Frederick Ave.",
+     "city": "Baltimore",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356336",
+     "url": "https://locations.wendys.com/united-states/md/edgewater/100-e-central-ave",
+     "status": "store page gone (404)",
+     "street": "100 E Central Ave",
+     "city": "Edgewater",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478888",
+     "url": "https://locations.wendys.com/united-states/md/forestville/3440-donnell-drive",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3440 Donnell Drive",
+     "city": "Forestville",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356417",
+     "url": "https://locations.wendys.com/united-states/md/hyattsville/1461-university-boulevard",
+     "status": "store page gone (404)",
+     "street": "1461 University Boulevard",
+     "city": "Hyattsville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356248",
+     "url": "https://locations.wendys.com/united-states/md/laurel/3563-russett-grn",
+     "status": "store page gone (404)",
+     "street": "3563 Russett Grn",
+     "city": "Laurel",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356318",
+     "url": "https://locations.wendys.com/united-states/md/linthicum-heights/714-nursery-rd",
+     "status": "store page gone (404)",
+     "street": "714 Nursery Rd",
+     "city": "Linthicum Heights",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356444",
+     "url": "https://locations.wendys.com/united-states/md/reisterstown/11818-reistertown-rd",
+     "status": "store page gone (404)",
+     "street": "11818 Reistertown Rd.",
+     "city": "Reisterstown",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356394",
+     "url": "https://locations.wendys.com/united-states/md/thurmont/303-tippin-drive",
+     "status": "store page gone (404)",
+     "street": "303 Tippin Drive",
+     "city": "Thurmont",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356386",
+     "url": "https://locations.wendys.com/united-states/md/waldorf/3005-crain-hwy",
+     "status": "store page gone (404)",
+     "street": "3005 Crain Hwy",
+     "city": "Waldorf",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065526783",
+     "url": "https://locations.wendys.com/united-states/mi/battle-creek/1428-capital-avenue-ne",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1428 Capital Avenue N.e.",
+     "city": "Battle Creek",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478209",
+     "url": "https://locations.wendys.com/united-states/mi/battle-creek/1428-capital-avenue-ne",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1428 Capital Avenue N.e.",
+     "city": "Battle Creek",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9250834",
+     "url": "https://locations.wendys.com/united-states/mi/battle-creek/1428-capital-avenue-ne",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1428 Capital Avenue N.e.",
+     "city": "Battle Creek",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356360",
+     "url": "https://locations.wendys.com/united-states/mi/burton/1230-e-bristol-road",
+     "status": "store page gone (404)",
+     "street": "1230 E. Bristol Road",
+     "city": "Burton",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356283",
+     "url": "https://locations.wendys.com/united-states/mi/detroit/2506-world-gateway-pl",
+     "status": "store page gone (404)",
+     "street": "2506 World Gateway Pl/Dma/Mcnamara",
+     "city": "Detroit",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528559",
+     "url": "https://locations.wendys.com/united-states/mi/grosse-pointe-farms/18800-mack-avenue",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "18800 Mack Avenue",
+     "city": "Grosse Pointe Farms",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252737",
+     "url": "https://locations.wendys.com/united-states/mi/grosse-pointe-farms/18800-mack-avenue",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "18800 Mack Avenue",
+     "city": "Grosse Pointe Farms",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356384",
+     "url": "https://locations.wendys.com/united-states/mi/muskegon/2071-e-apple",
+     "status": "store page gone (404)",
+     "street": "2071 E. Apple",
+     "city": "Muskegon",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356383",
+     "url": "https://locations.wendys.com/united-states/mn/minnetonka/4912-highway-101",
+     "status": "store page gone (404)",
+     "street": "4912 Highway 101",
+     "city": "Minnetonka",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356303",
+     "url": "https://locations.wendys.com/united-states/mo/kansas-city/1601-w-12th-street",
+     "status": "store page gone (404)",
+     "street": "1601 W. 12th Street",
+     "city": "Kansas City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356247",
+     "url": "https://locations.wendys.com/united-states/mo/kennett/1320-first-street",
+     "status": "store page gone (404)",
+     "street": "1320 First Street",
+     "city": "Kennett",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356317",
+     "url": "https://locations.wendys.com/united-states/ms/jackson/555-e-woodrow-wilson",
+     "status": "store page gone (404)",
+     "street": "555 E Woodrow Wilson",
+     "city": "Jackson",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356422",
+     "url": "https://locations.wendys.com/united-states/ms/ocean-springs/1407-bienville-blvd",
+     "status": "store page gone (404)",
+     "street": "1407 Bienville Blvd.",
+     "city": "Ocean Springs",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356286",
+     "url": "https://locations.wendys.com/united-states/nc/elizabeth-city/1239-n-road-st",
+     "status": "store page gone (404)",
+     "street": "1239 N. Road St.",
+     "city": "Elizabeth City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528172",
+     "url": "https://locations.wendys.com/united-states/nc/elizabeth-city/1330-ehringhaus-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1330 Ehringhaus Street",
+     "city": "Elizabeth City",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478587",
+     "url": "https://locations.wendys.com/united-states/nc/elizabeth-city/1330-ehringhaus-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1330 Ehringhaus Street",
+     "city": "Elizabeth City",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252177",
+     "url": "https://locations.wendys.com/united-states/nc/elizabeth-city/1330-ehringhaus-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1330 Ehringhaus Street",
+     "city": "Elizabeth City",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356288",
+     "url": "https://locations.wendys.com/united-states/nc/kernersville/827-south-main-street",
+     "status": "store page gone (404)",
+     "street": "827 South Main Street",
+     "city": "Kernersville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065529783",
+     "url": "https://locations.wendys.com/united-states/nh/milford/153-elm-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "153 Elm St",
+     "city": "Milford",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9254115",
+     "url": "https://locations.wendys.com/united-states/nh/milford/153-elm-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "153 Elm St",
+     "city": "Milford",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2086806414",
+     "url": "https://locations.wendys.com/united-states/nj/lawrenceville/2083-lawrenceville-road,-blc-student-center",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2083 Lawrenceville Road, Blc Student Center",
+     "city": "Lawrenceville",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2086811770",
+     "url": "https://locations.wendys.com/united-states/nj/lawrenceville/2083-lawrenceville-road,-blc-student-center",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2083 Lawrenceville Road, Blc Student Center",
+     "city": "Lawrenceville",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#15004971",
+     "url": "https://locations.wendys.com/united-states/nj/lawrenceville/2083-lawrenceville-road,-blc-student-center",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2083 Lawrenceville Road, Blc Student Center",
+     "city": "Lawrenceville",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481043",
+     "url": "https://locations.wendys.com/united-states/nm/silver-city/2289-superior-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2289 Superior Street",
+     "city": "Silver City",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356446",
+     "url": "https://locations.wendys.com/united-states/nv/reno/4855-kietzke-lane",
+     "status": "store page gone (404)",
+     "street": "4855 Kietzke Lane",
+     "city": "Reno",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356291",
+     "url": "https://locations.wendys.com/united-states/ny/jamaica/155-33-jamaica-avenue",
+     "status": "store page gone (404)",
+     "street": "155-33 Jamaica Avenue",
+     "city": "Jamaica",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356431",
+     "url": "https://locations.wendys.com/united-states/ny/new-york/335-fifth-avenue",
+     "status": "store page gone (404)",
+     "street": "335 Fifth Avenue",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356434",
+     "url": "https://locations.wendys.com/united-states/ny/new-york/79-e-125th-street",
+     "status": "store page gone (404)",
+     "street": "79 E. 125th Street",
+     "city": "New York",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356259",
+     "url": "https://locations.wendys.com/united-states/oh/akron/623-e-market-street",
+     "status": "store page gone (404)",
+     "street": "623 E. Market Street",
+     "city": "Akron",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356273",
+     "url": "https://locations.wendys.com/united-states/oh/athens/40-south-court-st",
+     "status": "store page gone (404)",
+     "street": "40 South Court St.",
+     "city": "Athens",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356380",
+     "url": "https://locations.wendys.com/united-states/oh/cincinnati/4559-eastgate-blvd",
+     "status": "store page gone (404)",
+     "street": "4559 Eastgate Blvd.",
+     "city": "Cincinnati",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356294",
+     "url": "https://locations.wendys.com/united-states/oh/cleveland/13939-euclid-ave",
+     "status": "store page gone (404)",
+     "street": "13939 Euclid Ave.",
+     "city": "Cleveland",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478555",
+     "url": "https://locations.wendys.com/united-states/oh/cleveland/6330-brookpark-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "6330 Brookpark Rd",
+     "city": "Cleveland",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356349",
+     "url": "https://locations.wendys.com/united-states/oh/columbus/1724-w-fifth-ave",
+     "status": "store page gone (404)",
+     "street": "1724 W Fifth Ave",
+     "city": "Columbus",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356266",
+     "url": "https://locations.wendys.com/united-states/oh/columbus/6030-busch-blvd",
+     "status": "store page gone (404)",
+     "street": "6030 Busch Blvd.",
+     "city": "Columbus",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356280",
+     "url": "https://locations.wendys.com/united-states/oh/columbus/666-e-fifth-ave",
+     "status": "store page gone (404)",
+     "street": "666 E Fifth Ave",
+     "city": "Columbus",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528752",
+     "url": "https://locations.wendys.com/united-states/oh/delaware/185-south-sandusky-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "185 South Sandusky Street",
+     "city": "Delaware",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478729",
+     "url": "https://locations.wendys.com/united-states/oh/delaware/185-south-sandusky-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "185 South Sandusky Street",
+     "city": "Delaware",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9251948",
+     "url": "https://locations.wendys.com/united-states/oh/delaware/185-south-sandusky-street",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "185 South Sandusky Street",
+     "city": "Delaware",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356428",
+     "url": "https://locations.wendys.com/united-states/oh/heath/911-hebron-rd",
+     "status": "store page gone (404)",
+     "street": "911 Hebron Rd.",
+     "city": "Heath",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356437",
+     "url": "https://locations.wendys.com/united-states/oh/mentor/7635-mentor-ave",
+     "status": "store page gone (404)",
+     "street": "7635 Mentor Ave.",
+     "city": "Mentor",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356448",
+     "url": "https://locations.wendys.com/united-states/oh/whitehall/3747-ebroad-st",
+     "status": "store page gone (404)",
+     "street": "3747 E.Broad St",
+     "city": "Whitehall",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356419",
+     "url": "https://locations.wendys.com/united-states/oh/worthington/6130-linworth-road",
+     "status": "store page gone (404)",
+     "street": "6130 Linworth Road",
+     "city": "Worthington",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481708",
+     "url": "https://locations.wendys.com/united-states/oh/xenia/363-west-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "363 West Main St",
+     "city": "Xenia",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356358",
+     "url": "https://locations.wendys.com/united-states/ok/edmond/1012-s-broadway",
+     "status": "store page gone (404)",
+     "street": "1012 S. Broadway",
+     "city": "Edmond",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356300",
+     "url": "https://locations.wendys.com/united-states/ok/enid/606-south-garland-road",
+     "status": "store page gone (404)",
+     "street": "606 South Garland Road",
+     "city": "Enid",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356443",
+     "url": "https://locations.wendys.com/united-states/ok/midwest-city/409-s-air-depot",
+     "status": "store page gone (404)",
+     "street": "409 S. Air Depot",
+     "city": "Midwest City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356370",
+     "url": "https://locations.wendys.com/united-states/pa/chambersburg/871-lincoln-way-west",
+     "status": "store page gone (404)",
+     "street": "871 Lincoln Way West",
+     "city": "Chambersburg",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356301",
+     "url": "https://locations.wendys.com/united-states/pa/clarks-summit/1135-northern-blvd",
+     "status": "store page gone (404)",
+     "street": "1135 Northern Blvd",
+     "city": "Clarks Summit",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528125",
+     "url": "https://locations.wendys.com/united-states/pa/cranberry/7-kimberly-ln",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "7 Kimberly Ln",
+     "city": "Cranberry",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478702",
+     "url": "https://locations.wendys.com/united-states/pa/cranberry/7-kimberly-ln",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "7 Kimberly Ln",
+     "city": "Cranberry",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9251803",
+     "url": "https://locations.wendys.com/united-states/pa/cranberry/7-kimberly-ln",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "7 Kimberly Ln",
+     "city": "Cranberry",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065527957",
+     "url": "https://locations.wendys.com/united-states/pa/du-bois/1429-bee-line-hwy",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1429 Bee Line Hwy",
+     "city": "Du Bois",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479009",
+     "url": "https://locations.wendys.com/united-states/pa/du-bois/1429-bee-line-hwy",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1429 Bee Line Hwy",
+     "city": "Du Bois",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252050",
+     "url": "https://locations.wendys.com/united-states/pa/du-bois/1429-bee-line-hwy",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1429 Bee Line Hwy",
+     "city": "Du Bois",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356378",
+     "url": "https://locations.wendys.com/united-states/pa/hanover/1137-baltimore-street",
+     "status": "store page gone (404)",
+     "street": "1137 Baltimore Street",
+     "city": "Hanover",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356388",
+     "url": "https://locations.wendys.com/united-states/pa/homestead/610-william-marks-drive",
+     "status": "store page gone (404)",
+     "street": "610 William Marks Drive",
+     "city": "Homestead",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356289",
+     "url": "https://locations.wendys.com/united-states/pa/lower-burrell/3164-leechburg-rd",
+     "status": "store page gone (404)",
+     "street": "3164 Leechburg Rd.",
+     "city": "Lower Burrell",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356435",
+     "url": "https://locations.wendys.com/united-states/pa/mechanicsburg/5235-simpson-ferry-road",
+     "status": "store page gone (404)",
+     "street": "5235 Simpson Ferry Road",
+     "city": "Mechanicsburg",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356427",
+     "url": "https://locations.wendys.com/united-states/pa/north-wales/28-airport-sq",
+     "status": "store page gone (404)",
+     "street": "28 Airport Sq",
+     "city": "North Wales",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356392",
+     "url": "https://locations.wendys.com/united-states/pa/philadelphia/2037-south-broad-street",
+     "status": "store page gone (404)",
+     "street": "2037 South Broad Street",
+     "city": "Philadelphia",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356423",
+     "url": "https://locations.wendys.com/united-states/pa/pittsburgh/603-clairton-blvd",
+     "status": "store page gone (404)",
+     "street": "603 Clairton Blvd.",
+     "city": "Pittsburgh",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356312",
+     "url": "https://locations.wendys.com/united-states/sc/clemson/238-bryan-circle",
+     "status": "store page gone (404)",
+     "street": "238 Bryan Circle",
+     "city": "Clemson",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356387",
+     "url": "https://locations.wendys.com/united-states/sc/greenville/2-state-park-road",
+     "status": "store page gone (404)",
+     "street": "2 State Park Road",
+     "city": "Greenville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356258",
+     "url": "https://locations.wendys.com/united-states/tn/chattanooga/4704-rossville-blvd",
+     "status": "store page gone (404)",
+     "street": "4704 Rossville Blvd",
+     "city": "Chattanooga",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356272",
+     "url": "https://locations.wendys.com/united-states/tn/chattanooga/5200-brainard-rd",
+     "status": "store page gone (404)",
+     "street": "5200 Brainard Rd.",
+     "city": "Chattanooga",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356287",
+     "url": "https://locations.wendys.com/united-states/tn/chattanooga/7019-shallowford-rd",
+     "status": "store page gone (404)",
+     "street": "7019 Shallowford Rd",
+     "city": "Chattanooga",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478567",
+     "url": "https://locations.wendys.com/united-states/tn/clarksville/662-n-riverside-dr",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "662 N Riverside Dr",
+     "city": "Clarksville",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356313",
+     "url": "https://locations.wendys.com/united-states/tn/knoxville/2904-knoxville-center-drive",
+     "status": "store page gone (404)",
+     "street": "2904 Knoxville Center Drive",
+     "city": "Knoxville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356260",
+     "url": "https://locations.wendys.com/united-states/tn/lenoir-city/401-hwy-321-north",
+     "status": "store page gone (404)",
+     "street": "401 Hwy 321 North",
+     "city": "Lenoir City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356353",
+     "url": "https://locations.wendys.com/united-states/tn/memphis/2221-frayser-blvd",
+     "status": "store page gone (404)",
+     "street": "2221 Frayser Blvd",
+     "city": "Memphis",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356363",
+     "url": "https://locations.wendys.com/united-states/tn/memphis/3275-thomas-street",
+     "status": "store page gone (404)",
+     "street": "3275 Thomas Street",
+     "city": "Memphis",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356451",
+     "url": "https://locations.wendys.com/united-states/tn/memphis/5541-poplar-ave",
+     "status": "store page gone (404)",
+     "street": "5541 Poplar Ave",
+     "city": "Memphis",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356447",
+     "url": "https://locations.wendys.com/united-states/tn/millington/4761-navy-road",
+     "status": "store page gone (404)",
+     "street": "4761 Navy Road",
+     "city": "Millington",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356355",
+     "url": "https://locations.wendys.com/united-states/tn/nashville/36-white-bridge-rd",
+     "status": "store page gone (404)",
+     "street": "36 White Bridge Rd.",
+     "city": "Nashville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356365",
+     "url": "https://locations.wendys.com/united-states/tn/nashville/one-terminal-drive",
+     "status": "store page gone (404)",
+     "street": "One Terminal Drive",
+     "city": "Nashville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356244",
+     "url": "https://locations.wendys.com/united-states/tx/addison/3710-beltline-road",
+     "status": "store page gone (404)",
+     "street": "3710 Beltline Road",
+     "city": "Addison",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065526913",
+     "url": "https://locations.wendys.com/united-states/tx/amarillo/2000-ross-osage-dr",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2000 Ross Osage Dr",
+     "city": "Amarillo",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478072",
+     "url": "https://locations.wendys.com/united-states/tx/amarillo/2000-ross-osage-dr",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2000 Ross Osage Dr",
+     "city": "Amarillo",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9250571",
+     "url": "https://locations.wendys.com/united-states/tx/amarillo/2000-ross-osage-dr",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "2000 Ross Osage Dr",
+     "city": "Amarillo",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356298",
+     "url": "https://locations.wendys.com/united-states/tx/bulverde/33889-us-hwy-281-n",
+     "status": "store page gone (404)",
+     "street": "33889 Us Hwy. 281 N.",
+     "city": "Bulverde",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356328",
+     "url": "https://locations.wendys.com/united-states/tx/college-station/2050-holleman-dr-w",
+     "status": "store page gone (404)",
+     "street": "2050 Holleman Dr W",
+     "city": "College Station",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356253",
+     "url": "https://locations.wendys.com/united-states/tx/dallas/6011-greenville-ave",
+     "status": "store page gone (404)",
+     "street": "6011 Greenville Ave.",
+     "city": "Dallas",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356398",
+     "url": "https://locations.wendys.com/united-states/tx/el-paso/3501-north-mesa",
+     "status": "store page gone (404)",
+     "street": "3501 North Mesa",
+     "city": "El Paso",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528024",
+     "url": "https://locations.wendys.com/united-states/tx/el-paso/825-n-zaragoza-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "825 N Zaragoza Rd",
+     "city": "El Paso",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252167",
+     "url": "https://locations.wendys.com/united-states/tx/el-paso/825-n-zaragoza-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "825 N Zaragoza Rd",
+     "city": "El Paso",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356396",
+     "url": "https://locations.wendys.com/united-states/tx/fort-worth/221-w-seminary-drive",
+     "status": "store page gone (404)",
+     "street": "221 W. Seminary Drive",
+     "city": "Fort Worth",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356403",
+     "url": "https://locations.wendys.com/united-states/tx/fort-worth/2926-w-7th-ave",
+     "status": "store page gone (404)",
+     "street": "2926 W. 7th Ave.",
+     "city": "Fort Worth",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356347",
+     "url": "https://locations.wendys.com/united-states/tx/gainesville/600-w-california",
+     "status": "store page gone (404)",
+     "street": "600 W California",
+     "city": "Gainesville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356367",
+     "url": "https://locations.wendys.com/united-states/tx/houston/3500-terminal-rd-s",
+     "status": "store page gone (404)",
+     "street": "3500 Terminal Rd S",
+     "city": "Houston",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065529301",
+     "url": "https://locations.wendys.com/united-states/tx/houston/3950-s-terminal-rd,-terminal-e",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3950 S Terminal Rd, Terminal E",
+     "city": "Houston",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479083",
+     "url": "https://locations.wendys.com/united-states/tx/houston/3950-s-terminal-rd,-terminal-e",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3950 S Terminal Rd, Terminal E",
+     "city": "Houston",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9253011",
+     "url": "https://locations.wendys.com/united-states/tx/houston/3950-s-terminal-rd,-terminal-e",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3950 S Terminal Rd, Terminal E",
+     "city": "Houston",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356337",
+     "url": "https://locations.wendys.com/united-states/tx/irving/3990-n-beltline-rd",
+     "status": "store page gone (404)",
+     "street": "3990 N. Beltline Rd.",
+     "city": "Irving",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065529374",
+     "url": "https://locations.wendys.com/united-states/tx/kingwood/3303-west-lake-houston-parkway",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3303 West Lake Houston Parkway",
+     "city": "Kingwood",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479668",
+     "url": "https://locations.wendys.com/united-states/tx/kingwood/3303-west-lake-houston-parkway",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3303 West Lake Houston Parkway",
+     "city": "Kingwood",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9253344",
+     "url": "https://locations.wendys.com/united-states/tx/kingwood/3303-west-lake-houston-parkway",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3303 West Lake Houston Parkway",
+     "city": "Kingwood",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356305",
+     "url": "https://locations.wendys.com/united-states/tx/lubbock/2401-19th-st",
+     "status": "store page gone (404)",
+     "street": "2401 19th St",
+     "city": "Lubbock",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356372",
+     "url": "https://locations.wendys.com/united-states/tx/san-antonio/9503-middlex-dr",
+     "status": "store page gone (404)",
+     "street": "9503 Middlex Dr",
+     "city": "San Antonio",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356292",
+     "url": "https://locations.wendys.com/united-states/tx/san-antonio/9700-san-pedro",
+     "status": "store page gone (404)",
+     "street": "9700 San Pedro",
+     "city": "San Antonio",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356415",
+     "url": "https://locations.wendys.com/united-states/ut/draper/1293-east-draper-pkwy",
+     "status": "store page gone (404)",
+     "street": "1293 East Draper Pkwy",
+     "city": "Draper",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356440",
+     "url": "https://locations.wendys.com/united-states/ut/provo/2025-w-center-st",
+     "status": "store page gone (404)",
+     "street": "2025 W. Center St.",
+     "city": "Provo",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356250",
+     "url": "https://locations.wendys.com/united-states/ut/salt-lake-city/6135-s-highland-drive",
+     "status": "store page gone (404)",
+     "street": "6135 S. Highland Drive",
+     "city": "Salt Lake City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356264",
+     "url": "https://locations.wendys.com/united-states/ut/salt-lake-city/776-n-terminal-drive-b-18",
+     "status": "store page gone (404)",
+     "street": "776 N. Terminal Drive B-18",
+     "city": "Salt Lake City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065531978",
+     "url": "https://locations.wendys.com/united-states/ut/west-jordan/8935-s-redwood-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "8935 S Redwood Rd",
+     "city": "West Jordan",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065481131",
+     "url": "https://locations.wendys.com/united-states/ut/west-jordan/8935-s-redwood-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "8935 S Redwood Rd",
+     "city": "West Jordan",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9256276",
+     "url": "https://locations.wendys.com/united-states/ut/west-jordan/8935-s-redwood-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "8935 S Redwood Rd",
+     "city": "West Jordan",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065527480",
+     "url": "https://locations.wendys.com/united-states/va/chester/13201-kingston-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "13201 Kingston Ave",
+     "city": "Chester",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478156",
+     "url": "https://locations.wendys.com/united-states/va/chester/13201-kingston-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "13201 Kingston Ave",
+     "city": "Chester",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9251437",
+     "url": "https://locations.wendys.com/united-states/va/chester/13201-kingston-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "13201 Kingston Ave",
+     "city": "Chester",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065527406",
+     "url": "https://locations.wendys.com/united-states/va/colonial-heights/1709-boulevard",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1709 Boulevard",
+     "city": "Colonial Heights",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478392",
+     "url": "https://locations.wendys.com/united-states/va/colonial-heights/1709-boulevard",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1709 Boulevard",
+     "city": "Colonial Heights",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9251622",
+     "url": "https://locations.wendys.com/united-states/va/colonial-heights/1709-boulevard",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "1709 Boulevard",
+     "city": "Colonial Heights",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356405",
+     "url": "https://locations.wendys.com/united-states/va/covington/1310-s-craig-street",
+     "status": "store page gone (404)",
+     "street": "1310 S. Craig Street",
+     "city": "Covington",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065528404",
+     "url": "https://locations.wendys.com/united-states/va/fairfax/4000-jermantown-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "4000 Jermantown Rd",
+     "city": "Fairfax",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065478693",
+     "url": "https://locations.wendys.com/united-states/va/fairfax/4000-jermantown-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "4000 Jermantown Rd",
+     "city": "Fairfax",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252268",
+     "url": "https://locations.wendys.com/united-states/va/fairfax/4000-jermantown-rd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "4000 Jermantown Rd",
+     "city": "Fairfax",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479599",
+     "url": "https://locations.wendys.com/united-states/va/hayes/3022-george-washington-memorial-hwy",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3022 George Washington Memorial Hwy",
+     "city": "Hayes",
+     "checked": "2026-11-07",
+     "context": "taurant\" id=\"Breakfast-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065529053",
+     "url": "https://locations.wendys.com/united-states/va/hopewell/5103-oaklawn-blvd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "5103 Oaklawn Blvd",
+     "city": "Hopewell",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065479708",
+     "url": "https://locations.wendys.com/united-states/va/hopewell/5103-oaklawn-blvd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "5103 Oaklawn Blvd",
+     "city": "Hopewell",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9252970",
+     "url": "https://locations.wendys.com/united-states/va/hopewell/5103-oaklawn-blvd",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "5103 Oaklawn Blvd",
+     "city": "Hopewell",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356441",
+     "url": "https://locations.wendys.com/united-states/va/midlothian/13822-village-place-dr",
+     "status": "store page gone (404)",
+     "street": "13822 Village Place Dr",
+     "city": "Midlothian",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2082895852",
+     "url": "https://locations.wendys.com/united-states/va/radford/801-e-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "801 E Main St",
+     "city": "Radford",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9255133",
+     "url": "https://locations.wendys.com/united-states/va/radford/801-e-main-st",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "801 E Main St",
+     "city": "Radford",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356324",
+     "url": "https://locations.wendys.com/united-states/wa/federal-way/2216-s-320th-st",
+     "status": "store page gone (404)",
+     "street": "2216 S. 320th St.",
+     "city": "Federal Way",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356376",
+     "url": "https://locations.wendys.com/united-states/wa/university-place/2102-mildred-st-w",
+     "status": "store page gone (404)",
+     "street": "2102 Mildred St W",
+     "city": "University Place",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356306",
+     "url": "https://locations.wendys.com/united-states/wi/schofield/2805-schofield-ave",
+     "status": "store page gone (404)",
+     "street": "2805 Schofield Ave",
+     "city": "Schofield",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2055356256",
+     "url": "https://locations.wendys.com/united-states/wv/beckley/3066-robert-c-byrd-drive",
+     "status": "store page gone (404)",
+     "street": "3066 Robert C. Byrd Drive",
+     "city": "Beckley",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065529563",
+     "url": "https://locations.wendys.com/united-states/wy/laramie/3103-grand-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3103 Grand Ave",
+     "city": "Laramie",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#2065480101",
+     "url": "https://locations.wendys.com/united-states/wy/laramie/3103-grand-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3103 Grand Ave",
+     "city": "Laramie",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    },
+    {
+     "spider": "wendys",
+     "ref": "https://locations.wendys.com/#9253493",
+     "url": "https://locations.wendys.com/united-states/wy/laramie/3103-grand-ave",
+     "status": "store's hours block says 'Temporarily Closed'",
+     "street": "3103 Grand Ave",
+     "city": "Laramie",
+     "checked": "2026-11-07",
+     "context": "t\" id=\"Kids&#39; Meals-restaurant-hours\" data-tab-content=\"restaurant\" role=\"tabpanel\"> Restaurant Hours Temporarily Closed <div class=\"c-location-hours-detai"
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "dennys_us": {
+   "pages": 1231,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "outback_steakhouse": {
+   "pages": 647,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "carrabbas_italian_grill": {
+   "pages": 203,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "bonefish_grill": {
+   "pages": 156,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "bonefish_grill",
+     "ref": "https://locations.bonefishgrill.com/#15502826",
+     "url": "https://locations.bonefishgrill.com/north-carolina/huntersville/8805-townley-road",
+     "status": "store page gone (404)",
+     "street": "8805 Townley Road Ste. B",
+     "city": "Huntersville",
+     "checked": "2026-11-07",
+     "context": ""
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "einstein_bros_us": {
+   "pages": 710,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "brueggers": {
+   "pages": 155,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "eatn_park_us": {
+   "pages": 55,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "waba_grill_us": {
+   "pages": 192,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "great_clips": {
+   "pages": 4302,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "great_clips",
+     "ref": "https://salons.greatclips.com/us/al/troy/1147-highway-231",
+     "url": "https://salons.greatclips.com/us/al/troy/1147-highway-231",
+     "status": "store page gone (404)",
+     "street": "1147 HIGHWAY 231",
+     "city": "Troy",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "great_clips",
+     "ref": "https://salons.greatclips.com/us/fl/kissimmee/4797-w-irlo-bronson-memorial-hwy",
+     "url": "https://salons.greatclips.com/us/fl/kissimmee/4797-w-irlo-bronson-memorial-hwy",
+     "status": "store page gone (404)",
+     "street": "4797 W Irlo Bronson Memorial Hwy",
+     "city": "Kissimmee",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "great_clips",
+     "ref": "https://salons.greatclips.com/us/ky/lexington/130-w-tiverton-way",
+     "url": "https://salons.greatclips.com/us/ky/lexington/130-w-tiverton-way",
+     "status": "store page gone (404)",
+     "street": "130 W Tiverton Way",
+     "city": "Lexington",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "great_clips",
+     "ref": "https://salons.greatclips.com/us/oh/cincinnati/12104-montgomery-rd",
+     "url": "https://salons.greatclips.com/us/oh/cincinnati/12104-montgomery-rd",
+     "status": "store page gone (404)",
+     "street": "12104 Montgomery Rd",
+     "city": "Cincinnati",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "great_clips",
+     "ref": "https://salons.greatclips.com/us/sc/greenville/1779-woodruff-rd",
+     "url": "https://salons.greatclips.com/us/sc/greenville/1779-woodruff-rd",
+     "status": "store page gone (404)",
+     "street": "1779 Woodruff Rd",
+     "city": "Greenville",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "great_clips",
+     "ref": "https://salons.greatclips.com/us/ut/salt-lake-city/906-e-900-s",
+     "url": "https://salons.greatclips.com/us/ut/salt-lake-city/906-e-900-s",
+     "status": "store page gone (404)",
+     "street": "906 E 900 S",
+     "city": "Salt Lake City",
+     "checked": "2026-11-07",
+     "context": ""
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "food_lion_us": {
+   "pages": 1153,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "pilot_flying_j": {
+   "pages": 597,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "pilot_flying_j",
+     "ref": "608",
+     "url": "https://locations.pilotflyingj.com/us/az/ehrenberg/i-10-exit-1-frontage-road-n.",
+     "status": "store page gone (404)",
+     "street": "I-10 Exit 1 Frontage Road N.",
+     "city": "Ehrenberg",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "365",
+     "url": "https://locations.pilotflyingj.com/us/ca/madera/22717-ave-18-1/2",
+     "status": "store page gone (404)",
+     "street": "22717 Ave 18 1/2",
+     "city": "Madera",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "575",
+     "url": "https://locations.pilotflyingj.com/us/ga/st.-mary's/491-st-mary's-rd",
+     "status": "store page gone (404)",
+     "street": "491 St Mary's Rd",
+     "city": "St. Mary's",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "1070",
+     "url": "https://locations.pilotflyingj.com/us/nm/santa-rosa/2464-u.s.-route-66",
+     "status": "store page gone (404)",
+     "street": "2464 U.S. Route 66",
+     "city": "Santa Rosa",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "1054",
+     "url": "https://locations.pilotflyingj.com/us/tx/buda/10700-u.s.-hwy-183-n.",
+     "status": "store page gone (404)",
+     "street": "10700 U.S. Hwy 183 N.",
+     "city": "Buda",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "744",
+     "url": "https://locations.pilotflyingj.com/us/ut/ogden/1172-west-21st-street",
+     "status": "store page gone (404)",
+     "street": "1172 West 21St Street",
+     "city": "Ogden",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "742",
+     "url": "https://locations.pilotflyingj.com/us/ut/tooele/1605-east-saddleback-blvd.",
+     "status": "store page gone (404)",
+     "street": "1605 East Saddleback Blvd.",
+     "city": "Tooele",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "pilot_flying_j",
+     "ref": "4651",
+     "url": "https://locations.pilotflyingj.com/us/va/skippers/781-moore's-ferry-rd",
+     "status": "store page gone (404)",
+     "street": "781 Moore's Ferry Rd",
+     "city": "Skippers",
+     "checked": "2026-11-07",
+     "context": ""
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "sport_clips_us": {
+   "skipped": "status words on 20/20 sample pages: template text",
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "golden_corral": {
+   "pages": 328,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "charleys_philly_steaks": {
+   "pages": 842,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "charleston-afb",
+     "url": "https://www.charleys.com/locations/charleston-afb/",
+     "status": "store page gone (404)",
+     "street": "101 Lawson Dr",
+     "city": "Charleston AFB",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "charleys-missouri-city-walmart",
+     "url": "https://www.charleys.com/locations/charleys-missouri-city-walmart/",
+     "status": "store page gone (404)",
+     "street": "5501 Hwy 6",
+     "city": "Missouri City",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "charleys-walmart-airport-fwy-tx",
+     "url": "https://www.charleys.com/locations/charleys-walmart-airport-fwy-tx/",
+     "status": "store page gone (404)",
+     "street": "4100 W Airport Fwy",
+     "city": "Irving",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "charleys-wm-market-place",
+     "url": "https://www.charleys.com/locations/charleys-wm-market-place/",
+     "status": "store page gone (404)",
+     "street": "1635 Market Place Blvd",
+     "city": "Irving",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "cicero-50th-il",
+     "url": "https://www.charleys.com/locations/cicero-50th-il/",
+     "status": "store page gone (404)",
+     "street": "4925 S Cicero Ave",
+     "city": "Chicago",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "fort-henry-mall-2",
+     "url": "https://www.charleys.com/locations/fort-henry-mall-2/",
+     "status": "store page gone (404)",
+     "street": "2101 Fort Henry Dr",
+     "city": "Kingsport",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "peachtree-mall",
+     "url": "https://www.charleys.com/locations/peachtree-mall/",
+     "status": "store page gone (404)",
+     "street": "3131 Manchester Expy",
+     "city": "Columbus",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "south-orange-blossom-trail",
+     "url": "https://www.charleys.com/locations/south-orange-blossom-trail/",
+     "status": "store page gone (404)",
+     "street": "5908 Orange Blossom Trail",
+     "city": "Orlando",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "the-crossing-at-katy-fulshear-tx",
+     "url": "https://www.charleys.com/locations/the-crossing-at-katy-fulshear-tx/",
+     "status": "store page gone (404)",
+     "street": "26750 FM 1093",
+     "city": "Richmond",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "walmart-6102-fm-3009",
+     "url": "https://www.charleys.com/locations/walmart-6102-fm-3009/",
+     "status": "store page gone (404)",
+     "street": "6102 FM 3009",
+     "city": "Schertz",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "walmart-cibolo-valley-dr",
+     "url": "https://www.charleys.com/locations/walmart-cibolo-valley-dr/",
+     "status": "store page gone (404)",
+     "street": "602 Cibolo Valley Dr",
+     "city": "Cibolo",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "walmart-precinct-line-rd",
+     "url": "https://www.charleys.com/locations/walmart-precinct-line-rd/",
+     "status": "store page gone (404)",
+     "street": "1732 Precinct Line Road",
+     "city": "Hurst",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "charleys_philly_steaks",
+     "ref": "walmart-uptown-blvd-tx",
+     "url": "https://www.charleys.com/locations/walmart-uptown-blvd-tx/",
+     "status": "store page gone (404)",
+     "street": "621 Uptown Blvd",
+     "city": "Cedar Hill",
+     "checked": "2026-11-07",
+     "context": ""
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "white_castle": {
+   "pages": 336,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "white_castle",
+     "ref": "93",
+     "url": "https://www.whitecastle.com/locations/93",
+     "status": "store page gone (404)",
+     "street": "5940 N RIDGE AVE",
+     "city": "Chicago",
+     "checked": "2026-11-07",
+     "context": ""
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "logans_roadhouse_us": {
+   "pages": 111,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "dave_and_busters": {
+   "pages": 184,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "smashburger": {
+   "pages": 158,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "bj_restaurant_us": {
+   "pages": 219,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "twin_peaks": {
+   "pages": 110,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "hooters": {
+   "pages": 149,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "benihana": {
+   "pages": 80,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "fogo_de_chao": {
+   "pages": 44,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "farmer_boys": {
+   "pages": 107,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "hopdoddy_burger_bar_us": {
+   "pages": 50,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "piada_us": {
+   "pages": 63,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "sizzler_us": {
+   "pages": 71,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "main_event": {
+   "pages": 67,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [
+    {
+     "spider": "main_event",
+     "ref": "BRE",
+     "url": "https://location.com/categories/arts-and-entertainment/us/ca/brea/main-event-brea-coming-soon-2618805603",
+     "status": "store page gone (404)",
+     "street": "245 West Birch Street",
+     "city": "Brea",
+     "checked": "2026-11-07",
+     "context": ""
+    },
+    {
+     "spider": "main_event",
+     "ref": "FWN",
+     "url": "https://www.mainevent.com/locations/fort-worth-north-tx",
+     "status": "store page gone (404)",
+     "street": "2601 Presidio Vista Dr",
+     "city": "Fort Worth",
+     "checked": "2026-11-07",
+     "context": ""
+    }
+   ],
+   "checked": "2026-11-07"
+  },
+  "joes_crab_shack_us": {
+   "pages": 13,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "mccormick_and_schmicks_us": {
+   "pages": 14,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "bravo_italian_us": {
+   "pages": 19,
+   "errors": 0,
+   "trust_404": false,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "7_brew_us": {
+   "pages": 561,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "publix_us": {
+   "pages": 1461,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "hy_vee_us": {
+   "pages": 296,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "blaze_pizza": {
+   "skipped": "status words on 20/20 sample pages: template text",
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "tgi_fridays_us": {
+   "pages": 68,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "keke": {
+   "pages": 86,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "innout": {
+   "pages": 445,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "bob_evans_us": {
+   "pages": 408,
+   "errors": 0,
+   "trust_404": true,
+   "flagged": [],
+   "checked": "2026-11-07"
+  },
+  "chilis": {
+   "pages": 1211,
+   "errors": 0,
+   "trust_404": false,
+   "flagged": [],
+   "checked": "2026-11-07"
+  }
+ },
+ "_readme": "Stores whose own chain page shows them closed, coming soon, or gone, found by tools/status_sweep.py. The build leaves these out. Each entry has the page and date."
+}

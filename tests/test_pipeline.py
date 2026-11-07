@@ -398,3 +398,24 @@ def test_location_exclusions_have_sources_and_apply(records):
     for e in doc["exclusions"]:
         assert e["reason"] and e["source_url"].startswith("https://") and e["checked"]
     assert not any(r["b"] == "charleys" and r.get("n") == "Fort Buchanan" for r in records)
+
+
+# ---- evaluator round 9 -------------------------------------------------------
+def test_store_status_entries_have_sources():
+    doc = load("data/store-status.json")
+    n = 0
+    for chain in doc["chains"].values():
+        for e in chain["flagged"]:
+            assert e["url"].startswith("https://") and e["status"] and e["checked"]
+            n += 1
+    assert n > 0
+
+
+def test_round9_closed_or_unopened_examples_gone(records):
+    def has(b, start):
+        return any(r["b"] == b and (r.get("a") or "").lower().startswith(start.lower()) for r in records)
+    assert not has("ihop", "1830 State Rd 44")
+    assert not has("ruby-tuesday", "1640 S")
+    assert not has("wendys", "801 E Main St")
+    assert not has("wendys", "3900 Georgia")
+    assert not has("playa-bowls", "1105 5th St")

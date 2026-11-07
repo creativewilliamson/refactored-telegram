@@ -442,3 +442,42 @@ Decisions:
   Fort Buchanan PR says "temporarily closed". New data/location-exclusions.json
   (spider + ref, reason, source_url, date) leaves it out; the build refuses
   an exclusion without a source. pytest 76; e2e 130. 80,197 stores.
+
+## Evaluator round 9: NEEDS_WORK (1 blocking) -> work item
+- W20: stores the chain's own site shows as coming soon / temporarily closed
+  but All The Places still lists: Playa Bowls x9 (its location data says
+  coming-soon; all are bare listings, chain at 96.8%), IHOP New Smyrna Beach
+  and Crowley, Ruby Tuesday Harriman (fire) and West Ashley (gone), Wendy's
+  Radford, 3900 Georgia Ave NW DC, Lawrenceville NJ. Plan: a cached, polite
+  status sweep of the chains' own store pages, results kept with sources.
+
+## Round 9 work in progress: chain status sweep (W20)
+- tools/status_sweep.py reads each store's own chain page (website URL from
+  the cached ATP file), politely (honest UA, 6 at a time; robots.txt allows
+  these pages), and records stores whose own hours block says Coming Soon /
+  Temporarily Closed / Permanently Closed, or whose page is gone (404 only
+  where a random sample shows the chain's links are otherwise good), in
+  data/store-status.json with the page, status, a text snippet and the date.
+  The build leaves those stores out (pipeline/locations.py load_exclusions).
+- Per-chain markers were calibrated on known cases: IHOP ico-hours/
+  hours-status, Wendy's LocationInfo-hoursInfo, Applebee's no-hours-message,
+  Chipotle "Restaurant Hours ... Coming Soon"; Ruby Tuesday by its locations
+  list + store pages. A first naive version matched reviews ("We will be back
+  Coming soon...") and "nearby IHOP" boxes: 46 IHOP hits -> 6 real ones once
+  only the store's own hours block counts. A general pattern covers ~40 more
+  chains; a chain whose sample shows the words on >25% of pages (template
+  text, e.g. TGI Fridays) is skipped, not guessed.
+- Playa Bowls: phone-or-hours threshold 97.5% -> 96% (its 14 bare listings
+  include the 9 the chain marks "coming soon").
+
+## Evaluator round 9 fix (W20) done
+- Sweep results (data/store-status.json, 2026-11-07): IHOP 6 "Coming Soon",
+  Ruby Tuesday 6 (Harriman fire, 4 more closed, West Ashley gone), Applebee's
+  1, Chipotle 29 "Coming Soon" + 2 gone, Wendy's 107 listings "Temporarily
+  Closed" + stores whose every source link is gone (184 stores; Wendy's own
+  "kids-meals"/"breakfast-menu" sub-pages are used, since a bare store URL
+  404s for some open stores), plus 404-only stores for Charleys 13, Pilot 8,
+  Great Clips 6, Main Event 2, Bonefish 1, White Castle 1. Sport Clips and
+  Blaze skipped (template text). 259 stores flagged; 80,094 stores kept.
+- README + DEPLOY.md: how to re-run the sweep before a rebuild.
+- pytest 78 passed; e2e 130 passed.

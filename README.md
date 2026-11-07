@@ -28,6 +28,7 @@ and Census data into `data\cache\` (a minute or two); later starts reuse it.
 | Serve `dist/` only | `docker compose up -d web` |
 | Stop | `docker compose down` |
 | Trace random stores to their source | `docker compose run --rm build python tools/spot_check.py 20` |
+| Re-check chains' own pages for closed / coming-soon stores (~20 min, writes data/store-status.json) | `docker compose run --rm build python tools/status_sweep.py` |
 | Deploy (J.Will only) | see `DEPLOY.md` |
 
 ## How it fits together
