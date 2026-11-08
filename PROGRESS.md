@@ -620,3 +620,12 @@ Run 2: planned (Sat Nov 7 evening, 3-hour limit, at most 3 evaluator rounds).
 - Same class on the results page: one-chain summary/status name X ("No Texas Roadhouse within 100 miles of Miles City, MT 59301.",
   "4 Texas Roadhouse stores within 25 miles ..."), widen note "Showing up to 100 miles to look for the nearest X."
 - e2e 197 passed. Evidence: evidence/R2-W2.png. Next: evaluator round 3 (last allowed).
+
+## Evaluator round 3 (run 2): NEEDS_WORK (1 blocking) -> round cap reached, not fixed
+- B1 (unfixed, round cap): one-chain "nearest X is more than R miles" is still decided after ended offers and filters are removed:
+  print page with an ended offer (McCormick & Schmick's from 20001 on Nov 10: an 8.6-mile store exists but is Ended; from Nov 12
+  every chain), and results + print when a filter hides X (Texas Roadhouse + "Coffee & treats"). The all-offers print on Nov 12
+  says "No places within 100 miles" when the nearby offers have only ended. Fix: decide "none in range" from X's store records
+  before date/filter filtering; say "offer ended" / "filters hide X" instead.
+- Per CLAUDE.md step 12: after the third NEEDS_WORK nothing more is fixed; RUN-REPORT.md lists it under Known bugs.
+- RUN-REPORT.md rewritten for run 2 (ended by: evaluator round cap). Run time ~2 h 10 min of 3 h.
